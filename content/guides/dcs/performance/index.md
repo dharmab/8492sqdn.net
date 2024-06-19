@@ -1,8 +1,11 @@
 ---
 title: DCS World Performance and Settings Guide
+summary: Recommended system, graphical and gameplay settings for DCS World
+date: 2024-06-19
+tags: 
+  - digital combat simulator
+weight: 1
 ---
-Recommended system, graphical and gameplay settings for DCS World. Last updated May 2024 for DCS 2.9.5.55300.
-
 ![](images/hero.png)
 _Photo by Generic (@generic_dcs)_
 
@@ -44,7 +47,6 @@ Since DCS uses an older graphics engine, high amounts of VRAM is more important 
 
 [Tom's Hardware: Best Graphics Cards for Gaming](https://gamersnexus.net/gpus/best-worst-gpus-2023-gaming-100-2000-video-cards)
 
-
 ## PSU
 
 You should have a sufficient power supply for your CPU and GPU— Tier B or better on the [Cultist Tier List](https://cultists.network/140/psu-tier-list/).
@@ -78,7 +80,6 @@ I do not recommend:
 - Tobii eye trackers. The head tracking is too coarse and oversmoothed for flight simulation. A real-life friend who tried to use one for flight simulation described it as feeling drunk.
 
 # Virtual Reality
-
 
 > ⚠️ Don’t bother with DCS VR unless:
 > 1. You have a very high end PC

@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>DCS Flaming Cliffs: MiG-29 Fulcrum Quick Start Guide | Osean Air Force 8492nd Squadron</title>
+<meta name="keywords" content="digital combat simulator">
+<meta name="description" content="Getting started with the fastest red fighter in DCS World.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/guides/dcs/aircraft/fc-mig-29/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4599eadb9eb2ad3d0a8d6827b41a8fda8f2f4af226b63466c09c5fddbc8706b7.css" integrity="sha256-RZnq256yrT0KjWgntBqP2o8vSvImtjRmwJxf3byHBrc=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/guides/dcs/aircraft/fc-mig-29/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Osean Air Force 8492nd Squadron (Alt + H)">Osean Air Force 8492nd Squadron</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/guides/" title="Guides">
+                    <span>Guides</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/missions" title="Missions">
+                    <span>Missions</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Updates">
+                    <span>Updates</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      DCS Flaming Cliffs: MiG-29 Fulcrum Quick Start Guide
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#variants-in-dcs" aria-label="Variants in DCS">Variants in DCS</a><ul>
+                        
+                <li>
+                    <a href="#mig-29a" aria-label="MiG-29A">MiG-29A</a></li>
+                <li>
+                    <a href="#mig-29g" aria-label="MiG-29G">MiG-29G</a></li>
+                <li>
+                    <a href="#mig-29s" aria-label="MiG-29S">MiG-29S</a></li></ul>
+                </li>
+                <li>
+                    <a href="#recommended-mods" aria-label="Recommended Mods">Recommended Mods</a><ul>
+                        
+                <li>
+                    <a href="#clickable-cockpit" aria-label="Clickable Cockpit">Clickable Cockpit</a></li>
+                <li>
+                    <a href="#english-cockpit" aria-label="English Cockpit">English Cockpit</a></li>
+                <li>
+                    <a href="#kneeboards" aria-label="Kneeboards">Kneeboards</a></li></ul>
+                </li>
+                <li>
+                    <a href="#controls" aria-label="Controls">Controls</a><ul>
+                        
+                <li>
+                    <a href="#flight-controls" aria-label="Flight Controls">Flight Controls</a></li>
+                <li>
+                    <a href="#navigation" aria-label="Navigation">Navigation</a></li>
+                <li>
+                    <a href="#autopilot" aria-label="Autopilot">Autopilot</a></li>
+                <li>
+                    <a href="#master-modes" aria-label="Master Modes">Master Modes</a></li>
+                <li>
+                    <a href="#sensors" aria-label="Sensors">Sensors</a></li>
+                <li>
+                    <a href="#weapons" aria-label="Weapons">Weapons</a></li>
+                <li>
+                    <a href="#countermeasures" aria-label="Countermeasures">Countermeasures</a></li>
+                <li>
+                    <a href="#communication" aria-label="Communication">Communication</a></li></ul>
+                </li>
+                <li>
+                    <a href="#flight-procedures" aria-label="Flight Procedures">Flight Procedures</a><ul>
+                        
+                <li>
+                    <a href="#startup--pretaxi" aria-label="Startup &amp; Pretaxi">Startup &amp; Pretaxi</a></li>
+                <li>
+                    <a href="#taxi" aria-label="Taxi">Taxi</a></li>
+                <li>
+                    <a href="#takeoff--departure" aria-label="Takeoff &amp; Departure">Takeoff &amp; Departure</a></li>
+                <li>
+                    <a href="#fence-in" aria-label="FENCE In">FENCE In</a></li>
+                <li>
+                    <a href="#fence-out" aria-label="FENCE Out">FENCE Out</a></li>
+                <li>
+                    <a href="#approach-and-landing" aria-label="Approach and Landing">Approach and Landing</a></li></ul>
+                </li>
+                <li>
+                    <a href="#navigation-1" aria-label="Navigation">Navigation</a></li>
+                <li>
+                    <a href="#air-to-air-combat" aria-label="Air to Air Combat">Air to Air Combat</a><ul>
+                        
+                <li>
+                    <a href="#beyond-visual-range-bvr-workflow" aria-label="Beyond Visual Range (BVR) Workflow">Beyond Visual Range (BVR) Workflow</a></li>
+                <li>
+                    <a href="#within-visual-range-wvr-workflow" aria-label="Within Visual Range (WVR) Workflow">Within Visual Range (WVR) Workflow</a></li>
+                <li>
+                    <a href="#guns-workflow" aria-label="Guns Workflow">Guns Workflow</a></li>
+                <li>
+                    <a href="#air-to-air-weapons" aria-label="Air to Air Weapons">Air to Air Weapons</a></li></ul>
+                </li>
+                <li>
+                    <a href="#air-to-ground-combat" aria-label="Air to Ground Combat">Air to Ground Combat</a><ul>
+                        
+                <li>
+                    <a href="#rockets-s-8-s-24" aria-label="Rockets (S-8, S-24)">Rockets (S-8, S-24)</a></li>
+                <li>
+                    <a href="#low-drag-bombs-fab-general-purpose-bomb" aria-label="Low-Drag Bombs (FAB General Purpose Bomb)">Low-Drag Bombs (FAB General Purpose Bomb)</a></li>
+                <li>
+                    <a href="#high-drag-bombs-rbk-cluster-bomb-kgmu-2-dispenser-betab-500-concrete-piercing-bomb" aria-label="High-Drag Bombs (RBK Cluster Bomb, KGMU-2 Dispenser, BetAB-500 Concrete Piercing Bomb)">High-Drag Bombs (RBK Cluster Bomb, KGMU-2 Dispenser, BetAB-500 Concrete Piercing Bomb)</a></li>
+                <li>
+                    <a href="#guns" aria-label="Guns">Guns</a></li></ul>
+                </li>
+                <li>
+                    <a href="#spo-15-rwr" aria-label="SPO-15 RWR">SPO-15 RWR</a></li>
+                <li>
+                    <a href="#reference-material" aria-label="Reference Material">Reference Material</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h1>
+<p><img loading="lazy" src="images/Untitled.jpeg" alt=""  />
+</p>
+<p>The Mikoyan MiG-29 “Fulcrum” is a Soviet-designed 4th generation fighter that first entered service in 1983. The Fulcrum was intended as an “Advanced Lightweight Tactical Fighter”, a high-speed air superiority fighter that could operate from austere runways to protect the battlefield’s frontline. It is, roughly speaking, the Soviet counterpart to the F-16.</p>
+<p>Downgraded versions were widely exported to the Warsaw Pact and other nations. MiG-29 variants have seen combat in Iraq, Iran, Kuwait, Yugoslavia, Croatia, Kosovo, Kashmir, Sudan, Georgia, Syria, Libya, and Ukraine. Once feared as one of the most agile and dangerous fighters ever made and a threat to the free world, the MiG-29 is now an aging platform- and an a unexpected symbol of resistance against Russian aggression.</p>
+<blockquote>
+<p>📰 <a href="https://www.smithsonianmag.com/air-space-magazine/truth-about-mig-29-180952403/">The Truth About the MiG-29</a>: A fantastic article on the MiG-29’s history.</p>
+</blockquote>
+<p>The MiG-29 is one of the fastest aircraft in DCS World - certainly the fastest player aircraft available to REDFOR - and the earliest to have a helmet-mounted sight for off-boresight missile employment. Although surpassed in capability by modernized 4th-and 5th-generation fighters, it remains an iconic aircraft.</p>
+<h1 id="variants-in-dcs">Variants in DCS<a hidden class="anchor" aria-hidden="true" href="#variants-in-dcs">#</a></h1>
+<h2 id="mig-29a">MiG-29A<a hidden class="anchor" aria-hidden="true" href="#mig-29a">#</a></h2>
+<p>Variant based on the MiG-29 9.12 production version operated by Russia during the 1980s and 1990s.</p>
+<p>This variant is a common sight in DCS Cold War servers.</p>
+<h2 id="mig-29g">MiG-29G<a hidden class="anchor" aria-hidden="true" href="#mig-29g">#</a></h2>
+<p>Variant based on the MiG-29 9.12A Warsaw Pact export variant, specifically the export model operated by the German Democratic Republic until 1990, then by the Federal Republic of Germany until 2004, and finally the Polish Air Force until 2023.</p>
+<p>In DCS, this variant is identical to the MiG-29A except the avionics use imperial units (feet and nautical miles) instead of SI units (meters).</p>
+<h2 id="mig-29s">MiG-29S<a hidden class="anchor" aria-hidden="true" href="#mig-29s">#</a></h2>
+<p>Variant based on the MiG-29 9.13S, an upgraded version of the MiG-29.</p>
+<p>In DCS, this variant has additional features:</p>
+<ol>
+<li>R-77 (AA-12 Adder) missiles</li>
+<li>Gardeniya ECM station (jammer pod)</li>
+<li>“TWS2” radar mode which supports tracking and firing on two targets at once.</li>
+<li>Slightly larger fuel tank</li>
+</ol>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="recommended-mods">Recommended Mods<a hidden class="anchor" aria-hidden="true" href="#recommended-mods">#</a></h1>
+<h2 id="clickable-cockpit">Clickable Cockpit<a hidden class="anchor" aria-hidden="true" href="#clickable-cockpit">#</a></h2>
+<p>The <a href="https://github.com/RedK0d/CLICKABLE-FC3">Clickable FC3</a> mod is strongly recommended. It does not transform the FC3 MiG-29 into a full fidelity module, but it does map keyboard commands to clickable regions of the cockpit. This reduces the number of keyboard keys you need to memorize; it’s especially useful for startup, lighting and individual autopilot modes.</p>
+<blockquote>
+<p>🖱️ <strong>This guide assumes the Clickable FC3 mod is installed.</strong></p>
+</blockquote>
+<h2 id="english-cockpit">English Cockpit<a hidden class="anchor" aria-hidden="true" href="#english-cockpit">#</a></h2>
+<p>If you don’t want to learn the Cyrillic alphabet, the English Cockpit Mod relabels all cockpit instruments in English. The original mod is no longer compatible with DCS 2.9, but I’ve uploaded a working tweaked version.</p>
+<p><a href="https://download.8492sqdn.net/MiG-29_English_Cockpit.zip">MiG-29 English Cockpit.zip</a></p>
+<p>After installing the <code>Cockpit_MiG29(A,G,S)</code> folders in <code>%userprofile%\Saved Games\DCS\Liveries\</code>, navigate to options → SPECIAL → Flaming Cliffs or MiG-29 to select the English cockpit option.</p>
+<blockquote>
+<p>🇺🇸 <strong>The author does not know the Cyrillic alphabet, so this guide uses English labels and terms.</strong></p>
+</blockquote>
+<h2 id="kneeboards">Kneeboards<a hidden class="anchor" aria-hidden="true" href="#kneeboards">#</a></h2>
+<p><a href="https://www.digitalcombatsimulator.com/en/files/3318384/">DCS Reference Guide</a> - A few pages in here are useful for quickly looking up landing weight, V-speeds, weapons data and a visual guide to the SPO-15.</p>
+<p><a href="https://www.digitalcombatsimulator.com/en/files/3312200/">Aerodrome Data and Frequencies</a> - this includes a table mapping the airfield IDs in the Return and Landing submodes to the airfield names, which is useful if you ever need to divert to a different airfield.</p>
+<h1 id="controls">Controls<a hidden class="anchor" aria-hidden="true" href="#controls">#</a></h1>
+<p>For the curious, here is the real-world control layout of a German MiG-29. Note that the MiG-29 does not follow the HOTAS design philosophy- important buttons are scattered over the controls and cockpit. Bind your controls however you see fit.</p>
+<p><img loading="lazy" src="images/Untitled.png" alt=""  />
+</p>
+<p><img loading="lazy" src="images/Untitled%201.png" alt=""  />
+</p>
+<p>Essential controls to bind to the HOTAS are in <strong>bold with a</strong> ⭐.</p>
+<blockquote>
+<p>🖱️ This binding list assumes you have installed the Clickable FC3 mod. It excludes some infrequently used actions that are accessible using the mouse, such as some startup steps and lighting controls.</p>
+</blockquote>
+<h2 id="flight-controls">Flight Controls<a hidden class="anchor" aria-hidden="true" href="#flight-controls">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Function</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⭐Pitch</td>
+<td>Pitch control</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Roll</td>
+<td>Roll control</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Thrust</td>
+<td>Engine power</td>
+<td>Set curve using <a href="https://pbzweihander.github.io/dcs-detent-finder/">https://pbzweihander.github.io/dcs-detent-finder/</a></td>
+</tr>
+<tr>
+<td>⭐Rudder</td>
+<td>Yaw, ground steering</td>
+<td></td>
+</tr>
+<tr>
+<td>Nose Wheel Steering</td>
+<td>Hold for high-range steering</td>
+<td>Low-range steering is always on</td>
+</tr>
+<tr>
+<td>⭐Wheel Brake (axis) or Wheel Brake On</td>
+<td>Ground brakes</td>
+<td>Real aircraft uses hand brake</td>
+</tr>
+<tr>
+<td>Wheel Brake Start</td>
+<td>Brake with additional pressure. Used for short takeoffs only.</td>
+<td>Separate binding from wheel brake.</td>
+</tr>
+<tr>
+<td>⭐Landing Gear Up/Down</td>
+<td>Lower/raise landing gear</td>
+<td>No weight on wheels safety!</td>
+</tr>
+<tr>
+<td>⭐Trim Hat</td>
+<td>Trim aircraft</td>
+<td></td>
+</tr>
+<tr>
+<td>Trim Reset</td>
+<td>Set takeoff trim</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Jettison Fuel Tanks</td>
+<td>Drop centerline fuel tank</td>
+<td>Airbrake will not deploy if centerline fuel tank is on aircraft</td>
+</tr>
+<tr>
+<td>Airbrake On/Off</td>
+<td>Deploy/retract airbrake</td>
+<td></td>
+</tr>
+<tr>
+<td>Flaps</td>
+<td>Lower/raise flaps</td>
+<td>Only Up and Landing positions are available</td>
+</tr>
+<tr>
+<td>⭐Dragging Chute</td>
+<td>Deploy drogue parachute, or detach a deployed drogue parachute</td>
+<td></td>
+</tr>
+<tr>
+<td>Engines Start</td>
+<td>Start both engines in sequence</td>
+<td>If your HOTAS has engine start/stop controls, use those instead.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="navigation">Navigation<a hidden class="anchor" aria-hidden="true" href="#navigation">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Function</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Next Waypoint, Airfield or Target</td>
+<td>Select next waypoint</td>
+<td>Used in Return/Landing submodes to select airfield ID for ILS</td>
+</tr>
+<tr>
+<td>Previous Waypoint, Airfield or Target</td>
+<td>Select next waypoint</td>
+<td>Used in Return/Landing submodes to select airfield ID for ILS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="autopilot">Autopilot<a hidden class="anchor" aria-hidden="true" href="#autopilot">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Function</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autopilot - Barometric Altitude Hold</td>
+<td>Engage/disengage altitude hold</td>
+<td></td>
+</tr>
+<tr>
+<td>Autopilot - Attitude Hold</td>
+<td>Engage/disengage attitude hold</td>
+<td>Combing with altitude hold for heading hold</td>
+</tr>
+<tr>
+<td>Autopilot - Ground Collision Avoidance</td>
+<td>Engage/disengage GCAS</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Autopilot - Transition To Level Flight Control</td>
+<td>Engage altitude and attitude hold</td>
+<td></td>
+</tr>
+<tr>
+<td>Autopilot Override</td>
+<td>Disengage autopilot while held, release to reengage</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Autopilot Reset</td>
+<td>Reset autopilot modes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="master-modes">Master Modes<a hidden class="anchor" aria-hidden="true" href="#master-modes">#</a></h2>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Function</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(1) Navigation Modes</td>
+<td>Select Route, Return and Landing (ILS) modes</td>
+<td>Used to program ILS</td>
+</tr>
+<tr>
+<td>⭐(2) Air-to-Air Beyond Visual Range Modes</td>
+<td>Select Scan mode</td>
+<td>Primary BVR mode</td>
+</tr>
+<tr>
+<td>Allows transition to TWS, TWS2 and STT modes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>⭐(3) Close Air Combat Vertical Scan Mode</td>
+<td>Select Vertical Scan mode</td>
+<td>Primary WVR mode</td>
+</tr>
+<tr>
+<td>(4) Close Air Combat Bore Mode</td>
+<td>Select Bore mode</td>
+<td>Situational WVR mode</td>
+</tr>
+<tr>
+<td>Can lock at slightly longer range than Vertical Scan</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>⭐(5) Close Air Combat HMD Helmet Mode</td>
+<td>Select helmet mounted sight</td>
+<td>Essential for dogfighting. Killer feature of the MiG-29.</td>
+</tr>
+<tr>
+<td>(7) Air-to-Ground Modes</td>
+<td>Select Air-to-Ground Mode</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sensors">Sensors<a hidden class="anchor" aria-hidden="true" href="#sensors">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Function</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⭐Radar on/off</td>
+<td>Turn radar on or off</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Electro-optical system on/off</td>
+<td>Turn EO system on or off</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐TDC slew (axis) or Target Designator (buttons)</td>
+<td>Radar cursor</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Target Lock</td>
+<td>Lock onto target under radar cursor or in HUD frame</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Return to Search</td>
+<td>Unlock locked target</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Radar Vertical (axis) or Scan Zone Up/Down (buttons)</td>
+<td>Radar elevation</td>
+<td></td>
+</tr>
+<tr>
+<td>Scan Zone Left/Right</td>
+<td>Radar azimuth</td>
+<td>Situationally useful. Infrequently used when working with a GCI.</td>
+</tr>
+<tr>
+<td>⭐Radar Display Zoom In/Out</td>
+<td>Radar display zoom level</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Radar Range (axis) or Predicted Target Range Increase/Decrease (buttons)</td>
+<td>Vertical scan volume</td>
+<td>Analogous to the 1B/2B/4B scan volume setting in western radars.</td>
+</tr>
+<tr>
+<td>Radar RWS/TWS Mode Select</td>
+<td>Toggle Range While Scan and Track While Scan</td>
+<td>RWS IS FINE. You can probably just leave the radar in RWS.</td>
+</tr>
+<tr>
+<td>Radar Pulse Repetition Frequency Select</td>
+<td>Toggle PRF modes.</td>
+<td>INTERLEAVED IS FINE. You probably don’t need to mess with this.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="weapons">Weapons<a hidden class="anchor" aria-hidden="true" href="#weapons">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Function</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⭐Weapon Change</td>
+<td>Cycle selected weapon (other than gun)</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Cannon</td>
+<td>Select/deselect gun</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Weapon fire</td>
+<td>Release selected weapon</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Launch Permission Override</td>
+<td>Hold to allow weapon release outside normal release parameters</td>
+<td>Required for maximum range missile employment</td>
+</tr>
+</tbody>
+</table>
+<h2 id="countermeasures">Countermeasures<a hidden class="anchor" aria-hidden="true" href="#countermeasures">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Function</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⭐Countermeasures Flares Dispense</td>
+<td>Release flares</td>
+<td></td>
+</tr>
+<tr>
+<td>⭐Countermeasures Chaff Dispense</td>
+<td>Release chaff</td>
+<td></td>
+</tr>
+<tr>
+<td>Countermeasures Release</td>
+<td>Release both flares and chaff</td>
+<td></td>
+</tr>
+<tr>
+<td>Countermeasures Continuously Dispense</td>
+<td>Release both flares and chaff repeatedly</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="communication">Communication<a hidden class="anchor" aria-hidden="true" href="#communication">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Function</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Communication menu</td>
+<td>Open communication menu</td>
+<td></td>
+</tr>
+<tr>
+<td>Receive Mode</td>
+<td>Cycles in-game AWACS communications</td>
+<td>Useful to make the in-game AWACS shut the fuck up</td>
+</tr>
+</tbody>
+</table>
+<h1 id="flight-procedures">Flight Procedures<a hidden class="anchor" aria-hidden="true" href="#flight-procedures">#</a></h1>
+<h2 id="startup--pretaxi">Startup &amp; Pretaxi<a hidden class="anchor" aria-hidden="true" href="#startup--pretaxi">#</a></h2>
+<ol>
+<li>
+<p>Arming the aircraft requires both engines stopped and the canopy open, so always check your loadout before startup.</p>
+</li>
+<li>
+<p>Turn on the electrical systems</p>
+<p><img loading="lazy" src="images/Untitled%201.jpeg" alt=""  />
+</p>
+<p>Click anywhere on the highlighted BATT-GND SUPPLY panel to turn on the electrical systems.</p>
+</li>
+<li>
+<p>Turn on the internal lights, if desired</p>
+<p><img loading="lazy" src="images/Untitled%202.jpeg" alt=""  />
+</p>
+<p>Click anywhere on the highlighted LIGHTING panel to turn on the console and instrument lights</p>
+</li>
+<li>
+<p>Turn on the engines</p>
+<ol>
+<li>For a simple startup, press the Engines Start button</li>
+<li>If you prefer to start each engine individually, start the left engine, wait for the RPM to settle, then start the right engine.</li>
+</ol>
+</li>
+<li>
+<p>Wait for the for the DAMPER OFF warning light to extinguish</p>
+<p><img loading="lazy" src="images/Untitled%203.jpeg" alt=""  />
+</p>
+<p>After about 3 minutes, the DAMPER OFF light will extinguish and the aircraft is ready to taxi</p>
+</li>
+</ol>
+<h2 id="taxi">Taxi<a hidden class="anchor" aria-hidden="true" href="#taxi">#</a></h2>
+<ol>
+<li>
+<p>Ensure the flaps are raised. High-range nose wheel steering is inhibited when the flaps are lowered.</p>
+<p><img loading="lazy" src="images/Untitled%204.jpeg" alt=""  />
+</p>
+<p>Click the highlighted button to toggle the flaps. The indicated instrument will illuminate when the flaps are lowered and extinguish when the flaps are raised.</p>
+</li>
+<li>
+<p>Set external lights as required</p>
+<p><img loading="lazy" src="images/Untitled%205.jpeg" alt=""  />
+</p>
+<p>Click the highlighted switch to toggle the position lights.</p>
+</li>
+<li>
+<p>Turn on the taxi light</p>
+<p><img loading="lazy" src="images/Untitled%206.jpeg" alt=""  />
+</p>
+<p>Click the highlighted switch to cycle the taxi and landing lights</p>
+</li>
+<li>
+<p>Slowly advance the throttles until the aircraft begins to roll.</p>
+</li>
+<li>
+<p>Test the brakes before continuing to taxi.</p>
+</li>
+<li>
+<p>Use nose wheel steering to steer the aircraft. Hold the Nose Wheel Steering button to engage high-range steering around tight turns.</p>
+</li>
+</ol>
+<h2 id="takeoff--departure">Takeoff &amp; Departure<a hidden class="anchor" aria-hidden="true" href="#takeoff--departure">#</a></h2>
+<ol>
+<li>
+<p>Line up on the runway.</p>
+</li>
+<li>
+<p>Ensure canopy is closed.</p>
+<p><img loading="lazy" src="images/Untitled%207.jpeg" alt=""  />
+</p>
+<p>Click anywhere on the highlighted canopy lever to close or open the canopy.</p>
+</li>
+<li>
+<p>Ensure flaps are raised.</p>
+</li>
+<li>
+<p>Fully apply the wheel brakes.</p>
+<ol>
+<li>For a short takeoff, press and hold the Wheel Brake Start button <em>instead of</em> the wheel brakes.</li>
+</ol>
+</li>
+<li>
+<p>Advance throttles to MIL power (regular takeoff) or MAX power (short takeoff).</p>
+</li>
+<li>
+<p>Release wheel brakes.</p>
+</li>
+<li>
+<p>Rotate between 240 kph (130 knots) and 285kph (154 knots), depending on takeoff weight. Take off before 330 kph to avoid damage to tires. Raise nose no higher than 15° to prevent a tail strike.</p>
+</li>
+<li>
+<p>Confirm positive climb rate.</p>
+</li>
+<li>
+<p>Raise landing gear before 350 kph (190 knots)</p>
+</li>
+<li>
+<p>Pull throttles back to desired climb rate.</p>
+</li>
+</ol>
+<h2 id="fence-in">FENCE In<a hidden class="anchor" aria-hidden="true" href="#fence-in">#</a></h2>
+<ol>
+<li>FIRE CONTROL
+<ol>
+<li>Select Scan or Air-to-Ground mode as required</li>
+<li>Turn on radar or EO system as required</li>
+<li>Select weapon as required</li>
+</ol>
+</li>
+<li>ECM
+<ol>
+<li>
+<p>Turn on RWR</p>
+<p><img loading="lazy" src="images/Untitled%208.jpeg" alt=""  />
+</p>
+<p>Click the highlighted switch to toggle the RWR on and off. The knob labeled BRT next to it is mapped to RWR volume control.</p>
+</li>
+<li>
+<p>Turn on Gardeniya as required</p>
+</li>
+</ol>
+</li>
+<li>NAVAIDS
+<ol>
+<li>N/A</li>
+</ol>
+</li>
+<li>COMMS
+<ol>
+<li>N/A</li>
+</ol>
+</li>
+<li>EMITTERS
+<ol>
+<li>
+<p>Turn off external lights</p>
+<p><img loading="lazy" src="images/Untitled%205.jpeg" alt=""  />
+</p>
+<p>Click the highlighted switch to toggle the position lights.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="fence-out">FENCE Out<a hidden class="anchor" aria-hidden="true" href="#fence-out">#</a></h2>
+<ol>
+<li>FIRE CONTROL
+<ol>
+<li>Select navigation mode to disarm weapons</li>
+</ol>
+</li>
+<li>ECM
+<ol>
+<li>
+<p>Turn off RWR as required</p>
+<p><img loading="lazy" src="images/Untitled%208.jpeg" alt=""  />
+</p>
+<p>Click the highlighted switch to toggle the RWR on and off. The knob labeled BRT is mapped to RWR volume control.</p>
+</li>
+<li>
+<p>Turn off Gardeniya if equipped</p>
+</li>
+</ol>
+</li>
+<li>NAVAIDS
+<ol>
+<li>Select navigation submode as required</li>
+<li>Select desired waypoint or airfield
+<ol>
+<li>Use <a href="https://www.digitalcombatsimulator.com/en/files/3312200/">Aerodrome Data and Frequencies</a> kneeboard to find airfield IDs</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>COMMS
+<ol>
+<li>N/A</li>
+</ol>
+</li>
+<li>EMITTERS
+<ol>
+<li>
+<p>Turn off radar as required</p>
+</li>
+<li>
+<p>Turn off EO</p>
+</li>
+<li>
+<p>Set external lights as required</p>
+<p><img loading="lazy" src="images/Untitled%205.jpeg" alt=""  />
+</p>
+<p>Click the highlighted switch to toggle the position lights.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="approach-and-landing">Approach and Landing<a hidden class="anchor" aria-hidden="true" href="#approach-and-landing">#</a></h2>
+<blockquote>
+<p>🛬 The MiG-29 is arguably the hardest aircraft to land in DCS, &gt;and certainly the hardest to land at an airfield. It lands less &gt;like a fighter and more like an Airbus.</p>
+<p>Tips:</p>
+<ul>
+<li>Fly a long, straight in approach. Don’t attempt the overhead &gt;break unless you are very well practiced.</li>
+<li>Use the landing submode and ILS system whenever possible.</li>
+<li>Intercept the glideslope 10 miles away from the runway, and &gt;fly an on-speed and on-glideslope approach</li>
+<li>Abort the approach and go around if any of the following are &gt;not true:
+<ul>
+<li>Aircraft is on the correct flight path, with only small &gt;inputs required to maintain it</li>
+<li>Airspeed within +40kph/+20 knots of the reference speed</li>
+<li>Airplane is in the landing configuration</li>
+<li>The rate of descent is not greater than 300 meters per &gt;minute/1000 feet per minute</li>
+<li>The power setting is appropriate for the configuration</li>
+</ul>
+</li>
+<li>Descent rate should ideally be 1 m/s at touchdown. Abort and &gt;go around if descent rate is above 5 m/s just before touchdown</li>
+<li>If you bounce at touchdown, abort and go around. Do not try &gt;to save it.</li>
+<li>It can be difficult to slow down with a centerline fuel tank &gt;because it prevents deployment of the airbrake. Consider &gt;jettisoning the fuel tank before the approach.</li>
+</ul>
+</blockquote>
+<ol>
+<li>Turn on position lights</li>
+<li>If using ILS, select the Landing submode, and select the ID of the destination airfield using the Next Waypoint and Previous Waypoint buttons. Use the <a href="https://www.notion.so/Flaming-Cliffs-MiG-29-Fulcrum-e1bbc7cf86a1435da950def5ea001f14?pvs=21">airfield data</a> in the kneeboard to find the correct ID.</li>
+<li>Reduce airspeed to 350 knots</li>
+<li>Fly an approach to intercept the glideslope. Rules of thumb for intercept altitude above the airfield (QFE):
+<ol>
+<li>90 meters or 300 feet of altitude for every mile</li>
+<li>55 meters of altitude for every kilometer</li>
+</ol>
+</li>
+<li>Lower flaps</li>
+<li>Lower landing gear and verify 3 green landing gear indicator lights</li>
+<li>Turn on landing light</li>
+<li>Intercept the glide slope at 350 kph (190 knots)</li>
+<li>During the final approach, gradually slow down to 290 kph (155 knots) by the time you are over the runway threshold. If you are using the ILS system, reference speed will be displayed in the HUD during the approach.</li>
+<li>Flare the aircraft over the runway threshold. Speed should reduce to about 270 kph (135 knots) Use throttle to maintain a 1 m/s descent rate at touchdown; do not exceed 5 m/s descent rate at touchdown.</li>
+<li>Touch down the rear wheels first, and hold the nose high to aerobrake. Point the nose no higher than 15° to prevent a tail strike.</li>
+<li>Deploy the drogue parachute.</li>
+<li>Hold the stick back to continue aerobraking.</li>
+<li>Reduce throttle to idle.</li>
+<li>Once all gear are firmly on the ground, use the wheel brakes to slow down to 90 kph (50 knots).</li>
+<li>Detach the drogue parachute.</li>
+<li>Use the wheel brakes to slow down to desired taxi speed or full stop.</li>
+</ol>
+<p>Demonstration by person who claimed to be a real world MiG-29 pilot:</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/kUf4i_SFO4o?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<h1 id="navigation-1">Navigation<a hidden class="anchor" aria-hidden="true" href="#navigation-1">#</a></h1>
+<p>There are three navigation submodes: Route, Return and Landing. The submodes are cycled with repeated presses of the Navigation mode button.</p>
+<p>Route mode displays navigation cues to waypoints in the programmed flight plan from the mission editor or flight planner. This mode is not useful in DCS multiplayer because the flight planner is not available in multiplayer. Instead, most navigation will need to be done with tools like the F10 map, or primitive methods such as dead reckoning and landmark navigation.</p>
+<blockquote>
+<p>🗺️ Real MiG-29s have used external navigation devices mounted to the cockpit, so I don&rsquo;t consider using external maps unrealistic.</p>
+<p><img loading="lazy" src="images/Untitled%209.jpeg" alt=""  />
+</p>
+</blockquote>
+<p>Return mode is used to navigate to the approach for an airfield.</p>
+<p>Landing mode enables ILS for instrument landing approaches. It is useful even in VFR conditions for displaying glide slope and reference speeds on the HUD.</p>
+<h1 id="air-to-air-combat">Air to Air Combat<a hidden class="anchor" aria-hidden="true" href="#air-to-air-combat">#</a></h1>
+<p>The MiG-29 has two main sensors: A radar and an Electro-Optical (EO) system. They can be used separately or together to search for and track targets.</p>
+<p>The sensor symbology is displayed on both the HUD and the HUD repeater on the Head-Down Display (HDD). Normally, you’ll use the HUD unless you can’t see it clearly due to glare.</p>
+<p>HUD repeater location in cockpit:</p>
+<p><img loading="lazy" src="images/Untitled%202.png" alt=""  />
+</p>
+<p>When using the radar as the primary sensor, the horizontal axis represents azimuth and the vertical axis represents range. This is similar to the attack radar MFD page in the F-15, F-16 and F/A-18.</p>
+<p>When using the EO system as the primary sensor, the vertical axis represents elevation rather than range. This is similar to the AZ/EL page in the F/A-18.</p>
+<p>Most commonly, you’ll rely on the radar; the EO system is mostly useful in PvP games where your enemy does not have GCI/AWACS support, allowing you to “hide” by turning off your radar. This strategy does not work well against AI (who have magical psychic powers) or if your opponent has GCI/AWACS support. (In real life, the EO system is also potentially useful against aircraft which have low observability to radar, but stealth aircraft do not feature in DCS.) The EO system can also be useful in WVR combat when you are behind an unaware human enemy and want to give them zero warning.</p>
+<h2 id="beyond-visual-range-bvr-workflow">Beyond Visual Range (BVR) Workflow<a hidden class="anchor" aria-hidden="true" href="#beyond-visual-range-bvr-workflow">#</a></h2>
+<p>Generally, you’ll use the following workflow for BVR:</p>
+<ol>
+<li>
+<p>Enter Scan mode</p>
+</li>
+<li>
+<p>Turn on the radar</p>
+<p><img loading="lazy" src="images/Untitled%203.png" alt=""  />
+</p>
+</li>
+<li>
+<p>Talk to a GCI to be assigned a target. The GCI will provide Bearing, Range, Altitude and Aspect. If working with a human GCI, you may need to specifically request BRAA instead of Bullseye and SI units instead of imperial.</p>
+</li>
+<li>
+<p>Set the display range scale to an appropriate scale</p>
+</li>
+<li>
+<p>Set the expected target range to the range to target. This will set the vertical volume of the radar scan appropriately for the given range.</p>
+</li>
+<li>
+<p>Point the aircraft nose at the target and look for a matching radar hit. Adjust the radar elevation as required. Radar hits will appear as 1-2 lines of 1-4 dots. 2 lines means friendly, 1 line means otherwise. More dots per line mean larger RCS - in DCS you’ll usually see 3-4 dots per line</p>
+</li>
+<li>
+<p>Slew the cursor over the contact and press Target Lock to transition to Single Target Track.</p>
+<p><img loading="lazy" src="images/Untitled%204.png" alt=""  />
+</p>
+</li>
+<li>
+<p>Either wait for Launch Authorization (LA) to appear in the HUD, or hold the Launch Permission Override button down.</p>
+</li>
+<li>
+<p>Hold down Weapon fire to release a missile.</p>
+<ol>
+<li>If using a SARH missile, keep the target locked until the missile hits or is defeated.</li>
+</ol>
+</li>
+</ol>
+<h2 id="within-visual-range-wvr-workflow">Within Visual Range (WVR) Workflow<a hidden class="anchor" aria-hidden="true" href="#within-visual-range-wvr-workflow">#</a></h2>
+<p>Generally, use the following workflow for WVR:</p>
+<ol>
+<li>Enter Vertical Scan mode. This automatically turns on the EO system and defaults to IR missiles if equipped.
+<ol>
+<li>If you want to use a radar-guided missile from this mode, turn on the radar and select the desired missile.</li>
+</ol>
+</li>
+<li>Fly so the enemy aircraft is within the scan zone. Note that the scan zone extends upward about two more HUD lengths.</li>
+<li>Press the Target Lock button to transition to STT.
+<ol>
+<li>If you’re unable to lock the target, switch to Bore mode, use the Throttle Designator control to slew the circle so it is superimposed on the target, and press the Target Lock button to transition to STT</li>
+</ol>
+</li>
+<li>Employ weapons as required.</li>
+</ol>
+<p>Alternatively, use the following workflow to lock an off-boresight target in a dogfight:</p>
+<ol>
+<li>Enter HMD Helmet Mode</li>
+<li>Using your head tracker or VR headset, look at the enemy so that the targeting ring is superimposed on the enemy.</li>
+<li>Press the Target Lock button to transition to STT.</li>
+<li>Employ weapons as required.</li>
+</ol>
+<h2 id="guns-workflow">Guns Workflow<a hidden class="anchor" aria-hidden="true" href="#guns-workflow">#</a></h2>
+<ol>
+<li>
+<p>Press the Cannon button to switch to the guns. By default, you’ll be in Gun Funnel mode with a funnel appropriate for a target with a 20 meter wingspan. (F-14: 11-20m, F-15: 13m, F-16: 10m, F/A-18: 14m)</p>
+<p><img loading="lazy" src="images/Untitled%205.png" alt=""  />
+</p>
+</li>
+<li>
+<p>Maneuver so the target is within the HUD frame.</p>
+</li>
+<li>
+<p>Press the Target Lock button to transition to Lead Computed Optical Sight (LCOS).</p>
+<p><img loading="lazy" src="images/Untitled%206.png" alt=""  />
+</p>
+</li>
+<li>
+<p>Align the target marker in the center of the aiming crosshair.</p>
+</li>
+<li>
+<p>Employ the gun as required.</p>
+</li>
+</ol>
+<h2 id="air-to-air-weapons">Air to Air Weapons<a hidden class="anchor" aria-hidden="true" href="#air-to-air-weapons">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Russian Designation</th>
+<th>NATO Designation</th>
+<th>Seeker Type</th>
+<th>Comparable US Missile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-60</td>
+<td>AA-8 Aphid</td>
+<td>IR</td>
+<td>AIM-9P Sidewinder</td>
+</tr>
+<tr>
+<td>R-27R/ER</td>
+<td>AA-10 Alamo</td>
+<td>SARH</td>
+<td>AIM-7 Sparrow</td>
+</tr>
+<tr>
+<td>R-27T/ET</td>
+<td>AA-10 Alamo</td>
+<td>IR</td>
+<td>No counterpart</td>
+</tr>
+<tr>
+<td>R-73</td>
+<td>AA-11 Archer</td>
+<td>IR</td>
+<td>AIM-9M Sidewinder</td>
+</tr>
+<tr>
+<td>R-77</td>
+<td>AA-12 Adder</td>
+<td>ARH</td>
+<td>AIM-120 AMRAAM</td>
+</tr>
+</tbody>
+</table>
+<h1 id="air-to-ground-combat">Air to Ground Combat<a hidden class="anchor" aria-hidden="true" href="#air-to-ground-combat">#</a></h1>
+<p>The MiG-29 can use unguided rockets and bombs. It’s not a precision bomber- think of it more like a high-speed airborne artillery barrage.</p>
+<h2 id="rockets-s-8-s-24">Rockets (S-8, S-24)<a hidden class="anchor" aria-hidden="true" href="#rockets-s-8-s-24">#</a></h2>
+<blockquote>
+<p>💥 Rockets are my preferred air to ground weapon in the MiG-29. &gt;some tips:</p>
+<p>Rockets are an area weapon, not a precision weapon. Distribute &gt;them over a target area.</p>
+<p>Rockets require you to dive onto your target, so they’re best &gt;used when the enemy has no AAA or MANPADS and limited small &gt;arms. They can also be used when flying under the radar of &gt;older SAM systems.</p>
+<p>”One pass, haul ass” is a winning strategy. Unleash all of your rockets in one quick attack and then leave.</p>
+</blockquote>
+<ol>
+<li>Select Air to Ground Mode.</li>
+<li>Repeatedly press the Weapon Change button to cycle the selected weapon stations until the equipped rocket pods are selected.</li>
+<li>A circular reticle will appear in the HUD. Fly to superimpose the circle over the target area.</li>
+<li>Wait for the Launch Authorization symbol to appear on the HUD.</li>
+<li>When in range, hold the Weapon Fire button to fire the rockets.</li>
+</ol>
+<h2 id="low-drag-bombs-fab-general-purpose-bomb">Low-Drag Bombs (FAB General Purpose Bomb)<a hidden class="anchor" aria-hidden="true" href="#low-drag-bombs-fab-general-purpose-bomb">#</a></h2>
+<ol>
+<li>Select Air to Ground Mode.</li>
+<li>Repeatedly press the Weapon Change button to cycle the selected weapon stations until the equipped bombs are selected.</li>
+<li>A circular reticle will appear in the HUD. Dive towards the target to superimpose the circle over the target.</li>
+<li>Wait for the Launch Authorization symbol to appear on the HUD.</li>
+<li>Press and hold the Weapon Fire button to release the bomb.</li>
+</ol>
+<h2 id="high-drag-bombs-rbk-cluster-bomb-kgmu-2-dispenser-betab-500-concrete-piercing-bomb">High-Drag Bombs (RBK Cluster Bomb, KGMU-2 Dispenser, BetAB-500 Concrete Piercing Bomb)<a hidden class="anchor" aria-hidden="true" href="#high-drag-bombs-rbk-cluster-bomb-kgmu-2-dispenser-betab-500-concrete-piercing-bomb">#</a></h2>
+<ol>
+<li>Select Air to Ground Mode.</li>
+<li>Repeatedly press the Weapon Change button to cycle the selected weapon stations until the equipped bombs are selected.</li>
+<li>A circular reticle will appear in the HUD. Fly the appropriate delivery approach to superimpose the circle over the target.</li>
+<li>Press and hold the Weapon Fire button. This will not release the bombs yet! Instead, a steering ring will appear in the HUD.</li>
+<li>Fly to place the tip of the “aircraft tail” symbol precisely on the center of the steering ring.</li>
+<li>Continue to hold the Weapon Fire button as the Time-To-Release scale on the right side of the HUD counts down.</li>
+<li>The bomb will release if the release parameters are met when the Time-To-Release scale reaches zero.</li>
+</ol>
+<h2 id="guns">Guns<a hidden class="anchor" aria-hidden="true" href="#guns">#</a></h2>
+<ol>
+<li>Select Air to Ground Mode.</li>
+<li>Press the Cannon button to select the gun</li>
+<li>A circular reticle will appear in the HUD. Dive towards the target to superimpose the circle over the target.</li>
+<li>Press the Weapon Fire button to employ the gun.</li>
+</ol>
+<h1 id="spo-15-rwr">SPO-15 RWR<a hidden class="anchor" aria-hidden="true" href="#spo-15-rwr">#</a></h1>
+<p>The SPO-15 RWR shows:</p>
+<ul>
+<li>Category, direction and intensity of one primary threat</li>
+<li>Categories and directions of multiple secondary threats</li>
+</ul>
+<p><img loading="lazy" src="images/Untitled%207.png" alt=""  />
+</p>
+<table>
+<thead>
+<tr>
+<th>Cyrillic</th>
+<th>English Cockpit Mod</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>П</td>
+<td>A</td>
+<td>Airborne</td>
+</tr>
+<tr>
+<td>З</td>
+<td>S</td>
+<td>Short Range</td>
+</tr>
+<tr>
+<td>X</td>
+<td>M</td>
+<td>Medium Range</td>
+</tr>
+<tr>
+<td>H</td>
+<td>L</td>
+<td>Long Range</td>
+</tr>
+<tr>
+<td>F</td>
+<td>E</td>
+<td>Early Warning</td>
+</tr>
+<tr>
+<td>C</td>
+<td>W</td>
+<td>AWACS</td>
+</tr>
+</tbody>
+</table>
+<h1 id="reference-material">Reference Material<a hidden class="anchor" aria-hidden="true" href="#reference-material">#</a></h1>
+<p><a href="https://www.digitalcombatsimulator.com/upload/iblock/463/DCS%20MIG-29%20Flight%20Manual%20EN.pdf">DCS Flaming Cliffs MiG-29 Flight Manual</a></p>
+<p>Crash Course Video Tutorial by Enigma
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/HrtYlh3oWp0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+</p>
+<p><strong><code>GAF T.O. 1F-MIG29-1</code></strong></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/digital-combat-simulator/">Digital Combat Simulator</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

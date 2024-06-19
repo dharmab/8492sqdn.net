@@ -6,30 +6,56 @@
     <description>Recent content on Osean Air Force 8492nd Squadron</description>
     <generator>Hugo -- 0.127.0</generator>
     <language>en</language>
+    <lastBuildDate>Wed, 19 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DCS World Performance and Settings Guide</title>
       <link>http://localhost:1313/guides/dcs/performance/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 19 Jun 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/guides/dcs/performance/</guid>
-      <description>Recommended system, graphical and gameplay settings for DCS World. Last updated May 2024 for DCS 2.9.5.55300.
-Photo by Generic (@generic_dcs)
-Recommended Specs Storage You MUST install DCS on an SSD (solid state) instead of an HDD (spinning disk). The base game is 160GB and a large install is 700GB+. A dedicated 1TB or larger high performance SSD is recommended.
-Tom&amp;rsquo;s Hardware: Best SSDs
-An SSD is absolutely essential. When installed on a spinning disk, DCS can take over 20 minutes to load into a mission and may crash during loading or during gameplay.</description>
+      <description>Recommended system, graphical and gameplay settings for DCS World</description>
+    </item>
+    <item>
+      <title>HOTAS Buyer&#39;s Guide for Combat Flight Simulation</title>
+      <link>http://localhost:1313/guides/hotas/</link>
+      <pubDate>Wed, 19 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/guides/hotas/</guid>
+      <description>Flight sticks, throttles and pedals organized into recommended, recommend with reservations, and not recommended.</description>
+    </item>
+    <item>
+      <title>DCS World: Stuff to Do!</title>
+      <link>http://localhost:1313/guides/dcs/content/</link>
+      <pubDate>Wed, 19 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/guides/dcs/content/</guid>
+      <description>A curated list of training, singleplayer and multiplayer content for DCS providing hundreds of hours of gameplay.</description>
+    </item>
+    <item>
+      <title>DCS A-4E-C Mod Quick Start Guide</title>
+      <link>http://localhost:1313/guides/dcs/aircraft/a-4e-c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/guides/dcs/aircraft/a-4e-c/</guid>
+      <description>Getting started with the best mod for DCS World.</description>
+    </item>
+    <item>
+      <title>DCS Flaming Cliffs: MiG-29 Fulcrum Quick Start Guide</title>
+      <link>http://localhost:1313/guides/dcs/aircraft/fc-mig-29/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/guides/dcs/aircraft/fc-mig-29/</guid>
+      <description>Getting started with the fastest red fighter in DCS World.</description>
+    </item>
+    <item>
+      <title>DCS Livery Folder Names</title>
+      <link>http://localhost:1313/guides/dcs/liveries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/guides/dcs/liveries/</guid>
+      <description>List of Livery folder names for each DCS World module.</description>
     </item>
     <item>
       <title>Wardogs of Sand Island</title>
       <link>http://localhost:1313/missions/wardogs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/missions/wardogs/</guid>
-      <description>An adaptation of the first several missions of Ace Combat 5: The Unsung War into DCS World as a series of 4-player cooperative missions.
-Requirements: Marianas terrain, F-4E Phantom
-01//SHOREBIRDS While attempting to force a spy plane to land, Wardog Squadron encounters unknown fighters.
-Download MIZ
-02//OPEN WAR Wardog Squadron intercepts recon UAVs launched by an unidentified ship.
-Download MIZ
-CHANGELOG </description>
+      <description>An adaptation of the first several missions of &lt;em&gt;Ace Combat 5: The Unsung War&lt;/em&gt; into &lt;em&gt;DCS World&lt;/em&gt; as a series of 4-player cooperative missions.</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DCS Livery Folder Names on Osean Air Force 8492nd Squadron</title>
+    <link>http://localhost:1313/guides/dcs/</link>
+    <description>Recent content in DCS Livery Folder Names on Osean Air Force 8492nd Squadron</description>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 19 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/guides/dcs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DCS World Performance and Settings Guide</title>
+      <link>http://localhost:1313/guides/dcs/performance/</link>
+      <pubDate>Wed, 19 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/guides/dcs/performance/</guid>
+      <description>Recommended system, graphical and gameplay settings for DCS World</description>
+    </item>
+    <item>
+      <title>DCS A-4E-C Mod</title>
+      <link>http://localhost:1313/guides/dcs/aircraft/a-4e-c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/guides/dcs/aircraft/a-4e-c/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DCS World Content</title>
+      <link>http://localhost:1313/guides/dcs/content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/guides/dcs/content/</guid>
+      <description>A curated list of training, singleplayer and multiplayer content for DCS providing hundreds of hours of gameplay.</description>
+    </item>
+    <item>
+      <title>Flaming Cliffs: MiG-29 Fulcrum</title>
+      <link>http://localhost:1313/guides/dcs/aircraft/fc-mig-29/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/guides/dcs/aircraft/fc-mig-29/</guid>
+      <description>Getting started with the fastest red fighter in DCS World.</description>
+    </item>
+  </channel>
+</rss>

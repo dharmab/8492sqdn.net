@@ -4,8 +4,7 @@ title: Osean Air Force 8492nd Squadron
 theme: PaperMod
 
 mainsections:
-  - featuredguides
-  - missions
+  - guides
   - posts
 languages:
   en:
@@ -20,9 +19,13 @@ languages:
         - name: Updates
           url: posts/
 params:
+  showtoc: true
   homeInfoParams:
     Title: "Guides, Missions and Experimental Software for DCS World and Falcon BMS"
-    Content: ""
+    Content: "Written and curated by a human. Ad-free forever."
+    Author: "Zaid"
+  footer:
+    hideCopyright: true
 privacy:
   youtube:
     disable: false
