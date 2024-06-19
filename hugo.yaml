@@ -22,7 +22,7 @@ params:
   showtoc: true
   homeInfoParams:
     Title: "Guides, Missions and Experimental Software for DCS World and Falcon BMS"
-    Content: "Written and curated by a human. Ad-free forever."
+    Content: "Written and curated by [a human](https://www.dharmab.com). Ad-free forever."
     Author: "Zaid"
   footer:
     hideCopyright: true
