@@ -29,7 +29,9 @@ See Tuuvas' setup guides:
 
 ([Not suitable for Falcon BMS](https://forum.falcon-bms.com/topic/23233/throttle-up-down-key-bindings-are-too-coarse?_=1683335735387&lang=en-US))
 
-### FlyDigi Vader 3 Pro (Xbox style gamepad with 6 additional mappable buttons and a gyro accurate enough to use as a primary flight control)
+### FlyDigi Vader 3 Pro
+
+Xbox style gamepad with 6 additional mappable buttons and a gyro accurate enough to use as a primary flight control.
 
 ![](images/Untitled.jpeg)
 
