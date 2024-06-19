@@ -1,0 +1,29 @@
+baseURL: https://8492sqdn.net
+languageCode: en-us
+title: Osean Air Force 8492nd Squadron
+theme: PaperMod
+
+mainsections:
+  - featuredguides
+  - missions
+  - posts
+languages:
+  en:
+    languageName: English
+    weight: 1
+    menu:
+      main:
+        - name: Guides
+          url: guides/
+        - name: Missions
+          url: missions
+        - name: Updates
+          url: posts/
+params:
+  homeInfoParams:
+    Title: "Guides, Missions and Experimental Software for DCS World and Falcon BMS"
+    Content: ""
+privacy:
+  youtube:
+    disable: false
+    privacyEnhanced: true
