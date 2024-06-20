@@ -78,6 +78,10 @@ Official tutorials
 
 {{< youtube-playlist PLml_c09ciuctIreNtpLoPg1DByY5upg6v >}}
 
+[Dave Gaming](https://www.youtube.com/watch?v=mI05H02yG4I&list=PLgviWHmfcBNUgsFDxsdwy66NfykKrn8Dn) - Quick yet detailed weapon employment tutorials
+
+{{< youtube-playlist PLgviWHmfcBNUgsFDxsdwy66NfykKrn8Dn >}}
+
 [Iain Christie](https://www.youtube.com/playlist?list=PL0jjGRFQGC0pFbi5Be73w71d_ybeTo_bE) - Goes into much greater depth on weapons employment than the official manual
 
 {{< youtube-playlist PL0jjGRFQGC0pFbi5Be73w71d_ybeTo_bE >}}
