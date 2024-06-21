@@ -95,9 +95,9 @@ There are better sticks at MSRP, but you can find these used for a good price. D
 
 Significantly more expensive than an Orion 2. Only consider this if shipping and import fees make it cheaper than a Winwing.
 
-![](images/Untitled%201.jpeg)
-
-![](images/Untitled%202.webp)
+ | 
+-|-
+![](images/Untitled%201.jpeg)|![](images/Untitled%202.webp)
 
 ### RealSimulator F-16 side grip with FSSB-R3 base
 
@@ -142,13 +142,10 @@ Customizable, best value!
 
 > 💡 The Mini version is intended for use with a separate mount; The Mini Plus/Standard/Max versions can be used as desktop devices out of the box. You can make a desktop plate for the Mini from some scrap wood.
 
-![](images/Untitled%2012.png)
-
-![https://preview.redd.it/vkb-hotas-phase-one-v0-cmnovjo37xcb1.jpg?width=1800&format=pjpg&auto=webp&s=4cb26c622a994bfc344131a2c1b3139b7cc2eba7](https://preview.redd.it/vkb-hotas-phase-one-v0-cmnovjo37xcb1.jpg?width=1800&format=pjpg&auto=webp&s=4cb26c622a994bfc344131a2c1b3139b7cc2eba7)
-
-![https://preview.redd.it/vkb-hotas-phase-one-v0-lfemjs8t6xcb1.jpg?width=1800&format=pjpg&auto=webp&s=2ede2ae90166f2022b7d8dd86d86bc63f6b9c242](https://preview.redd.it/vkb-hotas-phase-one-v0-lfemjs8t6xcb1.jpg?width=1800&format=pjpg&auto=webp&s=2ede2ae90166f2022b7d8dd86d86bc63f6b9c242)
-
-![](images/Untitled%2013.png)
+ |  
+-|-
+![](images/Untitled%2012.png)|![https://preview.redd.it/vkb-hotas-phase-one-v0-cmnovjo37xcb1.jpg?width=1800&format=pjpg&auto=webp&s=4cb26c622a994bfc344131a2c1b3139b7cc2eba7](https://preview.redd.it/vkb-hotas-phase-one-v0-cmnovjo37xcb1.jpg?width=1800&format=pjpg&auto=webp&s=4cb26c622a994bfc344131a2c1b3139b7cc2eba7)
+![https://preview.redd.it/vkb-hotas-phase-one-v0-lfemjs8t6xcb1.jpg?width=1800&format=pjpg&auto=webp&s=2ede2ae90166f2022b7d8dd86d86bc63f6b9c242](https://preview.redd.it/vkb-hotas-phase-one-v0-lfemjs8t6xcb1.jpg?width=1800&format=pjpg&auto=webp&s=2ede2ae90166f2022b7d8dd86d86bc63f6b9c242)|![](images/Untitled%2013.png)
 
 ### Winwing Orion 2 F/A-18
     
@@ -229,11 +226,9 @@ Only if you find a *very* good used price. Worse than the Thrustmaster TWCS in e
 
 Bundle of the Winwing Orion 2 F-16EX Viper stick and Orion 2 throttle. Choice of F/A-18, F-15E and F-15EX throttle grips available. A close match to the real controls of an A-10 or F-15E.
 
-![](images/Untitled%2024.png)
-
-![](images/Untitled%2025.png)
-
-![](images/Untitled%2026.png)
+ | | 
+-|-|-
+![](images/Untitled%2024.png)|![](images/Untitled%2025.png)|![](images/Untitled%2026.png)
 
 ## Recommended with Reservations
 
@@ -293,9 +288,9 @@ Single axis, no toe brakes
 
 Single axis, no toe brakes.
 
-![](images/Untitled%2029.png)
-
-![](images/Untitled%2030.png)
+ | 
+-|-
+![](images/Untitled%2029.png)|![](images/Untitled%2030.png)
 
 ### MFG Crosswind V3
     
@@ -305,7 +300,6 @@ Single axis, no toe brakes.
     
 ![](images/Untitled%2032.png)
     
-
 ## Recommended with Reservations
 
 ### Winwing Orion Metal Flight Rudder Pedals
