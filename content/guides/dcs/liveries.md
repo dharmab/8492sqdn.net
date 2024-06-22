@@ -11,8 +11,6 @@ Folder names are case-insensitive.
 
 Liveries are restricted by country. To unlock all liveries, either use the “CJTF Blue” and “CJTF Red” factions, or run https://github.com/LombardiDaniel/dcs-livery-unlocker after each game update.
 
-**Errors? Additions? Contact `the.human.zaid` on Discord**
-
 Module|Folder Name
 -|-
 A-4E-C Community mod|A-4E-C
@@ -26,6 +24,7 @@ AV-8B|AV8BNA
 C-101 Aviojet|C-101CC
 C-101 Aviojet|C-101EB
 Christen Eagle II|Christen Eagle II
+F-4E|F-4E-45MC
 F-5E|F-5E
 F-5E|F-5E-3
 F-14A (Early)|F-14A-95-GR
