@@ -557,6 +557,10 @@ Occasionally, something in the [Saved Games folder](#saved-games-folder) trigger
 
 Rename the Saved Games folder to `%userprofile%/Saved Games/DCS.backup`, then launch DCS. It will reset all of your settings including graphics settings, controls, player profiles, etc. to default. If this fixes your crash, you can then copy the files from the backup back into the Saved Games folder a piece at a time (or reconfigure the game from scratch).
 
+### Test Memory with Memtest86+
+
+Use [Memtest86+](https://www.memtest.org/) to test your system's memory overnight.
+
 # Saved Games Folder
 
 Some steps above reference the “Saved Games folder”, which is located in the following places:
