@@ -35,6 +35,10 @@ Ideally, use an upgraded CPU cooler.
 
 DCS World requires 16GB+ RAM minimum. 32GB-128GB RAM is recommended for large multiplayer servers and the Syria map.
 
+You should ideally use two sticks of RAM and not four sticks. Most systems have lower performance with four sticks due to motherboard and CPU bandwidth limits. If you use overclocked RAM, you are more likely to have stability issues with 4 sticks than with 2.
+
+When purchasing RAM, match the frequency and timings of the RAM to the CPU manufacturer's recommendation. The recommendation may vary by specifc CPU and motherboard. AMD provides a table of their test results with overclocked memory [here](https://www.amd.com/en/products/processors/ryzen-compatible-memory.html). On Intel systems, you are generally limited by the motherboard. Check with the manufacturer of the RAM, as some provide tables on their websites for selecting an appropriate kit.
+
 For new builds, I strongly recommend 32GB of RAM as a bare minimum.
 
 ## GPU
@@ -209,7 +213,7 @@ If you have an AMD Ryzen 7000 Series or newer CPU, install the [Xbox Game Bar](h
 
 If you have an upgraded CPU cooler, use [Ryzen Master](https://www.amd.com/en/technologies/ryzen-master) to overclock your CPU.
 
-Be sure to enable DOCP/EOCP in your motherboard settings if your RAM supports it! *I measured a 13% CPU performance gain in 3DMark toggling it on and off on my AMD system.*
+Be sure to enable DOCP/EOCP/EXPO in your motherboard settings if your RAM supports it! *I measured a 13% CPU performance gain in 3DMark toggling it on and off on my AMD system.*
 
 ## AMD GPU Tweaks
 
