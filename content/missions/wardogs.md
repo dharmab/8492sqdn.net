@@ -18,7 +18,7 @@ Wardog Squadron intercepts recon UAVs launched by an unidentified ship.
 
 _COMING AFTER THE JULY 3RD PATCH_
 
-## 03A//NARROW MARGINE
+## 03A//NARROW MARGIN
 
 Osean fighters scramble to defend the Port of St. Hewlett and the _OFS Kestrel_ from waves of Yuktobanian attack aircraft.
 
