@@ -56,6 +56,6 @@ _COMING SOON_
 
  ### 06B//VENGEANCE
 
- Sink the _Scinfaxi_!.
+ Sink the _Scinfaxi!_
  
 _COMING SOON_
