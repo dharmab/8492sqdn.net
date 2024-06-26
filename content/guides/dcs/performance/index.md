@@ -80,8 +80,11 @@ A head tracker is ideal for anyone who is not using VR. It is almost essential e
 
 I do not recommend:
 
-- NaturalPoint TrackIR: Too expensive compared to competition. Fragile infrared light clip. Lower refresh rates than competition. Official software has not been updated in a long time, compared to OpenTrack receiving new quality of life features.
-- Tobii eye trackers. The head tracking is too coarse and oversmoothed for flight simulation. A real-life friend who tried to use one for flight simulation described it as feeling drunk.
+- NaturalPoint TrackIR: Too expensive compared to competition. Fragile infrared light clip. Lower refresh rates than competition. Official software has not been updated in a long time, compared to OpenTrack receiving new quality of life features. No compelling reason to buy one when equivalent hardware can be had for less than half the price.
+
+I have heard mixed experiences about:
+
+- Tobii Eye Tracker 5. Initially I heard from users complaining coarse and oversmoothed tracking. A real-life friend who tried to use one for flight simulation described it as feeling drunk. More recently, I have heard this improved with software updates, but I haven't been able to verify this personally.
 
 # Virtual Reality
 
