@@ -22,7 +22,7 @@ params:
   footer:
     hideCopyright: true
   editPost:
-    URL: "https://github.com/dharmab/8492sqdn.net/content"
+    URL: "https://github.com/dharmab/8492sqdn.net/edit/main/content"
     Text: "Edit this page on GitHub!"
     appendFilePath: true
   homeInfoParams:
