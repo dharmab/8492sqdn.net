@@ -30,31 +30,31 @@ After reaching open waters, the _Kestrel_ must run a Yuktobanian blockade.
 
 _COMING SOON_
 
-### 04A//FIRST FLIGHT
+## 04A//FIRST FLIGHT
 
 Wardog Squadron's desperately defends their home base from Yuke strategic bombers.
 
 _COMING SOON_
 
-### 04B//TRANSFER ESCORT
+## 04B//TRANSFER ESCORT
 
 Wardog's new commander is ambushed by Yuke fighters during a ferry flight.
 
 _COMING SOON_
 
-### 05//RENDEZVOUS
+## 05//RENDEZVOUS
 
 Osea regroups their carriers into a formidable fleet, and holds out against waves of naval aircraft.
 
 _COMING SOON_
 
-### 06A//VANGUARD
+## 06A//VANGUARD
 
  A large Yuktobanian force advances directly toward Sand Island. Wardog must sink the battle group before their home is overrun.
 
 _COMING SOON_
 
- ### 06B//VENGEANCE
+ ## 06B//VENGEANCE
 
  Sink the _Scinfaxi!_
  
