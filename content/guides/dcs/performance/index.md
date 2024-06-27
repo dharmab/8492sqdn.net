@@ -351,9 +351,7 @@ If you use a Virtual Reality headset, there are some additional tweaks and consi
 
 ## Drivers
 
-If you have an Nvidia graphics card, install the latest drivers.
-
-AMD drivers have historically had unstable VR performance between versions; the best performance may or may not be the latest driver. As of January 2024, the RX 6000 series works well on the latest driver, while the RX 7000 series is sometimes hit or miss for different people.
+In most cases, you should install the latest drivers for your GPU. In some cases a new driver may have a performance issue for VR and you may need to install an older version.
 
 ## Prefer Standalone Over Steam
 
