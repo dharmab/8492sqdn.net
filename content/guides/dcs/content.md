@@ -182,6 +182,10 @@ Supplementary resources for BFM:
 
 {{< youtube 8N0rRTvHGBY >}}
 
+Note that DCS is a flawed simulation of real life. If you are mostly interested in milsim and roleplaying real tactices, the above resources are useful. If you are interested in optimizing your performance, you should learn the game mechanics, not just the real tactics.
+
+{{< youtube A9lmDbSgO2A >}}
+
 ## Advanced Topics
 
 Learn how to:
