@@ -65,9 +65,19 @@ Some USB devices such as HOTASes may exhibit jitter or other issues when connect
 
 ![](images/usb-pci-card.jpeg)
 
-Your motherboard has a limited number of USB devices and limited amount of USB bandwidth it can support. Flight simulator devices can push past these limits, especially when using some of the more advanced head trackers/webcams, VR headsets, and USB displays. If you notice these devices having issues, try adding a USB PCIe expansion card to your system and moving some devices to the expansion card. 
+Your motherboard has a limited number of USB devices and limited amount of USB bandwidth it can support. Each USB controller chip can support 127 USB devices- but note that a single physical device often consumes multiple virtual device slots! Flight simulator devices can push past these limits, especially when using some of the more advanced head trackers/webcams, VR headsets, and USB displays. If you notice these devices having issues, you may need additional USB controller chips.
 
-Note that the 4-port and 7-port expansion cards typically have the same bandwidth and device count limits. Also note that you should purchase a reputable card with an independent USB controller. Cheaper cards are just internal hubs and won’t solve this issue, and in the worst case can cause system instability.
+Some motherboards have a separate USB controller for the front and rear I/O, which may extend this limit. Other motherboards may have multiple controllers for the rear I/O. consult your motherboard manual to determine which physical ports correspond to which controllers.
+
+You can also add a USB PCIe expansion card to your system and moving some devices to the expansion card. My friend and I have tested a few of the cheaper and lower end PCIe cards and found them lacking. The very cheapest cards do not actually contain a dedicated controller chip and are simply internal hubs. With other cheap cards we encountered issues such as:
+
+- Cards failing after a few weeks of driving a VR headset
+- Driver incompatibilies
+- System stability issues such as BSOD crashes and boot loops
+
+In the worst case, a malfunctioning USB card can damage your motherboard through the PCIe port.
+
+The only reliable brand we've found is [Startech](https://www.startech.com/en-ca). While they are expensive, they are the gold standard for commercial systems. We particularly recommend this [4 port card](https://www.amazon.com/StarTech-com-Express-SuperSpeed-Dedicated-Channels/dp/B00HJZEA2S).
 
 # Head Tracking
 
@@ -91,7 +101,30 @@ I do not recommend:
 > 3. You are comfortable installing software from GitHub and very carefully reading technical instructions written by software engineers
 > 4. You have a head tracker to fall back on when updates break VR support from time to time
 
-There are no perfect VR headsets, but there are a few worth consideration for DCS:
+There are no perfect VR headsets, but there are a few worth consideration for DCS. Based on our testing, we currently recommend the **Pimax Crystal Light** as our primary recommendation and the **Meta Quest 3** as a budget option. 
+
+We also recommend using IEMs for audio instead of the mediocre speakers included with most headsets. For budget IEMs, I like the [7HZ x Crinacle Zero:2](https://www.linsoul.com/products/7hz-x-crinacle-zero-2) and [Moondrop CHU II](https://moondroplab.com/en/products/chu-ii).
+
+## [Pimax Crystal Light](https://pimax.com/pages/crystal-light)
+
+![](images/pimax-crystal-light.png) 
+
+**Pros**|
+-|
+Decent Field of View (104x104)
+Available as a headset-only
+Excellent display with great pixel density (35 PPD)
+Available with or without controllers
+Offers both external lighthouse and inside-out tracking options, allowing flexible choice between convenience or tracking fidelity
+
+**Cons**|
+-|
+Expensive when bundled with controllers or if including the cost of lighthouses
+Heavy and bulky, though lighter than the standard Pimax Crytsal
+Some users report issues with inside-out tracking
+No eye tracking
+Mixed experiences with customer support
+Mediocre microphone, no speakers
 
 ## [Meta Quest 3](https://www.meta.com/quest/quest-3/)
 
@@ -99,19 +132,22 @@ There are no perfect VR headsets, but there are a few worth consideration for DC
 
 **Pros**|
 -|
+Above-average Field of View (110x96)
 Relatively affordable
-Easiest to configure for PC use
+Easy to configure for PCVR use
 Good warranty with easy returns/exchanges
 Also good for roomscale
+Standalone capbilities
 Includes controllers
 
 **Cons**|
 -|
-Requires either excellent/dedicated wifi equipment or a third party charging+link cable for long sessions
-Display is OK but not perfect
+Requires a quality wifi5/wifi6 dedicated router or wireless access point *or* a third party charging+link cable for long sessions
+Significantly pixel density than our other recommendation (25 PPD)
 Significant compression artifacts including image noise and color banding
-Mandatory Oculus/Meta software updates sometimes cause breaking issues
+Forced Oculus/Meta software updates contain breaking changes and sometimes unfixable issues
 No eye tracking
+Medicore microphone and speaker quality
 
 ## [Pimax Crystal](https://pimax.com/crystal/)
 
@@ -119,19 +155,20 @@ No eye tracking
 
 **Pros**|
 -|
-Excellent display
+Decent Field of View (104x104)
+Excellent display with great pixel density (35 PPD)
 Excellent eye tracking
 Available with or without controllers
+Offers both external lighthouse and inside-out tracking options, allowing flexible choice between convenience or tracking fidelity
 
 **Cons**|
 -|
 Expensive
-Large & heavy
-Complicated software
-Lower quality of customer support
-Poor for roomscale
-Poor head tracking
-Controllers have poor tracking
+Battery required, even for wired usage
+Heavy and bulky
+Some users report issues with inside-out tracking
+Mixed experiences with customer support
+Mediocre microphone and speaker quality
 
 ## [Bigscreen Beyond](https://store.bigscreenvr.com/products/bigscreen-beyond)
 
@@ -139,21 +176,25 @@ Controllers have poor tracking
 
 **Pros**|
 -|
-Excellent display
-Lightweight & compact
+Excellent OLED display with good pixel density (32 PPD)
+Lightweight with a small form factor
 Custom fitted for maximum comfort
 High quality customer support
-Best microphone
-
+High quality microphone
 **Cons**|
 -|
-Expensive
-No eye tracking
+Slightly lower field of view (102x99)
+Requires external lighthouses for tracking
+Expensive, especially when including the price of the recommended lighthouses
 IPD is not user adjustable - cannot share headset with someone who has a different IPD
-Each user needs a separate custom fitted faceplate
-High restocking fee once the custom fitted parts are made
-No controllers available - roomscale requires controllers and lighthouses from another brand
+Each user needs a separate custom fitted gasket cushion
+High restocking fee after shipping
+No controllers available - roomscale requires controllers from another brand
 Not compatible with eyeglasses - users with vision deficiency will need prescription inserts
+Due to the combination of panel and lens, some users find the image to have low luminance and high image persitence, similar to the ghosting on an LCD monitor with a VA panel
+Glare in high contrast scenes
+No eye tracking
+No integrated audio
 
 ## Why not…?
 
@@ -165,7 +206,7 @@ Not compatible with eyeglasses - users with vision deficiency will need prescrip
 - Some users report eye & face tracking hardware failure due to sweat/moisture.
 - The slightly better controllers on the Quest Pro compared to the Quest 3 are of limited use for stationary simulations.
 - There are *some* advantages - good comfort, ability to see your HOTAS and keyboard through the gap between the headset and your face, and the included controllers are great for roomscale games. But the advantages aren’t worth the tradeoffs for most people, given this price point.
-- Awkward middle child between the Quest 3 and Crystal.
+- Awkward middle child between the Meta Quest 3 and Pimax Crystal.
 
 ### HP Reverb G2
 
@@ -175,17 +216,18 @@ Not compatible with eyeglasses - users with vision deficiency will need prescrip
 
 ### Valve Index
 
-- The Index is severely outdated hardware, and overpriced compared to the Meta Quest 3.
+- The Index is severely outdated hardware, overpriced and underperforming compared to the Meta Quest 3 and other current options.
 
 ### Apple Vision Pro
 
-- Not compatible with OpenXR, which is required for DCS.
+- Not officially compatible with OpenXR, which is required for DCS/BMS.
+- A workaround is available using ALVR streaming, but it has no guarantees of continuing to work.
 
 # Windows Settings and Tweaks
 
 ## General Tweaks
 
-If you are running an Intel [Alder Lake](https://en.wikipedia.org/wiki/Alder_Lake) CPU or AMD [Ryzen 7000](https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors#Ryzen_7000_series) Series CPU or newer, upgrade to Windows 11 to use the new Thread Director.
+If you are running an Intel [Alder Lake](https://en.wikipedia.org/wiki/Alder_Lake) CPU or AMD [Ryzen 7000](https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors#Ryzen_7000_series) Series CPU or newer, upgrade to Windows 11 to use the new Thread Director. Alternatively, you may be able to disable your efficiency cores (E-Cores) in your motherboard settings, but this may impact performance and battery life in other applications.
 
 Install any available Windows updates.
 
@@ -197,23 +239,31 @@ Uninstall all bloatware packaged by the manufacturer of your computer.
 
 Disable any VPN software when playing DCS multiplayer.
 
+Third party antivirus such as Kaspersky, BitDefender, McAfee, Norton, MalwareBytes, etc. is not recommended. These cause problems with DCS in particular because they flag the Digital Rights Management (DRM) encryption of the game files as a possible threat and quarantine or delete game files randomly. Third party antivirus also tends to cause general performance issues. We recommend using the default Microsoft Defender antivirus, and [optionally adding an exception for DCS.](#Exclude-DCS-from-Microsoft-Defender-Antivirus)
+
 ## Intel CPU Tweaks
 
-Be sure to enable XMP in your motherboard settings if your RAM supports it!
+Be sure to enable [XMP](https://www.intel.com/content/www/us/en/support/articles/000095207/intel-nuc.html#:~:text=XMP%20or%20Extreme%20Memory%20Profiles,higher%20than%20standard%20memory%20speeds.) in your motherboard settings as it's often disabled by default.
 
 ## Nvidia GPU Tweaks
 
-Update your graphics drivers to the latest available version from [nvidia.com/drivers](https://nvidia.com/drivers). If you are running an outdated driver version, some options like DLSS and SSS may be grayed out in the in-game options.
+Update your graphics drivers to the latest available version from [nvidia.com/drivers](https://nvidia.com/drivers) or through [GeForce Experience](https://www.nvidia.com/en-us/geforce/geforce-experience/). If you are running an outdated driver version, some options like DLSS and SSS may be grayed out in the in-game options.
 
 Disable Hardware Accelerated GPU Scheduling in Windows settings. It increases input latency and stutter, especially on mid to high end systems when using VR.
 
+Disable [ShadowPlay](https://www.nvidia.com/en-us/geforce/geforce-experience/shadowplay/) if you aren't using it to record gameplay footage.
+
 ## AMD CPU Tweaks
 
-If you have an AMD Ryzen 7000 Series or newer CPU, install the [Xbox Game Bar](https://apps.microsoft.com/store/detail/xbox-game-bar/9NZKPSTSNW4P) and run it while playing games. AMD’s software uses it to detect when a game is running and change CPU scheduling behavior.
+If you have the 7900X3D/7950X3D, or a Ryzen X3D CPU with *dual* CCDs, install the [Xbox Game Bar](https://apps.microsoft.com/store/detail/xbox-game-bar/9NZKPSTSNW4P) and run it while playing games. AMD’s software uses it to detect when a game is running and change CPU scheduling behavior to allow maximum performance.
 
-If you have an upgraded CPU cooler, use [Ryzen Master](https://www.amd.com/en/technologies/ryzen-master) to overclock your CPU.
+Be sure to enable [DOCP/EXPO](https://www.corsair.com/ca/en/explorer/diy-builder/memory/amd-expo-vs-docp/#:~:text=Called%20EXPO%2C%20which%20is%20short,available%20on%20the%20DDR5%20standard.) in your motherboard settings as it's often disabled by default. *I measured a 13% CPU performance gain in 3DMark toggling it on and off on my AMD system.*
 
-Be sure to enable DOCP/EOCP/EXPO in your motherboard settings if your RAM supports it! *I measured a 13% CPU performance gain in 3DMark toggling it on and off on my AMD system.*
+Adjusting [Precision Boost Overdrive 2](https://www.amd.com/en/resources/support-articles/faqs/CPU-PB2.html) optimizes power consumption and thermals, and sometimes provides a small performance benefit.
+
+<{{< youtube dfkrp25dpQ0 >}}>
+
+<{{< youtube FaOYYHNGlLs >}}>
 
 ## AMD GPU Tweaks
 
@@ -280,7 +330,7 @@ While playing the game, press `RCtrl + Pause` to open a frame rate counter widge
 
 > 💡 The CPU BOUND/GPU BOUND indicator is not accurate in all cases. To find out if you are CPU limited you must compare frame render time to framerate to determine if your GPU is rendering frames faster than the framerate.
 
-> 💡 Frame times may be inaccurate in VR if OpenXR’s Turbo Mode is enabled.
+> 💡 Frame times will be inaccurate in VR if Turbo Mode is enabled in OpenXR Toolkit/Quad Views Rendering.
 
 ## Recompile Shaders
 
@@ -354,7 +404,11 @@ AMD drivers have historically had unstable VR performance between versions; the 
 
 ## Prefer Standalone Over Steam
 
-For some reason I haven’t determined, DCS VR runs significantly worse when run through Steam than as a standalone application. For best performance, run the Standalone version of DCS directly, and don’t launch it through Steam.
+Launching DCS through SteamVR runs the game use the older OpenVR API rather than directly using the OpenXR API. This causes a performance hit.
+
+For the best performance, run the Standalone version of DCS directly with VR mode enabled in DCS settings.
+
+If you must use Steam, launch the game normally through the desktop client with VR enabled in DCS settings, rather than through SteamVR.
 
 To convert an existing Steam installation to Standalone:
 
@@ -381,11 +435,7 @@ After it’s installed, you can open the toolkit menu while playing and tweak se
 
 This can hugely reduce the number of pixels needed to render, improving performance. However, in a combat flight simulator it can also cause problems tracking small, fast moving objects outside of the focus area, such as a dogfight opponent, tracer fire, or the lights on the carrier during a night trap. It may require some tuning and user preference. Results may vary depending on the specific headset and the user’s vision and preferences. If your system is CPU bottlenecked, this might decrease your performance overall.
 
-To try this, use both [Quad Views Foveated](https://github.com/mbucchia/Quad-Views-Foveated) and [Quad Views Companion](https://github.com/TallyMouse/QuadViewsCompanion). The former implements the feature, and the latter provides a GUI for changing the settings.
-
-![My preferred settings for an HP Reverb G2 - yours will be different, because you have a different computer, headset and eyes!](DCS%20Performance%20&%20Settings%20Guide%20af42f452eb284c3d88885d623b819596/Untitled%208.png)
-
-My preferred settings for an HP Reverb G2 - yours will be different, because you have a different computer, headset and eyes!
+To try this, use both [Quad Views Foveated](https://github.com/mbucchia/Quad-Views-Foveated) and [Quad Views Companion](https://github.com/TallyMouse/QuadViewsCompanion). The former implements the feature, and the latter provides a GUI for changing the settings in `%localappdata%\Quad-Views-Foveated\settings.cfg`.
 
 Note that if you choose to use both Quad Views Rendering and OpenXR Toolkit together, you should set settings like Turbo Mode and foveated rendering/render scale in QuadViewsCompanion and leave them at the default setting in OpenXR Toolkit.
 
@@ -427,11 +477,11 @@ Additionally, you can save custom graphical settings into three different slots 
 
 You can then manually switch between these presets, or use [SkateZilla’s launcher](https://forum.dcs.world/topic/134493-the-dcs-updater-launcher-gui-utility-version-20-2023/) to automatically launch using one or the other.
 
-## Asynchronous Space Warp
+## Asynchronous Space Warp on Meta/Oculus headsets
 
 [Asynchronous Space Warp](https://developer.oculus.com/blog/asynchronous-spacewarp/) (ASW) is a technology that improves perceived smoothness in VR, at the tradeoff of locking the framerate to an integer divisor of the headset’s refresh rate. This feature is great if you can maintain your headset’s refresh rate. However, if your framerate dips below the refresh rate even slightly, it will immediately drop to 1/2 the refresh rate. It can also cause judder when using helmet-mounted displays.
 
-On Meta Quest headsets, you can toggle ASW while playing with these keys:
+On Meta Quest headsets using Link/AirLink, you can toggle ASW while playing with these keys:
 
 | Keybind | ASW | Framerate |
 | --- | --- | --- |
@@ -440,7 +490,7 @@ On Meta Quest headsets, you can toggle ASW while playing with these keys:
 | Ctrl+Num3 | Enabled | Locked |
 | Ctrl+Num4 | Auto | Unlocked |
 
-> ℹ️ My personal preference is AWS disabled and framerate unlocked (Ctrl+Num1)
+> ℹ️ My personal preference is ASW disabled and framerate unlocked (Ctrl+Num1)
 
 # Suggested Game Settings
 
@@ -525,7 +575,7 @@ Causes artifacting in both 2D and VR |
 | Pixel Density | 1.0 (If you want to enable supersampling, configure it in your headset’s software or Quad Views instead.) |
 | Force IPD Distance | Off (This configures world scale, which should be set in OpenXR Toolkit instead: https://mbucchia.github.io/OpenXR-Toolkit/other-features.html#world-scale-override) |
 | Bloom effect | Off (causes artifacting when using foveated rendering) |
-| Enable HMD Mask | On unless you are livestreaming |
+| Enable HMD Mask | On unless you are livestreaming or recording |
 | MSAA Mask Size | If set to a value below 1.0, MSAA will only be applied to the center of the display. Some users report that setting this to values other than 1.0 caused issues. |
 | VR Mirror Use DCS System Resolution | On. Turning this off decreases performance and interferes with Jester features in Heatblur modules. Use external software such as Oculus Mirror Utility for recording/livestreaming. |
 
