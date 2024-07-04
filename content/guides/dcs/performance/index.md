@@ -9,6 +9,8 @@ weight: 1
 ![](images/hero.png)
 _Photo by Generic (@generic_dcs)_
 
+_This page contains contributions from my friend Lynx._
+
 # Recommended Specs
 
 ## Storage
@@ -65,11 +67,13 @@ Some USB devices such as HOTASes may exhibit jitter or other issues when connect
 
 ![](images/usb-pci-card.jpeg)
 
-Your motherboard has a limited number of USB devices and limited amount of USB bandwidth it can support. Each USB controller chip can support 127 USB devices- but note that a single physical device often consumes multiple virtual device slots! Flight simulator devices can push past these limits, especially when using some of the more advanced head trackers/webcams, VR headsets, and USB displays. If you notice these devices having issues, you may need additional USB controller chips.
+Your motherboard has a limited number of USB devices and limited amount of USB bandwidth it can support. Each USB controller chip can support 127 USB devices- but note that a single physical device often consumes multiple virtual device slots!
 
-Some motherboards have a separate USB controller for the front and rear I/O, which may extend this limit. Other motherboards may have multiple controllers for the rear I/O. consult your motherboard manual to determine which physical ports correspond to which controllers.
+Flight simulator devices can push past these device and bandwidth limits, especially when using some of the more advanced head trackers/webcams, VR headsets, and USB displays. If you notice these devices having issues, you may need additional USB controller chips.
 
-You can also add a USB PCIe expansion card to your system and moving some devices to the expansion card. My friend and I have tested a few of the cheaper and lower end PCIe cards and found them lacking. The very cheapest cards do not actually contain a dedicated controller chip and are simply internal hubs. With other cheap cards we encountered issues such as:
+Some motherboards have a separate USB controller for the front and rear I/O, which may extend this limit. Other motherboards may have multiple controllers for the rear I/O. Consult your motherboard manual to determine which physical ports correspond to which controllers.
+
+You can add a USB PCIe expansion card to your system and move some devices to the expansion card. We have tested a few of the cheaper and lower end PCIe cards and found them lacking. The very cheapest cards do not actually contain a dedicated controller chip and are simply internal hubs. With other cheap cards we encountered issues such as:
 
 - Cards failing after a few weeks of driving a VR headset
 - Driver incompatibilies
@@ -77,7 +81,7 @@ You can also add a USB PCIe expansion card to your system and moving some device
 
 In the worst case, a malfunctioning USB card can damage your motherboard through the PCIe port.
 
-The only reliable brand we've found is [Startech](https://www.startech.com/en-ca). While they are expensive, they are the gold standard for commercial systems. We particularly recommend this [4 port card](https://www.amazon.com/StarTech-com-Express-SuperSpeed-Dedicated-Channels/dp/B00HJZEA2S).
+The only reliable brand we've found is [StarTech](https://www.startech.com). While they are expensive, they are the gold standard for commercial systems. We particularly recommend this [4 port card](https://www.amazon.com/StarTech-com-Express-SuperSpeed-Dedicated-Channels/dp/B00HJZEA2S).
 
 # Head Tracking
 
@@ -107,12 +111,11 @@ We also recommend using IEMs for audio instead of the mediocre speakers included
 
 ## [Pimax Crystal Light](https://pimax.com/pages/crystal-light)
 
-![](images/pimax-crystal-light.png) 
+![](images/pimax-crystal-light.webp) 
 
 **Pros**|
 -|
-Decent Field of View (104x104)
-Available as a headset-only
+Good field of view (104°x104°)
 Excellent display with great pixel density (35 PPD)
 Available with or without controllers
 Offers both external lighthouse and inside-out tracking options, allowing flexible choice between convenience or tracking fidelity
@@ -132,16 +135,14 @@ Mediocre microphone, no speakers
 
 **Pros**|
 -|
-Above-average Field of View (110x96)
+Decent field of view (110°x96°)
 Relatively affordable
 Easy to configure for PCVR use
 Good warranty with easy returns/exchanges
 Also good for roomscale
 Standalone capbilities
 Includes controllers
-
 **Cons**|
--|
 Requires a quality wifi5/wifi6 dedicated router or wireless access point *or* a third party charging+link cable for long sessions
 Significantly pixel density than our other recommendation (25 PPD)
 Significant compression artifacts including image noise and color banding
@@ -155,20 +156,14 @@ Medicore microphone and speaker quality
 
 **Pros**|
 -|
-Decent Field of View (104x104)
-Excellent display with great pixel density (35 PPD)
+Same Pros as Crystal Light
 Excellent eye tracking
-Available with or without controllers
-Offers both external lighthouse and inside-out tracking options, allowing flexible choice between convenience or tracking fidelity
-
 **Cons**|
--|
 Expensive
-Battery required, even for wired usage
+Requires a separate battery, even when connected to power source
 Heavy and bulky
-Some users report issues with inside-out tracking
-Mixed experiences with customer support
 Mediocre microphone and speaker quality
+Similar cons to Crystal Light: Inside-out tracking issues, mixed customer support experiences
 
 ## [Bigscreen Beyond](https://store.bigscreenvr.com/products/bigscreen-beyond)
 
@@ -182,10 +177,9 @@ Custom fitted for maximum comfort
 High quality customer support
 High quality microphone
 **Cons**|
--|
-Slightly lower field of view (102x99)
+Slightly lower field of view (102°x99°)
 Requires external lighthouses for tracking
-Expensive, especially when including the price of the recommended lighthouses
+Expensive, especially when including the price of the recommended number of lighthouses
 IPD is not user adjustable - cannot share headset with someone who has a different IPD
 Each user needs a separate custom fitted gasket cushion
 High restocking fee after shipping
@@ -227,7 +221,7 @@ No integrated audio
 
 ## General Tweaks
 
-If you are running an Intel [Alder Lake](https://en.wikipedia.org/wiki/Alder_Lake) CPU or AMD [Ryzen 7000](https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors#Ryzen_7000_series) Series CPU or newer, upgrade to Windows 11 to use the new Thread Director. Alternatively, you may be able to disable your efficiency cores (E-Cores) in your motherboard settings, but this may impact performance and battery life in other applications.
+If you are running an Intel [Alder Lake](https://en.wikipedia.org/wiki/Alder_Lake) CPU or AMD [Ryzen 7000](https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors#Ryzen_7000_series) Series CPU or newer, upgrade to Windows 11 to use the new Thread Director. Alternatively, you may be able to disable your efficiency cores (E-Cores) in your motherboard settings, but this may impact performance and power consumption in other applications.
 
 Install any available Windows updates.
 
@@ -239,7 +233,7 @@ Uninstall all bloatware packaged by the manufacturer of your computer.
 
 Disable any VPN software when playing DCS multiplayer.
 
-Third party antivirus such as Kaspersky, BitDefender, McAfee, Norton, MalwareBytes, etc. is not recommended. These cause problems with DCS in particular because they flag the Digital Rights Management (DRM) encryption of the game files as a possible threat and quarantine or delete game files randomly. Third party antivirus also tends to cause general performance issues. We recommend using the default Microsoft Defender antivirus, and [optionally adding an exception for DCS.](#Exclude-DCS-from-Microsoft-Defender-Antivirus)
+Third party antivirus such as Kaspersky, BitDefender, McAfee, Norton, MalwareBytes, etc. is not recommended. These cause problems with DCS in particular because they flag the Digital Rights Management (DRM) encryption of the game files as a possible threat and quarantine or delete game files randomly. Third party antivirus also tends to cause general performance issues. We recommend using the default Microsoft Defender antivirus, and [optionally adding an exception for DCS.](#exclude-dcs-from-microsoft-defender-antivirus)
 
 ## Intel CPU Tweaks
 
@@ -259,11 +253,11 @@ If you have the 7900X3D/7950X3D, or a Ryzen X3D CPU with *dual* CCDs, install th
 
 Be sure to enable [DOCP/EXPO](https://www.corsair.com/ca/en/explorer/diy-builder/memory/amd-expo-vs-docp/#:~:text=Called%20EXPO%2C%20which%20is%20short,available%20on%20the%20DDR5%20standard.) in your motherboard settings as it's often disabled by default. *I measured a 13% CPU performance gain in 3DMark toggling it on and off on my AMD system.*
 
-Adjusting [Precision Boost Overdrive 2](https://www.amd.com/en/resources/support-articles/faqs/CPU-PB2.html) optimizes power consumption and thermals, and sometimes provides a small performance benefit.
+Adjusting [Precision Boost Overdrive 2](https://www.amd.com/en/resources/support-articles/faqs/CPU-PB2.html) (PBO2) optimizes power consumption and thermals. Depending on your CPU cooling setup, this may also slightly improve performance.
 
-<{{< youtube dfkrp25dpQ0 >}}>
+{{< youtube dfkrp25dpQ0 >}}
 
-<{{< youtube FaOYYHNGlLs >}}>
+{{< youtube FaOYYHNGlLs >}}
 
 ## AMD GPU Tweaks
 
@@ -330,7 +324,7 @@ While playing the game, press `RCtrl + Pause` to open a frame rate counter widge
 
 > 💡 The CPU BOUND/GPU BOUND indicator is not accurate in all cases. To find out if you are CPU limited you must compare frame render time to framerate to determine if your GPU is rendering frames faster than the framerate.
 
-> 💡 Frame times will be inaccurate in VR if Turbo Mode is enabled in OpenXR Toolkit/Quad Views Rendering.
+> 💡 Frame times will be inaccurate in VR if Turbo Mode is enabled in OpenXR Toolkit/Quad Views.
 
 ## Recompile Shaders
 
