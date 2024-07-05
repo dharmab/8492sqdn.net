@@ -57,7 +57,7 @@ Since DCS uses an older graphics engine, high amounts of VRAM is more important 
 
 You should have a sufficient power supply for your CPU and GPU. **PSU wattage alone is not a good indicator of reliability under load.** 80PLUS ratings are also not useful for determining overall power delivery and efficiency performance. You need to select a PSU based on results from bench testing by knowledgeable people with the appropriate equipment.
 
-For now, we recommend anything Tier B or better on the [Cultist Tier List](https://cultists.network/140/psu-tier-list/). We're also keeping an eye on [LTTT Labs' PSU testing](https://www.lttlabs.com/categories/power-supplies) with interest.
+For now, we recommend anything Tier B or better on the [Cultist Tier List](https://cultists.network/140/psu-tier-list/). We're also keeping an eye on [LTT Labs' PSU testing](https://www.lttlabs.com/categories/power-supplies) with interest.
 
 ## USB
 
