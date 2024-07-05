@@ -55,9 +55,9 @@ Since DCS uses an older graphics engine, high amounts of VRAM is more important 
 
 ## PSU
 
-You should have a sufficient power supply for your CPU and GPU— Tier B or better on the [Cultist Tier List](https://cultists.network/140/psu-tier-list/).
+You should have a sufficient power supply for your CPU and GPU. **PSU wattage alone is not a good indicator of reliability under load.** 80PLUS ratings are also not useful for determining overall power delivery and efficiency performance. You need to select a PSU based on results from bench testing by knowledgeable people with the appropriate equipment.
 
-[PSU Tier List rev. 17.0g - Cultists Network](https://cultists.network/140/psu-tier-list/)
+For now, we recommend anything Tier B or better on the [Cultist Tier List](https://cultists.network/140/psu-tier-list/). We're also keeping an eye on [LTTT Labs' PSU testing](https://www.lttlabs.com/categories/power-supplies) with interest.
 
 ## USB
 
@@ -606,7 +606,20 @@ Occasionally, something in the [Saved Games folder](#saved-games-folder) trigger
 
 Rename the Saved Games folder to `%userprofile%/Saved Games/DCS.backup`, then launch DCS. It will reset all of your settings including graphics settings, controls, player profiles, etc. to default. If this fixes your crash, you can then copy the files from the backup back into the Saved Games folder a piece at a time (or reconfigure the game from scratch).
 
-### Test Memory with Memtest86+
+## Stability Testing
+
+A potential cause of random crashes is hardware stability issues. The two most common problems we've seen are:
+
+1. Power supply not appropriate for the system. **Wattage and 80PLUS ratings do not tell you if a power supply is reliable or correct for your system**. Modern high-end graphics card are sensitive to voltage stability, and many power supplies - even expensive, high wattage ones from major brands - do not supply stable power under load, resulting in random crashes.
+1. Unstable configuration of RAM. All of the following are risk factors for RAM instability:
+  - Using four sticks instead of two
+  - Enabling an overclocking profile EXPO/XMP/DOCP/EOCP
+  - AMD CPUs are generally more sensitive to RAM problems than Intel CPUs
+  - Having a large amount of RAM, especially over 32GB
+
+You can detect these stability problems by running stress tests on your hardware.
+
+Use [OCCT](https://www.ocbase.com/) to test your system under high graphics load.
 
 Use [Memtest86+](https://www.memtest.org/) to test your system's memory overnight.
 
