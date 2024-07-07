@@ -208,6 +208,8 @@ Learn how to:
 
 [DCS Retribution campaign generator](https://github.com/dcs-retribution/dcs-retribution) - Complex, powerful dynamic campaign generator
 
+[Digital Crew Chief](https://web.digitalcrewchief.at/) - Easy to use campaign generator
+
 [Pretense](https://github.com/Dzsek/pretense) - Persistent dynamic campaign where you operate as a mercenary and earn money for completing missions
 
 [Apache Hunting Ground](https://www.digitalcombatsimulator.com/en/files/3321127/) - 130 CAS missions on the Syria map
@@ -281,6 +283,8 @@ Cage the Bear - Story-based campaign included with the module.
 [Briefing Room mission generator](https://dcs-briefingroom.azurewebsites.net/) - Quick and simple mission generator
 
 [DCS Retribution campaign generator](https://github.com/dcs-retribution/dcs-retribution) - Complex, powerful dynamic campaign generator
+
+[Digital Crew Chief](https://web.digitalcrewchief.at/) - Easy to use campaign generator
 
 [Pretense](https://github.com/Dzsek/pretense) - Persistent dynamic campaign where you operate as a mercenary and earn money for completing missions
 
