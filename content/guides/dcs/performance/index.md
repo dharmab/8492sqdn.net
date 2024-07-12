@@ -33,6 +33,8 @@ Ideally, use an upgraded CPU cooler.
 
 [Gamers Nexus: CPU Cooler Benchmarks](https://gamersnexus.net/megacharts/cpu-coolers)
 
+**I recommend _against_ the Intel i9-13900K and i9-14900K due to [serious stability issues](https://www.youtube.com/watch?v=oAE4NWoyMZk)**
+
 ## RAM
 
 DCS World requires 16GB+ RAM minimum. 32GB-128GB RAM is recommended for large multiplayer servers and the Syria map.
