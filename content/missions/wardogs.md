@@ -10,13 +10,13 @@ An adaptation of the first several missions of _Ace Combat 5: The Unsung War_ in
 
 While attempting to force a spy plane to land, Wardog Squadron encounters unknown fighters.
 
-_COMING AFTER THE JULY 3RD PATCH_
+_COMING ~~AFTER THE JULY 3RD PATCH~~ WHEN ED FIXES VR SO I CAN UPDATE_
 
 ## 02//OPEN WAR
 
 Wardog Squadron intercepts recon UAVs launched by an unidentified ship.
 
-_COMING AFTER THE JULY 3RD PATCH_
+_~~COMING AFTER THE JULY 3RD PATCH~~ WHEN ED FIXES VR SO I CAN UPDATE_
 
 ## 03A//NARROW MARGIN
 
