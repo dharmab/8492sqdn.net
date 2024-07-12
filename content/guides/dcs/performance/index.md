@@ -1,7 +1,7 @@
 ---
 title: DCS World Performance and Settings Guide
 summary: Recommended system, graphical and gameplay settings for DCS World
-date: 2024-07-05
+date: 2024-07-11
 tags: 
   - digital combat simulator
 weight: 1
@@ -423,6 +423,13 @@ To convert an existing Steam installation to Standalone:
 After it’s installed, you can open the toolkit menu while playing and tweak settings. See [the usage instructions](https://mbucchia.github.io/OpenXR-Toolkit/#basic-usage) and [feature list](https://mbucchia.github.io/OpenXR-Toolkit/features.html) for more info.
 
 ## Quad Views Rendering
+
+> ⚠️ The 2.9.6.57650 (2024-07-11) patch caused a breaking change to Quad Views Foveated if the following are true:
+>
+> 1. Framerate is below 90 FPS
+> 2. DCS is running multi-threading rather than single-threading
+>
+> See [the bug report thread](https://forum.dcs.world/topic/353229-296-quad-views-foveated-varjo-aero-issue-under-90fps)
 
 [Quad Views Rendering](https://github.com/mbucchia/Quad-Views-Foveated/wiki/What-is-Quad-Views-rendering%3F) is a technique that renders the focus area within your headset at a higher resolution than the rest of the headset. If your headset has eye-tracking, the high-resolution render area will follow your gaze; otherwise, it will be centered within your headset.
 
