@@ -430,6 +430,8 @@ After it’s installed, you can open the toolkit menu while playing and tweak se
 >
 > 1. Framerate is below 90 FPS
 > 2. DCS is running multi-threading rather than single-threading
+> 
+> A workaround is available [here](https://www.youtube.com/watch?v=HedSC2wEy-A), but beware that it will trigger anti-cheat protection in many multiplayer games that use OpenXR. Use it at your own risk.
 >
 > See [the bug report thread](https://forum.dcs.world/topic/353229-296-quad-views-foveated-varjo-aero-issue-under-90fps)
 
