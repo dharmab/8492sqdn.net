@@ -155,12 +155,15 @@ Customizable, best value!
     
 ![](images/Untitled%202.jpeg)
     
-
 ## Recommended with Reservations
+
+### Virpil VMAX Prime Throttle
+
+Great quality, but is expensive compared to competition such as VKB STECS and Winwing Orion 2.
 
 ### Virpil VPC MongoosT-50CM3
 
-Great quality. Was previously in the Recommended section, but has been surpassed in value by other options like VKB STECS.
+Great quality, but is expensive compared to competition such as VKB STECS.
     
 ![](images/Untitled%2015.png)
     
