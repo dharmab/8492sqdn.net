@@ -33,7 +33,7 @@ Ideally, use an upgraded CPU cooler.
 
 [Gamers Nexus: CPU Cooler Benchmarks](https://gamersnexus.net/megacharts/cpu-coolers)
 
-**I recommend _against_ the Intel i9-13900K and i9-14900K due to [serious stability issues](https://www.youtube.com/watch?v=oAE4NWoyMZk)**
+**I recommend _against_ the Intel 13th and 14th generation CPUs due to [serious stability issues](https://www.youtube.com/watch?v=gTeubeCIwRw)**
 
 ## RAM
 
