@@ -15,8 +15,8 @@ _This page contains contributions from my friend Lynx._
 
 _Current known issues and workarounds_
 
-- ⚠️ [Intel 13th and 14th generation CPUs have a high rate of failure](https://community.intel.com/t5/Processors/July-2024-Update-on-Instability-Reports-on-Intel-Core-13th-and/m-p/1617113), manifesting as strange errors in many games including "out of VRAM" errors and inexplicable CPU crashes. The issue impacts the higher end models at the highest ratess, but can impact several SKUs including i9 and i7 models. Media reports: [Gamers Nexus](https://www.youtube.com/watch?v=OVdmK1UGzGs), [The Verge](https://www.theverge.com/2024/7/26/24206529/intel-13th-14th-gen-crashing-instability-cpu-voltage-q-a)
-  - Fix: Intel is releasing a delivering a microcode patch in mid-August to prevent a root cause of the issue from causing damage to the CPU. However, if the damage has already occurred, there is no fix'; the CPU must be exchanged for a new one.
+- ⚠️ [Intel 13th and 14th generation CPUs have a high rate of failure](https://community.intel.com/t5/Processors/July-2024-Update-on-Instability-Reports-on-Intel-Core-13th-and/m-p/1617113), manifesting as strange errors in many games including "out of VRAM" errors and inexplicable CPU crashes. The issue impacts the higher end models at the highest rates, but can impact several SKUs including i9 and i7 models. Media reports: [Gamers Nexus](https://www.youtube.com/watch?v=OVdmK1UGzGs), [The Verge](https://www.theverge.com/2024/7/26/24206529/intel-13th-14th-gen-crashing-instability-cpu-voltage-q-a)
+  - Fix: Intel is releasing a delivering a microcode patch in mid-August to prevent a root cause of the issue from causing damage to the CPU. However, if the damage has already occurred, there is no fix; the CPU must be exchanged for a new one.
   - **We recommend against the purchase of _any_ Intel 13th or 14th generation CPU** due to the severity of this issue
 - 🐛 General performance issues in the dynamic slot selection screen
   - Workaround: Disable the Supercarrier module in the module manager
