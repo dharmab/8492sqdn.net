@@ -1,7 +1,7 @@
 ---
 title: DCS World Performance and Settings Guide
 summary: Recommended system, graphical and gameplay settings for DCS World
-date: 2024-07-11
+date: 2024-07-31
 tags: 
   - digital combat simulator
 weight: 1
@@ -10,6 +10,19 @@ weight: 1
 _Photo by Generic (@generic_dcs)_
 
 _This page contains contributions from my friend Lynx._
+
+# Technical Bulletins
+
+_Current known issues and workarounds_
+
+- 🐛 General performance issues in the dynamic slot selection screen
+  - Workaround: Disable the Supercarrier module in the module manager
+  - Workaround: If you have a gaming mouse, decrease the USB device polling rate below 500Hz. Polling rate is not the same as DPI - you typically change this in the mouse's driver software, not using buttons on the moujse.
+- 🐛 [DCS Launcher resets gameplay setting on every launch](https://forum.dcs.world/topic/353727-launcher-keeps-resetting-some-settings/), including settings like Easy Communication that break paid campaign missions.
+  - Workaround: Disable the launcher. 
+- 🐛 Meta Quest VR headsets: [v68 software update breaks OpenXR API layers including OpenAPI Toolkit](https://forum.dcs.world/topic/355075-meta-acknowledges-bug-with-openxr-api-layers-in-v68)
+  - Workaround: Use Virtual Desktop instead.
+  - Fix: Meta will fix the issue in v69.
 
 # Recommended Specs
 
