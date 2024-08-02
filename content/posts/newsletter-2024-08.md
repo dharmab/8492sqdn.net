@@ -28,7 +28,7 @@ What makes SkyEye cool?
 
 ## Background
 
-SkyEye has been in development since October 2023. Bewtween then and May 2024, most of the effort was spent on basics, such as the low-level networking code, application architecture, basic data models, AI model integrations, dev tooling- the boring slog of software engineering. After this there was a period of slow development where I became frustrated with trying to run a full DCS instance in my development environment. On July 20th, I ripped out the direct integration with DCS and replaced it with an integration with the Tacview exporter. This was like strapping a rocket to a bicycle- development _immediately_ surged ahead. The dev-execute-iterate cycle dropped from minutes to seconds. The result has been a massive amount of progress in the last two weeks.
+SkyEye has been in development since October 2023. Between then and May 2024, most of the effort was spent on basics, such as the low-level networking code, application architecture, basic data models, AI model integrations, dev tooling- the boring slog of software engineering. After this there was a period of slow development where I became frustrated with trying to run a full DCS instance in my development environment. On July 20th, I ripped out the direct integration with DCS and replaced it with an integration with the Tacview exporter. This was like strapping a rocket to a bicycle- development _immediately_ surged ahead. The dev-execute-iterate cycle dropped from minutes to seconds. The result has been a massive amount of progress in the last two weeks.
 
 ## July Progress
 
