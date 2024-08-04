@@ -23,7 +23,7 @@ _Current known issues and workarounds_
   - Workaround: If you have a gaming mouse, decrease the USB device polling rate below 500Hz. Polling rate is not the same as DPI - you typically change this in the mouse's driver software, not using buttons on the mouse.
 - 🐛 [DCS Launcher resets gameplay setting on every launch](https://forum.dcs.world/topic/353727-launcher-keeps-resetting-some-settings/), including settings like Easy Communication that break paid campaign missions.
   - Workaround: Disable the launcher. 
-- 🐛 Meta Quest VR headsets: [v68 software update breaks OpenXR API layers including OpenAPI Toolkit](https://forum.dcs.world/topic/355075-meta-acknowledges-bug-with-openxr-api-layers-in-v68)
+- 🐛 Meta Quest VR headsets: [v68 software update breaks OpenXR API layers including OpenXR Toolkit](https://forum.dcs.world/topic/355075-meta-acknowledges-bug-with-openxr-api-layers-in-v68)
   - Workaround: Use Virtual Desktop instead.
   - Fix: Meta will fix the issue in v69.
 
