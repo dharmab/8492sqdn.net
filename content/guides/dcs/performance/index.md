@@ -621,7 +621,7 @@ Mods in DCS can cause bizarre, seemingly unrelated issues. Reflected of Reflecte
 
 {{< youtube SA6XkZLhxvk >}}
 
-As a troubleshooting step, remove all mods from your DCS installation. (Liveries and kneeboard pages are OK. Sound mods, modded aircraft and other assets should be removed.)
+As a troubleshooting step, remove all mods from your DCS installation. (Kneeboard pages are OK. Sound mods, modded aircraft and other assets should be removed. In some rare cases even liveries have caused crashes, such as if a module's 3D model or textures were updated and an old livery was installed.)
 
 ### Repair DCS
 
