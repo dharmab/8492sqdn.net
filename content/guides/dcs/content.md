@@ -310,6 +310,8 @@ Operation Reforger, Cage the Bear, Inherent Resolve for F-15E, and Operation Mou
 
 World War X - 40s-70s PvPvE, with a focus on supply and A2G gameplay. Features some unique missions like anti-submarine warfare.
 
+[Shadow Reapers Dynamic Campaign](https://www.shadowreapers.org/manual) - A complex, randomzied PvPvE dynamic campaign server.
+
 ## Open Event Groups
 
 [Tactical DCS](https://discord.gg/tacticaldcs) - Weekly training sessions, campaigns, and events. Organized training courses from time to time.
