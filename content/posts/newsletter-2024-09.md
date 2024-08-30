@@ -1,7 +1,7 @@
 ---
 title: "SkyEye Development Newsletter: September 2024"
 summary: "September's newsletter for the SkyEye project!"
-date: 2024-09-01
+date: 2024-08-29
 tags:
   - digital combat simulator
 ---
