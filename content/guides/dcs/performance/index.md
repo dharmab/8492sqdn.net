@@ -16,13 +16,14 @@ _This page contains contributions from my friend Lynx._
 _Current known issues and workarounds_
 
 - ⚠️ [Intel 13th and 14th generation CPUs have a high rate of failure](https://community.intel.com/t5/Processors/July-2024-Update-on-Instability-Reports-on-Intel-Core-13th-and/m-p/1617113), manifesting as strange errors in many games including "out of VRAM" errors and inexplicable CPU crashes. The issue impacts the higher end models at the highest rates, but can impact several SKUs including i9 and i7 models. Media reports: [Gamers Nexus](https://www.youtube.com/watch?v=OVdmK1UGzGs), [The Verge](https://www.theverge.com/2024/7/26/24206529/intel-13th-14th-gen-crashing-instability-cpu-voltage-q-a)
-  - Fix: Intel is releasing a delivering a microcode patch in mid-August to prevent a root cause of the issue from causing damage to the CPU. Check with your motherboard manufacturer for a BIOS update. However, if the damage has already occurred, there is no fix; the CPU must be exchanged for a new one.
-  - **We recommend against the purchase of _any_ Intel 13th or 14th generation CPU** due to the severity of this issue
+  - Fix: Intel has released a microcode patch to prevent a root cause of the issue from causing damage to the CPU. Check with your motherboard manufacturer for a BIOS update. However, if the damage has already occurred, there is no fix; the CPU must be exchanged for a new one.
 - 🐛 General performance issues in the dynamic slot selection screen
   - Workaround: Disable the Supercarrier module in the module manager
   - Workaround: If you have a gaming mouse, decrease the USB device polling rate below 500Hz. Polling rate is not the same as DPI - you typically change this in the mouse's driver software, not using buttons on the mouse.
 - 🐛 [DCS Launcher resets gameplay setting on every launch](https://forum.dcs.world/topic/353727-launcher-keeps-resetting-some-settings/), including settings like Easy Communication that break paid campaign missions.
-  - Workaround: Disable the launcher. 
+  - Workaround: Disable the launcher.
+- [F10 map does not render correctly in single-threading](https://forum.dcs.world/topic/356672-having-issues-after-the-update-no-f10-map-custom-gui-size-not-working-and-motion-blur-is-frozen/)
+  - Workaround: Launch DCS using multi-threading
 
 # Recommended Specs
 
@@ -45,8 +46,6 @@ DCS primarily uses two CPU cores and makes heavy use of the CPU’s cache. Some 
 Ideally, use an upgraded CPU cooler.
 
 [Gamers Nexus: CPU Cooler Benchmarks](https://gamersnexus.net/megacharts/cpu-coolers)
-
-**I recommend _against_ the Intel 13th and 14th generation CPUs due to [serious stability issues](https://www.youtube.com/watch?v=gTeubeCIwRw)**
 
 ## RAM
 
@@ -402,7 +401,7 @@ This tweak doesn’t improve in-game performance, but can save disk space and do
 
 ## Shrink Kneeboard Pages
 
-Very large kneeboard pages can cause a performance impact. Use image editing software to scale your kneeboard pages down to the resolution of your display. [OpenKneeboard’s guide to sizing](https://openkneeboard.com/faq.html#how-do-i-get-the-best-visual-quality-or-the-most-readable-text) has useful tips for both VR and 2D.
+Very large kneeboard pages can cause a performance impact. Use image editing software to scale your kneeboard pages down to the resolution of your display. [OpenKneeboard’s guide to sizing](https://openkneeboard.com/faq/#how-do-i-get-the-best-visual-quality-or-the-most-readable-text) has useful tips for both VR and 2D.
 
 # VR Tweaks
 
