@@ -55,14 +55,14 @@ In August, the following was completed:
 - THREAT calls are now automatically broadcast when a hostile aircraft potentially carrying air-to-air weapons is within range of a friendly aircraft who is listening on SRS. The range at which THREAT calls are broadcast is dynamically computed based on the threat's air-to-air capabilities. THREAT calls are repeated every few minutes as long as the threat criteria are met. The interval and mandatory threat range can be customized or the feature disabled via config.
 - The SNAPLOCK command (a faster version of DECLARE intended for use during a BVR timeline) has been implemented
 - FADED calls are broadcast when hostile contacts disappear (destroyed/landed/despawned) if anyone is listening on SRS.
-- DECLARE call coordinates can now be optionally sproken in BRAA format as an alternative to bullseye forat. For example, to ask for a declaration of a target on your nose at five miles at 10000 feet, say "Anyface, Mycallsign 1-1, declare BRAA Three-Six-Zero, Five, Ten Thousand".
+- DECLARE call coordinates can now be optionally spoken in BRAA format as an alternative to bullseye format. For example, to ask for a declaration of a target on your nose at five miles at 10000 feet, say "Anyface, Mycallsign 1-1, declare BRAA Three-Six-Zero, Five, Ten Thousand".
 - COMMS CHECK is now an acceptable alias for RADIO CHECK
 - An easter egg has been added if anyone asks for a TRIPWIRE 😜
 - The parser has been almost fully rewritten, with a much higher level of accuracy.
 - The controller now compares similarity of the callsigns it hears on SRS to the callsigns it sees in game, allowing it to deal with slightly "misheard" callsigns. The incidents of "I could not find that contact on scope" is now massively diminshed. This is especially good news for anyone with a homonymic callsign ("Spare" is no longer misheard as "Spear", "Witch" is not longer misheard as "Which"), or a non-English callsign ("Floppa 1-1" or "Miku 1-1" are now valid callsigns).
 - Magnetic declination is accounted for the in-game location and year. This is especially important on the Kola map, where declination varies across the map due to proximity to the north pole. The code handles anywhere on the Earth and up until the year 2025 in-game, so it will work correctly on new DCS maps without requiring updates.
 - Major improvements to trackfile handling which improves determination of ground speed, true speed, track direction and aspect.
-- Groups can now be separated in altitude. Groups spread over more than 10000 feet vertically are now reported using altitude STACKS brevity- that is, the bot provides multiple alititudes and a count of how many aircraft are at each layer of the stack.
+- Groups can now be separated in altitude. Groups spread over more than 10000 feet vertically are now reported using altitude STACKS brevity- that is, the controller provides multiple alititudes and a count of how many aircraft are at each layer of the stack.
 - Altitude of friendly groups are given in Angels/Cherubs, providing additional disambiguation between friendlies and bandits.
 - If a bullseye coordinate is very close to the bullseye, the controller now says "at bullseye" instead of the numeric coordinates.
 - A published [privacy statement](https://github.com/dharmab/skyeye/blob/main/docs/PRIVACY.md) explains how player data, especially voice recordings, are used by the service
@@ -70,7 +70,7 @@ In August, the following was completed:
 - There is now a brief pause between audio transmissions, breaking up long chains of messages and providing a small window for a player to interject.
 - Switched from Go's standard library CLI flag parser to Cobra/Viper, which provides better help text and the ability to load configuration from environment variables and YAML/JSON files.
 - Process now handles when the DCS server changes mission or restarts the mission
-- Process now exits if it loses connection to SRS. A supervisor such as systemd or a provided Powershell script can then restart the bot.
+- Process now exits if it loses connection to SRS. A supervisor such as systemd or a provided Powershell script can then restart the process.
 - Automated builds are now published on GitHub
 - An admin's guide to deploying SkyEye has been published. It includes recommended deployment strategies, hardware, and management tools such as a sample cloud-init and systemd unit for Linux and a supervisor script for Windows.
 - Expanded unit test coverage, especially for request parsing and geospatial/geometric calculations
