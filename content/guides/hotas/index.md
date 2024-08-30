@@ -112,7 +112,6 @@ For serious F-16 enthusiasts with very high budgets.
 For serious DIYers with extraordinary budgets and patience. Grip not included, requires custom assembly
 
 {{< youtube QDU5VHS-YzQ >}}
-[https://www.youtube.com/watch?v=QDU5VHS-
 
 ## Not Recommended
 
