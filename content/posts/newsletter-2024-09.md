@@ -66,6 +66,7 @@ In August, the following was completed:
 - Altitude of friendly groups are given in Angels/Cherubs, providing additional disambiguation between friendlies and bandits.
 - If a bullseye coordinate is very close to the bullseye, the controller now says "at bullseye" instead of the numeric coordinates.
 - A published [privacy statement](https://github.com/dharmab/skyeye/blob/main/docs/PRIVACY.md) explains how player data, especially voice recordings, are used by the service
+- If someone is talking on SRS, the bot waits until their transmission is over before beginning a transmission.
 - SRS audio tranmission timing improved to virtually eliminate audio stutter
 - There is now a brief pause between audio transmissions, breaking up long chains of messages and providing a small window for a player to interject.
 - Switched from Go's standard library CLI flag parser to Cobra/Viper, which provides better help text and the ability to load configuration from environment variables and YAML/JSON files.
