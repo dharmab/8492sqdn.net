@@ -34,7 +34,7 @@ SkyEye is now in the Limited Availability phase! Automated v0.X.X builds are pub
 
 ### Onboard Project Contributors
 
-During the month of Auguest, three contributors made their first commits into the project!
+During the month of August, three contributors made their first commits into the project!
 
 - @nabbl made a number of contributions including:
   - Support for loading configuration from a file or environment variables
