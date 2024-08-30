@@ -402,7 +402,7 @@ This tweak doesn’t improve in-game performance, but can save disk space and do
 
 ## Shrink Kneeboard Pages
 
-Very large kneeboard pages can cause a performance impact. Use image editing software to scale your kneeboard pages down to the resolution of your display. [OpenKneeboard’s guide to sizing](https://openkneeboard.com/faq.html#how-do-i-get-the-best-visual-quality-or-the-most-readable-text) has useful tips for both VR and 2D.
+Very large kneeboard pages can cause a performance impact. Use image editing software to scale your kneeboard pages down to the resolution of your display. [OpenKneeboard’s guide to sizing](https://openkneeboard.com/faq/#how-do-i-get-the-best-visual-quality-or-the-most-readable-text) has useful tips for both VR and 2D.
 
 # VR Tweaks
 
