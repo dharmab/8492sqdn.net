@@ -15,6 +15,8 @@ Downgraded versions were widely exported to the Warsaw Pact and other nations. M
 
 > 📰 [The Truth About the MiG-29](https://www.smithsonianmag.com/air-space-magazine/truth-about-mig-29-180952403/): A fantastic article on the MiG-29’s history.
 
+> 📷 [Fabulous Fulcrums](http://fabulousfulcrums.de/): A cool website of former Luftwaffe Fulcrum pilot.
+
 The MiG-29 is one of the fastest aircraft in DCS World - certainly the fastest player aircraft available to REDFOR - and the earliest to have a helmet-mounted sight for off-boresight missile employment. Although surpassed in capability by modernized 4th-and 5th-generation fighters, it remains an iconic aircraft.
 
 # Variants in DCS
