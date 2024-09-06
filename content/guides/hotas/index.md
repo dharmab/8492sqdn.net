@@ -1,7 +1,7 @@
 ---
 title: HOTAS Buyer's Guide for Combat Flight Simulation
 summary: Flight sticks, throttles and pedals organized into recommended, recommend with reservations, and not recommended.
-date: 2024-06-19
+date: 2024-09-05
 weight: 2
 ---
 
@@ -34,6 +34,12 @@ See Tuuvas' setup guides:
 Xbox style gamepad with 6 additional mappable buttons and a gyro accurate enough to use as a primary flight control.
 
 ![](images/Untitled.jpeg)
+
+### Winwing Ursa Minor Fighter Joystick
+
+A budget clone of the VKB Gladiator with more buttons and a vibration motor. Made from a cheaper-feeling plastic compared to the Gladiator. Has a fairly short throw.
+
+![](images/ursa-minor.bmp)
 
 ### VKB Gladiator NXT EVO Space Combat Edition Premium 
 
@@ -177,6 +183,12 @@ Smaller version of the MongoosT-50M3. Great quality, but for most users the VKB 
 Widely available. Has [stiction](https://en.wikipedia.org/wiki/Stiction) issues, which can be fixed by [replacing the lubricant](https://www.youtube.com/watch?v=sa0Qb2hq6tQ) or [replacing the slider](https://www.etsy.com/search?explicit=1&q=twcs+slider+mod&ref=s2_trn&order=highest_reviews). Commonly develops issues with the thrust and paddle axes.
     
 ![](images/Untitled%2017.png)
+
+### Winwing Ursa Minor Space Joystick
+
+A budget clone of the VKB Gladiator Omni Throttle with more buttons and a vibration motor. Designed for space simulation, but can also be used as a serviceable flight simulation throttle. Made from a cheaper-feeling plastic compared to the Gladiator.
+
+![](images/ursa-minor-space.bmp)
     
 ### VKB Gladiator NXT EVO Omni Throttle
 
