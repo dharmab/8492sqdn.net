@@ -20,10 +20,9 @@ _Current known issues and workarounds_
 - 🐛 General performance issues in the dynamic slot selection screen
   - Workaround: Disable the Supercarrier module in the module manager
   - Workaround: If you have a gaming mouse, decrease the USB device polling rate below 500Hz. Polling rate is not the same as DPI - you typically change this in the mouse's driver software, not using buttons on the mouse.
-- 🐛 [DCS Launcher resets gameplay setting on every launch](https://forum.dcs.world/topic/353727-launcher-keeps-resetting-some-settings/), including settings like Easy Communication that break paid campaign missions.
-  - Workaround: Disable the launcher.
 - 🐛 [F10 map does not render correctly in single-threading](https://forum.dcs.world/topic/356672-having-issues-after-the-update-no-f10-map-custom-gui-size-not-working-and-motion-blur-is-frozen/)
   - Workaround: Launch DCS using multi-threading
+  - Fix: Single-threading will be removed from DCS entirely in an upcoming update.
 
 # Recommended Specs
 
@@ -471,7 +470,7 @@ A tradeoff is that you may not be able to charge your headset and use the link c
 
 ## Virtual Desktop
 
-[Virtual Desktop](https://www.vrdesktop.net/) is a third-party VR streaming application. Although its primary use case is for displaying 2D content in VR, it also provides advanced options for improved stream quality for VR content. In my testing with Meta Quest devices, I was able to see a higher level of clarity using Virtual Desktop compared to  Meta Quest Link. Your experience may vary depending on your hardware.
+[Virtual Desktop](https://www.vrdesktop.net/) is a third-party VR streaming application. Although its primary use case is for displaying 2D content in VR, it also provides advanced options for improved stream quality for VR content. In my testing with Meta Quest devices, I was able to see a higher level of clarity using Virtual Desktop compared to  Meta Quest Link. Your experience may vary depending on your hardware, especially your network bandwidth and wireless access points.
 
 ## DLSS/FSR
 
