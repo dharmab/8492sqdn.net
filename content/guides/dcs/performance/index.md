@@ -1,7 +1,7 @@
 ---
 title: DCS World Performance and Settings Guide
 summary: Recommended system, graphical and gameplay settings for DCS World
-date: 2024-08-18
+date: 2024-09-05
 tags: 
   - digital combat simulator
 weight: 1
@@ -468,6 +468,10 @@ RedKite has a good video demoing eye-tracked Foveated Rendering:
 If you have a Meta Quest headset, a link cable will provide the best video quality. Meta sells an [official link cable](https://www.meta.com/quest/accessories/link-cable/) if you don’t have one, and more affordable third-party cables are also available.
 
 A tradeoff is that you may not be able to charge your headset and use the link cable at the same time, which may limit how long you can fly at a time. [This third party cable](https://a.co/d/765REiP) allows connecting both a charger and link at once, which extends battery life sufficiently for very long flights.
+
+## Virtual Desktop
+
+[Virtual Desktop](https://www.vrdesktop.net/) is a third-party VR streaming application. Although its primary use case is for displaying 2D content in VR, it also had advanced options for improving the stream quality for 3D content. In my testing with Meta Quest devices, I was able to see a higher level of clarity using Virtual Desktop compared to  Meta Quest Link. Your experience may vary depending on your hardware.
 
 ## DLSS/FSR
 
