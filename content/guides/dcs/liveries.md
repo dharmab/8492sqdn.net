@@ -51,15 +51,15 @@ Mi-24P Hind|Mi-24P
 MiG-15bis|MiG-15bis
 MiG-19P Farmer|MiG-19P
 MiG-21Bis|MiG-21Bis
-MiG-29A (Flaming Cliffs 3)|MiG-29A
-MiG-29G (Flaming Cliffs 3)|MiG-29G
-MiG-29S (Flaming Cliffs 3)|MiG-29S
+MiG-29A (Flaming Cliffs)|MiG-29A
+MiG-29G (Flaming Cliffs)|MiG-29G
+MiG-29S (Flaming Cliffs)|MiG-29S
 Mirage F1|Mirage-F1BE
 Mirage F1|Mirage-F1CE
-Su-25 (Flaming Cliffs 3)|Su-25
+Su-25 (Flaming Cliffs)|Su-25
 Su-25T|SU-25T
-Su-27 (Flaming Cliffs 3)|Su-27
-Su-33 (Flaming Cliffs 3)|Su-33
+Su-27 (Flaming Cliffs)|Su-27
+Su-33 (Flaming Cliffs)|Su-33
 T-45C mod|T-45
 TF-51D|TF-51D
 UH-1H|UH-1H
