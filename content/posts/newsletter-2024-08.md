@@ -4,6 +4,7 @@ summary: "The first newsletter for the SkyEye project!"
 date: 2024-08-01
 tags:
   - digital combat simulator
+  - skyeye
 ---
 
 Dear LARPers, Part-Timers and Frenemies,

@@ -4,6 +4,7 @@ summary: "September's newsletter for the SkyEye project!"
 date: 2024-08-29
 tags:
   - digital combat simulator
+  - skyeye
 ---
 
 Hello and welcome to September's development newsletter for the SkyEye project! These monthly posts summarize new progress, the current status of the project, and what to expect in the near future.
