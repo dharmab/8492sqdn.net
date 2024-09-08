@@ -26,7 +26,7 @@ Learn how to use your navigation system. Create a flight plan and follow it. Add
 
 Learn basic employment of weapons. Practice each weapon one at a time using Sedlo’s trainer mission.
 
-[BFM and Weapons Trainer by Sedlo Version 3 (2024-03-22B)](https://www.digitalcombatsimulator.com/en/files/3331603/)
+[BFM/BVBR and Air to Ground Weapons Trainer Trainer by Sedlo](https://www.digitalcombatsimulator.com/en/files/3331603/)
 
 {{< youtube VGC03b2p1nA >}}
 
