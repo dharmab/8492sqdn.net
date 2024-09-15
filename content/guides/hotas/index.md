@@ -47,7 +47,7 @@ Best value!
 
 ![](images/gladiator-nxt-evo-sce-premium.png)
 
-### Winwing Orion 2 F-16EX Viper
+### Winwing Orion 2 ViperAce EX (formerly F-16EX)
 
 ![](images/orion-2-f-16ex.png)
 
@@ -127,9 +127,9 @@ Badly designed. Has an inverse force curve making precise inputs and aiming extr
 
 Poor gimbal quality, stick is too heavy for the base, you can get much better sticks for less money
 
-### Winwing Orion 2 F/A-18 Hornet
+### Winwing Orion 2 NavyAce (formerly F/A-18 Hornet)
 
-More expensive than the F-16EX Viper grip for fewer buttons. Even if you only play *DCS: F/A-18C Hornet*, you should get the F-16 grip since you’ll want extra buttons for communications. If you play *DCS: F-15E Strike Eagle*, the F-16EX grip is recommended instead to provide an analog input for the WSO’s Hand Controller Unit.
+More expensive than the ViperAce grip for fewer buttons. Even if you only play *DCS: F/A-18C Hornet*, you should get the F-16 grip since you’ll want extra buttons for communications. If you play *DCS: F-15E Strike Eagle*, the ViperAce grip is recommended instead to provide an analog input for the WSO’s Hand Controller Unit.
 
 ### VKB Gunfighter Modern Combat Edition Pro
 
@@ -150,11 +150,11 @@ Customizable, best value!
 ![](images/stecs-mini.png)|![](images/stecs-mini-plus.bmp)
 ![](images/stecs-standard.bmp)|![](images/stecs-max.png)
 
-### Winwing Orion 2 F/A-18
+### Winwing Orion 2 NavyAce (formerly F/A-18)
     
 ![](images/orion-2-fa-18-throttle.png)
     
-### Winwing Orion 2 F-15EX
+### Winwing Orion 2 StrikeAce EX (formerly F-15EX)
     
 ![](images/orion-2-f15-ex-throttle.jpeg)
     
@@ -202,7 +202,7 @@ Throttle grip and axis is good. The switches on the base are overly specific to 
     
 ![](images/warthog-throttle.png)
     
-### Winwing Orion 2 F-16
+### Winwing Orion 2 ViperAce (formerly F-16)
 
 If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS*
     
@@ -214,9 +214,9 @@ If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS* and y
     
 ![](images/viper-tqs.png)
     
-### Winwing Orion 2 F-15E
+### Winwing Orion 2 StrikeAce E (formerly F-15E)
 
-If you mostly play *DCS: F-15E Strike Eagle.* Notably, it has a speedbrake switch which the F-15EX grip lacks.
+If you mostly play *DCS: F-15E Strike Eagle.* Notably, it has a speedbrake switch which the StrikeAce EX grip lacks.
     
 ![](images/orion-2-f-15e.jpeg)
     
@@ -238,7 +238,7 @@ Worse than a modded Thrustmaster TWCS.
 
 ### Winwing Orion 2 HOTAS MAX
 
-Bundle of the Winwing Orion 2 F-16EX Viper stick and Orion 2 throttle. Choice of F/A-18, F-15E and F-15EX throttle grips available. A close match to the real controls of an A-10 or F-15E.
+Bundle of the Winwing Orion 2 ViperAce EX Viper stick and Orion 2 throttle. Choice of replica F/A-18, replica F-15E and fictionalized F-15EX throttle grips available. A close match to the real controls of an A-10 or F-15E.
 
  | | 
 -|-|-
@@ -252,7 +252,7 @@ Bundle of the Thrustmaster T16000M FCS stick and TWCS throttle
     
 ![](images/t16000m-fcs-hotas.png)
     
-Winwing Orion 2 HOTAS F-16 Viper: Bundle of the Winwing Orion 2 F-16EX Viper stick and Orion 2. A close match to the real controls of an F-16
+Winwing Orion 2 HOTAS ViperAce: Bundle of the Winwing Orion 2 ViperAce EX stick and Orion 2 ViperAce throttle. A close match to the real controls of an F-16.
     
 ![](images/orion-2-hotas-f-16.png)
 
