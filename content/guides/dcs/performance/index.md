@@ -64,7 +64,7 @@ Since DCS uses an older graphics engine, high amounts of VRAM is more important 
 
 [Gamers Nexus: Best & Worst GPUs of 2023](https://gamersnexus.net/gpus/best-worst-gpus-2023-gaming-100-2000-video-cards)
 
-[Tom's Hardware: GPU Hierarchy(https://www.tomshardware.com/reviews/gpu-hierarchy,4388.html)
+[Tom's Hardware: GPU Hierarchy](https://www.tomshardware.com/reviews/gpu-hierarchy,4388.html)
 
 ## PSU
 
