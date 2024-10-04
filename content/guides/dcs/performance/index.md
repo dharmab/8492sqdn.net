@@ -34,6 +34,8 @@ You **MUST** install DCS on an SSD (solid state) instead of an HDD (spinning dis
 
 An SSD is **absolutely essential**. When installed on a spinning disk, DCS can take over 20 minutes to load into a mission and may crash during loading or during gameplay.
 
+> ⚠️ [SK Hynix SSDs have an issue where write performance drops in half after several months of use, requiring the drive to be erased to reset](https://forums.anandtech.com/threads/sk-hynix-platinum-p41-2tb-ssd-write-speed-dropped-by-half.2610542/). This is not a problem for a drive dedicated to DCS only, since write speed is only a factor during updates, and even then only if you have a very fast internet connection. However, we recommend against their use as OS or general purpose drives.
+
 ## CPU
 
 The best CPUs for DCS World are the AMD 7800X3D, AMD 5800X3D and AMD 5700X3D. But any fast gaming-oriented CPU is fine.
