@@ -35,11 +35,9 @@ An SSD is **absolutely essential**. When installed on a spinning disk, DCS can t
 
 ## CPU
 
-The best CPUs for DCS World are the AMD 7800X3D, AMD 5800X3D and AMD 5700X3D. But any fast gaming-oriented CPU is fine.
+The best CPUs for DCS World are AMD X3D series CPUs including the the AMD 7800X3D, 5800X3D, 5700X3D and 5600X3D. But any fast gaming-oriented CPU is fine.
 
 [Gamer's Nexus: Best CPUs of 2023](https://gamersnexus.net/cpus/best-cpus-2023-intel-vs-amd-gaming-video-editing-budget-biggest-disappointment)
-
-DCS primarily uses two CPU cores and makes heavy use of the CPU’s cache. Some higher-end CPUs designed for heavily multithreaded applications, such as the AMD 7950X3D, AMD’s Threadripper series, and Intel’s Core i7 and i9 series, don’t offer much, if any, performance benefit to DCS. If you’re building a computer specifically for DCS, you’re better off getting a great gaming CPU rather than a top-end productivity-oriented CPU. Spend the money saved on a better GPU, a nice HOTAS or a head tracker!
 
 Ideally, use an upgraded CPU cooler.
 
@@ -290,8 +288,8 @@ For the default Microsoft Defender antivirus:
 2. Select Virus & Threat Protection in the sidebar
 3. Under Virus & Threat Protection settings, click Manage Settings
 4. Under Exclusions, click Add or Remove Exclusions
-5. Add a File Exclusion for **the full path** to `DCS.exe`, e.g. on my system it is `D:\games\dcs\DCS World OpenBeta\bin-mt\DCS.exe`
-6. Add a Process Exclusion for **the full path** to `DCS.exe`, e.g. on my system it is `D:\games\dcs\DCS World OpenBeta\bin-mt\DCS.exe`
+5. Add a File Exclusion for **the full path** to `DCS.exe`, e.g. on my system it is `D:\games\dcs\DCS World\bin\DCS.exe`
+6. Add a Process Exclusion for **the full path** to `DCS.exe`, e.g. on my system it is `D:\games\dcs\DCS World\bin\DCS.exe`
 
 Here is what mine looked like after this. Yours will look differently.
 
@@ -318,16 +316,6 @@ Disable this setting:
 ![](images/power-options.png)
 
 # Game Tweaks
-
-## Enable Multithreading
-
-Use the multithreading build of the game for significantly improved performance.
-
-For the Steam version, right click on *DCS World Steam Edition* and select play. Select “Play MT Preview” and then press Play.
-
-![https://forum.dcs.world/uploads/monthly_2023_03/steammt.png.9fdea6251e9ed1dff62fc9bd867fa6e1.png](https://forum.dcs.world/uploads/monthly_2023_03/steammt.png.9fdea6251e9ed1dff62fc9bd867fa6e1.png)
-
-The Standalone version *should* automatically use multithreading by default.
 
 ## Enable the Frame Rate Counter
 
@@ -436,15 +424,6 @@ After it’s installed, you can open the toolkit menu while playing and tweak se
 
 ## Quad Views Rendering
 
-> ⚠️ The 2.9.6.57650 (2024-07-11) patch caused a breaking change to Quad Views Foveated if the following are true:
->
-> 1. Framerate is below 90 FPS
-> 2. DCS is running multi-threading rather than single-threading
-> 
-> A workaround is available [here](https://www.youtube.com/watch?v=HedSC2wEy-A), but beware that it will trigger anti-cheat protection in many multiplayer games that use OpenXR. Use it at your own risk.
->
-> See [the bug report thread](https://forum.dcs.world/topic/353229-296-quad-views-foveated-varjo-aero-issue-under-90fps)
-
 [Quad Views Rendering](https://github.com/mbucchia/Quad-Views-Foveated/wiki/What-is-Quad-Views-rendering%3F) is a technique that renders the focus area within your headset at a higher resolution than the rest of the headset. If your headset has eye-tracking, the high-resolution render area will follow your gaze; otherwise, it will be centered within your headset.
 
 ![](images/quad-views.png)
@@ -487,11 +466,11 @@ If you play in both 2D and VR, you can set up some tweaks to make switching betw
 
 Create two separate shortcuts for DCS, one for 2D and one for VR. For 2D:
 
-`"D:\games\dcs\DCS World OpenBeta\bin-mt\DCS.exe" --force_disable_VR`
+`"D:\games\dcs\DCS World\bin\DCS.exe" --force_disable_VR`
 
 For VR:
 
-`"D:\games\dcs\DCS World OpenBeta\bin-mt\DCS.exe" --force_enable_VR`
+`"D:\games\dcs\DCS World\bin\DCS.exe" --force_enable_VR`
 
 Additionally, you can save custom graphical settings into three different slots in the Options > System tab, using the presets buttons in the bottom right. You can use one for your 2D settings and another for your VR settings.
 
@@ -536,7 +515,7 @@ MSAA may reduce shimmer in VR |
 Try DLSS Quality and sharpening 0.5 on newer Nvidia graphics
 Try FSR with scaling 0.9 and sharpening 0.8 on AMD graphics or older Nvidia graphics
 Tune sharpening to user preference
-If this is grayed out, verify you are using the multi-threaded build, turn off anti-aliasing and verify drivers are fully updated |
+If this is grayed out, turn off anti-aliasing and verify drivers are fully updated |
 | Textures | High |
 | Terrain textures | High |
 | Heat Blur | High (2D) or Off (VR)
