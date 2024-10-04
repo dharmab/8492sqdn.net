@@ -20,9 +20,6 @@ _Current known issues and workarounds_
 - 🐛 General performance issues in the dynamic slot selection screen
   - Workaround: Disable the Supercarrier module in the module manager
   - Workaround: If you have a gaming mouse, decrease the USB device polling rate below 500Hz. Polling rate is not the same as DPI - you typically change this in the mouse's driver software, not using buttons on the mouse.
-- 🐛 [F10 map does not render correctly in single-threading](https://forum.dcs.world/topic/356672-having-issues-after-the-update-no-f10-map-custom-gui-size-not-working-and-motion-blur-is-frozen/)
-  - Workaround: Launch DCS using multi-threading
-  - Fix: Single-threading will be removed from DCS entirely in an upcoming update.
 
 # Recommended Specs
 
