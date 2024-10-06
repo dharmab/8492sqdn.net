@@ -91,7 +91,7 @@ You can add a USB PCIe expansion card to your system and move some devices to th
 
 In the worst case, a malfunctioning USB card can damage your motherboard through the PCIe port.
 
-The only reliable brand we've found is [StarTech](https://www.startech.com). While they are expensive, they are the gold standard for commercial systems. We particularly recommend this [4 port card](https://www.amazon.com/StarTech-com-Express-SuperSpeed-Dedicated-Channels/dp/B00HJZEA2S).
+The only reliable brand we've found is [StarTech](https://www.startech.com). While they are expensive, they are the gold standard for commercial systems. We particularly recommend this [4 port card](https://www.amazon.com/StarTech-com-Express-SuperSpeed-Dedicated-Channels/dp/B00HJZEA2S), which has 5Gbps of bandwidth _per port_ rather than sharing a single channel across all ports. You can then attach a hub to each of the ports to share the bandwidth across physical devices as required.
 
 # Head Tracking
 
