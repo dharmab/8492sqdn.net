@@ -17,21 +17,7 @@ A HOTAS. This guide assumes you have a quality HOTAS with plenty of buttons, not
 
 [HOTAS Buyers Guide for Combat Flight simulation](../../hotas/)
 
-Some type of head tracker so you don’t have to use the mouse to look around.
-
-Some recommended options:
-
-- [TrackHat Sensor V2](https://www.trackhat.org/sensorv2): Infrared camera based sensor. *Author’s personal favorite - better tracking than IRLED trackers in their experience.*
-- [DelanClip](https://delanengineering.com/), [GrassMonkey](https://grassmonkeysimulations.com/), [TrackNP](https://www.aliexpress.com/w/wholesale-tracknp.html): Infrared LED based sensors. Good precision and relatively affordable.
-- [JBC Head Tracker](https://jbcconsulting448679429.wordpress.com/), [SmoothTrack](https://smoothtrack.app/): Smartphone apps. Basic, but very affordable if you already have a phone with face unlock. JBC has a free trial and is $2 to unlock the full version. SmoothTrack is $10 and has more features specific to Apple devices, such as using AirPods for tracking. Both the Apple and Android app stores have refund policies.
-- [OpenTrack Neuralnet](https://github.com/opentrack/opentrack/wiki/AI-Face-Tracking): Standard webcam based sensor. Basic, but very affordable if you already have a webcam or can purchase one inexpensively.
-
-I do not recommend:
-
-- NaturalPoint TrackIR: Too expensive compared to competition. Fragile infrared light clip. Lower refresh rates than competition. Official software has not been updated in a long time, compared to OpenTrack receiving new quality of life features.
-- Tobii eye trackers. The head tracking is too coarse and oversmoothed for flight simulation. A real-life friend who tried to use one for flight simulation described it as feeling drunk.
-
-Alternatively, BMS has VR support. See my DCS VR headset guide for some good choices for flight simulation: [VR Headset](../../dcs/performance/#virtual-reality) 
+Some type of [head tracker](../../headtracker/) so you don’t have to use the mouse to look around. Alternatively, BMS has VR support. See my DCS VR headset guide for some good choices for flight simulation: [VR Headset](../../dcs/performance/#virtual-reality) 
 
 # Buy Falcon 4.0
 

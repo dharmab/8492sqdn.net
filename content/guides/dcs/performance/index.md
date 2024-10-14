@@ -92,20 +92,7 @@ The only reliable brand we've found is [StarTech](https://www.startech.com). Whi
 
 # Head Tracking
 
-A head tracker is ideal for anyone who is not using VR. It is almost essential equipment for dogfighting- possibly more important than a HOTAS. Some great options:
-
-- [TrackHat Sensor V2](https://www.trackhat.org/sensorv2): Infrared camera based sensor. *Author’s personal favorite - better tracking than IRLED trackers in their experience.*
-- [DelanClip](https://delanengineering.com/), [GrassMonkey](https://grassmonkeysimulations.com/), [TrackNP](https://www.aliexpress.com/w/wholesale-tracknp.html): Infrared LED based sensors. Good precision and relatively affordable.
-- [JBC Head Tracker](https://jbcconsulting448679429.wordpress.com/), [SmoothTrack](https://smoothtrack.app/): Smartphone apps. Basic, but very affordable if you already have a phone with face unlock. JBC has a free trial and is $2 to unlock the full version. SmoothTrack is $10 and has more features specific to Apple devices, such as using AirPods for tracking. Both the Apple and Android app stores have refund policies.
-- [OpenTrack Neuralnet](https://github.com/opentrack/opentrack/wiki/AI-Face-Tracking): Standard webcam based sensor. Basic, but very affordable if you already have a webcam or can purchase one inexpensively.
-
-I do not recommend:
-
-- NaturalPoint TrackIR: Too expensive compared to competition. Fragile infrared light clip. Lower refresh rates than competition. Official software has not been updated in a long time, compared to OpenTrack receiving new quality of life features. No compelling reason to buy one when equivalent hardware can be had for less than half the price.
-
-I have heard mixed experiences about:
-
-- Tobii Eye Tracker 5. Initially I heard from users complaining coarse and oversmoothed tracking. A real-life friend who tried to use one for flight simulation described it as feeling drunk. More recently, I have heard this improved with software updates, but I haven't been able to verify this personally.
+A head tracker is ideal for anyone who is not using VR. See [the companion article on head trackers.](../headtracker/)
 
 # Virtual Reality
 
