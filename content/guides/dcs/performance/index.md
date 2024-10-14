@@ -124,7 +124,7 @@ Heavy and bulky, though lighter than the standard Pimax Crytsal
 Some users report issues with inside-out tracking
 No eye tracking
 Mixed experiences with customer support
-Mediocre microphone, no speakers
+Medicore microphone and speaker quality
 
 ## [Meta Quest 3](https://www.meta.com/quest/quest-3/)
 
@@ -159,8 +159,7 @@ Excellent eye tracking
 Expensive
 Requires a separate battery, even when connected to power source
 Heavy and bulky
-Mediocre microphone and speaker quality
-Similar cons to Crystal Light: Inside-out tracking issues, mixed customer support experiences
+Similar cons to Crystal Light: Inside-out tracking issues, medicore microphone and speaker quality, mixed customer support experiences
 
 ## [Bigscreen Beyond](https://store.bigscreenvr.com/products/bigscreen-beyond)
 
