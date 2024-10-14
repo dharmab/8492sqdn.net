@@ -1,7 +1,7 @@
 ---
 title: DCS World Performance and Settings Guide
 summary: Recommended system, graphical and gameplay settings for DCS World
-date: 2024-09-05
+date: 2024-10-14
 tags: 
   - digital combat simulator
 weight: 1
@@ -17,9 +17,6 @@ _Current known issues and workarounds_
 
 - ⚠️ Intel 13th and 14th generation CPUs have a high rate of failure ([1](https://community.intel.com/t5/Processors/July-2024-Update-on-Instability-Reports-on-Intel-Core-13th-and/m-p/1617113), [2](https://community.intel.com/t5/Blogs/Tech-Innovation/Client/Intel-Core-13th-and-14th-Gen-Desktop-Instability-Root-Cause/post/1633239)) manifesting as strange errors in many games including "out of VRAM" errors and inexplicable CPU crashes. The issue impacts the higher end models at the highest rates, but can impact several SKUs including i9 and i7 models.
   - Fix: Intel has released a pair of microcode patches, one in mid August 2024 and one in late September 2024. Check with your motherboard manufacturer for a BIOS update. However, if the damage has already occurred, there is no fix; the CPU must be exchanged for a new one.
-- 🐛 General performance issues in the dynamic slot selection screen
-  - Workaround: Disable the Supercarrier module in the module manager
-  - Workaround: If you have a gaming mouse, decrease the USB device polling rate below 500Hz. Polling rate is not the same as DPI - you typically change this in the mouse's driver software, not using buttons on the mouse.
 
 # Recommended Specs
 
@@ -205,6 +202,16 @@ No integrated audio
 
 ## Why not…?
 
+### Meta Quest 3S
+
+- The Quest 3S is optically identical to the Quest 2, with some additional features such as passthrough and hand tracking, and upgraded onboard hardware.
+- The much better display on the Quest 3 is preferred, but the Quest 3S may be a decent introductory headset if you get it at a good price.
+- If you are only interested in PCVR and not standalone VR, consider a used or refurbished Quest 2 instead. It is optically identical to the 3S for PCVR use.
+
+### Meta Quest 2
+
+- The much better display on the Quest 3 is preferred, but a used or refurbished Quest 2 may be a decent introductory headset if you get it at a good price.
+
 ### Meta Quest Pro
 
 - The Quest 3 is both cheaper and higher resolution.
@@ -217,8 +224,8 @@ No integrated audio
 
 ### HP Reverb G2
 
-- Microsoft is killing off Windows Mixed Reality, and the G2 relies on WMR to function.
-- There is some hope that [Monado](https://monado.freedesktop.org/) will provide support after WMR is removed, but this is not guaranteed.
+- Microsoft has removed Windows Mixed Reality from Windows, and the G2 relied on WMR to function. (Existing installations continue to work if Windows updates are deferred, but this will become increasingly impractical over time.)
+- There is some hope that [Monado](https://monado.freedesktop.org/) will provide support in the future, but this is not guaranteed.
 - Very common hardware failures due to internal damage to the proprietary video cable.
 
 ### Valve Index
@@ -229,6 +236,7 @@ No integrated audio
 
 - Not officially compatible with OpenXR, which is required for DCS/BMS.
 - A workaround is available using ALVR streaming, but it has no guarantees of continuing to work.
+- Extremely high price!
 
 # Windows Settings and Tweaks
 
@@ -432,6 +440,13 @@ This can hugely reduce the number of pixels needed to render, improving performa
 
 To try this, use both [Quad Views Foveated](https://github.com/mbucchia/Quad-Views-Foveated) and [Quad Views Companion](https://github.com/TallyMouse/QuadViewsCompanion). The former implements the feature, and the latter provides a GUI for changing the settings in `%localappdata%\Quad-Views-Foveated\settings.cfg`.
 
+Ensure that the following options are enabled in DCS's VR settings as well:
+
+- Use Quad Views
+- Track the eyes position (if your headset supports eye tracking)
+
+> 
+
 Note that if you choose to use both Quad Views Rendering and OpenXR Toolkit together, you should set settings like Turbo Mode and foveated rendering/render scale in QuadViewsCompanion and leave them at the default setting in OpenXR Toolkit.
 
 RedKite has a good video demoing eye-tracked Foveated Rendering:
@@ -491,6 +506,10 @@ On Meta Quest headsets using Link/AirLink, you can toggle ASW while playing with
 
 > ℹ️ My personal preference is ASW disabled and framerate unlocked (Ctrl+Num1)
 
+## Lower Refresh Rate
+
+You should lock your headset to the _lowest_ refresh rate that you can use comfortably. This helps reduce the visual impact of stuttering. I personally find a refresh rate of 72Hz to work best for me, but if you are impacted by VR sickness or motion sickness, you may need a higher setting such as 90Hz.
+
 # Suggested Game Settings
 
 These settings are a good starting baseline; you may need to tweak and test further, especially for VR setups.
@@ -507,38 +526,24 @@ These settings are a good starting baseline; you may need to tweak and test furt
 | | |
 |-|-|
 | Res of Cockpit Displays | 1024 Every Frame |
-| Anti-Aliasing | Off or MSAA 2x/MSAA 4x
-Do not use TAA - it causes ghosting
-Do not use DLAA - it causes blurring
-MSAA may reduce shimmer in VR |
-| Upscaling | Off has best fidelity (no blurring/ghosting), especially on 1080p monitors
-Try DLSS Quality and sharpening 0.5 on newer Nvidia graphics
-Try FSR with scaling 0.9 and sharpening 0.8 on AMD graphics or older Nvidia graphics
-Tune sharpening to user preference
-If this is grayed out, turn off anti-aliasing and verify drivers are fully updated |
+| Anti-Aliasing | Off or MSAA 2x/MSAA 4x. Do not use TAA - it causes ghosting. Do not use DLAA - it causes blurring. MSAA may reduce shimmer in VR |
+| Upscaling | Off has best fidelity (no blurring/ghosting), especially on 1080p monitors. Try DLSS Quality and sharpening 0.5 on newer Nvidia graphics. Try FSR with scaling 0.9 and sharpening 0.8 on AMD graphics or older Nvidia graphics. Tune sharpening to user preference. If this is grayed out, turn off anti-aliasing and verify drivers are fully updated |
 | Textures | High |
 | Terrain textures | High |
-| Heat Blur | High (2D) or Off (VR)
-In VR, the blur renders incorrectly, causing it to blur objects in front of the heat. |
+| Heat Blur | High (2D) or Off (VR). In VR, the blur renders incorrectly, causing it to blur objects in front of the heat. |
 | Shadows | Off or High |
 | Flat Shadows Blur | Off |
-| Secondary Shadows | User preference
-Particularly impactful on carriers and at large airbases |
+| Secondary Shadows | User preference. Particularly impactful on carriers and at large airbases |
 | SSS (Screen Space Shadows) | User preference |
 | Visib Range | Medium or High |
 | Civ Traffic | Off |
 | Clouds | High or Ultra |
-| Depth of Field | Off
-Causes artifacting in VR when using Quad Views Rendering |
+| Depth of Field | Off. Causes artifacting in VR when using Quad Views Rendering |
 | Water | Medium |
-| SSAO | Off
-Causes artifacting in VR when using Quad Views Rendering |
-| SSLR | Off
-Causes artifacting in VR when using Quad Views Rendering |
-| Lens Effects | Off
-Causes artifacting in VR when using Quad Views Rendering |
-| Motion Blur | Off
-Causes artifacting in both 2D and VR |
+| SSAO | Off. Causes artifacting in VR when using Quad Views Rendering |
+| SSLR | Off. Causes artifacting in VR when using Quad Views Rendering |
+| Lens Effects | Off. Causes artifacting in VR when using Quad Views Rendering |
+| Motion Blur | Off. Causes artifacting in both 2D and VR |
 | Clutter/Grass | 0 |
 | Forest Visibility | 100% |
 | Forest Details Factor | 1 |
@@ -577,6 +582,8 @@ Causes artifacting in both 2D and VR |
 | Enable HMD Mask | On unless you are livestreaming or recording |
 | MSAA Mask Size | If set to a value below 1.0, MSAA will only be applied to the center of the display. Some users report that setting this to values other than 1.0 caused issues. |
 | VR Mirror Use DCS System Resolution | On. Turning this off decreases performance and interferes with Jester features in Heatblur modules. Use external software such as Oculus Mirror Utility for recording/livestreaming. |
+| Use Quad View | On, if you have installed and configured Quad Views Rendering |
+| Track the eye position | On, if you have installed and configured Quad Views Rendering and your headset has an eye tracker |
 
 # Troubleshooting Crashes
 
