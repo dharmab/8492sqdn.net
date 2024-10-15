@@ -6,7 +6,7 @@ weight: 1
 ---
 Head tracking is a technology that allow you to control the camera view in your simulator by rotating and moving your head.
 
-Head tracking is a near-essential input for combat flight simulation games; it is extremely difficult to track an enemy in a dogfight, use helmet-mounted sights to target weapons, or fly in close formation without head tracking. **I personally consider head tracking to be more important than a HOTAS.**
+Head tracking is a near-essential input for combat flight simulation games; it is extremely difficult to track an enemy in a dogfight, use helmet-mounted sights to target weapons, or fly in close formation without head tracking. **I personally consider head tracking to be more important than a HOTAS. I would rather use a gamepad and a head tracker than a HOTAS without head tracking.**
 
 Head tracking can also enrich other types of simulation games such as civil flight simulation, sim racing, and infantry combat games like ArmA.
 
