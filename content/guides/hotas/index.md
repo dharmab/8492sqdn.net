@@ -25,7 +25,7 @@ You may already have one!
 
 See Tuuvas' setup guides:
 
-{{< youtube-playlist PLAHjQB4UN-S5sKnHYkq_AxoAd-gBxhvb8 >}}
+{{< youtube id=7Zy_P-EhjPo >}}
 
 ([Not suitable for Falcon BMS](https://forum.falcon-bms.com/topic/23233/throttle-up-down-key-bindings-are-too-coarse?_=1683335735387&lang=en-US))
 
