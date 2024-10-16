@@ -454,13 +454,13 @@ The MiG-29 can use unguided rockets and bombs. It’s not a precision bomber- th
 
 ## Rockets (S-8, S-24)
 
->💥 Rockets are my preferred air to ground weapon in the MiG-29. >some tips:
+> 💥 Rockets are my preferred air to ground weapon in the MiG-29. Some tips:
 >
->Rockets are an area weapon, not a precision weapon. Distribute >them over a target area.
+> Rockets are an area weapon, not a precision weapon. Distribute them over a target area.
 >
->Rockets require you to dive onto your target, so they’re best >used when the enemy has no AAA or MANPADS and limited small >arms. They can also be used when flying under the radar of >older SAM systems.
+> Rockets require you to dive onto your target, so they’re best used when the enemy has no AAA or MANPADS and limited small >arms. They can also be used when flying under the radar of older SAM systems.
 >
->”One pass, haul ass” is a winning strategy. Unleash all of your rockets in one quick attack and then leave.
+> ”One pass, haul ass” is a winning strategy. Unleash all of your rockets in one quick attack and then leave.
 
 1. Select Air to Ground Mode.
 2. Repeatedly press the Weapon Change button to cycle the selected weapon stations until the equipped rocket pods are selected.
@@ -503,13 +503,13 @@ The SPO-15 RWR shows:
 ![](images/Untitled%207.png)
 
 | Cyrillic | English Cockpit Mod | Type |
-| --- | --- | --- |
+| - | - | - |
 | П | A | Airborne |
 | З | S | Short Range |
 | X | M | Medium Range |
 | H | L | Long Range |
 | F | E | Early Warning |
-| C  | W | AWACS |
+| C | W | AWACS |
 
 # Reference Material
 
