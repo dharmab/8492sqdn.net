@@ -453,9 +453,9 @@ A tradeoff is that you may not be able to charge your headset and use the link c
 
 ## DLSS/FSR
 
-DLSS doesn’t work great in VR headsets, causing noticeable ghosting. The main use case of DLSS with VR is to supersample in OpenXR, then use DLSS to scale back down to the native resolution. This can soften some types of distracting visual artifacts, but requires a very beastly rig.
+DLSS as implemented in DCS doesn’t work great in VR headsets, causing noticeable ghosting. [It is possible to override the DLSS implementation to one that doesn't cause ghosting using an unofficial tweak.](https://forum.dcs.world/topic/356743-update-the-dlss-preset-used-by-dcs-to-remove-ghosting/)
 
-FSR also causes visual artifacts, such as ghosting/blurring on moving options and when switching MFD pages. Personally, I find the performance gain to be worth the tradeoff, but your mileage may vary based on your headset and vision.
+FSR also causes visual artifacts, such as ghosting/blurring on moving options and when switching MFD pages.Your mileage may vary based on your headset and vision.
 
 ## XRNeckSafer
 
