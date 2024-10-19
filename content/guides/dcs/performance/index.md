@@ -191,11 +191,13 @@ No integrated audio
 ### Meta Quest 3S
 
 - The Quest 3S is optically identical to the Quest 2, with some additional features such as passthrough and hand tracking, and upgraded onboard hardware.
+- Meta uses multiple suppliers for the LCD panel, with significant variance in color and visiblyt different pixelation. You might get a panel with good color, or one with washed out colors.
 - The much better display on the Quest 3 is preferred, but the Quest 3S may be a decent introductory headset if you get it at a good price.
 - If you are only interested in PCVR and not standalone VR, consider a used or refurbished Quest 2 instead. It is optically identical to the 3S for PCVR use.
 
 ### Meta Quest 2
 
+- Meta used multiple suppliers for the LCD panel, with significant variance in color and visiblyt different pixelation. You might get a panel with good color, or one with washed out colors.
 - The much better display on the Quest 3 is preferred, but a used or refurbished Quest 2 may be a decent introductory headset if you get it at a good price.
 
 ### Meta Quest Pro
