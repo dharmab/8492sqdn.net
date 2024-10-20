@@ -32,7 +32,7 @@ An SSD is **absolutely essential**. When installed on a spinning disk, DCS can t
 
 ## CPU
 
-The best CPUs for DCS World are AMD X3D series CPUs including the the AMD 7800X3D, 5800X3D, 5700X3D and 5600X3D. But any fast gaming-oriented CPU is fine.
+The best CPUs for DCS World are AMD X3D series CPUs including the the AMD 7800X3D, 5800X3D, 5700X3D and 5600X3D. But any fast gaming-oriented CPU with at least 4 cores is fine.
 
 [Gamer's Nexus: Best CPUs of 2023](https://gamersnexus.net/cpus/best-cpus-2023-intel-vs-amd-gaming-video-editing-budget-biggest-disappointment)
 
@@ -55,6 +55,15 @@ For new builds, I strongly recommend 32GB of RAM as a bare minimum.
 The best GPUs for DCS World are high-end Nvidia and AMD GPUs. Intel GPUs are accepted for 1080p at lower settings.
 
 Since DCS uses an older graphics engine, high amounts of VRAM is more important than ray tracing performance. 12-16GB+ of VRAM is ideal.
+
+Ideal GPUs for VR include:
+
+Tier | Nvidia | AMD
+-|-|-
+S|RTX 4090
+A|7900 XTX, RTX 4080 Super, RTX 4080 | 7900 XT
+B|RTX 4070 Ti Super, RTX 4070 Ti, RTX 3090 Ti | 7900 GRE, 7800 XT, 6950 XT, 6900 XT
+C|RTX 4070 Super, RTX 4070, RTX 3080 Ti, RTX 3080 12GB | 6800 XT
 
 [Gamers Nexus: Best & Worst GPUs of 2023](https://gamersnexus.net/gpus/best-worst-gpus-2023-gaming-100-2000-video-cards)
 
