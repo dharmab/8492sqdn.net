@@ -52,7 +52,7 @@ For new builds, I strongly recommend 32GB of RAM as a bare minimum.
 
 ## GPU
 
-The best GPUs for DCS World are high-end Nvidia and AMD GPUs. Intel GPUs are accepted for 1080p at lower settings.
+The best GPUs for DCS World are high-end Nvidia and AMD GPUs. Intel GPUs are acceptable for 1080p at lower settings.
 
 Since DCS uses an older graphics engine, high amounts of VRAM is more important than ray tracing performance. 12-16GB+ of VRAM is ideal.
 
