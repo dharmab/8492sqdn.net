@@ -48,6 +48,15 @@ You should ideally use two sticks of RAM and not four sticks. Most systems have 
 
 When purchasing RAM, match the frequency and timings of the RAM to the CPU manufacturer's recommendation. The recommendation may vary by specifc CPU and motherboard. AMD provides a table of their test results with overclocked memory [here](https://www.amd.com/en/products/processors/ryzen-compatible-memory.html). On Intel systems, you are generally limited by the motherboard. Check with the manufacturer of the RAM, as some provide tables on their websites for selecting an appropriate kit.
 
+_In most cases_ the optimal speeds are:
+
+|CPU Type|Speed|Note|
+|-|-|-|
+|Intel (DDR4)|3200-4000MHz|Diminishing returns past 3200-3600MHz|
+|Intel (DDR5)|6400-7200MHz|Varies by motherboard|
+|AMD (DDR4)|3600MHz||
+|AMD (DDR5)|6000MHz||
+
 For new builds, I strongly recommend 32GB of RAM as a bare minimum.
 
 ## GPU
@@ -150,7 +159,7 @@ Standalone capbilities
 Includes controllers
 **Cons**|
 Requires a quality wifi5/wifi6 dedicated router or wireless access point *or* a third party charging+link cable for long sessions
-Significantly pixel density than our other recommendation (25 PPD)
+Significantly lower pixel density than our other recommendation (25 PPD)
 Significant compression artifacts including image noise and color banding
 Forced Oculus/Meta software updates contain breaking changes and sometimes unfixable issues
 No eye tracking
@@ -257,14 +266,6 @@ Third party antivirus such as Kaspersky, BitDefender, McAfee, Norton, MalwareByt
 
 Be sure to enable [XMP](https://www.intel.com/content/www/us/en/support/articles/000095207/intel-nuc.html#:~:text=XMP%20or%20Extreme%20Memory%20Profiles,higher%20than%20standard%20memory%20speeds.) in your motherboard settings as it's often disabled by default.
 
-## Nvidia GPU Tweaks
-
-Update your graphics drivers to the latest available version from [nvidia.com/drivers](https://nvidia.com/drivers) or through [GeForce Experience](https://www.nvidia.com/en-us/geforce/geforce-experience/). If you are running an outdated driver version, some options like DLSS and SSS may be grayed out in the in-game options.
-
-Disable Hardware Accelerated GPU Scheduling in Windows settings. It increases input latency and stutter, especially on mid to high end systems when using VR.
-
-Disable [ShadowPlay](https://www.nvidia.com/en-us/geforce/geforce-experience/shadowplay/) if you aren't using it to record gameplay footage.
-
 ## AMD CPU Tweaks
 
 If you have the 7900X3D/7950X3D, or a Ryzen X3D CPU with *dual* CCDs, install the [Xbox Game Bar](https://apps.microsoft.com/store/detail/xbox-game-bar/9NZKPSTSNW4P) and run it while playing games. AMD’s software uses it to detect when a game is running and change CPU scheduling behavior to allow maximum performance.
@@ -276,6 +277,14 @@ Adjusting [Precision Boost Overdrive 2](https://www.amd.com/en/resources/support
 {{< youtube dfkrp25dpQ0 >}}
 
 {{< youtube FaOYYHNGlLs >}}
+
+## Nvidia GPU Tweaks
+
+Update your graphics drivers to the latest available version from [nvidia.com/drivers](https://nvidia.com/drivers) or through [GeForce Experience](https://www.nvidia.com/en-us/geforce/geforce-experience/). If you are running an outdated driver version, some options like DLSS and SSS may be grayed out in the in-game options.
+
+Disable Hardware Accelerated GPU Scheduling in Windows settings. It increases input latency and stutter, especially on mid to high end systems when using VR.
+
+Disable [ShadowPlay](https://www.nvidia.com/en-us/geforce/geforce-experience/shadowplay/) if you aren't using it to record gameplay footage.
 
 ## AMD GPU Tweaks
 
