@@ -446,12 +446,10 @@ This can hugely reduce the number of pixels needed to render, improving performa
 
 To try this, use both [Quad Views Foveated](https://github.com/mbucchia/Quad-Views-Foveated) and [Quad Views Companion](https://github.com/TallyMouse/QuadViewsCompanion). The former implements the feature, and the latter provides a GUI for changing the settings in `%localappdata%\Quad-Views-Foveated\settings.cfg`.
 
-Ensure that the following options are enabled in DCS's VR settings as well:
+Ensure that the following options are enabled in DCS's VR settings as well. **These checkboxes only appear if Quad Views Rendering is installed and DCS is launched with VR enabled.**
 
 - Use Quad Views
 - Track the eyes position (if your headset supports eye tracking)
-
-> 
 
 Note that if you choose to use both Quad Views Rendering and OpenXR Toolkit together, you should set settings like Turbo Mode and foveated rendering/render scale in QuadViewsCompanion and leave them at the default setting in OpenXR Toolkit.
 
