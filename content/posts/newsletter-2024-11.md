@@ -56,7 +56,7 @@ In October, the following was completed:
 
 There are currently three open issues necessary before the v1 release:
 
-- Use of API keys with DCS-gRPC when authentication. This was waiting for the official release of DCS-gRPC v0.8.0, which was released on the 28t. I expect this will be trivial to implement.
+- Use of API keys when authentication is required by DCS-gRPC. This was waiting for the official release of DCS-gRPC v0.8.0, which was released on the 28th. I expect this will be trivial to implement.
 - In-game subtitles. This should be technically feasible, but will require a bit of development.
 - Replace the current 50 knot speed filter with an AGL filter. This is going to require me to go into the programming cave for a bit, so keep an eye out for what I have to share next month :D
 
