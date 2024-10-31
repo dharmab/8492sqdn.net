@@ -61,3 +61,5 @@ There are currently three open issues necessary before the v1 release:
 - Replace the current 50 knot speed filter with an AGL filter. This is going to require me to go into the programming cave for a bit, so keep an eye out for what I have to share next month :D
 
 Honestly, the bot is pretty much production ready for PvE servers at this point, but I want to address the accessibility gaps and PvP use case before I slap a v1 sticker on it. I fully expect a v1.0 release this winter, likely before the end of 2024!
+
+P.S. If you haven't already done so, be sure to try the bot out on the Flashpoint Levant server! See https://limakilo.net for details, and a link to the Discord where you can check out the tracing system in the `#gci-log` channel!
