@@ -413,7 +413,9 @@ In most cases, you should install the latest drivers for your GPU. In some cases
 
 ## Prefer Standalone Over Steam
 
-Launching DCS through SteamVR runs the game use the older OpenVR API rather than directly using the OpenXR API. This causes a performance hit.
+Launching DCS through SteamVR runs the game use the older OpenVR API rather than directly using the OpenXR API. This causes a significant performance hit (though the exact amount may vary by system).
+
+{{< youtube id="TVmYgjMyJIQ" start=1051 >}}
 
 For the best performance, run the Standalone version of DCS directly with VR mode enabled in DCS settings.
 
