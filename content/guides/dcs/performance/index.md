@@ -429,15 +429,6 @@ To convert an existing Steam installation to Standalone:
 4. Delete `<DCS standalone installation folder>\Config\retail.cfg`
 5. Run the “Repair DCS World” application in your Start Menu
 
-## OpenXR Toolkit
-
-[OpenXR Toolkit](https://mbucchia.github.io/OpenXR-Toolkit/) provides tweaks for VR applications. Some notable settings:
-
-- Turbo Mode, which makes VR feel smoother by forcing frames to render more quickly rather than wait for consistent frame timing. Note that this seems to cause weird, unexplained problems when combined with SteamVR.
-- The supersampling in OpenXR toolkit works better than the supersampling built into DCS.
-
-After it’s installed, you can open the toolkit menu while playing and tweak settings. See [the usage instructions](https://mbucchia.github.io/OpenXR-Toolkit/#basic-usage) and [feature list](https://mbucchia.github.io/OpenXR-Toolkit/features.html) for more info.
-
 ## Quad Views Rendering
 
 [Quad Views Rendering](https://github.com/mbucchia/Quad-Views-Foveated/wiki/What-is-Quad-Views-rendering%3F) is a technique that renders the focus area within your headset at a higher resolution than the rest of the headset. If your headset has eye-tracking, the high-resolution render area will follow your gaze; otherwise, it will be centered within your headset.
@@ -515,6 +506,15 @@ On Meta Quest headsets using Link/AirLink, you can toggle ASW while playing with
 ## Lower Refresh Rate
 
 You should lock your headset to the _lowest_ refresh rate that you can use comfortably. This helps reduce the visual impact of stuttering. I personally find a refresh rate of 72Hz to work best for me, but if you are impacted by VR sickness or motion sickness, you may need a higher setting such as 90Hz.
+
+## OpenXR Toolkit
+
+[OpenXR Toolkit](https://mbucchia.github.io/OpenXR-Toolkit/) provides tweaks for VR applications. This used to be an important tool, but improvements in OpenXR, DCS World and Quad Views Rendering mean it's mostly an optional tool for those who want to configure advanced tweaks. Some notable settings:
+
+- Turbo Mode, which makes VR feel smoother by forcing frames to render more quickly rather than wait for consistent frame timing. Note that this seems to cause weird, unexplained problems when combined with SteamVR.
+- The supersampling in OpenXR toolkit works better than the supersampling built into DCS.
+
+After it’s installed, you can open the toolkit menu while playing and tweak settings. See [the usage instructions](https://mbucchia.github.io/OpenXR-Toolkit/#basic-usage) and [feature list](https://mbucchia.github.io/OpenXR-Toolkit/features.html) for more info.
 
 # Suggested Game Settings
 
