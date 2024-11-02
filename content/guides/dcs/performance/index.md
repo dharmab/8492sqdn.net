@@ -80,9 +80,11 @@ B|RTX 4070 Super, RTX 4070, RTX 3080 Ti, RTX 3080 12GB | 6800 XT
 
 ## PSU
 
-You should have a sufficient power supply for your CPU and GPU. **PSU wattage alone is not a good indicator of reliability under load.** 80PLUS ratings are also not useful for determining overall power delivery and efficiency performance. You need to select a PSU based on results from bench testing by knowledgeable people with the appropriate equipment.
+You should have a sufficient power supply for your CPU and GPU. 
 
-For now, we recommend anything Tier B or better on the [Cultist Tier List](https://cultists.network/140/psu-tier-list/). We're also keeping an eye on [LTT Labs' PSU testing](https://www.lttlabs.com/categories/power-supplies) with interest.
+**PSU wattage alone is not a good indicator of reliability under load. 80PLUS ratings are not useful** for determining overall power delivery and efficiency across a range of scenarios. The 80PLUS rating only test efficiency at a few specific loads, and does not test for performance or reliability. Manufacturers can and do game these ratings! 
+
+You need to select a PSU based on results from bench testing by knowledgeable people with the appropriate equipment. Check any power supply you plan to purchase against the [Cultist Tier List](https://cultists.network/140/psu-tier-list/) (see [spreadsheet](https://docs.google.com/spreadsheets/d/1eL0893Ramlwk6E3s3uSvH1_juom7SMG5SCNzP2Uov8w/edit?gid=1719706335#gid=1719706335) for newer data not yet on the website), as well as  [LTT Labs' PSU testing](https://www.lttlabs.com/categories/power-supplies) testing. Only buy if it is Tier B on the Cultist list and/or recommended by LTT Labs.
 
 ## USB
 
