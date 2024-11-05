@@ -230,6 +230,12 @@ No integrated audio
 - There are *some* advantages - good comfort, ability to see your HOTAS and keyboard through the gap between the headset and your face, and the included controllers are great for roomscale games. But the advantages aren’t worth the tradeoffs for most people, given this price point.
 - Awkward middle child between the Meta Quest 3 and Pimax Crystal.
 
+### HTC Vive Focus Vision
+
+- The lenses in the Focus Vision are very poor in quality, resulting in a mostly blurry image.
+- General problems with tracking, video stability and eye tracking.
+- Probably the worst value headset on the market as of this writing.
+
 ### HP Reverb G2
 
 - Microsoft has removed Windows Mixed Reality from Windows, and the G2 relied on WMR to function. (Existing installations continue to work if Windows updates are deferred, but this will become increasingly impractical over time.)
