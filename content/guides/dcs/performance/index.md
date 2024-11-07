@@ -32,7 +32,15 @@ An SSD is **absolutely essential**. When installed on a spinning disk, DCS can t
 
 ## CPU
 
-The best CPUs for DCS World are AMD X3D series CPUs including the the AMD 7800X3D, 5800X3D, 5700X3D and 5600X3D. But any fast gaming-oriented CPU with at least 4 cores is fine.
+The best CPUs for DCS World are AMD X3D series CPUs such as:
+
+- AMD 9800X3D
+- AMD 7800X3D
+- AMD 5800X3D
+- AMD 5700X3D
+- AMD 5600X3D.
+
+However, any fast gaming-oriented CPU with at least 4 cores is fine.
 
 [Gamer's Nexus: Best CPUs of 2023](https://gamersnexus.net/cpus/best-cpus-2023-intel-vs-amd-gaming-video-editing-budget-biggest-disappointment)
 
