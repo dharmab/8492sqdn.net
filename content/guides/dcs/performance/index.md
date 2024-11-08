@@ -36,9 +36,10 @@ The best CPUs for DCS World are AMD X3D series CPUs such as:
 
 - AMD 9800X3D
 - AMD 7800X3D
+- AMD 7600X3D
 - AMD 5800X3D
 - AMD 5700X3D
-- AMD 5600X3D.
+- AMD 5600X3D
 
 However, any fast gaming-oriented CPU with at least 4 cores is fine.
 
