@@ -43,7 +43,7 @@ There are various advantages and tradeoffs for each product, so try a few and se
 
 The head tracker amplifies your movement; typically, you configure it so physically looking at the edge of your monitor turns your in-game camera to look over your character's shoulder.
 
-{{ youtube id=9wXx3vMy_AQ start=38 }}
+{{< youtube id=9wXx3vMy_AQ start=38 >}}
 
 ## I use VR. Do I need a head tracker?
 
