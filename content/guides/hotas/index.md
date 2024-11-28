@@ -252,7 +252,9 @@ Bundle of the Thrustmaster T16000M FCS stick and TWCS throttle
     
 ![](images/t16000m-fcs-hotas.png)
     
-Winwing Orion 2 HOTAS ViperAce: Bundle of the Winwing Orion 2 ViperAce EX stick and Orion 2 ViperAce throttle. A close match to the real controls of an F-16.
+### Winwing Orion 2 HOTAS ViperAce
+
+Bundle of the Winwing Orion 2 ViperAce EX stick and Orion 2 ViperAce throttle. A close match to the real controls of an F-16.
     
 ![](images/orion-2-hotas-f-16.png)
 
