@@ -19,7 +19,7 @@ Great choice for a first joystick to try before you spend hundreds of dollars!
 
 ### Xbox or PlayStation gamepad
 
-You may already have one! 
+You may already have one! If not, a third-party 8BitDo gamepad costs around $20. 
 
 ![](images/xbox-one-controller.png)
 
@@ -28,12 +28,6 @@ See Tuuvas' setup guides:
 {{< youtube id=7Zy_P-EhjPo >}}
 
 ([Not suitable for Falcon BMS](https://forum.falcon-bms.com/topic/23233/throttle-up-down-key-bindings-are-too-coarse?_=1683335735387&lang=en-US))
-
-### FlyDigi Vader 3 Pro
-
-Xbox style gamepad with 6 additional mappable buttons and a gyro accurate enough to use as a primary flight control.
-
-![](images/vader-3-pro.jpeg)
 
 ### Winwing Ursa Minor Fighter Joystick
 
