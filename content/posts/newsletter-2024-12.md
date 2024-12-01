@@ -7,7 +7,7 @@ tags:
   - skyeye
 ---
 
-Hello and welcome to Decembers's development newsletter for the SkyEye project! These monthly posts summarize new progress, the current status of the project, and what to expect in the near future.
+Hello and welcome to December's development newsletter for the SkyEye project! These monthly posts summarize new progress, the current status of the project, and what to expect in the near future.
 
 ## What is SkyEye?
 
@@ -27,7 +27,7 @@ What makes SkyEye cool?
 
 ## November in Review
 
-In [November's newsletter](newsletter-2024-11.md) I set three goals
+In [November's newsletter](newsletter-2024-11.md) I set three goals:
 
 ### Use API keys when authentication is required by DCS-gRPC.
 
@@ -49,7 +49,7 @@ This tool is early and work-in-progress, but my dev build already produces valid
 
 In the meantime, I've staged the code to use AGL data into SkyEye; SkyEye will intelligently use the AGL data if it is available, and fall back to the current speed filter if it is not.
 
-## In-Game Subtitles
+### In-Game Subtitles
 
 Unfortunately, I did not make progress on this goal in November. Expect this work to continue into 2025.
 
