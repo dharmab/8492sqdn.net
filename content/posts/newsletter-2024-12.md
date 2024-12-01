@@ -1,7 +1,7 @@
 ---
 title: "SkyEye Development Newsletter: December 2024"
-summary: "SkyEye: Over the Line"
-date: 2024-10-01
+summary: "SkyEye Development Newsletter"
+date: 2024-12-01
 tags:
   - digital combat simulator
   - skyeye
