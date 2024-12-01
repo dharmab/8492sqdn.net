@@ -1,7 +1,7 @@
 ---
 title: DCS World Performance and Settings Guide
 summary: Recommended system, graphical and gameplay settings for DCS World
-date: 2024-10-14
+date: 2024-11-30
 tags: 
   - digital combat simulator
 weight: 1
@@ -43,7 +43,7 @@ The best CPUs for DCS World are AMD X3D series CPUs such as:
 
 However, any fast gaming-oriented CPU with at least 4 cores is fine.
 
-[Gamer's Nexus: Best CPUs of 2023](https://gamersnexus.net/cpus/best-cpus-2023-intel-vs-amd-gaming-video-editing-budget-biggest-disappointment)
+[Gamer's Nexus: Best CPUs of 2024](https://gamersnexus.net/cpus/best-cpus-2024-intel-vs-amd-gaming-production-budget-efficiency)
 
 Ideally, use an upgraded CPU cooler.
 
