@@ -2,7 +2,10 @@ baseURL: https://8492sqdn.net
 languageCode: en-us
 title: Osean Air Force 8492nd Squadron
 theme: PaperMod
-
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 mainsections:
   - guides
   - posts

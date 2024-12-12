@@ -22,7 +22,7 @@ _Current known issues and workarounds_
 
 ## Storage
 
-You **MUST** install DCS on an SSD (solid state) instead of an HDD (spinning disk). The base game is 160GB and a large install is 700GB+. A dedicated 1TB or larger high performance SSD is recommended.
+You **MUST** install DCS on an SSD (solid state) instead of an HDD (spinning disk). The base game is 160GB, a typical large install is around 700GB  and a complete install is over 1TB. A dedicated 1TB or 2TB high performance SSD is recommended.
 
 [Tom's Hardware: Best SSDs](https://www.tomshardware.com/reviews/best-ssds,3891.html)
 
@@ -45,13 +45,13 @@ However, any fast gaming-oriented CPU with at least 4 cores is fine.
 
 [Gamer's Nexus: Best CPUs of 2024](https://gamersnexus.net/cpus/best-cpus-2024-intel-vs-amd-gaming-production-budget-efficiency)
 
-Ideally, use an upgraded CPU cooler.
+Ideally, use an upgraded CPU cooler. We're fans of the Thermaltake Phantom 120 series of air coolers and the Arctic Liquid Freezer III AIO liquid cooler.
 
 [Gamers Nexus: CPU Cooler Benchmarks](https://gamersnexus.net/megacharts/cpu-coolers)
 
 ## RAM
 
-DCS World requires 16GB+ RAM minimum. 32GB-128GB RAM is recommended for large multiplayer servers and the Syria map.
+DCS World requires 16GB+ RAM minimum for small missions on the Caucases map. 32GB RAM is required for large multiplayer servers and the Syria map. 64-96GB RAM is recommended if you have the budget available.
 
 You should ideally use two sticks of RAM and not four sticks. Most systems have lower performance with four sticks due to motherboard and CPU bandwidth limits. If you use overclocked RAM, you are more likely to have stability issues with 4 sticks than with 2.
 
@@ -59,14 +59,14 @@ When purchasing RAM, match the frequency and timings of the RAM to the CPU manuf
 
 _In most cases_ the optimal speeds are:
 
-|CPU Type|Speed|Note|
-|-|-|-|
-|Intel (DDR4)|3200-4000MHz|Diminishing returns past 3200-3600MHz|
-|Intel (DDR5)|6400-7200MHz|Varies by motherboard|
-|AMD (DDR4)|3600MHz||
-|AMD (DDR5)|6000MHz||
+|CPU Mfr.|RAM Type|Speed|Note|
+|-|-|-|-|
+|AMD|DDR5|6000MHz||
+|AMD|DDR4|3600MHz||
+|Intel|DDR5|6400-7200MHz|Varies by motherboard|
+|Intel|DDR4|3200-4000MHz|Diminishing returns past 3200-3600MHz|
 
-For new builds, I strongly recommend 32GB of RAM as a bare minimum.
+New builds should have an absolute minimum of 32GB of RAM.
 
 ## GPU
 
@@ -601,19 +601,25 @@ These settings are a good starting baseline; you may need to tweak and test furt
 
 # Troubleshooting Crashes
 
-## Logs
+## Unable to start application (0xc0000142)
+
+Download Visual C++ Redistributable 2017 from [https://aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe), install it, and restart your computer.
+
+## Other Crashes
+
+### Logs
 
 There is a log file located in the [Saved Games folder](#saved-games-folder) at `<Saved Games folder>\Logs\dcs.log`. It can sometimes provide clues for why DCS has crashed, but can be difficult to interpret.
 
-## Sanity checks
+### Sanity checks
 
 These are some basic steps that have been known to fix crashes for some users in the past.
 
-### Recompile Shaders
+#### Recompile Shaders
 
 Follow the steps in the Recompile Shaders section above to clear the shader cache.
 
-### Remove all mods
+#### Remove all mods
 
 Mods in DCS can cause bizarre, seemingly unrelated issues. Reflected of Reflected Simulations has documented some of the utterly strange bugs that can be caused simply by having a mod installed.
 
@@ -631,14 +637,14 @@ Occasionally, something in the [Saved Games folder](#saved-games-folder) trigger
 
 Rename the Saved Games folder to `%userprofile%/Saved Games/DCS.backup`, then launch DCS. It will reset all of your settings including graphics settings, controls, player profiles, etc. to default. If this fixes your crash, you can then copy the files from the backup back into the Saved Games folder a piece at a time (or reconfigure the game from scratch).
 
-## Stability Testing
+### Stability Testing
 
 A potential cause of random crashes is hardware stability issues. The two most common problems we've seen are:
 
 1. Power supply not appropriate for the system. **Wattage and 80PLUS ratings do not tell you if a power supply is reliable or correct for your system**. Modern high-end graphics card are sensitive to voltage stability, and many power supplies - even expensive, high wattage ones from major brands - do not supply stable power under load, resulting in random crashes.
 1. Unstable configuration of RAM. All of the following are risk factors for RAM instability:
   - Using four sticks instead of two
-  - Enabling an overclocking profile EXPO/XMP/DOCP/EOCP
+  - Enabling an overclocking profile (EXPO/XMP/DOCP/EOCP)
   - AMD CPUs are generally more sensitive to RAM problems than Intel CPUs
   - Having a large amount of RAM, especially over 32GB
 
