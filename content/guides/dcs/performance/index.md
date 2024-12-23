@@ -261,6 +261,20 @@ No integrated audio
 - A workaround is available using ALVR streaming, but it has no guarantees of continuing to work.
 - Extremely high price!
 
+### Upcoming Devices
+
+### Pimax Crystal Super
+
+We are watching this one. For now, our recommendation is to wait for independent reviews before deciding whether to purchase.
+
+### Pimax Dream Air
+
+We expect most simmers will prefer the Pimax Crystal models instead. The Dream Air is significantly more expensive while providing a broadly similar PCVR experience. Pimax themselves are marketing the Dream Air as a lightweight and portable device rather than a simulation cockpit device.
+
+### Unannounced Valve headset ("Deckard")
+
+We are waiting for more information. If you are buying your first headset, especially a Quest, we suggest you buy something now rather than wait. If you are comtemplating an upgrade to a Pimax or Bigscreen headset, consider waiting until Summer 2025 for more information.
+
 # Windows Settings and Tweaks
 
 ## General Tweaks
