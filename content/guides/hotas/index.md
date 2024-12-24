@@ -129,6 +129,10 @@ More expensive than the ViperAce grip for fewer buttons. Even if you only play *
 
 The MCE Ultimate fixed a number of criticisms over the MCE Pro and is worth the cost difference.
 
+### Moza AB9 Force Feedback
+
+We have heard reports that Moza's force feedback software interferes with other DCS tools including SimpleRadio-Standalone. We recommend VPForce as an alternative, because of the excellent software.
+
 # Throttles
 
 ## Recommended
@@ -148,7 +152,7 @@ Customizable, best value!
     
 ![](images/orion-2-fa-18-throttle.png)
     
-### Winwing Orion 2 StrikeAce EX (formerly F-15EX)
+### Winwing Orion 2 StrikeAce EX II (formerly StrikeAce EX / F-15EX)
     
 ![](images/orion-2-f15-ex-throttle.jpeg)
     
