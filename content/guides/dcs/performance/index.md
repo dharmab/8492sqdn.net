@@ -133,7 +133,8 @@ A head tracker is ideal for anyone who is not using VR. See [the companion artic
 > 1. You have a very high end PC
 > 2. You are willing and able to troubleshoot all manner of obscure technical issues
 > 3. You are comfortable installing software from GitHub and very carefully reading technical instructions written by software engineers
-> 4. You have a head tracker to fall back on when updates break VR support from time to time
+> 4. You are OK with your headset breaking for absolutely no fault of your own due to software updates. This includes being OK with headsets becoming permanently bricked and unusuable. This is not a hypothetical; it has _already happened_ to the HP Reverb G2 and some Meta Quest headsets
+> 5. You have a head tracker to fall back on when updates break VR support from time to time
 
 There are no perfect VR headsets, but there are a few worth consideration for DCS. Based on our testing, we currently recommend the **Pimax Crystal Light** as our primary recommendation and the **Meta Quest 3** as a budget option. 
 
