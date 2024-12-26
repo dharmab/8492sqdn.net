@@ -644,7 +644,7 @@ These are some basic steps that have been known to fix crashes for some users in
 
 #### Recompile Shaders
 
-Follow the steps in the Recompile Shaders section above to clear the shader cache.
+Follow the steps in the [Recompile Shaders](#recompile-shaders) section above to clear the shader cache.
 
 #### Remove all mods
 
@@ -688,3 +688,38 @@ Some steps above reference the “Saved Games folder”, which is located in the
 - If you play on Steam, it is `%userprofile%\Saved Games\DCS`
 - If you play on Standalone version, it is `%userprofile%\Saved Games\DCS`...
     - …unless you upgraded from an Open Beta version prior to patch [2.9.3.51704](https://www.digitalcombatsimulator.com/en/news/changelog/stable/2.9.3.51704/), in which case it is `%userprofile%\Saved Games\DCS.Openbeta`, even after the Open Beta and Stable versions were unified.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+_This space intentionally left blank._
