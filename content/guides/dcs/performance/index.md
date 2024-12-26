@@ -15,6 +15,10 @@ _This page contains contributions from my friend Lynx._
 
 _Current known issues and workarounds_
 
+- ⚠️  Meta Quest headsets which have not been updated in a long time may be permanently bricked when the software updates. ([1](https://communityforums.atmeta.com/t5/Talk-VR/Unacceptable-Response-to-Software-Update-Breaking-Device/td-p/1273736), [2](https://www.reddit.com/r/OculusQuest/comments/1hmh09n/quest_update_possibly_bricking_headsets/?share_id=8XnUqovHJR_9Fl7mLQo8X)). This issue may also occur with brand new headsets, if they have were packaged with an older firmware version.
+  - Workaround: **Do not turn on a Quest headset if it has not been updated recently.** **Do not install any updates until Meta provides a fix for this issue.**
+  - There is **no fix** if this happens. Meta support is unable to help and will suggest buying a replacement headset.
+  - We currently recommend against purchasing a Quest headset without a warranty.
 - ⚠️ Intel 13th and 14th generation CPUs have a high rate of failure ([1](https://community.intel.com/t5/Processors/July-2024-Update-on-Instability-Reports-on-Intel-Core-13th-and/m-p/1617113), [2](https://community.intel.com/t5/Blogs/Tech-Innovation/Client/Intel-Core-13th-and-14th-Gen-Desktop-Instability-Root-Cause/post/1633239)) manifesting as strange errors in many games including "out of VRAM" errors and inexplicable CPU crashes. The issue impacts the higher end models at the highest rates, but can impact several SKUs including i9 and i7 models.
   - Fix: Intel has released a pair of microcode patches, one in mid August 2024 and one in late September 2024. Check with your motherboard manufacturer for a BIOS update. However, if the damage has already occurred, there is no fix; the CPU must be exchanged for a new one.
 
@@ -159,6 +163,8 @@ Medicore microphone and speaker quality
 
 ![](images/meta-quest.jpeg)
 
+> NOTE: As of December 2024, we do not recommend buying a Quest headset without a warranty because of the Meta firmware issues bricking headsets with old firmware. Only purchase a headset if you can verify it is running the latest firmware and is functional.
+
 **Pros**|
 -|
 Decent field of view (110°x96°)
@@ -219,6 +225,8 @@ No integrated audio
 
 ### Meta Quest 3S
 
+> NOTE: As of December 2024, we do not recommend buying a Quest headset without a warranty because of the Meta firmware issues bricking headsets with old firmware. Only purchase a headset if you can verify it is running the latest firmware and is functional.
+
 - The Quest 3S is optically identical to the Quest 2, with some additional features such as passthrough and hand tracking, and upgraded onboard hardware.
 - Meta uses multiple suppliers for the LCD panel, with significant variance in color and visibly different pixelation. You might get a panel with good color, or one with washed out colors.
 - The much better display on the Quest 3 is preferred, but the Quest 3S may be a decent introductory headset if you get it at a good price.
@@ -226,10 +234,14 @@ No integrated audio
 
 ### Meta Quest 2
 
+> NOTE: As of December 2024, we do not recommend buying a Quest headset without a warranty because of the Meta firmware issues bricking headsets with old firmware. Only purchase a headset if you can verify it is running the latest firmware and is functional.
+
 - Meta used multiple suppliers for the LCD panel, with significant variance in color and visibly different pixelation. You might get a panel with good color, or one with washed out colors.
 - The much better display on the Quest 3 is preferred, but a used or refurbished Quest 2 may be a decent introductory headset if you get it at a good price.
 
 ### Meta Quest Pro
+
+> NOTE: As of December 2024, we do not recommend buying a Quest headset without a warranty because of the Meta firmware issues bricking headsets with old firmware. Only purchase a headset if you can verify it is running the latest firmware and is functional.
 
 - The Quest 3 is both cheaper and higher resolution.
 - On Meta headsets, eye tracking with OpenXR is only available in debug mode. This requires a developer account, which must be verified by Meta. *The author had to send their driver’s license to Meta to pass verification. Your experience may vary.*
