@@ -15,7 +15,7 @@ _This page contains contributions from my friend Lynx._
 
 _Current known issues and workarounds_
 
-- ⚠️  Meta Quest headsets which have not been updated in a long time may be permanently bricked when the software updates. ([1](https://communityforums.atmeta.com/t5/Talk-VR/Unacceptable-Response-to-Software-Update-Breaking-Device/td-p/1273736): [archived](images/quest-update-thread.png), [2](https://www.reddit.com/r/OculusQuest/comments/1hmh09n/quest_update_possibly_bricking_headsets/?share_id=8XnUqovHJR_9Fl7mLQo8X)). This issue may also occur with brand new headsets, if they have were packaged with an older firmware version.
+- ⚠️  Meta Quest headsets which have not been updated in a long time may be permanently bricked when the software updates. ([1](https://communityforums.atmeta.com/t5/Talk-VR/Unacceptable-Response-to-Software-Update-Breaking-Device/td-p/1273736): [archived](images/quest-update-thread.png), [2](https://communityforums.atmeta.com/t5/Talk-VR/Meta-Software-Bricking-Breaking-Device/td-p/1276177), [3](https://www.reddit.com/r/OculusQuest/comments/1hmh09n/quest_update_possibly_bricking_headsets/?share_id=8XnUqovHJR_9Fl7mLQo8X)). This issue may also occur with brand new headsets, if they have were packaged with an older firmware version.
   - Workaround: **Do not turn on a Quest headset if it has not been updated recently.** **Do not install any updates until Meta provides a fix for this issue.**
   - There is **no fix** if this happens. Meta support is unable to help and will suggest buying a replacement headset.
   - We currently recommend against purchasing a Quest headset without a warranty.
