@@ -91,9 +91,9 @@ Date|Campaign|Mission|Title|Canon Aircfraft
 2019-08-10|_Ace Combat 7: Skies Unknown_|11|_Fleet Destruction_|F-15C
 2019-08-19|_Ace Combat 7: Skies Unknown_|12|_Stonehenge Defensive_|F-15C
 2019-09-02|_Ace Combat 7: Skies Unknown_|13|_Bunker Buster_|F-15C
-2019-09-04|_Ace Combat 7: Skies Unknown - Unexpected Visitor_|SP01|F-15C
-2019-09-10|_Ace Combat 7: Skies Unknown - Anchorhead Raid_|SP02|F-15C
-2019-09-10|_Ace Combat 7: Skies Unknown - Ten Million Relief Plan_|SP03|F-15C
+2019-09-04|_Ace Combat 7: Skies Unknown - Unexpected Visitor_|SP01|_Unexpected Visitor_|F-15C
+2019-09-10|_Ace Combat 7: Skies Unknown - Anchorhead Raid_|SP02|_Anchorhead Raid_|F-15C
+2019-09-10|_Ace Combat 7: Skies Unknown - Ten Million Relief Plan_|SP03|_Ten Million Relief Plan_|F-15C
 2019-09-16|_Ace Combat 7: Skies Unknown_|14|_Cape Rainy Assault_|F-15C
 2019-09-19|_Ace Combat 7: Skies Unknown_|15|_Battle for Farbanti_|F-15C
 2019-10-01|_Ace Combat 7: Skies Unknown_|16|_Last Hope_|F-15C
