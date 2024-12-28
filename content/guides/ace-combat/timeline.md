@@ -43,6 +43,7 @@ Date|Campaign|Mission|Title|Canon Aircfraft
 2005-08-15|_Ace Combat 04: Shattered Skies_|16|_Whiskey Corridor_|?
 2005-09-19|_Ace Combat 04: Shattered Skies_|17|_Siege of Farbanti_|?
 2005-09-26|_Ace Combat 04: Shattered Skies_|18|_Megalith_|F-22
+2006-09-26|_Ace Combat 5: The Unsung War_ Arcade Mode|--|_Operation Katina_|F-22
 2010-09-24|_Ace Combat 5: The Unsung War_|01|_Shorebirds_|F-5E
 2010-09-27|_Ace Combat 5: The Unsung War_|02|_Open War_|F-5E
 2010-09-27|_Ace Combat 5: The Unsung War_|03|_Narrow Margin_|F-5E
