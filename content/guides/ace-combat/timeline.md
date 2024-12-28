@@ -120,7 +120,7 @@ Notes:
 - Trigger's aircraft during missions 05-10 of _Skies Unknown_ is most likely the same F-16C he flew in missions 01-04, based on the following clues:
   - Trigger's plane in Spare Squadron has the Fort Grays tail code painted over with the Three Strikes symbol. Fort Grays is depicted as operating the F-16C (Mage Squadron) and F/A-18F (Golem Squadron).
   - When Avril looks at Trigger's plane in the cutscene after _First Contact_, the engine nozzle is briefly depicted. It's not an exact match for any plane, but the artist seems to have used a Pratt & Whitney F100 as a reference. This engine is used in the F-15 and F-16. Note that the F-15 depicted earlier in the cutscene is not Trigger's plane; from Avril's narration, it is clear that she sees Trigger's plane for the first time _after_ her conversation with Tabloid.
-- Trigger's aircraft during mission 20 of _Skies Unknown_ is most likely an F-15C or F-22, but it could also be an F-16C, F/A-18, or F-22.
+- Trigger's aircraft during mission 20 of _Skies Unknown_ is most likely an F-15C or F-22, but it could also be an F-16C, F/A-18, or F-35.
   - The cutscene before mission 20 depicts Avril preparing to work on an F-15C before the mission begins.
   - The game's cover art depicts the F-22 as the "hero" plane flying past Princess Cosette as she prepares to leap from the Lighthouse.
   - Various aircraft including an F-16, several F/A-18s and an F-22 are visible in the hangar in the cutscenes before mission 20.
