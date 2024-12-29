@@ -100,9 +100,9 @@ Date|Campaign|Mission|Title|Canon Aircfraft
 2010-12-29|_Ace Combat 5: The Unsung War_|26|_Sea of Chaos_|F-14
 2010-12-30|_Ace Combat 5: The Unsung War_|27|_ACES_|F-14
 2010-12-31|_Ace Combat 5: The Unsung War_|27+|_The Unsung War_|F-14
-2014-05-28|_Ace Combat 7: Skies Unknown_|01|VR Mission 01|F-22
-2014-06-16|_Ace Combat 7: Skies Unknown_|02|VR Mission 02|F-22
-2014-07-11|_Ace Combat 7: Skies Unknown_|03|VR Mission 03|F-22
+2014-05-28|_Ace Combat 7: Skies Unknown_|VR01|VR Mission 01|F-22
+2014-06-16|_Ace Combat 7: Skies Unknown_|VR02|VR Mission 02|F-22
+2014-07-11|_Ace Combat 7: Skies Unknown_|VR03|VR Mission 03|F-22
 2019-05-15|_Ace Combat 7: Skies Unknown_|01|_Charge Assault_|F-16C
 2019-05-17|_Ace Combat 7: Skies Unknown_|02|_Charge the Enemy_|F-16C
 2019-05-30|_Ace Combat 7: Skies Unknown_|03|_Two-pronged Strategy_|F-16C
