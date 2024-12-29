@@ -144,7 +144,6 @@ Date|Campaign|Mission|Title|Canon Aircraft
 2040      |_Ace Combat 3: Electrosphere_|--||
 
 Notes:
-
 - _The Demon of the Round Table_, _The Valley of Kings_ and _Zero_ are a single sortie flown as back-to-back missions.
 - _Assault Horizon Legacy_ has multiple routes. _Tin Castle_/_Opera House_, _Rising High_/_Acid Rain_, and _St. Elmo's Fire_, _Visiting Hours_ & _Toy Box_/_Cavalry_, _El Dorado_ & _Final Countdown_ are mutally exclusive.
 - The cutscene before _Sitting Duck_ depicts Mobius One launching an F-4 from an ISAF carrier.
