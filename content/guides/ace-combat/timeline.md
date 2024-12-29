@@ -5,7 +5,7 @@ tags:
   - ace combat
 ---
 
-Date|Campaign|Mission|Title|Canon Aircfraft
+Date|Campaign|Mission|Title|Canon Aircraft
 -|-|-|-|-
 1995      |_Air Combat_|--||Su-35
 1995-04-02|_Ace Combat Zero: The Belkan War_|01|_Glacial Skies_|F-15C
@@ -103,6 +103,21 @@ Date|Campaign|Mission|Title|Canon Aircfraft
 2014-05-28|_Ace Combat 7: Skies Unknown_|VR01|VR Mission 01|F-22
 2014-06-16|_Ace Combat 7: Skies Unknown_|VR02|VR Mission 02|F-22
 2014-07-11|_Ace Combat 7: Skies Unknown_|VR03|VR Mission 03|F-22
+2015-08-30|_Ace Combat 6: Fires of Liberation_|01|_Invasion of Gracemeria_|F-15E
+2015-11-24|_Ace Combat 6: Fires of Liberation_|02|_Vitoze Aerial Defense_|F-15E
+2015-11-27|_Ace Combat 6: Fires of Liberation_|03|_Sipli Field_|F-15E
+2015-12-27|_Ace Combat 6: Fires of Liberation_|04|_Bartolomeo Fortress_|F-15E
+2016-01-26|_Ace Combat 6: Fires of Liberation_|05|_Anea Landing_|F-15E
+2016-02-07|_Ace Combat 6: Fires of Liberation_|06|_Siege on Silvat_|F-15E
+2016-02-12|_Ace Combat 6: Fires of Liberation_|07|_Selumna Peak_|F-15E
+2016-02-15|_Ace Combat 6: Fires of Liberation_|08|_San Loma Assault_|F-15E
+2016-02-20|_Ace Combat 6: Fires of Liberation_|09|_Heavy Command Cruiser_|F-15E
+2016-03-06|_Ace Combat 6: Fires of Liberation_|10|_Ragno Fortress_|F-15E
+2016-03-25|_Ace Combat 6: Fires of Liberation_|11|_The Moloch Desert_|F-15E
+2016-03-26|_Ace Combat 6: Fires of Liberation_|12|_Weapons of Mass Destruction_|F-15E
+2016-03-31|_Ace Combat 6: Fires of Liberation_|13|_The Liberation of Gracemeria_|F-15E
+2016-03-31|_Ace Combat 6: Fires of Liberation_|14|_Gracemeria Patrol_|F-15E
+2016-04-01|_Ace Combat 6: Fires of Liberation_|15|_Chandelier_|F-15E
 2019-05-15|_Ace Combat 7: Skies Unknown_|01|_Charge Assault_|F-16C
 2019-05-17|_Ace Combat 7: Skies Unknown_|02|_Charge the Enemy_|F-16C
 2019-05-30|_Ace Combat 7: Skies Unknown_|03|_Two-pronged Strategy_|F-16C
@@ -127,6 +142,7 @@ Date|Campaign|Mission|Title|Canon Aircfraft
 2019-10-31|_Ace Combat 7: Skies Unknown_|19|_Lighthouse_|F-15C
 2019-11-01|_Ace Combat 7: Skies Unknown_|20|_Dark Blue_|F-15C or F-22
 2040      |_Ace Combat 3: Electrosphere_|--||
+
 Notes:
 
 - _The Demon of the Round Table_, _The Valley of Kings_ and _Zero_ are a single sortie flown as back-to-back missions.
