@@ -7,6 +7,7 @@ tags:
 
 Date|Campaign|Mission|Title|Canon Aircfraft
 -|-|-|-|-
+1995      |_Air Combat_|--||Su-35
 1995-04-02|_Ace Combat Zero: The Belkan War_|01|_Glacial Skies_|F-15C
 1995-04-15|_Ace Combat Zero: The Belkan War_|02|_Annex_|F-15C
 1995-04-20|_Ace Combat Zero: The Belkan War_|03|_The Round Table_|F-15C
@@ -125,7 +126,7 @@ Date|Campaign|Mission|Title|Canon Aircfraft
 2019-10-24|_Ace Combat 7: Skies Unknown_|18|_Lost Kingdom_|F-15C
 2019-10-31|_Ace Combat 7: Skies Unknown_|19|_Lighthouse_|F-15C
 2019-11-01|_Ace Combat 7: Skies Unknown_|20|_Dark Blue_|F-15C or F-22
-
+2040      |_Ace Combat 3: Electrosphere_|--||
 Notes:
 
 - _The Demon of the Round Table_, _The Valley of Kings_ and _Zero_ are a single sortie flown as back-to-back missions.
@@ -150,3 +151,4 @@ Notes:
   - The game's cover art depicts the F-22 as the "hero" plane flying past Princess Cosette as she prepares to leap from the Lighthouse.
   - Various aircraft including an F-16, several F/A-18s and an F-22 are visible in the hangar in the cutscenes before mission 20.
   - F-15Cs, F/A-18s and an F-35 are visible on the carrier's deck during the launch at the beginning of mission 20.
+- The events of _Electrosphere_ take place within a computer simulation, so none of the missions actually occur in the timeline.
