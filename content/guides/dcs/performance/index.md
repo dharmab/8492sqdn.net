@@ -132,11 +132,13 @@ A head tracker is ideal for anyone who is not using VR. See [the companion artic
 > 4. You are OK with your headset breaking for absolutely no fault of your own due to software updates. This includes being OK with headsets becoming permanently bricked and unusuable. This is not a hypothetical; it has _already happened_ to the HP Reverb G2 and some Meta Quest headsets
 > 5. You have a head tracker to fall back on when updates break VR support from time to time
 
+## Recommended Devices
+
 There are no perfect VR headsets, but there are a few worth consideration for DCS. Based on our testing, we currently recommend the **Pimax Crystal Light** as our primary recommendation and the **Meta Quest 3** as a budget option. 
 
 We also recommend using IEMs for audio instead of the mediocre speakers included with most headsets. For budget IEMs, I like the [7HZ x Crinacle Zero:2](https://www.linsoul.com/products/7hz-x-crinacle-zero-2) and [Moondrop CHU II](https://moondroplab.com/en/products/chu-ii).
 
-## [Pimax Crystal Light](https://pimax.com/pages/crystal-light)
+### [Pimax Crystal Light](https://pimax.com/pages/crystal-light)
 
 ![](images/pimax-crystal-light.webp) 
 
@@ -156,7 +158,7 @@ No eye tracking
 Mixed experiences with customer support
 Medicore microphone and speaker quality
 
-## [Meta Quest 3](https://www.meta.com/quest/quest-3/)
+### [Meta Quest 3](https://www.meta.com/quest/quest-3/)
 
 ![](images/meta-quest.jpeg)
 
@@ -179,7 +181,7 @@ Forced Oculus/Meta software updates contain breaking changes and sometimes unfix
 No eye tracking
 Medicore microphone and speaker quality
 
-## [Pimax Crystal](https://pimax.com/crystal/)
+### [Pimax Crystal](https://pimax.com/crystal/)
 
 ![](images/pimax-crystal.webp)
 
@@ -193,7 +195,7 @@ Requires a separate battery, even when connected to power source
 Heavy and bulky
 Similar cons to Crystal Light: Inside-out tracking issues, medicore microphone and speaker quality, mixed customer support experiences
 
-## [Bigscreen Beyond](https://store.bigscreenvr.com/products/bigscreen-beyond)
+### [Bigscreen Beyond](https://store.bigscreenvr.com/products/bigscreen-beyond)
 
 ![](images/bigscreen-beyond.jpg)
 
@@ -270,7 +272,7 @@ No integrated audio
 - A workaround is available using ALVR streaming, but it has no guarantees of continuing to work.
 - Extremely high price!
 
-### Upcoming Devices
+## Upcoming Devices
 
 ### Pimax Crystal Super
 
