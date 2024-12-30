@@ -471,9 +471,17 @@ To convert an existing Steam installation to Standalone:
 4. Delete `<DCS standalone installation folder>\Config\retail.cfg`
 5. Run the “Repair DCS World” application in your Start Menu
 
+## Remove OpenXR Toolkit
+
+OpenXR Toolkit is discontinued software and should be removed if you previously installed it.
+
+OpenXR Toolkit is no longer required because all of the features it provides are now surpassed by native features available within DCS, Quad Views Rendering and Virtual Desktop. It is now a useless API Layer [which can cause problems for VR applications](https://fredemmott.com/blog/2024/11/25/best-practices-for-openxr-api-layers.html)/. For example, it causes crashes in current versions of Falcon BMS.
+
 ## Quad Views Rendering
 
 [Quad Views Rendering](https://github.com/mbucchia/Quad-Views-Foveated/wiki/What-is-Quad-Views-rendering%3F) is a technique that renders the focus area within your headset at a higher resolution than the rest of the headset. If your headset has eye-tracking, the high-resolution render area will follow your gaze; otherwise, it will be centered within your headset.
+
+> ℹ️ A common misconception is that Quad Views requires eye tracking. While it works _best_ with eye tracking, it is also useful for headsets without eye tracking because you can reduce the resolution at the edges of the display where optical distortion from the headset's lenses blurs the detail anyway.
 
 ![](images/quad-views.png)
 
@@ -486,23 +494,46 @@ Ensure that the following options are enabled in DCS's VR settings as well. **Th
 - Use Quad Views
 - Track the eyes position (if your headset supports eye tracking)
 
-Note that if you choose to use both Quad Views Rendering and OpenXR Toolkit together, you should set settings like Turbo Mode and foveated rendering/render scale in QuadViewsCompanion and leave them at the default setting in OpenXR Toolkit.
-
 RedKite has a good video demoing eye-tracked Foveated Rendering:
 
 {{< youtube id="b4yziWFZTNE" start=487 >}}
 
 *Note: If you are using a Meta Quest Pro, you’ll need to install [OpenXR Eye Trackers](https://github.com/mbucchia/OpenXR-Eye-Trackers/wiki/Meta-Quest-Pro) to enable eye tracking on PC. You will probably need a verified Developer account.*
 
+## Virtual Desktop or Steam Link
+
+Meta's Airlink streaming application is suboptimal; Since Meta makes money from standalone VR applications sold through the Quest store, their Airlink app for PCVR is a minimal effort with poorly selected video compression settings. Third-party streaming applications can produce better results by more thoughtfully tuning the video stream quality and latency.
+
+[Virtual Desktop](https://www.vrdesktop.net/) is a paid third-party streaming application. Although its primary use case is for displaying 2D content in VR, it also provides advanced options for improved stream quality for VR content. In my testing with Meta Quest devices, I was able to see a higher level of clarity using Virtual Desktop over wifi compared to Meta Quest Link over either USB or wifi. It also recovers from errors better than Quest Link; with Virtual Desktop I can reliably take my headset off, get a drink from the fridge, put my headset back on and resume flight. With Quest Link, I usually had to restart DCS in that situation!
+
+[Steam Link](https://www.meta.com/experiences/steam-link/5841245619310585/) is a free third-party streaming application that works with Meta Quest devices, although it isn't quite as simple to set up as Virtual Desktop.
+
+Your experience may vary depending on your hardware, especially your network bandwidth and wireless access points.
+
 ## Meta Quest Link Cable
 
-If you have a Meta Quest headset, a link cable will provide the best video quality. Meta sells an [official link cable](https://www.meta.com/quest/accessories/link-cable/) if you don’t have one, and more affordable third-party cables are also available.
+If you have a Meta Quest headset, and are using Quest Link instead of Virtual Desktop or Steam Link, a link cable will provide the best video quality. Meta sells an [official link cable](https://www.meta.com/quest/accessories/link-cable/) if you don’t have one, and more affordable third-party cables are also available.
 
 A tradeoff is that you may not be able to charge your headset and use the link cable at the same time, which may limit how long you can fly at a time. [This third party cable](https://a.co/d/765REiP) allows connecting both a charger and link at once, which extends battery life sufficiently for very long flights.
 
-## Virtual Desktop
+## Asynchronous Space Warp on Meta Quest Headsets using Quest Link/Airlink
 
-[Virtual Desktop](https://www.vrdesktop.net/) is a third-party VR streaming application. Although its primary use case is for displaying 2D content in VR, it also provides advanced options for improved stream quality for VR content. In my testing with Meta Quest devices, I was able to see a higher level of clarity using Virtual Desktop compared to  Meta Quest Link. Your experience may vary depending on your hardware, especially your network bandwidth and wireless access points.
+[Asynchronous Space Warp](https://developer.oculus.com/blog/asynchronous-spacewarp/) (ASW) is a technology that improves perceived smoothness in VR, at the tradeoff of locking the framerate to an integer divisor of the headset’s refresh rate. This feature is great if you can maintain your headset’s refresh rate. However, if your framerate dips below the refresh rate even slightly, it will immediately drop to 1/2 the refresh rate. It can also cause judder when using helmet-mounted displays.
+
+On Meta Quest headsets using Quest Link or Airlink, you can toggle ASW while playing with these keys:
+
+| Keybind   | ASW      | Framerate |
+| --------- | -------- | --------- |
+| Ctrl+Num1 | Disabled | Unlocked  |
+| Ctrl+Num2 | Disabled | Locked    |
+| Ctrl+Num3 | Enabled  | Locked    |
+| Ctrl+Num4 | Auto     | Unlocked  |
+
+> ℹ️ My personal preference is ASW disabled and framerate unlocked (Ctrl+Num1)
+
+## Lower Refresh Rate
+
+You should lock your headset to the _lowest_ refresh rate that you can use comfortably. This helps reduce the visual impact of stuttering. I personally find a refresh rate of 72Hz to work best for me, but if you are impacted by VR sickness or motion sickness, you may need a higher setting such as 90Hz.
 
 ## DLSS/FSR
 
@@ -529,25 +560,6 @@ For VR:
 Additionally, you can save custom graphical settings into three different slots in the Options > System tab, using the presets buttons in the bottom right. You can use one for your 2D settings and another for your VR settings.
 
 You can then manually switch between these presets, or use [SkateZilla’s launcher](https://forum.dcs.world/topic/134493-the-dcs-updater-launcher-gui-utility-version-20-2023/) to automatically launch using one or the other.
-
-## Asynchronous Space Warp on Meta/Oculus headsets
-
-[Asynchronous Space Warp](https://developer.oculus.com/blog/asynchronous-spacewarp/) (ASW) is a technology that improves perceived smoothness in VR, at the tradeoff of locking the framerate to an integer divisor of the headset’s refresh rate. This feature is great if you can maintain your headset’s refresh rate. However, if your framerate dips below the refresh rate even slightly, it will immediately drop to 1/2 the refresh rate. It can also cause judder when using helmet-mounted displays.
-
-On Meta Quest headsets using Link/AirLink, you can toggle ASW while playing with these keys:
-
-| Keybind | ASW | Framerate |
-| --- | --- | --- |
-| Ctrl+Num1 | Disabled | Unlocked |
-| Ctrl+Num2 | Disabled | Locked |
-| Ctrl+Num3 | Enabled | Locked |
-| Ctrl+Num4 | Auto | Unlocked |
-
-> ℹ️ My personal preference is ASW disabled and framerate unlocked (Ctrl+Num1)
-
-## Lower Refresh Rate
-
-You should lock your headset to the _lowest_ refresh rate that you can use comfortably. This helps reduce the visual impact of stuttering. I personally find a refresh rate of 72Hz to work best for me, but if you are impacted by VR sickness or motion sickness, you may need a higher setting such as 90Hz.
 
 # Suggested Game Settings
 
