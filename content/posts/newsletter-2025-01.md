@@ -1,7 +1,7 @@
 ---
 title: "SkyEye Development Newsletter: January 2025"
 summary: "v1.0.0 and Beyond"
-date: 2025-12-31
+date: 2024-12-31
 tags:
   - digital combat simulator
   - skyeye
