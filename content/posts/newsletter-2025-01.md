@@ -7,7 +7,7 @@ tags:
   - skyeye
 ---
 
-Hello and welcome to December's development newsletter for the SkyEye project! These monthly posts summarize new progress, the current status of the project, and what to expect in the near future.
+Hello and welcome to January's development newsletter for the SkyEye project! These monthly posts summarize new progress, the current status of the project, and what to expect in the near future.
 
 ## What is SkyEye?
 
