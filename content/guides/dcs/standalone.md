@@ -26,7 +26,13 @@ Competition between stores can help you get a better deal on your purchases.
 
 The standalone version of DCS World offers free trials for most modules, allowing you to try before you buy. Each module can be trialed for 2 weeks, with the trial resetting after 6 months. Each module's trial is independent, so you can trial multiple modules at once, or trial different modules at different times.
 
-To activate a trial, either log into the DCS World website, then go to https://www.digitalcombatsimulator.com/en/personal/licensing/trial/ and click "TRY" on the module you want to trial, or activate the trials from the game launcher.
+To activate a trial, either:
+
+- Log into the DCS World website, then go to https://www.digitalcombatsimulator.com/en/personal/licensing/trial/ and click "TRY" on the module you want to trial
+
+OR
+
+- Activate the trials through the game launcher
 
 ### Longer Sales
 
