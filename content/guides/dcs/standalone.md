@@ -5,6 +5,8 @@ tags:
   - digital combat simulator
 ---
 
+The Standalone and Steam versions can crossplay together in multiplayer. Updates are released for both versions simultaneously.
+
 **Most players should use the standalone version of DCS World rather than the Steam version.**
 
 ## Advantages of the Standalone Version
@@ -20,8 +22,6 @@ Competition between stores can help you get a better deal on your purchases.
 - The Heatblur store offers exclusive merchandise for Heatblur products. For example, preorders for the F-4 Phantom included an option to add a T-shirt at an inexpensive price.
 - The OrbX store offers Orbs, a loyalty program that can be redeemed for discounts on future OrbX purchases, such as addons for Microsoft Flight Simulator.
 
-The ED store starts sales earlier and ends sales later than the Steam store.
-
 ### Free Trials
 
 The standalone version of DCS World offers free trials for most modules, allowing you to try before you buy. Each module can be trialed for 2 weeks, with the trial resetting after 6 months. Each module's trial is independent, so you can trial multiple modules at once, or trial different modules at different times.
@@ -31,6 +31,10 @@ To activate a trial, either log into the DCS World website, then go to https://w
 ### Longer Sales
 
 The ED store begins sales earlier and ends sales later than the Steam store.
+
+### Earlier Access to New Modules
+
+New modules are usually released on the standalone version of DCS World before they are released on Steam.
 
 ## Advantages of the Steam Version
 
