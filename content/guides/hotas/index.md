@@ -1,7 +1,7 @@
 ---
 title: HOTAS Buyer's Guide for Combat Flight Simulation
 summary: Flight sticks, throttles and pedals organized into recommended, recommend with reservations, and not recommended.
-date: 2024-09-05
+date: 2025-01-01
 weight: 2
 ---
 
@@ -10,12 +10,6 @@ weight: 2
 # Sticks & Gamepads
 
 ## Recommended
-
-### Logitech Extreme 3D Pro
-
-Great choice for a first joystick to try before you spend hundreds of dollars!
-
-![](images/extreme-3d-pro.png)
 
 ### Xbox or PlayStation gamepad
 
@@ -54,6 +48,12 @@ Best value!
 ![](images/gunfighter-mcg.webp)
 
 ## Recommended with Reservations
+
+### Logitech Extreme 3D Pro
+
+This used to be recommended as a first joystick to try flight simulators before buying an expensive HOTAS. However, the price of this joystick has increased while the price of a general-purpose gamepad has decreased, so it's not longer the best option in the price range.
+
+![](images/extreme-3d-pro.png)
 
 ### Thrustmaster T16000M FCS
 
