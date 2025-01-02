@@ -276,6 +276,11 @@ Cage the Bear - Story-based campaign included with the module.
 - [Rise of the Persian Lion](https://www.digitalcombatsimulator.com/en/shop/campaigns/fa-18c_rise_of_the_persian_lion_campaign/) 💵
 - [Rise of the Persian Lion II](https://www.digitalcombatsimulator.com/en/shop/campaigns/fa-18c_rise_of_the_persian_lion_ii_campaign/) 💵
 
+## UH-1H
+
+- [I LOVE THIS JOB](http://www.gamesfromhell.com/DCS/) - A free mission pack themed around emergency response.
+- [Paradise Lost](https://www.digitalcombatsimulator.com/en/shop/campaigns/uh-1h_paradise_lost_campaign/) 💵 - A story-based campaign inspired by the Vietnam War.
+
 # Multiplayer
 
 ## Tools and Missions
