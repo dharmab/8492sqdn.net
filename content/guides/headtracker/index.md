@@ -16,7 +16,7 @@ Originally, head tracking was pioneered by NaturalPoint with their TrackIR produ
 
 - [SmoothTrack](https://smoothtrack.app/), [JBC Head Tracker](https://jbcconsulting448679429.wordpress.com/): Smartphone apps. Very affordable if you already have a phone with face unlock. These apps are particularly good on iPhone, since iPhones have infrared laser head tracking sensors built in. JBC has a free trial and is $2 to unlock the full version. SmoothTrack is $10 and has more features specific to Apple devices, such as using AirPods for tracking.
 - [OpenTrack NeuralNet](https://github.com/opentrack/opentrack/wiki/AI-Face-Tracking): Standard webcam based sensor. Basic, but very affordable if you already have a webcam or can purchase one inexpensively.
-- [TrackHat Sensor V2](https://www.trackhat.org/sensorv2), [Delanclip DeclanCam1](https://delanclip.com/product/delancam1/): Camera based sensors that do not require wearing any special headgear.
+- [TrackHat Sensor V2](https://www.trackhat.org/sensorv2), [Delanclip DelanCam1](https://delanclip.com/product/delancam1/): Camera based sensors that do not require wearing any special headgear.
 - [Delanclip](https://delanengineering.com/), [GrassMonkey](https://grassmonkeysimulations.com/), [TrackNP](https://www.aliexpress.com/w/wholesale-tracknp.html): Infrared LED based sensors. Require wearing headgear. Good precision and relatively affordable.
 
 I do not recommend:
