@@ -6,7 +6,7 @@ tags:
   - digital combat simulator
 weight: 1
 ---
-![](images/hero.png)
+![](images/hero.webp)
 _Photo by Generic (@generic_dcs)_
 
 _This page contains contributions from my friend Lynx._
@@ -97,11 +97,11 @@ You need to select a PSU based on results from bench testing by knowledgeable pe
 
 ## USB
 
-![](images/usb-hub.png)
+![](images/usb-hub.webp)
 
 Some USB devices such as HOTASes may exhibit jitter or other issues when connected directly to a computer’s USB power. This is especially a problem with the Saitek/Logitech X52, X55 and X56. In many cases, this can be resolved using a powered USB hub. I’ve personally found powered USB hubs from SABRENT to be good quality for the price. Some of these hubs also have individual switches for each port, which is handy for quickly disconnecting your flight sim devices to play other games where those devices cause problems (looking at you, *Elden Ring*).
 
-![](images/usb-pci-card.jpeg)
+![](images/usb-pci-card.webp)
 
 Your motherboard has a limited number of USB devices and limited amount of USB bandwidth it can support. Each USB controller chip can support 127 USB devices- but note that a single physical device often consumes multiple virtual device slots!
 
@@ -160,7 +160,7 @@ Medicore microphone and speaker quality
 
 ### [Meta Quest 3](https://www.meta.com/quest/quest-3/)
 
-![](images/meta-quest.jpeg)
+![](images/meta-quest.webp)
 
 > ⚠️  We do not recommend buying a Quest headset without a warranty. Meta has had issues with mandatory software updates bricking headsets, including out-of-warranty devices.
 
@@ -197,7 +197,7 @@ Similar cons to Crystal Light: Inside-out tracking issues, medicore microphone a
 
 ### [Bigscreen Beyond](https://store.bigscreenvr.com/products/bigscreen-beyond)
 
-![](images/bigscreen-beyond.jpg)
+![](images/bigscreen-beyond.webp)
 
 **Pros**|
 -|
@@ -349,7 +349,7 @@ For the default Microsoft Defender antivirus:
 
 Here is what mine looked like after this. Yours will look differently.
 
-![](images/defender-exclusions.png)
+![](images/defender-exclusions.webp)
 
 ## Set Page File Size
 
@@ -369,7 +369,7 @@ Disable this setting:
 2. In the Edit Plan Settings page that appears, click “Change advanced power settings”
 3. In the Power Options window that appears, navigate to “USB selective suspend setting” and choose “Disabled” from the dropdown
 
-![](images/power-options.png)
+![](images/power-options.webp)
 
 # Game Tweaks
 
@@ -377,7 +377,7 @@ Disable this setting:
 
 While playing the game, press `RCtrl + Pause` to open a frame rate counter widget. You can use this to check your current framerate and whether you are currently CPU bound or GPU bound. You can use this to measure the performance impact of settings and tweaks.
 
-![](images/performance-widget.png)
+![](images/performance-widget.webp)
 
 > 💡 There is a 180FPS limit by default.
 
@@ -437,9 +437,9 @@ If you use Tacview, also delete old `.acmi` files in `%userprofile%\Documents\Ta
 
 This tweak doesn’t improve in-game performance, but can save disk space and doesn’t hurt performance. Download [Compactor](https://github.com/Freaky/Compactor) and use it to compress the DCS World game directory and the [Saved Games folder](#saved-games-folder). The compression algorithm it uses is built into Windows and has virtually zero performance impact on CPUs made after 2010. On my computer, this shrunk DCS World’s disk usage by over 110GB with no in-game performance impact.
 
-![](images/compactor-main.png)
+![](images/compactor-main.webp)
 
-![](images/compactor-saved-games.png)
+![](images/compactor-saved-games.webp)
 
 ## Shrink Kneeboard Pages
 
@@ -483,7 +483,7 @@ OpenXR Toolkit is no longer required because all of the features it provides are
 
 > ℹ️ A common misconception is that Quad Views requires eye tracking. While it works _best_ with eye tracking, it is also useful for headsets without eye tracking because you can reduce the resolution at the edges of the display where optical distortion from the headset's lenses blurs the detail anyway.
 
-![](images/quad-views.png)
+![](images/quad-views.webp)
 
 This can hugely reduce the number of pixels needed to render, improving performance. However, in a combat flight simulator it can also cause problems tracking small, fast moving objects outside of the focus area, such as a dogfight opponent, tracer fire, or the lights on the carrier during a night trap. It may require some tuning and user preference. Results may vary depending on the specific headset and the user’s vision and preferences. If your system is CPU bottlenecked, this might decrease your performance overall.
 

@@ -38,7 +38,7 @@ Set the Profile dropdown to F-15.
 
 Set the Category dropdown to RIGHT CONSOLE. Scroll down and find the section for FLIGHT STICK.
 
-![](images/Untitled.png)
+![](images/Untitled.webp)
 
 Map the controls in the diagram to your stick as you see fit. Reference both `Docs\02 Aircraft Manuals & Checklists\01 F-16\TO 1F-16CMAM-1 BMS.pdf`, section 17.1 and `Docs\02 Aircraft Manuals & Checklists\01 F-16\TO 1F-16CMAM-34-1-1 BMS.pdf`, section 2.1.5 for a description of functions.
 

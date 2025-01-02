@@ -4,7 +4,7 @@ summary: "Getting started with the best mod for DCS World."
 tags:
   - digital combat simulator
 ---
-![Untitled](images/Untitled.png)
+![Untitled](images/Untitled.webp)
 
 The A-4 Skyhawk is a naval light attack plane introduced in the 1950s. It served the US in a combat role, most notably during the Vietnam War. It was also operated by the IDF in the Yom Kippur War, Argentina in the Falklands War and the Free Kuwaiti Air Force during Operation Desert Storm. The US continued to use it in a training role until the early 2000s. It is notable for its light weight, agility, toughness, ease of maintenance, and low cost. It is best suited for low-level ground attack and strike missions using guns, rockets, and bombs. It was also used as an adversary aircraft for air-to-air combat training at TOPGUN.
 
@@ -128,7 +128,7 @@ The A-4E does not have nosewheel steering, instead the nose wheel freely casters
 
 ## Takeoff
 
-![a4e_cockpit_kneeboard_54.png](images/a4e_cockpit_kneeboard_54.png)
+![a4e_cockpit_kneeboard_54.webp](images/a4e_cockpit_kneeboard_54.webp)
 
 1. Hold brakes, spool engine to 90% RPM, release brakes
 2. Nosewheel lifts off ~120KIAS
@@ -145,7 +145,7 @@ The A-4E does not have nosewheel steering, instead the nose wheel freely casters
 
 ## Airfield Approach and Landing
 
-![a4e_cockpit_kneeboard_55.png](images/a4e_cockpit_kneeboard_55.png)
+![a4e_cockpit_kneeboard_55.webp](images/a4e_cockpit_kneeboard_55.webp)
 
 1. Reduce airspeed to 225KIAS
 2. Speedbrakes OPEN
@@ -160,7 +160,7 @@ The A-4E does not have nosewheel steering, instead the nose wheel freely casters
 
 # Navigation Computer Procedures
 
-![a4e_cockpit_kneeboard_11.png](images/a4e_cockpit_kneeboard_11.png)
+![a4e_cockpit_kneeboard_11.webp](images/a4e_cockpit_kneeboard_11.webp)
 
 1. Set AN/ASN-41 computer function selector to STBY
 2. Set PRESENT POSITION to navigation fix

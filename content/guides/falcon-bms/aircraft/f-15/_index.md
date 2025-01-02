@@ -38,7 +38,7 @@ Set the Profile dropdown to F-15.
 
 Set the Category dropdown to CENTER CONSOLE. Scroll down and find the section for CONTROL STICK.
 
-![](images/Untitled.png)
+![](images/Untitled.webp)
 
 Map the controls in the diagram to your stick as you see fit.  Reference `Docs\02 Aircraft Manuals & Checklists\TO 1F-15C-1 BMS.pdf`, section 4.1.2.2.49 for a description of functions.
 

@@ -5,7 +5,7 @@ date: 2025-01-01
 weight: 2
 ---
 
-![](images/orion-2-hotas-max-f-15ex.png)
+![](images/orion-2-hotas-max-f-15ex.webp)
 
 # Sticks & Gamepads
 
@@ -15,7 +15,7 @@ weight: 2
 
 You may already have one! If not, a third-party 8BitDo gamepad costs around $20. 
 
-![](images/xbox-one-controller.png)
+![](images/xbox-one-controller.webp)
 
 See Tuuvas' setup guides:
 
@@ -33,15 +33,15 @@ A budget clone of the VKB Gladiator with more buttons and a vibration motor. Mad
 
 Best value!
 
-![](images/gladiator-nxt-evo-sce-premium.png)
+![](images/gladiator-nxt-evo-sce-premium.webp)
 
 ### Winwing Orion 2 ViperAce EX (formerly F-16EX)
 
-![](images/orion-2-f-16ex.png)
+![](images/orion-2-f-16ex.webp)
 
 ### Virpil Constellation Alpha grip with WarBRD-D base
 
-![](images/constellation-alpha.png)
+![](images/constellation-alpha.webp)
 
 ### VKB Gunfighter Modern Combat Edition Ultimate
 
@@ -53,31 +53,31 @@ Best value!
 
 This used to be recommended as a first joystick to try flight simulators before buying an expensive HOTAS. However, the price of this joystick has increased while the price of a general-purpose gamepad has decreased, so it's not longer the best option in the price range.
 
-![](images/extreme-3d-pro.png)
+![](images/extreme-3d-pro.webp)
 
 ### Thrustmaster T16000M FCS
 
 Widely available. Commonly develops problems with axis sensors. Button layout is difficult to use while keeping hands on the HOTAS. Overall similar to the Logitech 3D Extreme Pro, but costs more.
 
-![](images/t16000m-fcs.png)
+![](images/t16000m-fcs.webp)
 
 ### VKB Gladiator NXT EVO Space Combat Edition Standard
 
 The Premium is worth the extra $30 for the extra hat, trigger and analog stick. However, the Standard may fit within import *de minimis* limits in some European countries.
 
-![](images/gladiator-nxt-evo-sce-standard.png)
+![](images/gladiator-nxt-evo-sce-standard.webp)
 
 ### VKB Gladiator NXT EVO WWII Combat Edition
 
 Good choice if you only play WWII simulations.
 
-![](images/nxt-evo-ww2ce.png)
+![](images/nxt-evo-ww2ce.webp)
 
 ### VKB Gladiator NXT EVO F-14 Combat Edition
 
 Good choice if you only play *DCS: F-14 Tomcat*
 
-![](images/gladiator-nxt-evo-f-14ce.png)
+![](images/gladiator-nxt-evo-f-14ce.webp)
 
 ### Virpil VPC VFX grip with WarBRD-D base
 
@@ -91,13 +91,13 @@ Significantly more expensive than an Orion 2. Only consider this if shipping and
 
  | 
 -|-
-![](images/ava-f-16c.jpeg)|![](images/ava-fa-18c.webp)
+![](images/ava-f-16c.webp)|![](images/ava-fa-18c.webp)
 
 ### RealSimulator F-16 side grip with FSSB-R3 base
 
 For serious F-16 enthusiasts with very high budgets.
 
-![](images/realsimulator.png)
+![](images/realsimulator.webp)
 
 {{< youtube feqtkpDfuN0 >}}
 
@@ -145,16 +145,16 @@ Customizable, best value!
 
  |  
 -|-
-![](images/stecs-mini.png)|![](images/stecs-mini-plus.bmp)
-![](images/stecs-standard.bmp)|![](images/stecs-max.png)
+![](images/stecs-mini.webp)|![](images/stecs-mini-plus.bmp)
+![](images/stecs-standard.bmp)|![](images/stecs-max.webp)
 
 ### Winwing Orion 2 NavyAce (formerly F/A-18)
     
-![](images/orion-2-fa-18-throttle.png)
+![](images/orion-2-fa-18-throttle.webp)
     
 ### Winwing Orion 2 StrikeAce EX II (formerly StrikeAce EX / F-15EX)
     
-![](images/orion-2-f15-ex-throttle.jpeg)
+![](images/orion-2-f15-ex-throttle.webp)
     
 ## Recommended with Reservations
 
@@ -168,19 +168,19 @@ Great quality, but is expensive compared to competition such as VKB STECS and Wi
 
 Great quality, but is expensive compared to competition such as VKB STECS.
     
-![](images/mongoost-50cm3.png)
+![](images/mongoost-50cm3.webp)
     
 ### Virpil VPC CDT-VMAX
 
 Smaller version of the MongoosT-50M3. Great quality, but for most users the VKB STECS is the better value.
     
-![](images/vpc-cdt-vmax.png)
+![](images/vpc-cdt-vmax.webp)
     
 ### Thrustmaster TWCS
 
 Widely available. Has [stiction](https://en.wikipedia.org/wiki/Stiction) issues, which can be fixed by [replacing the lubricant](https://www.youtube.com/watch?v=sa0Qb2hq6tQ) or [replacing the slider](https://www.etsy.com/search?explicit=1&q=twcs+slider+mod&ref=s2_trn&order=highest_reviews). Commonly develops issues with the thrust and paddle axes.
     
-![](images/twcs.png)
+![](images/twcs.webp)
 
 ### Winwing Ursa Minor Space Joystick
 
@@ -192,37 +192,37 @@ A budget clone of the VKB Gladiator Omni Throttle with more buttons and a vibrat
 
 A great device for space simulation, which can also be used as a serviceable flight simulation throttle.
     
-![](images/gladiator-nxt-evo-omni-throttle.png)
+![](images/gladiator-nxt-evo-omni-throttle.webp)
     
 ### Thrustmaster HOTAS Warthog throttle
 
 Throttle grip and axis is good. The switches on the base are overly specific to *DCS: A-10C Warthog*. Can be found used for a decent value, but VKB STECS is almost always a better choice. Units made before late 2022 have a poor quality slew control which benefits from a [third-party replacement](https://deltasimelectronics.com/products/thumbstick-slew-sensor-adapter). All versions benefit from the [third-party firmware](https://deltasimelectronics.com/pages/install-instructions).
     
-![](images/warthog-throttle.png)
+![](images/warthog-throttle.webp)
     
 ### Winwing Orion 2 ViperAce (formerly F-16)
 
 If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS*
     
-![](images/orion-2-f-16-throttle.png)
+![](images/orion-2-f-16-throttle.webp)
     
 ### Thrustmaster Viper TQS
 
 If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS* and you live somewhere this is cheaper than a Winwing Orion 2 F-16 throttle
     
-![](images/viper-tqs.png)
+![](images/viper-tqs.webp)
     
 ### Winwing Orion 2 StrikeAce E (formerly F-15E)
 
 If you mostly play *DCS: F-15E Strike Eagle.* Notably, it has a speedbrake switch which the StrikeAce EX grip lacks.
     
-![](images/orion-2-f-15e.jpeg)
+![](images/orion-2-f-15e.webp)
     
 ### VKB GNX WWII Throttle
 
 If you mostly fly WWII aircraft, early to mid cold war aircraft, and/or *DCS MiG-29/Su-25/Su-27/Su-33*
     
-![](images/gnx-ww2-throttle.png)
+![](images/gnx-ww2-throttle.webp)
     
 ## Not Recommended
 
@@ -240,7 +240,7 @@ Bundle of the Winwing Orion 2 ViperAce EX Viper stick and Orion 2 throttle. Choi
 
  | | 
 -|-|-
-![](images/orion-2-hotas-max-fa-18c.png)|![](images/orion-2-hotas-max-f-15e.png)|![](images/orion-2-hotas-max-f-15ex.png)
+![](images/orion-2-hotas-max-fa-18c.webp)|![](images/orion-2-hotas-max-f-15e.webp)|![](images/orion-2-hotas-max-f-15ex.webp)
 
 ## Recommended with Reservations
 
@@ -248,13 +248,13 @@ Bundle of the Winwing Orion 2 ViperAce EX Viper stick and Orion 2 throttle. Choi
 
 Bundle of the Thrustmaster T16000M FCS stick and TWCS throttle
     
-![](images/t16000m-fcs-hotas.png)
+![](images/t16000m-fcs-hotas.webp)
     
 ### Winwing Orion 2 HOTAS ViperAce
 
 Bundle of the Winwing Orion 2 ViperAce EX stick and Orion 2 ViperAce throttle. A close match to the real controls of an F-16.
     
-![](images/orion-2-hotas-f-16.png)
+![](images/orion-2-hotas-f-16.webp)
 
 ## Not Recommended
 
@@ -304,15 +304,15 @@ Single axis, no toe brakes.
 
  | 
 -|-
-![](images/warbrd-pedals.png)|![](images/vpc-ace-torq-pedals.png)
+![](images/warbrd-pedals.webp)|![](images/vpc-ace-torq-pedals.webp)
 
 ### MFG Crosswind V3
     
-![](images/crosswind-v3.png)
+![](images/crosswind-v3.webp)
     
 ### Slaw Device pedals
     
-![](images/slaw-device-pedals.png)
+![](images/slaw-device-pedals.webp)
     
 ## Recommended with Reservations
 
@@ -320,25 +320,25 @@ Single axis, no toe brakes.
 
 Included spring is slightly on the strong side. Otherwise very similar to the MFG Crosswinds, but more expensive and with less customization. May be a good choice for shipping to some regions.
     
-![](images/orion-pedals.jpeg)
+![](images/orion-pedals.webp)
     
 ### CH Products Pro Pedals
 
 Can be found for a good price used. Very narrow.
     
-![](images/pro-pedals.png)
+![](images/pro-pedals.webp)
     
 ### Virpil VPC ACE
 
 Similar to the MFG Crosswind V3. Might be a good choice if you’re buying other Virpil products and can bundle the shipping
     
-![](images/vpc-ace-pedals.png)
+![](images/vpc-ace-pedals.webp)
     
 ### Thrustmaster TPR
 
 Expensive, some reports of reliability issues
     
-![](images/tpr.png)
+![](images/tpr.webp)
     
 ## Not Recommended
 

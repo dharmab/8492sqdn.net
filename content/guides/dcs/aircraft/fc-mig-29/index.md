@@ -7,7 +7,7 @@ tags:
 
 # Introduction
 
-![](images/Untitled.jpeg)
+![](images/Untitled.webp)
 
 The Mikoyan MiG-29 “Fulcrum” is a Soviet-designed 4th generation fighter that first entered service in 1983. The Fulcrum was intended as an “Advanced Lightweight Tactical Fighter”, a high-speed air superiority fighter that could operate from austere runways to protect the battlefield’s frontline. It is, roughly speaking, the Soviet counterpart to the F-16. 
 
@@ -77,7 +77,7 @@ After installing the `Cockpit_MiG29(A,G,S)` folders in `%userprofile%\Saved Game
 
 For the curious, here is the real-world control layout of a German MiG-29. Note that the MiG-29 does not follow the HOTAS design philosophy- important buttons are scattered over the controls and cockpit. Bind your controls however you see fit.
 
-![](images/Untitled.png)
+![](images/Untitled.webp)
 
 ![](images/Untitled%201.png)
 
