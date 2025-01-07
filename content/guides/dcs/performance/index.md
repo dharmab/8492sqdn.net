@@ -19,7 +19,7 @@ _This page contains contributions from my friend Lynx._
 
 _Current known issues and workarounds_
 
-- No bulletins at this time.
+- [Some players are seeing visual artifacts that look like infinitely long brown stripes.](https://forum.dcs.world/topic/361719-terrain-visual-issues/). No known root cause or workaround at this time.
 
 # Recommended Specs
 
