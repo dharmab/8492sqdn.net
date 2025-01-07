@@ -20,6 +20,7 @@ _This page contains contributions from my friend Lynx._
 _Current known issues and workarounds_
 
 - [Some players are seeing visual artifacts that look like infinitely long brown stripes.](https://forum.dcs.world/topic/361719-terrain-visual-issues/). No known root cause or workaround at this time.
+- [The "Broken 3" weather preset exhibits visual artifacting in VR](https://forum.dcs.world/topic/366759-graphical-glitch-in-between-cloud-layers/). Workaround: Use a different weather preset.
 
 # Recommended Specs
 
