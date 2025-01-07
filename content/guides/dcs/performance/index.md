@@ -11,12 +11,15 @@ _Photo by Generic (@generic_dcs)_
 
 _This page contains contributions from my friend Lynx._
 
+# Upcoming Products
+
+- Nvidia has announced the RTX 5000 series. While we need to wait for independent benchmarks to provide more info, our initial impression is that the RTX 5070, 5070 Ti and 5080 may underperform in DCS due to their low amount of VRAM.
+
 # Technical Bulletins
 
 _Current known issues and workarounds_
 
-- ⚠️ Intel 13th and 14th generation CPUs have a high rate of failure ([1](https://community.intel.com/t5/Processors/July-2024-Update-on-Instability-Reports-on-Intel-Core-13th-and/m-p/1617113), [2](https://community.intel.com/t5/Blogs/Tech-Innovation/Client/Intel-Core-13th-and-14th-Gen-Desktop-Instability-Root-Cause/post/1633239)) manifesting as strange errors in many games including "out of VRAM" errors and inexplicable CPU crashes. The issue impacts the higher end models at the highest rates, but can impact several SKUs including i9 and i7 models.
-  - Fix: Intel has released a pair of microcode patches, one in mid August 2024 and one in late September 2024. Check with your motherboard manufacturer for a BIOS update. However, if the damage has already occurred, there is no fix; the CPU must be exchanged for a new one.
+- No bulletins at this time.
 
 # Recommended Specs
 
