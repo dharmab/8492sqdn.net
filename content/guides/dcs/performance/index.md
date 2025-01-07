@@ -290,7 +290,7 @@ We expect most simmers will prefer the Pimax Crystal models instead. The Dream A
 
 We are waiting for more information. If you are buying your first headset, especially a Quest, we suggest you buy something now rather than wait. If you are comtemplating an upgrade to a Pimax or Bigscreen headset, consider waiting until Summer 2025 for more information.
 
-### MeganzeX superlight 8K
+### MeganeX superlight 8K
 
 We are watching this one. For now, our recommendation is to wait for independent reviews before deciding whether to purchase.
 
