@@ -117,6 +117,10 @@ This used to be Recommended with Reservations as a used option, but the Winwing 
 
 Badly designed. Has an inverse force curve making precise inputs and aiming extremely difficult.
 
+### Turtle Beach Velocity One Flight Deck
+
+Not great, not terrible, but for the price you can get a much better HOTAS from VKB.
+
 ### Thrustmaster HOTAS Warthog Flight Stick
 
 Poor gimbal quality, stick is too heavy for the base, you can get much better sticks for less money
