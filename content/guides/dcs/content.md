@@ -174,6 +174,10 @@ Supplementary resources for BFM:
 
 {{< youtube-playlist PLd5Qdmhmp3Y5-SDJjOzuUqV3m3mmuieTQ >}}
 
+*Debrief BFM Guides* Byu Air Warfare Group
+
+{{< youtube-playlist PLroS5xjXW90smqJPDcIlPvXYUKxLM94bm >}}
+
 *The Air Combat Tutorial Library* by Requiem
 
 {{< youtube-playlist PLnyigzFtHeNr9zTkpxyD0ksFD3CwLa2UE >}}
