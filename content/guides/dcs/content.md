@@ -156,6 +156,18 @@ Su-25A Crash Course (also a helpful supplement for the Su-25T)
 
 {{< youtube OWVTyixci3I >}}
 
+### MiG-29A/G/S
+
+[My own quick start guide](https://www.8492sqdn.net/guides/dcs/aircraft/fc-mig-29/)
+
+Official manual
+
+### Su-33
+
+Kuznetsov landing procedure
+
+{{< youtube id="-bnZR4XLALw" start=133 >}}
+
 ## BVR Timeline
 
 They key to surviving medium to long range air combat is the BVR timeline. If you learn how to follow a timeline, you will be invincible. If you don’t, you’ll suffer from frustrating and avoidable deaths.
