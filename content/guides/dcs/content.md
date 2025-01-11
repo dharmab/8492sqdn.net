@@ -146,6 +146,16 @@ Official tutorials
 
 {{< youtube-playlist PLer9oF4AanvFOfG4sSZSHJQZeMQx7YGr6 >}}
 
+### Su-25A/T
+
+Su-25T: From Zero to Hero
+
+{{< youtube 5EvHS0nQ_K0 >}}
+
+Su-25A Crash Course (also a helpful supplement for the Su-25T)
+
+{{< youtube OWVTyixci3I >}}
+
 ## BVR Timeline
 
 They key to surviving medium to long range air combat is the BVR timeline. If you learn how to follow a timeline, you will be invincible. If you don’t, you’ll suffer from frustrating and avoidable deaths.
