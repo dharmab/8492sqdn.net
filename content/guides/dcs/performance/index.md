@@ -344,6 +344,8 @@ Disable Hardware Accelerated GPU Scheduling in Windows settings. It increases in
 
 Disable [ShadowPlay](https://www.nvidia.com/en-us/geforce/geforce-experience/shadowplay/) if you aren't using it to record gameplay footage.
 
+If you use DLSS see the [DLSS/FSR section](#dlssfsr) for addtional tweaks.
+
 ## AMD GPU Tweaks
 
 In the AMD Software, navigate to Preferences, and next to AMD User Experience Program, click Learn More and then Leave. If left enabled, this setting runs a telemetry service on your computer. *I found this service was consuming a lot of system resources and making my system generally sluggish on boot. Leaving the program made my computer substantially snappier and my applications started much faster.*
@@ -555,7 +557,7 @@ You should lock your headset to the _lowest_ refresh rate that you can use comfo
 
 DLSS as implemented in DCS doesn’t work great in VR headsets, causing noticeable ghosting. [It is possible to override the DLSS implementation to one that doesn't cause ghosting using an unofficial tweak.](https://forum.dcs.world/topic/356743-update-the-dlss-preset-used-by-dcs-to-remove-ghosting/)
 
-FSR also causes visual artifacts, such as ghosting/blurring on moving options and when switching MFD pages.Your mileage may vary based on your headset and vision.
+FSR also causes visual artifacts, such as ghosting/blurring on moving options and when switching MFD pages. Your mileage may vary based on your headset and vision.
 
 ## XRNeckSafer
 
