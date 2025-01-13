@@ -318,7 +318,7 @@ Uninstall all bloatware packaged by the manufacturer of your computer.
 
 Disable any VPN software when playing DCS multiplayer.
 
-Third party antivirus such as Kaspersky, BitDefender, McAfee, Norton, MalwareBytes, etc. is not recommended. These cause problems with DCS in particular because they flag the Digital Rights Management (DRM) encryption of the game files as a possible threat and quarantine or delete game files randomly. Third party antivirus also tends to cause general performance issues. We recommend using the default Microsoft Defender antivirus, and [optionally adding an exception for DCS.](#exclude-dcs-from-microsoft-defender-antivirus)
+Third party antivirus such as Kaspersky, BitDefender, McAfee, Norton, MalwareBytes, etc. is not recommended. These third party programs cause a lot of general system performance problems for gaming. We recommend using the default Microsoft Defender antivirus, and [adding an exception for DCS.](#exclude-dcs-from-microsoft-defender-antivirus)
 
 ## Intel CPU Tweaks
 
@@ -352,9 +352,11 @@ In the AMD Software, navigate to Preferences, and next to AMD User Experience Pr
 
 ## Exclude DCS from Microsoft Defender Antivirus
 
-Real-time antivirus scans can reduce performance for programs that need to read many files from disk during runtime. You can disable real-time scans of files that DCS accesses while DCS is open. The files will still be scanned by regular scheduled scans when DCS is not running.
+Antivirus software has caused problems with DCS because it sees the Digital Rights Management (DRM) copy protection on files within the DCS game folder as suspicious and deletes these files from the game, causing problems and crashes. Additionally, real-time antivirus scans can reduce disk performance, causing performance problems as DCS streams terrain and texture data from the disk.
 
-> ⚠️ If you use mods or play multiplayer, this tweak increases your risk. Use your best judgement about whether to use this tweak. I personally wouldn’t use this with any mod for which I haven’t read the source code. If you use the [3D Editor for DCS Web Editor](https://dcs-web-editor.github.io/dcs-web-editor-docs/editor/3deditor/), this also increases your vulnerability to malicious scripts in mission files.
+These issues can be avoided by adding exceptions for DCS to the antivirus software.
+
+> ⚠️ If you use mods or play multiplayer, this tweak increases your risk. Use your best judgement about whether to use this tweak. I personally wouldn’t use this with any mod for which I haven’t read the source code. If you use an unsanitized mission.lua, such as with the [3D Editor for DCS Web Editor](https://dcs-web-editor.github.io/dcs-web-editor-docs/editor/3deditor/), DCS Liberation/Retribution, or certain other tools, this also increases your vulnerability to malicious scripts in mission files.
 
 For the default Microsoft Defender antivirus:
 
@@ -362,12 +364,8 @@ For the default Microsoft Defender antivirus:
 2. Select Virus & Threat Protection in the sidebar
 3. Under Virus & Threat Protection settings, click Manage Settings
 4. Under Exclusions, click Add or Remove Exclusions
-5. Add a File Exclusion for **the full path** to `DCS.exe`, e.g. on my system it is `D:\games\dcs\DCS World\bin\DCS.exe`
-6. Add a Process Exclusion for **the full path** to `DCS.exe`, e.g. on my system it is `D:\games\dcs\DCS World\bin\DCS.exe`
-
-Here is what mine looked like after this. Yours will look differently.
-
-![](images/defender-exclusions.webp)
+5. Add a Folder Exclusion for the DCS game folder, e.g. on my system it is `D:\games\dcs\DCS World`
+6. Add a Folder Exclusion for the DCS Saved Games Folder, e.g on my system it is `C:\Users\me\Saved Games\DCS`
 
 ## Set Page File Size
 
