@@ -119,7 +119,7 @@ Badly designed. Has an inverse force curve making precise inputs and aiming extr
 
 ### Turtle Beach Velocity One Flight Deck
 
-Not great, not terrible, but for the price you can get a much better HOTAS from VKB.
+Multiple sources have reported reliability issues with the hats and switches falling off, which is absolutely not acceptable in this price bracket.
 
 ### Thrustmaster HOTAS Warthog Flight Stick
 
