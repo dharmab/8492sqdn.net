@@ -13,13 +13,13 @@ _This page contains contributions from my friend Lynx._
 
 # Upcoming Products
 
-- Nvidia has announced the RTX 5000 series. While we need to wait for independent benchmarks to provide more info, our initial impression is that the RTX 5070, 5070 Ti and 5080 may underperform in DCS due to their low amount of VRAM.
+- Nvidia has announced the RTX 5000 series. While we need to wait for independent benchmarks to provide more info, our initial impression is that the RTX 5070, 5070 Ti and 5080 may underperform in DCS due to their low amount of VRAM. However, the upcoming driver feature to force custom DLSS configuration may be of interest.
 
 # Technical Bulletins
 
 _Current known issues and workarounds_
 
-- [Some players are seeing visual artifacts that look like infinitely long brown stripes.](https://forum.dcs.world/topic/361719-terrain-visual-issues/). No known root cause or workaround at this time.
+- [Some players are seeing visual artifacts that look like infinitely long brown stripes if a specific crater is present.](https://forum.dcs.world/topic/361719-terrain-visual-issues/). No known root cause or workaround at this time.
 - [The "Broken 3" weather preset exhibits visual artifacting in VR](https://forum.dcs.world/topic/366759-graphical-glitch-in-between-cloud-layers/). Workaround: Use a different weather preset.
 - Meta's quest software may fill the `C:\` with over a million files named `fba_ads_*.json`, severely impacting disk performance. Workaround: Delete or rename the file `C:\Program Files\Oculus\Support\oculus-remote-desktop\RemoteDesktopCompanion.exe`, then run the following in a command prompt:
 
@@ -90,10 +90,12 @@ Ideal GPUs for VR include:
 
 Tier | Nvidia | AMD
 -|-|-
-S+|RTX 4090
+S+|RTS 5090†, RTX 4090
 S|RTX 4080 Super, RTX 4080, RTX 3090 Ti | 7900 XTX, 7900 XT
 A|RTX 4070 Ti Super, RTX 4070 Ti, RTX 3090 | 7900 GRE, 7800 XT, 6950 XT, 6900 XT
 B|RTX 4070 Super, RTX 4070, RTX 3080 Ti, RTX 3080 12GB | 6800 XT
+
+> †: Tentative position, pending additional benchmarks and testing.
 
 [Gamers Nexus: Best & Worst GPUs of 2023](https://gamersnexus.net/gpus/best-worst-gpus-2023-gaming-100-2000-video-cards)
 
