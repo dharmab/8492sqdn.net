@@ -13,7 +13,7 @@ weight: 2
 
 ### Gamepad
 
-You may already have one! If not, a  8BitDo gamepad can be found for under $20, and has [Hall effect sensors](https://en.wikipedia.org/wiki/Hall_effect_sensor) which are more accurate than most mass-market flight sticks. 
+You may already have one! If not, an 8BitDo Ultimate 2C gamepad can be found for under $20, and has [Hall effect sensors](https://en.wikipedia.org/wiki/Hall_effect_sensor) which are more accurate than most mass-market flight sticks. 
 
 ![](images/ultimate-2c.webp)
 
