@@ -11,11 +11,11 @@ weight: 2
 
 ## Recommended
 
-### Xbox or PlayStation gamepad
+### Gamepad
 
-You may already have one! If not, a third-party 8BitDo gamepad costs around $20. 
+You may already have one! If not, a  8BitDo gamepad can be found for under $20, and has Hall Effect joysticks which are more accurate than most mass-market flight sticks. See [this video](https://youtu.be/RG8ljpIwsgc?t=70) for a demonstration of how Hall Effect joysticks are great for vehicle games with fine controls.
 
-![](images/xbox-one-controller.webp)
+![](images/ultimate-2c.webp)
 
 See Tuuvas' setup guides:
 
