@@ -13,13 +13,17 @@ weight: 2
 
 ### Gamepad
 
-You may already have one! If not, a  8BitDo gamepad can be found for under $20, and has Hall Effect joysticks which are more accurate than most mass-market flight sticks. See [this video](https://youtu.be/RG8ljpIwsgc?t=70) for a demonstration of how Hall Effect joysticks are great for vehicle games with fine controls.
+You may already have one! If not, a  8BitDo gamepad can be found for under $20, and has [Hall effect sensors](https://en.wikipedia.org/wiki/Hall_effect_sensor) which are more accurate than most mass-market flight sticks. 
 
 ![](images/ultimate-2c.webp)
 
 See Tuuvas' setup guides:
 
 {{< youtube id=7Zy_P-EhjPo >}}
+
+See this demonstration of how Hall Effect gamepads are great for vehicle games with fine controls:
+
+{{< youtube id=RG8ljpIwsgc start=70 >}
 
 ([Not suitable for Falcon BMS](https://forum.falcon-bms.com/topic/23233/throttle-up-down-key-bindings-are-too-coarse?_=1683335735387&lang=en-US))
 
