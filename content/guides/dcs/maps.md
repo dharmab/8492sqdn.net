@@ -24,7 +24,7 @@ B|Kola, Channel (WW2)
 C|Afghanistan, Iraq, Sinai, South Atlantic
 F|
 
-Syria has excellent content for practically every post-WW2 DCS world and is a must-buy.
+Syria has excellent content for practically every post-WW2 module.
 
 Normandy is the standard WW2 terrain.
 
@@ -44,7 +44,7 @@ B|
 C|Afghanistan, Iraq, Kola, Nevada, Sinai
 F|South Atlantic, Channel (WW2)
 
-Syria is the de facto standard multiplayer map and is a must-buy.
+Syria is the de facto standard multiplayer map.
 
 Normandy is the standard WW2 terrain.
 
