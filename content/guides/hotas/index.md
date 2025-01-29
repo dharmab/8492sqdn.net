@@ -23,7 +23,7 @@ See Tuuvas' setup guides:
 
 See this demonstration of how Hall Effect gamepads are great for vehicle games with fine controls:
 
-{{< youtube id=RG8ljpIwsgc start=70 >}
+{{< youtube id=RG8ljpIwsgc start=70 >}}
 
 ([Not suitable for Falcon BMS](https://forum.falcon-bms.com/topic/23233/throttle-up-down-key-bindings-are-too-coarse?_=1683335735387&lang=en-US))
 
