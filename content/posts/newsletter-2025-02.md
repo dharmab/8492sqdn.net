@@ -39,7 +39,7 @@ The [Victor Romeo Sierra](https://forum.dcs.world/topic/368175-launching-ai-cent
 
 ### Fox 3 Managed Solutions
 
-[Fox 3 Managed Solutions](https://fox3ms.com/) is a DCS server hosting company. They now offer [paid hosting for managed instances of SkyEye](https://www.fox3ms.com/product-page/skyeye-ai-gci-server-linux-server). This was a bit of a surprise - I've joked with colleagues that this [marks a milestone for me as an open source developer](https://www.youtube.com/watch?v=3_9LGSex1JY). I have to say, their pricing is pretty high! They're charging $25/month and they don't host the Whisper model for you - you have to bring your own OpenAI API key and pay OpenAI as well. For reference, there are private squadrons self-hosting SkyEye for as little as $3/month. 😊
+[Fox 3 Managed Solutions](https://fox3ms.com/) is a DCS server hosting company. They now offer [paid hosting for managed instances of SkyEye](https://www.fox3ms.com/product-page/skyeye-ai-gci-server-linux-server). This was a bit of a surprise - I've joked with colleagues that this [marks a milestone for me as an open source developer](https://youtu.be/3_9LGSex1JY?t=124). I have to say, their pricing is pretty high! They're charging $25/month and they don't host the Whisper model for you - you have to bring your own OpenAI API key and pay OpenAI as well. For reference, there are private squadrons self-hosting SkyEye for as little as $3/month. 😊
 
 _Disclaimer: I am not affiliated in any way with Fox 3 MS._
 
