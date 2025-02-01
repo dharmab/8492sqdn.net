@@ -1,7 +1,7 @@
 ---
 title: "SkyEye Development Newsletter: February 2025"
 summary: "Sustainment Operations"
-date: 2024-12-31
+date: 2025-1-31
 tags:
   - digital combat simulator
   - skyeye
