@@ -13,7 +13,7 @@ _This page contains contributions from my friend Lynx._
 
 # Upcoming Products
 
-- Nvidia has announced the RTX 5000 series. While we need to wait for independent benchmarks to provide more info, our initial impression is that the RTX 5070, 5070 Ti and 5080 may underperform in DCS due to their low amount of VRAM. However, the upcoming driver feature to force custom DLSS configuration may be of interest.
+- Nvidia is releasing the RTX 5000 series. While we need to wait for independent benchmarks to provide more info, our initial impression is that the RTX 5070, 5070 Ti and 5080 may underperform in DCS due to their low amount of VRAM. However, the upcoming driver feature to force custom DLSS configuration may be of interest.
 
 # Technical Bulletins
 
@@ -30,6 +30,8 @@ del *fba_ads_*.json
 
 This will take a while but it will eventually remove the files.
 
+* The Nvidia 5000 series has a compatibility issue with Pimax and Varjo headsets due to changes to DisplayPort and Direct Drive Monitor (DDM). Pimax may be able to work around the issue in software; no fix is expected for Varjo.
+ 
 # Recommended Specs
 
 ## Storage
