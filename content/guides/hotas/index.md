@@ -7,6 +7,26 @@ weight: 2
 
 ![](images/orion-2-hotas-max-f-15ex.webp)
 
+# Note On Current Events
+
+Beginning in February 2025, shipments from China to the United States have
+additional costs:
+
+- The previous duty/tax exemption for shipments under $800 has been removed.
+- Tariffs on Chinese goods have increased.
+
+People in the United States should expect to pay additional import taxes on
+shipments from Chinese warehouses, which may be collected by the carrier (DHL,
+Fedex, UPS, OnTrac, etc.) _separately_ from the price paid at checkout.
+Shipments from warehouse in the US _should_ have these taxes paid on entry to
+the US, before your purchase. However, you should check with the seller to
+confirm if these taxes have been paid, and be prepared to pay any additional
+taxes before you can receive your shipment.
+
+Of course, people outside the United States are usually already familiar with
+this process, since the _de minimis_ exemption was not nearly as high as it
+was in the US.
+
 # Sticks & Gamepads
 
 ## Recommended
