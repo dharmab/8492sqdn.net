@@ -5,6 +5,9 @@ date: 2025-01-01
 weight: 2
 ---
 
+## Due to recent tariffs put in place by US President Donald Trump, VKB (and likely more soon) have put a 35% import cost on their products for US residents, please keep this in mind when shopping.
+
+
 ![](images/orion-2-hotas-max-f-15ex.webp)
 
 # Sticks & Gamepads
