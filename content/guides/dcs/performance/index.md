@@ -90,9 +90,10 @@ Since DCS uses an older graphics engine, high amounts of VRAM is more important 
 
 Ideal GPUs for VR include:
 
-Tier | Nvidia | AMD
+Tier | Nvidia | AMD |
 -|-|-
-S+|RTX 5090†, RTX 4090 |
+S++|RTX 5090† | 
+S+|RTX 4090 | 
 S|RTX 5080†, RTX 4080 Super, RTX 4080, RTX 3090 Ti | 7900 XTX, 7900 XT
 A|RTX 4070 Ti Super, RTX 4070 Ti, RTX 3090 | 7900 GRE, 7800 XT, 6950 XT, 6900 XT
 B|RTX 4070 Super, RTX 4070, RTX 3080 Ti, RTX 3080 12GB | 6800 XT
