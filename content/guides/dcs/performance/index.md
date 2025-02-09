@@ -1,7 +1,7 @@
 ---
 title: DCS World Performance and Settings Guide
 summary: Recommended system, graphical and gameplay settings for DCS World
-date: 2024-12-26
+date: 2025-02-09
 tags: 
   - digital combat simulator
 weight: 1
@@ -99,8 +99,6 @@ A|RTX 4070 Ti Super, RTX 4070 Ti, RTX 3090 | 7900 GRE, 7800 XT, 6950 XT, 6900 XT
 B|RTX 4070 Super, RTX 4070, RTX 3080 Ti, RTX 3080 12GB | 6800 XT
 
 † Tentative position, pending additional benchmarks and testing.
-
-[Gamers Nexus: Best & Worst GPUs of 2023](https://gamersnexus.net/gpus/best-worst-gpus-2023-gaming-100-2000-video-cards)
 
 [Tom's Hardware: GPU Hierarchy](https://www.tomshardware.com/reviews/gpu-hierarchy,4388.html)
 
