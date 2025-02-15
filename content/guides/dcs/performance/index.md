@@ -647,7 +647,7 @@ These settings are a good starting baseline; you may need to tweak and test furt
 | | |
 |-|-|
 | Pixel Density | 1.0 (If you want to enable supersampling, configure it in your headset’s software or Quad Views instead.) |
-| Force IPD Distance | Off (This configures world scale, which should be set in OpenXR Toolkit instead: https://mbucchia.github.io/OpenXR-Toolkit/other-features.html#world-scale-override) |
+| Force IPD Distance | Off (This configures world scale, not IPD. Configure IPD in your headset's hardware or software instead.) |
 | Bloom effect | Off (causes artifacting when using foveated rendering) |
 | Enable HMD Mask | On unless you are livestreaming or recording |
 | MSAA Mask Size | If set to a value below 1.0, MSAA will only be applied to the center of the display. Some users report that setting this to values other than 1.0 caused issues. |
