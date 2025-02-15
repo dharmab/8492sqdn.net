@@ -13,6 +13,7 @@ _This page contains contributions from my friend Lynx._
 
 # Upcoming Products
 
+- AMD is annoucning the RX 9000 series at the end of February 2025.
 - Nvidia is releasing the RTX 5000 series. While we need to wait for independent benchmarks to provide more info, our initial impression is that the RTX 5070, 5070 Ti and 5080 may underperform in DCS due to their low amount of VRAM. However, the upcoming driver feature to force custom DLSS configuration may be of interest.
 
 # Technical Bulletins
