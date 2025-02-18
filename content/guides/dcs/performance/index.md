@@ -413,11 +413,9 @@ Every time that DCS World is updated, your graphics driver is updated, or you ch
 
 `<Saved Games folder>\metashaders2`
 
-These folders contain [shaders](https://en.wikipedia.org/wiki/Shader), which need to be rebuilt whenever either the game or graphics card driver is updated. DCS does not seem to consistently automatically rebuild these, resulting in performance issues. Deleting the folders will force DCS to rebuild them; this may cause a one-time increase in load times or some stutter during gameplay, but these will only happen once for each shader and the game may run smoother afterwards.
+These folders contain [shaders](https://en.wikipedia.org/wiki/Shader), which need to be rebuilt whenever either the hardware, game or graphics card driver is changed. DCS does not seem to consistently automatically rebuild these, resulting in performance issues. Deleting the folders will force DCS to rebuild them; this may cause a one-time increase in load times or some stutter during gameplay, but these will only happen once for each shader and the game may run smoother afterwards.
 
-Learn more about shader compilation:
-
-{{< youtube id="Kr7RGkFuPdQ" start=60 >}}
+Learn more about shader compilation and stutter in [this blog post](https://www.unrealengine.com/en-US/tech-blog/game-engines-and-shader-stuttering-unreal-engines-solution-to-the-problem).
 
 ## Disable Data Exports
 
