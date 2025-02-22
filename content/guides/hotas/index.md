@@ -16,16 +16,14 @@ additional costs:
 - Tariffs on Chinese goods have increased.
 
 People in the United States should expect to pay additional import taxes on
-shipments from Chinese warehouses, which may be collected by the carrier (DHL,
+shipments from China or Hong Kong, which may be collected by the carrier (DHL,
 Fedex, UPS, OnTrac, etc.) _separately_ from the price paid at checkout.
 Shipments from warehouse in the US _should_ have these taxes paid on entry to
 the US, before your purchase. However, you should check with the seller to
 confirm if these taxes have been paid, and be prepared to pay any additional
 taxes before you can receive your shipment.
 
-[Note that the _de minimis_ repeal was paused on February 7th](https://www.reuters.com/business/trump-signs-order-delaying-tariffs-de-minimis-imports-china-2025-02-07/)
-to give Customs & Border Patrol additional time to implement the change.
-However, this pause may end at any time.
+[DigiKey has a useful page summarizing these new tariffs](https://www.digikey.com/en/resources/tariff-resources).
 
 Of course, people outside the United States are usually already familiar with
 this process, since the _de minimis_ exemption was not nearly as high as it
