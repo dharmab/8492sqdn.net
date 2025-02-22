@@ -31,7 +31,7 @@ del *fba_ads_*.json
 
 This will take a while but it will eventually remove the files.
 
-* The Nvidia 5000 series has a compatibility issue with Pimax and Varjo headsets due to changes to DisplayPort and Direct Drive Monitor (DDM). Pimax may be able to work around the issue in software; no fix is expected for Varjo.
+* The Nvidia 5000 series has a compatibility issue with some Pimax, Beyond Varjo headsets due to changes to DisplayPort and Direct Drive Monitor (DDM).
  
 # Recommended Specs
 
