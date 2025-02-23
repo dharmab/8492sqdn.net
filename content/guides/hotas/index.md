@@ -185,27 +185,23 @@ Customizable, best value!
 ### Winwing Orion 2 StrikeAce EX II (formerly StrikeAce EX / F-15EX)
     
 ![](images/orion-2-f15-ex-throttle.webp)
-    
-## Recommended with Reservations
 
 ### Virpil VMAX Prime Throttle
-
-Great quality, but is expensive compared to competition such as VKB STECS and Winwing Orion 2.
 
 ![](images/vpc-vmax-prime-throttle.bmp)
 
 ### Virpil VPC MongoosT-50CM3
-
-Great quality, but is expensive compared to competition such as VKB STECS.
     
 ![](images/mongoost-50cm3.webp)
     
 ### Virpil VPC CDT-VMAX
 
-Smaller version of the MongoosT-50M3. Great quality, but for most users the VKB STECS is the better value.
+Smaller version of the MongoosT-50M3.
     
 ![](images/vpc-cdt-vmax.webp)
-    
+
+## Recommended with Reservations
+
 ### Thrustmaster TWCS
 
 Widely available. Has [stiction](https://en.wikipedia.org/wiki/Stiction) issues, which can be fixed by [replacing the lubricant](https://www.youtube.com/watch?v=sa0Qb2hq6tQ) or [replacing the slider](https://www.etsy.com/search?explicit=1&q=twcs+slider+mod&ref=s2_trn&order=highest_reviews). Commonly develops issues with the thrust and paddle axes.
