@@ -35,7 +35,9 @@ was in the US.
 
 ### Gamepad
 
-You may already have one! If not, an 8BitDo Ultimate 2C gamepad can be found for under $20, and has [Hall effect sensors](https://en.wikipedia.org/wiki/Hall_effect_sensor) which are more accurate than most mass-market flight sticks. 
+You may already have one! 
+
+If not, an 8BitDo Ultimate series gamepad can be found for under $20, and has either [Hall effect](https://en.wikipedia.org/wiki/Hall_effect_sensor) or [tunneling magneto-resistance](https://en.wikipedia.org/wiki/Tunnel_magnetoresistance) sensors which are more accurate and durable than most mass-market flight sticks.  For slightly more, controllers from FlyDigi or Gamesir add additional buttons which can be mapped in DCS using Steam Input, or high quality microswitch buttons. We don't recommend buying mass market devices from Xbox/PlayStation at this time due to stick drift issues, though they're fine if you already have one.
 
 ![](images/ultimate-2c.webp)
 
