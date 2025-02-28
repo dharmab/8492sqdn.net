@@ -280,6 +280,12 @@ Cage the Bear - Story-based campaign included with the module.
 
 {{< youtube Ky3_4iMEPmQ >}}
 
+[The Gamblers](https://www.digitalcombatsimulator.com/en/shop/campaigns/f-16c_the_gamblers_campaign/) 💵 - A realistic and challenging campaign based on real events in Syria.
+
+{{< youtube oNTN9b5_vKI >}}
+
+[Arctic Thunder](https://www.digitalcombatsimulator.com/en/shop/campaigns/f-16c_arctic_thunder_campaign/) 💵 - A high intensity campaign depicting a war between Finland and Russia. Set in the same continuity as the F/A-18C campaign of the same name.
+
 ## F/A-18C
 
 [Inherent Resolve for “CF-18”](https://www.digitalcombatsimulator.com/en/files/3332538/)  - A realistic mission set in Syria in 2016, featuring custom ATC and voice acting.
@@ -301,6 +307,10 @@ Cage the Bear - Story-based campaign included with the module.
 - [The Serpent’s Head 2](https://www.digitalcombatsimulator.com/en/shop/campaigns/fa-18c_serpents_head_2_campaign/) 💵
 - [Rise of the Persian Lion](https://www.digitalcombatsimulator.com/en/shop/campaigns/fa-18c_rise_of_the_persian_lion_campaign/) 💵
 - [Rise of the Persian Lion II](https://www.digitalcombatsimulator.com/en/shop/campaigns/fa-18c_rise_of_the_persian_lion_ii_campaign/) 💵
+
+[Arctic Thunder](https://www.digitalcombatsimulator.com/en/shop/campaigns/fa-18c_arctic_thunder_campaign/) 💵 - A high intensity campaign depicting a war between Finland and Russia. Set in the same continuity as the F-16C campaign of the same name.
+
+{{< youtube HYp_9iXoF88 >}}
 
 ## UH-1H
 
