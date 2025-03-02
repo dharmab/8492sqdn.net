@@ -14,7 +14,7 @@ Head tracking can also enrich other types of simulation games such as civil flig
 
 Originally, head tracking was pioneered by NaturalPoint with their TrackIR product. For this reason, you'll sometimes hear people say "TrackIR" to refer to any head tracking system. However, NaturalPoint TrackIR has long been surpassed in both functionality and value by the competition, so I no longer recommend purchasing new TrackIR units. Instead, check out the following:
 
-- [SmoothTrack](https://smoothtrack.app/), [JBC Head Tracker](https://jbcconsulting448679429.wordpress.com/): Smartphone apps. Very affordable if you already have a phone with face unlock. These apps are particularly good on iPhone, since iPhones have infrared laser head tracking sensors built in. JBC has a free trial and is $2 to unlock the full version. SmoothTrack is $10 and has more features specific to Apple devices, such as using AirPods for tracking.
+- [SmoothTrack](https://smoothtrack.app/), [JBC Head Tracker](https://jbcconsulting448679429.wordpress.com/): Smartphone apps. Very affordable if you already have a phone with face unlock. These apps are particularly good on iPhone, since iPhones have infrared laser head tracking sensors built in. JBC has a free trial and is $2 to unlock the full version. SmoothTrack is $10 and has more features specific to Apple devices, such as using AirPods for tracking. 
 - [OpenTrack NeuralNet](https://github.com/opentrack/opentrack/wiki/AI-Face-Tracking): Standard webcam based sensor. Basic, but very affordable if you already have a webcam or can purchase one inexpensively. Try both the Accela and NaturalMotion filters in OpenTrack and see if it works well for you!
 - [TrackHat Sensor V2](https://www.trackhat.org/sensorv2), [Delanclip DelanCam1](https://delanclip.com/product/delancam1/): Camera based sensors that do not require wearing any special headgear.
 - [Delanclip](https://delanengineering.com/), [GrassMonkey](https://grassmonkeysimulations.com/), [TrackNP](https://www.aliexpress.com/w/wholesale-tracknp.html): Infrared LED based sensors. Require wearing headgear. Good precision and relatively affordable.
@@ -27,6 +27,8 @@ I do not recommend:
 I have heard mixed experiences about:
 
 - Tobii Eye Tracker 5. Initially I heard from users complaining coarse and oversmoothed tracking. A real-life friend who tried to use one for flight simulation described it as feeling drunk. More recently, I have heard this improved with software updates, but I haven't been able to verify this personally.
+
+> 💡 Tip: Use an inexpensive Magsafe charging stand to power your iPhone while running Smoothtrack!
 
 # FAQ:
 
