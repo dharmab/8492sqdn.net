@@ -1,7 +1,7 @@
 ---
 title: DCS World Performance and Settings Guide
 summary: Recommended system, graphical and gameplay settings for DCS World
-date: 2025-02-09
+date: 2025-03-05
 tags: 
   - digital combat simulator
 weight: 1
@@ -13,8 +13,7 @@ _This page contains contributions from my friend Lynx._
 
 # Upcoming Products
 
-- AMD is annoucning the RX 9000 series at the end of February 2025.
-- Nvidia is releasing the RTX 5000 series. While we need to wait for independent benchmarks to provide more info, our initial impression is that the RTX 5070, 5070 Ti and 5080 may underperform in DCS due to their low amount of VRAM. However, the upcoming driver feature to force custom DLSS configuration may be of interest.
+- We expect a number of new VR headsets to launch within the coming months and recommend waiting for these annoucements before buying a new VR headsets.
 
 # Technical Bulletins
 
@@ -93,11 +92,11 @@ Ideal GPUs for VR include:
 
 Tier | Nvidia | AMD |
 -|-|-
-S++|RTX 5090† | 
-S+|RTX 4090 | 
-S|RTX 5080†, RTX 4080 Super, RTX 4080, RTX 3090 Ti | 7900 XTX, 7900 XT
-A|RTX 4070 Ti Super, RTX 4070 Ti, RTX 3090 | 7900 GRE, 7800 XT, 6950 XT, 6900 XT
-B|RTX 4070 Super, RTX 4070, RTX 3080 Ti, RTX 3080 12GB | 6800 XT
+S+|RTX 5090† | 
+S|RTX 4090 | 
+A|RTX 5080†, RTX 4080 Super, RTX 5070 Ti†, RTX 4080, RTX 3090 Ti | 7900 XTX, 7900 XT, 9070XT†
+B|RTX 5070†, RTX 4070 Ti Super, RTX 4070 Ti, RTX 3090 |  9070†, 7900 GRE, 7800 XT, 6950 XT, 6900 XT
+C|RTX 4070 Super, RTX 4070, RTX 3080 Ti, RTX 3080 12GB | 6800 XT
 
 † Tentative position, pending additional benchmarks and testing.
 
@@ -300,7 +299,7 @@ We expect most simmers will prefer the Pimax Crystal models instead. The Dream A
 
 ### Unannounced Valve headset ("Deckard")
 
-We are waiting for more information. If you are buying your first headset, especially a Quest, we suggest you buy something now rather than wait. If you are comtemplating an upgrade to a Pimax or Bigscreen headset, consider waiting until Summer 2025 for more information.
+We are waiting for more information. If you are comtemplating purchasing a headset, consider waiting until Summer 2025 for more information.
 
 ### MeganeX superlight 8K
 
