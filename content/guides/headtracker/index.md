@@ -41,7 +41,7 @@ There are various advantages and tradeoffs for each product, so try a few and se
 1. Do you own an iPhone with Face ID? Try Smoothtrack. Refund it if it doesn't work well for you.
 1. Do you own a webcam? Try OpenTrack NeuralNet.
 1. Do you own an Android Phone? Try the Android apps. Refund them if they don't work well for you.
-1. Take a look at Delanclip, Grassmonkey and TrackHat. Try whichever has the best price with shipping.
+1. Take a look at Delanclip, Grassmonkey, TrackHat or a used iPhone X or newer (if you didn't already try Smoothtrack). Try whichever has the best price with shipping.
 
 ## How do you look to the side/behind you?
 
