@@ -594,7 +594,7 @@ These settings are a good starting baseline; you may need to tweak and test furt
 | | |
 |-|-|
 | Res of Cockpit Displays | 1024 Every Frame |
-| Anti-Aliasing | Off or MSAA 2x/MSAA 4x. Do not use TAA - it causes ghosting. Do not use DLAA - it causes blurring. MSAA may reduce shimmer in VR |
+| Anti-Aliasing | Off or MSAA 2x/MSAA 4x. Do not use TAA or DLAA, because they cause blurring/ghosting that makes it very difficult to spot aircraft. MSAA may reduce shimmer in VR |
 | Upscaling | Off has best fidelity (no blurring/ghosting), especially on 1080p monitors. Try DLSS Quality and sharpening 0.5 on newer Nvidia graphics. Try FSR with scaling 0.9 and sharpening 0.8 on AMD graphics or older Nvidia graphics. Tune sharpening to user preference. If this is grayed out, turn off anti-aliasing and verify drivers are fully updated |
 | Textures | High. Do not lower this, as anything below High makes the cockpit difficult to read. |
 | Terrain textures | Low or High |
