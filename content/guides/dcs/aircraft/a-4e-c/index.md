@@ -14,7 +14,7 @@ Download the latest version at [https://heclak.github.io/community-a4e-c](https:
 
 The folder will look like this when correctly installed:
 
-![Untitled](images/Untitled%201.png)
+![Untitled](images/Untitled%201.webp)
 
 # Controls
 
