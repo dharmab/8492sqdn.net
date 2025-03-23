@@ -13,7 +13,7 @@ _This page contains contributions from my friend Lynx._
 
 # Upcoming Products
 
-- We expect a number of new VR headsets to launch within the coming months and recommend waiting for these annoucements before buying a new VR headsets.
+- We expect a number of new VR headsets to launch within the coming months and recommend waiting for these annoucements and releases before buying any new VR headset.
   - [Bigscreen Beyond 2](https://store.bigscreenvr.com/products/bigscreen-beyond-2)
   - [Pirmax Crystal Super](https://pimax.com/pages/pimax-crystal-super)
   - Unannounced Valve Headset
@@ -221,30 +221,12 @@ Similar cons to Crystal Light: Inside-out tracking issues, medicore microphone a
 
 ### Bigscreen Beyond
 
-Bigscreen has announced the [Beyond 2](https://store.bigscreenvr.com/products/bigscreen-beyond-2). Anyone interested in the Beyond should wait for the Beyond 2 instead.
+Bigscreen has announced the [Beyond 2](https://store.bigscreenvr.com/products/bigscreen-beyond-2) and the orignal Beyond is not longer available. Anyone interested in the Beyond should wait for the Beyond 2 instead.
 
-The original Beyond was previously in our recommended section as an alternative to the Pimax Crystal and Crystal Light.
+We do not recommend buying a used Beyond:
 
-Some of our criticisms of the original Beyond include:
-
-- Non-adjustable IPD
-- Optical issues due to the lenses
-- Slightly low FOV
-- No eye tracking
-- No integrated audio
-
-Based on pre-reelase reviews, these issues are fixed in the Beyond 2.
-
-Some of our other criticisms of the original Beyond which we expect will also be true of the Beyond 2 include:
-
-- Requires external lighthouses for tracking
-- Expensive, especially when including the price of the - recommended number of lighthouses
-- Each user needs a separate custom fitted gasket cushion
-- High restocking fee after shipping
-- No controllers available - roomscale requires controllers from another brand
-- Not compatible with eyeglasses - users with vision deficiency will need prescription inserts
-
-Overall, we are optimistic that the Beyond 2 will be on our recommended list in late 2025. However, we are waiting for production units to be available for testing and review before making a final recommendation.
+1. The original Beyond has a non-adjustable IPD, so you would need to have the exact same IPD as the original owner.
+2. Many of the Beyond's parts, such as the head cushion, head strap, and connectors to connect to a PC, are forward-compatible with the Beyond 2. Many Beyond owners are listing the non-reusable core for sale, but these are only useful for replacing a broken out-of-warranty Beyond. Therefore, most used Beyond listings are not usable out of the box.
 
 ### Meta Quest 3S
 
