@@ -2,7 +2,7 @@
 title: DCS World Performance and Settings Guide
 summary: Recommended system, graphical and gameplay settings for DCS World
 date: 2025-03-05
-tags: 
+tags:
   - digital combat simulator
 weight: 1
 ---
@@ -22,7 +22,7 @@ _This page contains contributions from my friend Lynx._
 
 _Current known issues and workarounds_
 
-- [Some players are seeing visual artifacts that look like infinitely long brown stripes if a specific crater is present.](https://forum.dcs.world/topic/361719-terrain-visual-issues/). No known root cause or workaround at this time.
+- [Some players are seeing visual artifacts that look like infinitely long brown stripes if a specific crater is present.](https://forum.dcs.world/topic/361719-terrain-visual-issues/) No known root cause or workaround at this time.
 - [The "Broken 3" weather preset exhibits visual artifacting in VR](https://forum.dcs.world/topic/366759-graphical-glitch-in-between-cloud-layers/). Workaround: Use a different weather preset.
 - Meta's quest software may fill the `C:\` with over a million files named `fba_ads_*.json`, severely impacting disk performance. Workaround: Delete or rename the file `C:\Program Files\Oculus\Support\oculus-remote-desktop\RemoteDesktopCompanion.exe`, then run the following in a command prompt:
 
@@ -33,8 +33,8 @@ del *fba_ads_*.json
 
 This will take a while but it will eventually remove the files.
 
-* The Nvidia 5000 series has a compatibility issue with some Pimax, Beyond and Varjo headsets due to changes to DisplayPort and Direct Drive Monitor (DDM).
- 
+* The Nvidia 5000 series has a compatibility issue with some Pimax headsets due to changes to DisplayPort and Direct Display Mode (DDM).
+
 # Recommended Specs
 
 ## Storage
@@ -95,8 +95,8 @@ Ideal GPUs for VR include:
 
 Tier | Nvidia | AMD |
 -|-|-
-S+|RTX 5090† | 
-S|RTX 4090 | 
+S+|RTX 5090† |
+S|RTX 4090 |
 A|RTX 5080†, RTX 4080 Super, RTX 5070 Ti†, RTX 4080, RTX 3090 Ti, RTX 3090 | 7900 XTX, 7900 XT, 9070XT†
 B|RTX 5070†, RTX 4070 Ti Super, RTX 4070 Ti |  9070†, 7900 GRE, 7800 XT, 6950 XT, 6900 XT
 C|RTX 4070 Super, RTX 4070, RTX 3080 Ti, RTX 3080 12GB | 6800 XT
@@ -107,9 +107,9 @@ C|RTX 4070 Super, RTX 4070, RTX 3080 Ti, RTX 3080 12GB | 6800 XT
 
 ## PSU
 
-You should have a sufficient power supply for your CPU and GPU. 
+You should have a sufficient power supply for your CPU and GPU.
 
-**PSU wattage alone is not a good indicator of reliability under load. 80PLUS ratings are not useful** for determining overall power delivery and efficiency across a range of scenarios. The 80PLUS rating only test efficiency at a few specific loads, and does not test for performance or reliability. Manufacturers can and do game these ratings! 
+**PSU wattage alone is not a good indicator of reliability under load. 80PLUS ratings are not useful** for determining overall power delivery and efficiency across a range of scenarios. The 80PLUS rating only test efficiency at a few specific loads, and does not test for performance or reliability. Manufacturers can and do game these ratings!
 
 You need to select a PSU based on results from bench testing by knowledgeable people with the appropriate equipment. Check any power supply you plan to purchase against the [Cultist Tier List](https://cultists.network/140/psu-tier-list/) (see [spreadsheet](https://docs.google.com/spreadsheets/d/1eL0893Ramlwk6E3s3uSvH1_juom7SMG5SCNzP2Uov8w/edit?gid=1719706335#gid=1719706335) for newer data not yet on the website), as well as  [LTT Labs' PSU testing](https://www.lttlabs.com/categories/power-supplies) testing. Only buy if it is Tier B on the Cultist list and/or recommended by LTT Labs.
 
@@ -144,21 +144,25 @@ A head tracker is ideal for anyone who is not using VR. See [the companion artic
 # Virtual Reality
 
 > ⚠️ Don’t bother with DCS VR unless:
-> 1. You have a very high end PC
-> 2. You are willing and able to troubleshoot all manner of obscure technical issues
-> 3. You are comfortable installing software from GitHub and very carefully reading technical instructions written by software engineers
-> 4. You are OK with your headset breaking for absolutely no fault of your own due to software updates. This includes being OK with headsets becoming permanently bricked and unusuable. This is not a hypothetical; it has _already happened_ to the HP Reverb G2 and some Meta Quest headsets
-> 5. You have a head tracker to fall back on when updates break VR support from time to time
+> 1. You have a very high end PC.
+> 2. You are willing and able to troubleshoot all manner of obscure technical issues.
+> 3. You are comfortable installing software from GitHub and very carefully reading technical instructions written by software engineers.
+> 4. You are OK with your headset breaking for absolutely no fault of your own due to software updates. This includes being OK with headsets becoming permanently bricked and unusuable. This is not a hypothetical; it has _already happened_ to the HP Reverb G2 and some Meta Quest headsets.
+> 5. You have a head tracker to fall back on when updates break VR support from time to time.
 
 ## Recommended Devices
 
-There are no perfect VR headsets, but there are a few worth consideration for DCS. Based on our testing, we currently recommend the **Pimax Crystal Light** as our primary recommendation and the **Meta Quest 3** as a budget option. 
+There are no perfect VR headsets, but there are a few worth consideration for DCS.
+
+**As of March 2025, we currently don't recommend purchasing a new VR headset because of upcoming product announcements. Stay tuned for updates once we have public information we can share.***
+
+Before March 2025 we recommended the **Pimax Crystal Light** as our primary recommendation and the **Meta Quest 3** as a budget option.
 
 We also recommend using IEMs for audio instead of the mediocre speakers included with most headsets. For budget IEMs, I like the [7HZ x Crinacle Zero:2](https://www.linsoul.com/products/7hz-x-crinacle-zero-2) and [Moondrop CHU II](https://moondroplab.com/en/products/chu-ii).
 
 ### [Pimax Crystal Light](https://pimax.com/pages/crystal-light)
 
-![](images/pimax-crystal-light.webp) 
+![](images/pimax-crystal-light.webp)
 
 **Pros**|
 -|
@@ -192,8 +196,8 @@ Also good for roomscale
 Standalone capbilities
 Includes controllers
 **Cons**|
-Requires a quality wifi5/wifi6 dedicated router or wireless access point *or* a third party charging+link cable for long sessions
-Significantly lower pixel density than our other recommendation (25 PPD)
+Requires a quality WiFi5/WiFi6 dedicated router or wireless access point *or* a third party charging+link cable for long sessions
+Significantly lower pixel density than our other recommendations (25 PPD)
 Significant compression artifacts including image noise and color banding
 Forced Oculus/Meta software updates contain breaking changes and sometimes unfixable issues
 No eye tracking
@@ -213,32 +217,34 @@ Requires a separate battery, even when connected to power source
 Heavy and bulky
 Similar cons to Crystal Light: Inside-out tracking issues, medicore microphone and speaker quality, mixed customer support experiences
 
-### [Bigscreen Beyond](https://store.bigscreenvr.com/products/bigscreen-beyond)
-
-![](images/bigscreen-beyond.webp)
-
-**Pros**|
--|
-Excellent OLED display with good pixel density (32 PPD)
-Lightweight with a small form factor
-Custom fitted for maximum comfort
-High quality customer support
-High quality microphone
-**Cons**|
-Slightly lower field of view (102°x99°)
-Requires external lighthouses for tracking
-Expensive, especially when including the price of the recommended number of lighthouses
-IPD is not user adjustable - cannot share headset with someone who has a different IPD
-Each user needs a separate custom fitted gasket cushion
-High restocking fee after shipping
-No controllers available - roomscale requires controllers from another brand
-Not compatible with eyeglasses - users with vision deficiency will need prescription inserts
-Due to the combination of panel and lens, some users find the image to have low luminance and high image persitence, similar to the ghosting on an LCD monitor with a VA panel
-Glare in high contrast scenes
-No eye tracking
-No integrated audio
-
 ## Why not…?
+
+### Bigscreen Beyond
+
+Bigscreen has announced the [Beyond 2](https://store.bigscreenvr.com/products/bigscreen-beyond-2). Anyone interested in the Beyond should wait for the Beyond 2 instead.
+
+The original Beyond was previously in our recommended section as an alternative to the Pimax Crystal and Crystal Light.
+
+Some of our criticisms of the original Beyond include:
+
+- Non-adjustable IPD
+- Optical issues due to the lenses
+- Slightly low FOV
+- No eye tracking
+- No integrated audio
+
+Based on pre-reelase reviews, these issues are fixed in the Beyond 2.
+
+Some of our other criticisms of the original Beyond which we expect will also be true of the Beyond 2 include:
+
+- Requires external lighthouses for tracking
+- Expensive, especially when including the price of the - recommended number of lighthouses
+- Each user needs a separate custom fitted gasket cushion
+- High restocking fee after shipping
+- No controllers available - roomscale requires controllers from another brand
+- Not compatible with eyeglasses - users with vision deficiency will need prescription inserts
+
+Overall, we are optimistic that the Beyond 2 will be on our recommended list in late 2025. However, we are waiting for production units to be available for testing and review before making a final recommendation.
 
 ### Meta Quest 3S
 
@@ -292,6 +298,10 @@ No integrated audio
 
 ## Upcoming Devices
 
+### Bigscreen Beyond 2
+
+We are optimistic that the Beyond 2 will be on our recommended list in late 2025. We are waiting for production units to be available for testing and review before making a final recommendation.
+
 ### Pimax Crystal Super
 
 We are watching this one. For now, our recommendation is to wait for independent reviews before deciding whether to purchase.
@@ -302,11 +312,15 @@ We expect most simmers will prefer the Pimax Crystal models instead. The Dream A
 
 ### Unannounced Valve headset ("Deckard")
 
-We are waiting for more information. If you are comtemplating purchasing a headset, consider waiting until Summer 2025 for more information.
+We are currently waiting until we can publicly share more information.
 
 ### MeganeX superlight 8K
 
-We are watching this one. For now, our recommendation is to wait for independent reviews before deciding whether to purchase.
+We are watching this one. It's been having some teething issues with optical
+quality and compatibility issues with some RTX 5000 series GPUs. We're unsure if
+it will be added to our recommended list at this time, especially compared to
+other headsets coming out in 2025 which don't require vendor lock-in to specific
+GPUs.
 
 # Windows Settings and Tweaks
 
@@ -383,7 +397,7 @@ The [page file](https://learn.microsoft.com/en-us/troubleshoot/windows-client/pe
 
 ## Disable USB Selective Suspend
 
-[USB selective suspend](https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-selective-suspend) is a feature intended to reduce electricity usage by powering down idle devices. This can cause problems for flight simulators, such as disconnecting your peripherals during a long cruise, or in some cases, causing devices like head trackers to stop working after a few minutes of use. 
+[USB selective suspend](https://learn.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-selective-suspend) is a feature intended to reduce electricity usage by powering down idle devices. This can cause problems for flight simulators, such as disconnecting your peripherals during a long cruise, or in some cases, causing devices like head trackers to stop working after a few minutes of use.
 
 Disable this setting:
 
