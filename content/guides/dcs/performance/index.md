@@ -14,6 +14,9 @@ _This page contains contributions from my friend Lynx._
 # Upcoming Products
 
 - We expect a number of new VR headsets to launch within the coming months and recommend waiting for these annoucements before buying a new VR headsets.
+  - [Bigscreen Beyond 2](https://store.bigscreenvr.com/products/bigscreen-beyond-2)
+  - [Pirmax Crystal Super](https://pimax.com/pages/pimax-crystal-super)
+  - Unannounced Valve Headset
 
 # Technical Bulletins
 
