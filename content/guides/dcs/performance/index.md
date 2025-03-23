@@ -529,7 +529,7 @@ Your experience may vary depending on your hardware, especially your network ban
 
 ## Meta Quest Link Cable
 
-If you have a Meta Quest headset, and are using Quest Link instead of Virtual Desktop or Steam Link, a link cable will provide the best video quality. Meta sells an [official link cable](https://www.meta.com/quest/accessories/link-cable/) if you don’t have one, and more affordable third-party cables are also available.
+If you have a Meta Quest headset, and are using Quest Link instead of Virtual Desktop or Steam Link, a link cable will provide better video quality than Quest Link over Wifi, though it will likely be inferior to Virtual Desktop or Steam Link. Meta sells an [official link cable](https://www.meta.com/quest/accessories/link-cable/) if you don’t have one, and more affordable third-party cables are also available.
 
 A tradeoff is that you may not be able to charge your headset and use the link cable at the same time, which may limit how long you can fly at a time. [This third party cable](https://a.co/d/765REiP) allows connecting both a charger and link at once, which extends battery life sufficiently for very long flights.
 
