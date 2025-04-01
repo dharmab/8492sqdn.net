@@ -53,7 +53,7 @@ To use this feature, you and your friends must use so-called [Strict Callsigns](
 
 Here are my findings on the speech-to-text models:
 
-1. None of these new models can run locally, so they cannoy fully replace the current models.
+1. None of these new models can run locally, so they cannot fully replace the current models.
 1. The new speech-to-text models do not yet support a feature SkyEye uses called "prompting" which improves the accuracy of recognizing technical terminology such as aviation and air combat brevity. Because of this missing feature, the new models have a _higher_ error rate in practice compared to the current model.
 
 After this investigation, I added support for the new speech-to-text models, but they are not used by default (they require server admins to set a configuration option) and I have warned against their use in the documentation. However, I have coded SkyEye such that if OpenAI does add prompting support for these new models, SkyEye will begin using the prompting feature immediately without requiring further code changes.
