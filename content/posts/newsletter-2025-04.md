@@ -47,7 +47,7 @@ If the call had only applied to Yellows 11 and 13, SkyEye would instead say:
 
 To use this feature, you and your friends must use so-called [Strict Callsigns](https://github.com/dharmab/skyeye/blob/main/docs/PLAYER.md#strict-callsigns), instead of free-form player names. Refer to the linked section of the player guide for details.
 
-## New GPT4o Models
+### New GPT4o Models
 
 [OpenAI recently launched new models for speech-to-text and text-to-speech.](https://openai.com/index/introducing-our-next-generation-audio-models/) In particular, OpenAI claims that the new speech-to-text models have a lower error rate than the current model used by SkyEye. I investigated these models and compared them to SkyEye's current models.
 
