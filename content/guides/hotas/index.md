@@ -9,25 +9,13 @@ weight: 2
 
 # Note On Current Events
 
-Beginning in February 2025, shipments from China to the United States have
-additional costs:
+The US is currently experiencing highly chaotic and extreme changes in
+tariff policy. The cost of tariffs is passed onto the customer (i.e. you),
+either in the form of increased prices on goods, or directly as fees collected
+by customs authorities on packages.
 
-- The previous duty/tax exemption for shipments under $800 is being repealed.
-- Tariffs on Chinese goods have increased.
-
-People in the United States should expect to pay additional import taxes on
-shipments from China or Hong Kong, which may be collected by the carrier (DHL,
-Fedex, UPS, OnTrac, etc.) _separately_ from the price paid at checkout.
-Shipments from warehouse in the US _should_ have these taxes paid on entry to
-the US, before your purchase. However, you should check with the seller to
-confirm if these taxes have been paid, and be prepared to pay any additional
-taxes before you can receive your shipment.
-
-[DigiKey has a useful page summarizing these new tariffs](https://www.digikey.com/en/resources/tariff-resources).
-
-Of course, people outside the United States are usually already familiar with
-this process, since the _de minimis_ exemption was not nearly as high as it
-was in the US.
+You should expect significantly increased prices on most HOTAS equipment,
+since all HOTAS equipment is manufacturerd outside of the United States.
 
 # Sticks & Gamepads
 
