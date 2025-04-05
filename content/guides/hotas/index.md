@@ -15,7 +15,7 @@ either in the form of increased prices on goods, or directly as fees collected
 by customs authorities on packages.
 
 You should expect significantly increased prices on most HOTAS equipment,
-since all HOTAS equipment is manufacturerd outside of the United States.
+since all consumer HOTAS devices are manufacturerd outside of the United States.
 
 # Sticks & Gamepads
 
