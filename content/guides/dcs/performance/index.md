@@ -33,8 +33,6 @@ del *fba_ads_*.json
 
 This will take a while but it will eventually remove the files.
 
-* The Nvidia 5000 series has a compatibility issue with some Pimax headsets due to changes to DisplayPort and Direct Display Mode (DDM).
-
 # Recommended Specs
 
 ## Storage
