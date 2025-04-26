@@ -1,6 +1,6 @@
 ---
 title: DCS Steam vs. Standalone
-summary: Differences between the Steam and standalone versions of DCS World.
+summary: Differences between the Steam and standalone versions of DCS World. Most players should use the standalone version.
 tags:
   - digital combat simulator
 ---
