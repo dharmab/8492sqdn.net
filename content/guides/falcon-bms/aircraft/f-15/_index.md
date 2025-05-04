@@ -48,7 +48,7 @@ All controls on the stick are important.
 
 Set the category dropdown to LEFT CONSOLE. Scroll down and find the section for THROTTLE.
 
-![](images/Untitled%201.png)
+![](images/Untitled%201.webp)
 
 Assign the controls as you see fit. Reference `Docs\02 Aircraft Manuals & Checklists\TO 1F-15C-1 BMS.pdf`, section 4.1.2.1.16 for a description of functions.
 

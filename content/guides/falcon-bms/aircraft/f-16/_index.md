@@ -50,11 +50,11 @@ Set the category dropdown to LEFT CONSOLE. Scroll down and find the section for 
 
 Diagram from the DCS manual, because BMS’ manuals don’t have a complete diagram of the throttle…
 
-![](images/Untitled%201.png)
+![](images/Untitled%201.webp)
 
 Diagram from the BMS manual - SPD BRK switch is unlabeled
 
-![](images/Untitled%202.png)
+![](images/Untitled%202.webp)
 
 Assign the controls as you see fit. Reference both `Docs\02 Aircraft Manuals & Checklists\01 F-16\TO 1F-16CMAM-1 BMS.pdf`, section 2.45 and `Docs\02 Aircraft Manuals & Checklists\01 F-16\TO 1F-16CMAM-34-1-1 BMS.pdf`, section 2.1.5 for a description of functions.
 
