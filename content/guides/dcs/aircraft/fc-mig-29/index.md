@@ -313,22 +313,22 @@ Can lock at slightly longer range than Vertical Scan |
 
 ## Approach and Landing
 
->🛬 The MiG-29 is arguably the hardest aircraft to land in DCS, >and certainly the hardest to land at an airfield. It lands less >like a fighter and more like an Airbus.
+>🛬 The MiG-29 is arguably the hardest aircraft to land in DCS, and certainly the hardest to land at an airfield. It lands less like a fighter and more like an Airbus.
 >
 >Tips:
 >
->- Fly a long, straight in approach. Don’t attempt the overhead >break unless you are very well practiced.
+>- Fly a long, straight in approach. Don’t attempt the overhead break unless you are very well practiced.
 >- Use the landing submode and ILS system whenever possible.
->- Intercept the glideslope 10 miles away from the runway, and >fly an on-speed and on-glideslope approach
->- Abort the approach and go around if any of the following are >not true:
->    - Aircraft is on the correct flight path, with only small >inputs required to maintain it
+>- Intercept the glideslope 10 miles away from the runway, and fly an on-speed and on-glideslope approach
+>- Abort the approach and go around if any of the following are not true:
+>    - Aircraft is on the correct flight path, with only small inputs required to maintain it
 >    - Airspeed within +40kph/+20 knots of the reference speed
 >    - Airplane is in the landing configuration
->    - The rate of descent is not greater than 300 meters per >minute/1000 feet per minute
+>    - The rate of descent is not greater than 300 meters per minute/1000 feet per minute
 >    - The power setting is appropriate for the configuration
->- Descent rate should ideally be 1 m/s at touchdown. Abort and >go around if descent rate is above 5 m/s just before touchdown
->- If you bounce at touchdown, abort and go around. Do not try >to save it.
->- It can be difficult to slow down with a centerline fuel tank >because it prevents deployment of the airbrake. Consider >jettisoning the fuel tank before the approach.
+>- Descent rate should ideally be 1 m/s at touchdown. Abort and go around if descent rate is above 5 m/s just before touchdown
+>- If you bounce at touchdown, abort and go around. Do not try to save it.
+>- It can be difficult to slow down with a centerline fuel tank because it prevents deployment of the airbrake. Consider >jettisoning the fuel tank before the approach.
 
 1. Turn on position lights
 2. If using ILS, select the Landing submode, and select the ID of the destination airfield using the Next Waypoint and Previous Waypoint buttons. Use the [airfield data](https://www.notion.so/Flaming-Cliffs-MiG-29-Fulcrum-e1bbc7cf86a1435da950def5ea001f14?pvs=21) in the kneeboard to find the correct ID.
