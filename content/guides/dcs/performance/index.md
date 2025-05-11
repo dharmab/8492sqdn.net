@@ -145,9 +145,9 @@ A head tracker is ideal for anyone who is not using VR. See [the companion artic
 
 There are no perfect VR headsets, but there are a few worth consideration for DCS.
 
-**As of March 2025, we currently don't recommend purchasing a new VR headset because of upcoming product announcements. Stay tuned for updates once we have public information we can share.**
+**As of May 2025, we currently don't recommend purchasing a new VR headset because of upcoming product releases from Pimax and Bigscreen. We recommend waiting for these releases and reviews.**
 
-Before March 2025 we recommended the **Pimax Crystal Light** as our primary recommendation and the **Meta Quest 3** as a budget option.
+We previously recommended the **Pimax Crystal Light** as our primary recommendation and the **Meta Quest 3** as a budget option.
 
 We also recommend using IEMs for audio instead of the mediocre speakers included with most headsets. For budget IEMs, I like the [7HZ x Crinacle Zero:2](https://www.linsoul.com/products/7hz-x-crinacle-zero-2) and [Moondrop CHU II](https://moondroplab.com/en/products/chu-ii).
 
