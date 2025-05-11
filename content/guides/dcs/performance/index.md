@@ -11,18 +11,11 @@ _Photo by Generic (@generic_dcs)_
 
 _This page contains contributions from my friend Lynx._
 
-# Upcoming Products
-
-- We expect a number of new VR headsets to launch within the coming months and recommend waiting for these annoucements and releases before buying any new VR headset.
-  - [Bigscreen Beyond 2](https://store.bigscreenvr.com/products/bigscreen-beyond-2)
-  - [Pirmax Crystal Super](https://pimax.com/pages/pimax-crystal-super)
-  - Unannounced Valve Headset
 
 # Technical Bulletins
 
 _Current known issues and workarounds_
 
-- [Some players are seeing visual artifacts that look like infinitely long brown stripes if a specific crater is present.](https://forum.dcs.world/topic/361719-terrain-visual-issues/) No known root cause or workaround at this time.
 - [The "Broken 3" weather preset exhibits visual artifacting in VR](https://forum.dcs.world/topic/366759-graphical-glitch-in-between-cloud-layers/). Workaround: Use a different weather preset.
 - Meta's quest software may fill the `C:\` with over a million files named `fba_ads_*.json`, severely impacting disk performance. Workaround: Delete or rename the file `C:\Program Files\Oculus\Support\oculus-remote-desktop\RemoteDesktopCompanion.exe`, then run the following in a command prompt:
 
