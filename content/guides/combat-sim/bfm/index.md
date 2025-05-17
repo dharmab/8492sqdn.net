@@ -36,6 +36,8 @@ In a fight, you will need to keep your eyes locked on the enemy aircraft at all 
 
 You will need to be comfortable using your weapons and managing your airspeed without looking down. If your aircraft has a helmet-mounted display, this will be a little easier. Regardless, you need to practice this skill offline or with a sparring partner, so that you will be ready to use it in combat.
 
+If you cannot see the enemy, assume they are directly behind you and about to fire an IR missile. Dispense flares and keep maneuvering. Don't ever fly straight and level when an enemy is near and not tracked!
+
 ## Phases of a Fight
 
 You can break a 1v1 dogfight down into phases:
