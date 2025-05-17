@@ -361,8 +361,6 @@ World War X - 40s-70s PvPvE, with a focus on supply and A2G gameplay. Features s
 
 [Border Zone](https://discord.gg/WzqXveJC) - Regular campaigns and events.
 
-[DCS Dogfighters](https://discord.gg/dogfighters) - Air to air combat mentorship and training
-
 ## Private Squadrons
 
 The best gameplay in DCS is found by joining a private squadron and playing organized, structured missions together. You can meet squadrons on the [official forums](https://forum.dcs.world/forum/144-squadron-recruiting/) and on the [wingman finder](https://discord.gg/dcs-wingman-finder) Discord.
