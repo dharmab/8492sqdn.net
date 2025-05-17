@@ -186,6 +186,8 @@ BFM and dogfighting is a difficult topic to learn by yourself. The AI opponents 
 
 The best way to learn BFM is to dogfight against a human with better skills and debrief every fight. A human can teach you more in an evening than you would learn in a year.
 
+Main article: [Basic Fighter Maneuvers](../combat-sim/bfm/)
+
 Supplementary resources for BFM:
 
 *Art of the Kill* by Pete Bonanni
@@ -196,7 +198,7 @@ Supplementary resources for BFM:
 
 {{< youtube-playlist PLd5Qdmhmp3Y5-SDJjOzuUqV3m3mmuieTQ >}}
 
-*Debrief BFM Guides* Byu Air Warfare Group
+*Debrief BFM Guides* By Air Warfare Group
 
 {{< youtube-playlist PLroS5xjXW90smqJPDcIlPvXYUKxLM94bm >}}
 
