@@ -67,7 +67,7 @@ F-14B|
 F-15C|
 F-15E|
 F-16C|
-F/A-18C|330-390 kts
+F/A-18C|350 kts
 MiG-29A|
 Su-27|
 Su-33|
