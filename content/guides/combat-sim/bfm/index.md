@@ -68,7 +68,7 @@ F-15C|
 F-15E|
 F-16C|
 F/A-18C|350 kts
-MiG-29A|
+MiG-29A|750 kph
 Su-27|
 Su-33|
 J-11|
