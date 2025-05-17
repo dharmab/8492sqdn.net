@@ -56,7 +56,7 @@ Once past the merge, you will usually enter a turning fight. You will bank your 
 
 To find your aircraft's optimal turn rate, use an Energy-Manueverability Diagram. A user named "Contact Light" computed and published E-M diagrams for many DCS aircraft in 2022; However, flight models have been changed and new aircraft added to the sim since then, so you should search for updated E-M diagrams for the current patch. Contact Light's diagrams include instructions on interpreting E-M diagrams, so they're still a good learning tool. I have mirrored the diagrams PDF [here](docs/em.pdf). The key number is the _maximum sustained turn speed_. The exact number varies with altitude/pressure. You should memorize this number at several altitudes that you expect to fight at.
 
-For quick reference, here is a table of approximate Max Sustained Turn Speeds for some popular aircraft. The numbers are rounded to be easier to remember.
+For quick reference, here is a table of approximate Max Sustained Turn Speeds for some popular aircraft.
 
 _Work in Progress, table will be filled out as I verify data_
 
@@ -67,7 +67,7 @@ F-14B|
 F-15C|
 F-15E|
 F-16C|
-F/A-18C|
+F/A-18C|330-390 kts
 MiG-29A|
 Su-27|
 Su-33|
