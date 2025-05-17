@@ -56,22 +56,20 @@ Once past the merge, you will usually enter a turning fight. You will bank your 
 
 To find your aircraft's optimal turn rate, use an Energy-Manueverability Diagram. A user named "Contact Light" computed and published E-M diagrams for many DCS aircraft in 2022; However, flight models have been changed and new aircraft added to the sim since then, so you should search for updated E-M diagrams for the current patch. Contact Light's diagrams include instructions on interpreting E-M diagrams, so they're still a good learning tool. I have mirrored the diagrams PDF [here](docs/em.pdf). The key number is the _maximum sustained turn speed_. The exact number varies with altitude/pressure. You should memorize this number at several altitudes that you expect to fight at.
 
-For quick reference, here is a table of approximate Max Sustained Turn Speeds for some popular aircraft.
-
-_Work in Progress, table will be filled out as I verify data_
+For quick reference, here is a table of approximate Sustained Turn Speeds for some popular aircraft. These err on the slightly slow side to give beginners more margin of error, at the tradeoff of slighly suboptimal turn rate.
 
 Module|Speed
 -|-
-F-14A|
-F-14B|
-F-15C|
-F-15E|
-F-16C|
+F-14B|330 kts
+F-15C|400 kts
+F-15E|350 kts
+F-16C|400 kts
 F/A-18C|350 kts
 MiG-29A|750 kph
-Su-27|
-Su-33|
-J-11|
+Su-27|750 kph
+Su-33|750 kph
+
+If this table is too much to remember, just use 350 kts for US fighters and 750 kph for Soviet fighters. It's close enough for video games.
 
 When in the turn phase of a fight, place your throttle in afterburner and keep it there. Then pull your stick to stay as close as you can to the max sustained turn rate as possible. If you're too slow, pull the stick less until you reach the target speed. If you're a little too fast, pull the stick more until you reach the target speed. If you're way too fast, try climbing to convert the excess speed into altitude you can spend later if needed.
 
