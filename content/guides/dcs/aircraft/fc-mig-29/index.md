@@ -328,7 +328,7 @@ Can lock at slightly longer range than Vertical Scan |
 >    - The power setting is appropriate for the configuration
 >- Descent rate should ideally be 1 m/s at touchdown. Abort and go around if descent rate is above 5 m/s just before touchdown
 >- If you bounce at touchdown, abort and go around. Do not try to save it.
->- It can be difficult to slow down with a centerline fuel tank because it prevents deployment of the airbrake. Consider >jettisoning the fuel tank before the approach.
+>- It can be difficult to slow down with a centerline fuel tank because it prevents deployment of the airbrake. Consider jettisoning the fuel tank before the approach.
 
 1. Turn on position lights
 2. If using ILS, select the Landing submode, and select the ID of the destination airfield using the Next Waypoint and Previous Waypoint buttons. Use the [airfield data](https://www.notion.so/Flaming-Cliffs-MiG-29-Fulcrum-e1bbc7cf86a1435da950def5ea001f14?pvs=21) in the kneeboard to find the correct ID.
@@ -458,7 +458,7 @@ The MiG-29 can use unguided rockets and bombs. It’s not a precision bomber- th
 >
 > Rockets are an area weapon, not a precision weapon. Distribute them over a target area.
 >
-> Rockets require you to dive onto your target, so they’re best used when the enemy has no AAA or MANPADS and limited small >arms. They can also be used when flying under the radar of older SAM systems.
+> Rockets require you to dive onto your target, so they’re best used when the enemy has no AAA or MANPADS and limited small arms. They can also be used when flying under the radar of older SAM systems.
 >
 > ”One pass, haul ass” is a winning strategy. Unleash all of your rockets in one quick attack and then leave.
 
