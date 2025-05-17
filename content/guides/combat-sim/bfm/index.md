@@ -79,7 +79,7 @@ _Note: Third-gen interceptors such as the MiG-21 and F-4 will find it difficult 
 
 ## Kill the Enemy
 
-Once you have a kill shot lined up, **kill the enemy**. Usually this means getting directly behind them and firing a missile up their tailpipe. If you are in a newer aircraft you might have all-aspect missiles like the AIM-9X that can kill from weird angles. You might also have a helmet-mounted display that lets you lock on to enemies way outside your HUD. These are great to have, and you should learn how to use these tools if available, but ultimately what matters is that you **kill them** before they kill you.
+Once you have a kill shot lined up, **kill the enemy**. Usually this means getting directly behind them and firing an infrared missile up their tailpipe. If you are in a newer aircraft you might have all-aspect missiles like the AIM-9X that can kill from weird angles. You might also have a helmet-mounted display that lets you lock on to enemies way outside your HUD. These are great to have, and you should learn how to use these tools if available, but ultimately what matters is that you **kill them** before they kill you.
 
 ## Practice
 
