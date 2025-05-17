@@ -13,7 +13,7 @@ This is a quick, introductory guide to Basic Fighter Maneuvers (BFM), also calle
 
 BFM/Dogfighting specifically means close range fighting (usually within 5-10 nautical miles).
 
-BFM is fun to practice, and a great way to build piloting skills. However, it is a _losing_ strategy in most missions, because it negates most of your technological advantages and evens the playing field with the enemy. If you want to win fights, you should study [BVR combat](....//dcs/content.md#bvr-timeline).
+BFM is fun to practice, and a great way to build piloting skills. However, it is a _losing_ strategy in most missions, because it negates most of your technological advantages and evens the playing field with the enemy. If you want to win fights, you should study [BVR combat](../../dcs/content#bvr-timeline).
 
 This guide is intended for absolute beginners to begin dogfight training within a few minutes. It is not a comprehensive guide, nor a guide intended to make you an ace pilot. You must **practice**, **debrief**, **study**, and **practice again** to achieve that.
 
