@@ -60,7 +60,7 @@ Once past the merge, you will usually enter a turning fight. You will bank your 
 
 To find your aircraft's optimal turn rate, use an Energy-Manueverability Diagram. A user named "Contact Light" computed and published E-M diagrams for many DCS aircraft in 2023. I have mirrored the diagrams PDF [here](docs/em.pdf). The key number is the _maximum sustained turn speed_. The exact number varies with altitude/pressure. You should memorize this number at several altitudes that you expect to fight at.
 
-For quick reference, here is a table of approximate Sustained Turn Speeds for some popular aircraft. These err on the slightly slow side to give beginners more margin of error, at the tradeoff of slighly suboptimal turn rate.
+For quick reference, here is a table of approximate Sustained Turn Speeds for some popular aircraft. These err on the slightly slow side to give beginners more margin of error, at the tradeoff of slightly suboptimal turn rate. Higher speeds can provide a slightly better turn rate, but going too fast while turning can result in a rapid and catastrophic loss of energy.
 
 Module|Speed
 -|-
