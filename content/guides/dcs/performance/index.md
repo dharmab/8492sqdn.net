@@ -273,7 +273,7 @@ We do not recommend buying a used Beyond:
 
 ### Bigscreen Beyond 2
 
-We are optimistic that the Beyond 2 will be on our recommended list in late 2025. We are waiting for production units to be available for testing and review before making a final recommendation.
+We are optimistic that the Beyond 2 will be on our recommended list in late 2025. We have ordered one for testing and will update this guide once we have hands-on experience.
 
 ### Pimax Crystal Super
 
