@@ -153,7 +153,7 @@ The MCE Ultimate fixed a number of criticisms over the MCE Pro and is worth the 
 
 We have heard reports that Moza's force feedback software interferes with other DCS tools including SimpleRadio-Standalone. 
 
-[Additionally, we have heaerd reports thnat Moza's customers have found fradulent charges on their payment cards after bnuying from Moza.](https://www.reddit.com/r/moza/comments/1houmep/dont_buy_from_the_moza_website/) Therefore, we do not recommend purchasing from Moza for your financial security.
+[Additionally, we have heard reports thnat Moza's customers have found fradulent charges on their payment cards after buying from Moza.](https://www.reddit.com/r/moza/comments/1houmep/dont_buy_from_the_moza_website/) Therefore, we do not recommend purchasing from Moza for your financial security.
 
 We recommend VPForce as an alternative, because of the excellent software.
 
@@ -248,9 +248,9 @@ If you mostly fly WWII aircraft, early to mid cold war aircraft, and/or *DCS MiG
 
 ### Moza MTP Throttle.
 
-There aren't any major faults with the hardware itself. The controls on the base arte oriented towards startup functions rather than commonly used functions, so it's best paired with a separate panel for commonly used flight controls. The price is a high compared to the competition.
+There aren't any major faults with the hardware itself. The controls on the base are oriented towards startup functions rather than commonly used functions, so it's best paired with a separate panel for commonly used flight controls. The price is a high compared to the competition.
 
-However,  [we have heaerd reports thnat Moza's customers have found fradulent charges on their payment cards after bnuying from Moza.](https://www.reddit.com/r/moza/comments/1houmep/dont_buy_from_the_moza_website/) Therefore, we do not recommend purchasing from Moza for your financial security.
+However, [we have heard reports thnat Moza's customers have found fradulent charges on their payment cards after buying from Moza.](https://www.reddit.com/r/moza/comments/1houmep/dont_buy_from_the_moza_website/) Therefore, we do not recommend purchasing from Moza for your financial security.
 
 ### CH Products Pro Throttle
 
