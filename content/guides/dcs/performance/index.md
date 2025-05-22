@@ -1,7 +1,7 @@
 ---
 title: DCS World Performance and Settings Guide
 summary: Recommended system, graphical and gameplay settings for DCS World
-date: 2025-03-23
+date: 2025-05-22
 tags:
   - digital combat simulator
 weight: 1
@@ -337,7 +337,23 @@ Disable Hardware Accelerated GPU Scheduling in Windows settings. It increases in
 
 Disable [ShadowPlay](https://www.nvidia.com/en-us/geforce/geforce-experience/shadowplay/) if you aren't using it to record gameplay footage.
 
-If you use DLSS see the [DLSS/FSR section](#dlssfsr) for addtional tweaks.
+### DLSS
+
+DLSS (Dynamic Learning Super Sampling) is a feature on Nvidia GPUs that renders the game at a lower resolution and then uses an AI model to generate a higher resolution image. This can be faster than rendering at the full resolution, at the tradeoff of blurriness/visual artifacts.
+
+The default settings for DLSS in DCS cause ghosting issues on fast-moving objects and blurs the HUD and MFDs in your cockpit. You can improve these issues by following these steps to use a better DLSS preset and exclude the HUD/MFDs from DLSS:
+
+1. Navigate to your [Saved Games folder](#saved-games-folder)
+2. Create a `Config/` folder if it doesn't already exist
+3. Create a text file named `autoexec.cfg` inside the `Config/` folder, if it doesn't already exist. Make sure it is `autoexec.cfg`, not `autoexec.cfg.txt`. You may need to enable "Show file name extensions" in Windows Explorer to correctly name the file
+4. Edit `autoexec.cfg` with a text editor and ensure the following values are set - edit them if they're already in there, or add them if they're missing:
+
+```
+DLSS_Preset = 'K'
+HUD_MFD_after_DLSS = true
+```
+
+Try both without and without DLSS. Some people prefer the softer look and higher framerate with DLSS, some prefer the higher clarity without DLSS.
 
 ## AMD GPU Tweaks
 
@@ -542,12 +558,6 @@ On Meta Quest headsets using Quest Link or Airlink, you can toggle ASW while pla
 
 You should lock your headset to the _lowest_ refresh rate that you can use comfortably. This helps reduce the visual impact of stuttering. I personally find a refresh rate of 72Hz to work best for me, but if you are impacted by VR sickness or motion sickness, you may need a higher setting such as 90Hz.
 
-## DLSS/FSR
-
-DLSS as implemented in DCS doesn’t work great in VR headsets, causing noticeable ghosting. [It is possible to override the DLSS implementation to one that doesn't cause ghosting using an unofficial tweak.](https://forum.dcs.world/topic/356743-update-the-dlss-preset-used-by-dcs-to-remove-ghosting/)
-
-FSR also causes visual artifacts, such as ghosting/blurring on moving options and when switching MFD pages. Your mileage may vary based on your headset and vision.
-
 ## XRNeckSafer
 
 If you find it uncomfortable or painful to twist your torso and neck to look behind you/over your wing, you can use [XRNeckSafer](https://gitlab.com/NobiWan/xrnecksafer) to provide an assist.
@@ -585,7 +595,7 @@ These settings are a good starting baseline; you may need to tweak and test furt
 |-|-|
 | Res of Cockpit Displays | 1024 Every Frame |
 | Anti-Aliasing | Off or MSAA 2x/MSAA 4x. Do not use TAA or DLAA, because they cause blurring/ghosting that makes it very difficult to spot aircraft. MSAA may reduce shimmer in VR |
-| Upscaling | Off has best fidelity (no blurring/ghosting), especially on 1080p monitors. Try DLSS Quality and sharpening 0.5 on newer Nvidia graphics. Try FSR with scaling 0.9 and sharpening 0.8 on AMD graphics or older Nvidia graphics. Tune sharpening to user preference. If this is grayed out, turn off anti-aliasing and verify drivers are fully updated |
+| Upscaling | Off has best fidelity (no blurring/ghosting), especially on 1080p monitors. Try DLSS Quality and sharpening 0.5 on newer Nvidia graphics, especially with [this tweak](#dlss). Try FSR with scaling 0.9 and sharpening 0.8 on AMD graphics or older Nvidia graphics. Tune sharpening to user preference. If this is grayed out, turn off anti-aliasing and verify drivers are fully updated |
 | Textures | High. Do not lower this, as anything below High makes the cockpit difficult to read. |
 | Terrain textures | Low or High |
 | Heat Blur | High (2D) or Off (VR). In VR, the blur renders incorrectly, causing it to blur objects in front of the heat. |
