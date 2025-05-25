@@ -1,6 +1,6 @@
 ---
 title: HOTAS Buyer's Guide for Combat Flight Simulation
-summary: Flight sticks, throttles and pedals organized into recommended, recommend with reservations, and not recommended.
+summary: Flight sticks, throttles and pedals organized into recommended, recommended with reservations, and not recommended.
 date: 2025-01-01
 weight: 2
 ---
