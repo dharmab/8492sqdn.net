@@ -43,9 +43,9 @@ Launch the game once to make sure it creates the Windows Registry entries needed
 
 Download the Falcon BMS downloader from [https://www.falcon-bms.com](https://www.falcon-bms.com/).
 
-![Download the “BMS Downloader (web)” from the Downloads page.](images/w%201.jpg)
+Download the “Falcon BMS Downloader” from the Downloads page.
 
-Download the “BMS Downloader (web)” from the Downloads page.
+> ℹ️ Windows Defender may attempt to block the downloader from running or stop it while it runs. This is because the downloader uses peer-to-peer file transfer, similar to [how Blizzard used to distribute patches](https://antifandom.com/wowpedia/wiki/Blizzard_Downloader), and this looks "weird" to an antivirus. You may need to add an exclusion to your antivirus.
 
 Extract the EXE from the ZIP file and run it. Follow the instructions for the latest version of Falcon BMS. It will create a folder named `BMS_Downloads`, and inside it will be another EXE file. Run this EXE file to and follow the instructions to install Falcon BMS.
 
