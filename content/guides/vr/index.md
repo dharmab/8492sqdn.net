@@ -99,7 +99,7 @@ See the [RAM section of the DCS performance guide](guides/dcs/performance#ram) f
 
 It is important to use a high quality power supply that provides stable power under high load. Wattage and 80PLUS ratings are not enough to tell if a power supply is good or bad.
 
-See the [PSU section of the DCS performance guide](guides/dcs/performance#PSU) for a buyer's guide.
+See the [PSU section of the DCS performance guide](guides/dcs/performance#psu) for a buyer's guide.
 
 ## Recommended Headsets
 
