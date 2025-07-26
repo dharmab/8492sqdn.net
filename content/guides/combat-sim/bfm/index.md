@@ -4,12 +4,12 @@ summary: "A quick introduction to how to dogfight"
 date: 2025-05-15
 tags:
   - digital combat simulator
-  - falcon 
+  - falcon
 ---
 
 _Work in Progress_
 
-This is a quick, introductory guide to Basic Fighter Maneuvers (BFM), also called dogfighting.
+This is a quick introductory guide to Basic Fighter Maneuvers (BFM), also called dogfighting.
 
 BFM/Dogfighting specifically means close range fighting (usually within 5-10 nautical miles).
 
@@ -23,10 +23,10 @@ _This guide includes contributions from my friend Marlan._
 
 In a dogfight, energy is your life bar. You have two forms of energy:
 
-- Kinetic Energy: **Speed**. If you maintain your aircraft's optimal speed, you will be able to make the tightest possible sustained turn, which helps you kill your enemy before they can kill you. 
-- Potential Energy: **Altitude**. If you're at a high altitude, enemy planes and missiles below you need to spend energy to reach you, and your own missiles spend less energy to reach enemies at or below your altitude. 
+- Kinetic Energy: **Speed**. If you maintain your aircraft's optimal speed, you will be able to make the tightest possible sustained turn, which helps you kill your enemy before they can kill you.
+- Potential Energy: **Altitude**. If you're at a high altitude, enemy planes and missiles below you need to spend energy to reach you, and your own missiles spend less energy to reach enemies at or below your altitude.
 
-If you have excess kinetic energy, you can climb to convert kinetic energy to potential energy. If you need more kinetic energy, you can dive to convert potential energy to kinetic energy.
+If you have excess kinetic energy, you can climb to convert it to potential energy; if you need more kinetic energy, you can dive to convert potential energy back to kinetic energy.
 
 If you run out of both kinetic and potential energy, you will be killed.
 
@@ -44,7 +44,7 @@ You can break a 1v1 dogfight down into phases:
 
 - Pre-merge: The aircraft are approaching each other.
 - Merge: The aircraft pass close to each other.
-- Fight: The aircraft compete to turn better than each other to set up a kill shot. 
+- Fight: The aircraft compete to turn better than each other to set up a kill shot.
 
 ![](images/circles.jpg)
 
@@ -54,11 +54,11 @@ In training, you and your sparring partner will typically agree on rules on when
 
 ## Rate Fight
 
-Once past the merge, you will usually enter a turning fight. You will bank your aircraft so that your lift vector intersects the enemy, and then pull the stick to turn. Your goal is to turn towards the enemy at the optimal rate, setting up a kill shot. If you pull too hard on the stick, you'll bleed too much speed and lose maneuverability. If you pull too softly, you won't turn fast enough to catch the enemy.
+Once past the merge, you will usually enter a turning fight. You will bank your aircraft so that your lift vector intersects the enemy, and then pull the stick to turn. Your goal is to turn towards the enemy at the optimal rate, setting up a kill shot. If you pull too hard on the stick, you'll bleed too much speed and lose maneuverability. If you don't pull hard enough, you won't turn fast enough to catch the enemy.
 
 ![](images/lift-vector.webp)
 
-To find your aircraft's optimal turn rate, use an Energy-Manueverability Diagram. A user named "Contact Light" computed and published E-M diagrams for many DCS aircraft in 2023. I have mirrored the diagrams PDF [here](docs/em.pdf). The key number is the _maximum sustained turn speed_. The exact number varies with altitude/pressure. You should memorize this number at several altitudes that you expect to fight at.
+To find your aircraft's optimal turn rate, use an Energy-Maneuverability Diagram. A user named "Contact Light" computed and published E-M diagrams for many DCS aircraft in 2023. I have mirrored the diagrams PDF [here](docs/em.pdf). The key number is the _maximum sustained turn speed_. The exact number varies with altitude/pressure. You should memorize this number at several altitudes that you expect to fight at.
 
 For quick reference, here is a table of approximate Sustained Turn Speeds for some popular aircraft. These err on the slightly slow side to give beginners more margin of error, at the tradeoff of slightly suboptimal turn rate. Higher speeds can provide a slightly better turn rate, but going too fast while turning can result in a rapid and catastrophic loss of energy.
 
@@ -79,7 +79,7 @@ If this table is too much to remember, just use 350 kts for US fighters and 750 
 
 When in the turn phase of a fight, place your throttle in afterburner and keep it there. Then pull your stick to stay as close as you can to the max sustained turn rate as possible. If you're too slow, pull the stick less until you reach the target speed. If you're a little too fast, pull the stick more until you reach the target speed. If you're way too fast, try climbing to convert the excess speed into altitude you can spend later if needed.
 
-_Note: Third-gen interceptors such as the MiG-21 and F-4 will find it difficult to sustain level turns due to their smaller wings and emphasis on speed over manueverabiltiy. These older machines fight using different tactics such as slashing attacks, boom and zoom tactics, and "The Egg", an elliptical turn designed to exploit the F-4's strengths against the MiG-21's weaknesses. Play the MiG Killers campaign to learn more!_
+_Note: Third-gen interceptors such as the MiG-21 and F-4E will find it difficult to sustain level turns due to their smaller wings and emphasis on speed over maneuverability. These older machines fight using different tactics such as slashing attacks, boom and zoom tactics, and "The Egg", an elliptical turn designed to exploit the F-4E's strengths against the MiG-21's weaknesses. Play the MiG Killers campaign to learn more!_
 
 ## Kill the Enemy
 
@@ -87,7 +87,7 @@ Once you have a kill shot lined up, **kill the enemy**. Usually this means getti
 
 ## Practice
 
-The best way to practice these skills is to spar a with human better than you and debrief every fight. This will teach you more in an evening you would learn on your own in a year. 
+The best way to practice these skills is to spar with a human better than you and debrief every fight. This will teach you more in an evening than you would learn on your own in a year.
 
 Record your fights using [Tacview](https://www.tacview.net/). The free version of Tacview works well for this purpose. Spend 15 minutes debriefing in Tacview for every 5 minutes you spend fighting in the sim.
 
