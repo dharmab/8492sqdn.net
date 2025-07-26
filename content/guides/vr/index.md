@@ -176,8 +176,23 @@ On Meta headsets (Quest 3, Quest 3S, Quest Pro, Quest 2), see our [Meta-specifc 
 
 ### DCS-Specific Tweaks
 
-For tweaks specific to DCS, see the [VR Tweaks section of the DCS Performance Guide](guides/dcs/performance#vr-tweaks)
+See the [DCS Performance Guide](../dcs/performance) for recommended settings and tweaks for DCS World, including [VR tweaks specific to DCS](../dcs/performance#vr-tweaks)
 
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <br/>
 <br/>
 <br/>
