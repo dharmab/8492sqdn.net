@@ -58,7 +58,7 @@ However, if a high-VRAM Nvidia GPU is out of budget or otherwise unavailable, AM
 
 > Note that some VR headsets, such as the MeganeX superlight, are not compatible with AMD GPUs at all.
 
-It is technically possible to use Intel Arc GPUs with certain headsets usch as Meta and Pico, but we don't recommend it for flight sims due to poor performance.
+It is possible to use Intel Arc GPUs with certain headsets usch as Meta and Pico, but we don't recommend it for flight sims due to limited performance.
 
 ### Recommended GPUs
 
