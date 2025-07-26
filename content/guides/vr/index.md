@@ -127,15 +127,15 @@ We **only reluctantly recommend** these devices for those on a budget:
 
 We also recommend using IEMs for audio instead of the mediocre speakers included with most headsets. For budget IEMs, I like the [7HZ x Crinacle Zero:2](https://www.linsoul.com/products/7hz-x-crinacle-zero-2) and [Moondrop CHU II](https://moondroplab.com/en/products/chu-ii). If you have more money, check out the [Crinear Daybreak](https://crinear.com/daybreak).
 
-# VR Tweaks
+## VR Tweaks
 
 If you use a Virtual Reality headset, there are some additional tweaks and considerations.
 
-## Drivers
+### Drivers
 
 In most cases, you should install the latest drivers for your GPU. In some cases a new driver may have a performance issue for VR and you may need to install an older version.
 
-## Quad Views Rendering
+### Quad Views Rendering
 
 [Quad Views Rendering](https://github.com/mbucchia/Quad-Views-Foveated/wiki/What-is-Quad-Views-rendering%3F) is a technique that renders the focus area within your headset at a higher resolution than the rest of the headset. If your headset has eye-tracking, the high-resolution render area will follow your gaze; otherwise, it will be centered within your headset.
 
@@ -158,23 +158,23 @@ RedKite has a good video demoing eye-tracked Foveated Rendering:
 
 *Note: If you are using a Meta Quest Pro, you’ll need to install [OpenXR Eye Trackers](https://github.com/mbucchia/OpenXR-Eye-Trackers/wiki/Meta-Quest-Pro) to enable eye tracking on PC. You will probably need a verified Developer account.*
 
-## Lower Refresh Rate
+### Lower Refresh Rate
 
 You should lock your headset to the _lowest_ refresh rate that you can use comfortably. This helps reduce the visual impact of stuttering. I personally find a refresh rate of 72Hz to work best for me, but if you are impacted by VR sickness or motion sickness, you may need a higher setting such as 90Hz.
 
-## XRNeckSafer
+### XRNeckSafer
 
 If you find it uncomfortable or painful to twist your torso and neck to look behind you/over your wing, you can use [XRNeckSafer](https://gitlab.com/NobiWan/xrnecksafer) to provide an assist.
 
-## Remove OpenXR Toolkit
+### Remove OpenXR Toolkit
 
 OpenXR Toolkit is discontinued software and should be removed if you previously installed it.
 
-## Meta-Specific Tweaks
+### Meta-Specific Tweaks
 
 On Meta headsets (Quest 3, Quest 3S, Quest Pro, Quest 2), see our [Meta-specifc tweak guide](tweaks/meta).
 
-## DCS-Specific Tweaks
+### DCS-Specific Tweaks
 
 For tweaks specific to DCS, see the [VR Tweaks section of the DCS Performance Guide](guides/dcs/performance#vr-tweaks)
 
