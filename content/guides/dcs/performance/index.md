@@ -16,8 +16,17 @@ _This page contains contributions from my friend Lynx._
 
 _Current known issues and workarounds_
 
-- [The "Broken 3" weather preset exhibits visual artifacting in VR](https://forum.dcs.world/topic/366759-graphical-glitch-in-between-cloud-layers/). Workaround: Use a different weather preset.
-- Meta's quest software may fill the `C:\` with over a million files named `fba_ads_*.json`, severely impacting disk performance. Workaround: Delete or rename the file `C:\Program Files\Oculus\Support\oculus-remote-desktop\RemoteDesktopCompanion.exe`, then run the following in a command prompt:
+## Broken 3 Weather Preset Artifacting
+
+ [The "Broken 3" weather preset exhibits visual artifacting in VR](https://forum.dcs.world/topic/366759-graphical-glitch-in-between-cloud-layers/).
+
+ **Workaround**: Use a different weather preset.
+
+ ## Quest Software Fills C Drive with Garbage
+
+Meta's quest software may fill the `C:\` with over a million files named `fba_ads_*.json`, severely impacting disk performance.
+
+**Workaround**: Delete or rename the file `C:\Program Files\Oculus\Support\oculus-remote-desktop\RemoteDesktopCompanion.exe`, then run the following in a command prompt:
 
 ```
 cd \
