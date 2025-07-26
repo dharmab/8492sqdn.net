@@ -25,15 +25,15 @@ weight: 3
 
 _This page contains contributions from my friend Lynx._
 
-## Recommended PC Specs
+# Recommended PC Specs
 
-### Operating System
+## Operating System
 
 This guide assumes you are using Windows 11. Windows 10 is missing some features necessary to properly use modern CPUs with heterogenous core layout (e.g. dual CCD, separate performance and efficiency cores).
 
 VR is possible on Linux, but we don't recommend attempting it unless you are a software developer, or at least a very comfortable Linux power user.
 
-### CPU
+## CPU
 
 The best CPUs for VR are AMD X3D series CPUs such as:
 
@@ -48,9 +48,9 @@ However, any fast, high end gaming-oriented CPU is fine. As of current writing, 
 
 Ideally, use an upgraded CPU cooler. We're fans of Thermaltake's series of budget-friendly air coolers and the Arctic Liquid Freezer III AIO liquid cooler.
 
-### GPU
+## GPU
 
-#### Nvidia vs AMD vs Intel
+### Nvidia vs AMD vs Intel
 
 For VR, high-VRAM Nvidia GPUs are preferable to AMD GPUs if the budget allows. Nvidia's GPUs and drivers have signifcantly better software support for VR.
 
@@ -60,7 +60,7 @@ However, if a high-VRAM Nvidia GPU is out of budget or otherwise unavailable, AM
 
 It is technically possible to use Intel Arc GPUs with certain headsets usch as Meta and Pico, but we don't recommend it for flight sims due to poor performance.
 
-#### Recommended GPUs
+### Recommended GPUs
 
 Tier | Nvidia | AMD |
 -|-|-
@@ -80,7 +80,7 @@ Deprioritize:
 - Frame generation (DLSS/FSR/XeSS)
 - Ray tracing performance
 
-### RAM
+## RAM
 
 Buy a 2x48GB or 2x32GB kit, with the correct compatibility for your CPU and motherboard. Do not use a 4x kit, because they may have stability issue at higher frequencies.
 
@@ -95,13 +95,13 @@ _In most cases_ you can follow this table, but always check with your motherboar
 
 See the [RAM section of the DCS performance guide](guides/dcs/performance#ram) for more details.
 
-### PSU
+## PSU
 
 It is important to use a high quality power supply that provides stable power under high load. Wattage and 80PLUS ratings are not enough to tell if a power supply is good or bad.
 
 See the [PSU section of the DCS performance guide](guides/dcs/performance#psu) for a buyer's guide.
 
-## Recommended Headsets
+# Recommended Headsets
 
 There are no perfect VR headsets, but there are a few worth consideration for flight sims.
 
@@ -123,19 +123,19 @@ We **only reluctantly recommend** these devices for those on a budget:
 
 [See all of our reviews here](../../../reviews)!
 
-## Recommended Audio
+# Recommended Audio
 
 We also recommend using IEMs for audio instead of the mediocre speakers included with most headsets. For budget IEMs, I like the [7HZ x Crinacle Zero:2](https://www.linsoul.com/products/7hz-x-crinacle-zero-2) and [Moondrop CHU II](https://moondroplab.com/en/products/chu-ii). If you have more money, check out the [Crinear Daybreak](https://crinear.com/daybreak).
 
-## VR Tweaks
+# VR Tweaks
 
 If you use a Virtual Reality headset, there are some additional tweaks and considerations.
 
-### Drivers
+## GPU Drivers
 
 In most cases, you should install the latest drivers for your GPU. In some cases a new driver may have a performance issue for VR and you may need to install an older version.
 
-### Quad Views Rendering
+## Quad Views Rendering
 
 [Quad Views Rendering](https://github.com/mbucchia/Quad-Views-Foveated/wiki/What-is-Quad-Views-rendering%3F) is a technique that renders the focus area within your headset at a higher resolution than the rest of the headset. If your headset has eye-tracking, the high-resolution render area will follow your gaze; otherwise, it will be centered within your headset.
 
@@ -158,23 +158,23 @@ RedKite has a good video demoing eye-tracked Foveated Rendering:
 
 *Note: If you are using a Meta Quest Pro, you’ll need to install [OpenXR Eye Trackers](https://github.com/mbucchia/OpenXR-Eye-Trackers/wiki/Meta-Quest-Pro) to enable eye tracking on PC. You will probably need a verified Developer account.*
 
-### Lower Refresh Rate
+## Lower Refresh Rate
 
 You should lock your headset to the _lowest_ refresh rate that you can use comfortably. This helps reduce the visual impact of stuttering. I personally find a refresh rate of 72Hz to work best for me, but if you are impacted by VR sickness or motion sickness, you may need a higher setting such as 90Hz.
 
-### XRNeckSafer
+## XRNeckSafer
 
 If you find it uncomfortable or painful to twist your torso and neck to look behind you/over your wing, you can use [XRNeckSafer](https://gitlab.com/NobiWan/xrnecksafer) to provide an assist.
 
-### Remove OpenXR Toolkit
+## Remove OpenXR Toolkit
 
-OpenXR Toolkit is discontinued software and should be removed if you previously installed it.
+OpenXR Toolkit is discontinued software and should be removed if you previously installed it. It can cause crashes due to incompatibility with current versions of flight sims like Falcon BMS.
 
-### Meta-Specific Tweaks
+## Meta-Specific Tweaks
 
 On Meta headsets (Quest 3, Quest 3S, Quest Pro, Quest 2), see our [Meta-specifc tweak guide](tweaks/meta).
 
-### DCS-Specific Tweaks
+## DCS-Specific Tweaks
 
 See the [DCS Performance Guide](../dcs/performance) for recommended settings and tweaks for DCS World, including [VR tweaks specific to DCS](../dcs/performance#vr-tweaks)
 
