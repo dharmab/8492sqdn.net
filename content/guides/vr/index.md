@@ -133,8 +133,6 @@ If you have more money, check out the [Crinear Daybreak](https://crinear.com/day
 
 # VR Tweaks
 
-If you use a Virtual Reality headset, there are some additional tweaks and considerations.
-
 ## GPU Drivers
 
 In most cases, you should install the latest drivers for your GPU. In some cases a new driver may have a performance issue for VR and you may need to install an older version.
@@ -181,7 +179,6 @@ On Meta headsets (Quest 3, Quest 3S, Quest Pro, Quest 2), see our [Meta-specifc 
 ## DCS-Specific Tweaks
 
 See the [DCS Performance Guide](../dcs/performance) for recommended settings and tweaks for DCS World, including [VR tweaks specific to DCS](../dcs/performance#vr-tweaks)
-
 
 <br/>
 <br/>
