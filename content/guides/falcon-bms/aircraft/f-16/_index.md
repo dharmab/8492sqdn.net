@@ -3,9 +3,10 @@ title: Falcon BMS F-16 Controls Guide
 summary: Essential control bindings for the F-16
 tags:
   - falcon
+weight: 6
 ---
 
-Open the Falcon BMS Alternative Launcher (`Launcher\FalconBMS_Alternative_Launcher.exe`). 
+Open the Falcon BMS Alternative Launcher (`Launcher\FalconBMS_Alternative_Launcher.exe`).
 
 # Assign Axes
 

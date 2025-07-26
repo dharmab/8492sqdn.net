@@ -16,7 +16,7 @@ Flying a module for the first time? Start a free flight mission and just fly aro
 
 Then, learn how to start up the aircraft. Make your own checklists as you learn to help internalize the steps.
 
-Practice take-offs and landings. Do ten touch-and-go landings in a row. Do a few full stop landings. 
+Practice take-offs and landings. Do ten touch-and-go landings in a row. Do a few full stop landings.
 
 If your plane is naval, practice carrier launches and CASE I recoveries using [Bankler's CASE 1 Recovery Trainer](https://forum.dcs.world/topic/189005-banklers-case-1-recovery-trainer/).
 

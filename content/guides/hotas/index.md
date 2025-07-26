@@ -23,7 +23,7 @@ since all consumer HOTAS devices are manufactured outside of the United States.
 
 ### Gamepad
 
-You may already have one! 
+You may already have one!
 
 If not, an 8BitDo Ultimate series gamepad can be found for under $20, and has either [Hall effect](https://en.wikipedia.org/wiki/Hall_effect_sensor) or [tunneling magneto-resistance](https://en.wikipedia.org/wiki/Tunnel_magnetoresistance) sensors which are more accurate and durable than most mass-market flight sticks.  For slightly more, controllers from FlyDigi or Gamesir add additional buttons which can be mapped in DCS using Steam Input, or high quality microswitch buttons. We don't recommend buying mass market devices from Xbox/PlayStation at this time due to stick drift issues, though they're fine if you already have one.
 
@@ -45,7 +45,7 @@ A budget clone of the VKB Gladiator with more buttons and a vibration motor. Mad
 
 <img src="images/ursa-minor-fighter-joystick.bmp" width="1600" height="1600" loading="lazy" alt="">
 
-### VKB Gladiator NXT EVO Space Combat Edition Premium 
+### VKB Gladiator NXT EVO Space Combat Edition Premium
 
 Best value!
 
@@ -105,7 +105,7 @@ Good choice if you only play *DCS: F-14 Tomcat*
 
 Significantly more expensive than an Orion 2. Only consider this if shipping and import fees make it cheaper than a Winwing.
 
- | 
+ |
 -|-
 <img src="images/ava-f-16c.webp" width="1500" height="1500" loading="lazy" alt="">|<img src="images/ava-fa-18c.webp" width="600" height="600" loading="lazy" alt="">
 
@@ -151,7 +151,7 @@ The MCE Ultimate fixed a number of criticisms over the MCE Pro and is worth the 
 
 ### Moza AB9 Force Feedback
 
-We have heard reports that Moza's force feedback software interferes with other DCS tools including SimpleRadio-Standalone. 
+We have heard reports that Moza's force feedback software interferes with other DCS tools including SimpleRadio-Standalone.
 
 [Additionally, we have heard reports thnat Moza's customers have found fradulent charges on their payment cards after buying from Moza.](https://www.reddit.com/r/moza/comments/1houmep/dont_buy_from_the_moza_website/) Therefore, we do not recommend purchasing from Moza for your financial security.
 
@@ -167,17 +167,17 @@ Customizable, best value!
 
 > 💡 The Mini version is intended for use with a separate mount; The Mini Plus/Standard/Max versions can be used as desktop devices out of the box. You can make a desktop plate for the Mini from some scrap wood.
 
- |  
+ |
 -|-
 <img src="images/stecs-mini.webp" width="1800" height="1800" loading="lazy" alt="">|<img src="images/stecs-mini-plus.bmp" width="1800" height="1800" loading="lazy" alt="">
 <img src="images/stecs-standard.bmp" width="1800" height="1800" loading="lazy" alt="">|<img src="images/stecs-max.webp" width="1800" height="1800" loading="lazy" alt="">
 
 ### Winwing Orion 2 NavyAce (formerly F/A-18)
-    
+
 <img src="images/orion-2-fa-18-throttle.webp" width="1600" height="1600" loading="lazy" alt="">
-    
+
 ### Winwing Orion 2 StrikeAce EX II (formerly StrikeAce EX / F-15EX)
-    
+
 <img src="images/orion-2-f15-ex-throttle.webp" width="1600" height="1600" loading="lazy" alt="">
 
 ### Virpil VMAX Prime Throttle
@@ -185,13 +185,13 @@ Customizable, best value!
 <img src="images/vpc-vmax-prime-throttle.bmp" width="1000" height="1320" loading="lazy" alt="">
 
 ### Virpil VPC MongoosT-50CM3
-    
+
 <img src="images/mongoost-50cm3.webp" width="1000" height="1000" loading="lazy" alt="">
-    
+
 ### Virpil VPC CDT-VMAX
 
 Smaller version of the MongoosT-50M3.
-    
+
 <img src="images/vpc-cdt-vmax.webp" width="1000" height="1000" loading="lazy" alt="">
 
 ## Recommended with Reservations
@@ -199,7 +199,7 @@ Smaller version of the MongoosT-50M3.
 ### Thrustmaster TWCS
 
 Widely available. Has [stiction](https://en.wikipedia.org/wiki/Stiction) issues, which can be fixed by [replacing the lubricant](https://www.youtube.com/watch?v=sa0Qb2hq6tQ) or [replacing the slider](https://www.etsy.com/search?explicit=1&q=twcs+slider+mod&ref=s2_trn&order=highest_reviews). Commonly develops issues with the thrust and paddle axes.
-    
+
 <img src="images/twcs.webp" width="474" height="474" loading="lazy" alt="">
 
 ### Winwing Ursa Minor Space Joystick
@@ -207,43 +207,43 @@ Widely available. Has [stiction](https://en.wikipedia.org/wiki/Stiction) issues,
 A budget clone of the VKB Gladiator Omni Throttle with more buttons and a vibration motor. Designed for space simulation, but can also be used as a serviceable flight simulation throttle. Made from a cheaper-feeling plastic compared to the Gladiator.
 
 <img src="images/ursa-minor-space-joystick-l.bmp" width="1600" height="1600" loading="lazy" alt="">
-    
+
 ### VKB Gladiator NXT EVO Omni Throttle
 
 A great device for space simulation, which can also be used as a serviceable flight simulation throttle.
-    
+
 <img src="images/gladiator-nxt-evo-omni-throttle.webp" width="474" height="474" loading="lazy" alt="">
-    
+
 ### Thrustmaster HOTAS Warthog throttle
 
 Throttle grip and axis is good. The switches on the base are overly specific to *DCS: A-10C Warthog*. Can be found used for a decent value, but VKB STECS is almost always a better choice. Units made before late 2022 have a poor quality slew control which benefits from a [third-party replacement](https://deltasimelectronics.com/products/thumbstick-slew-sensor-adapter). All versions benefit from the [third-party firmware](https://deltasimelectronics.com/pages/install-instructions).
-    
+
 <img src="images/warthog-throttle.webp" width="2560" height="2222" loading="lazy" alt="">
-    
+
 ### Winwing Orion 2 ViperAce (formerly F-16)
 
 If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS*
-    
+
 <img src="images/orion-2-f-16-throttle.webp" width="1600" height="1600" loading="lazy" alt="">
-    
+
 ### Thrustmaster Viper TQS
 
 If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS* and you live somewhere this is cheaper than a Winwing Orion 2 F-16 throttle
-    
+
 <img src="images/viper-tqs.webp" width="1000" height="1000" loading="lazy" alt="">
-    
+
 ### Winwing Orion 2 StrikeAce E (formerly F-15E)
 
 If you mostly play *DCS: F-15E Strike Eagle.* Notably, it has a speedbrake switch which the StrikeAce EX grip lacks.
-    
+
 <img src="images/orion-2-f-15e.webp" width="1600" height="1600" loading="lazy" alt="">
-    
+
 ### VKB GNX WWII Throttle
 
 If you mostly fly WWII aircraft, early to mid cold war aircraft, and/or *DCS MiG-29/Su-25/Su-27/Su-33*
-    
+
 ![](images/gnx-ww2-throttle.webp)
-    
+
 ## Not Recommended
 
 ### Moza MTP Throttle.
@@ -264,7 +264,7 @@ Worse than a modded Thrustmaster TWCS.
 
 Bundle of the Winwing Orion 2 ViperAce EX Viper stick and Orion 2 throttle. Choice of replica F/A-18, replica F-15E and fictionalized F-15EX throttle grips available. A close match to the real controls of an A-10 or F-15E.
 
- | | 
+ | |
 -|-|-
 ![](images/orion-2-hotas-max-fa-18c.webp)|![](images/orion-2-hotas-max-f-15e.webp)|![](images/orion-2-hotas-max-f-15ex.webp)
 
@@ -273,13 +273,13 @@ Bundle of the Winwing Orion 2 ViperAce EX Viper stick and Orion 2 throttle. Choi
 ### Thrustmaster T16000M FCS HOTAS
 
 Bundle of the Thrustmaster T16000M FCS stick and TWCS throttle
-    
+
 ![](images/t16000m-fcs-hotas.webp)
-    
+
 ### Winwing Orion 2 HOTAS ViperAce
 
 Bundle of the Winwing Orion 2 ViperAce EX stick and Orion 2 ViperAce throttle. A close match to the real controls of an F-16.
-    
+
 ![](images/orion-2-hotas-f-16.webp)
 
 ## Not Recommended
@@ -321,51 +321,51 @@ Note: Rudders are not mandatory. They are strongly recommended for most helicopt
 ### VKB T-Rudders
 
 Single axis, no toe brakes
-    
+
 ![](images/t-rudders.webp)
-    
+
 ### Virpil WarBRD/VPC ACE Torq
 
 Single axis, no toe brakes.
 
- | 
+ |
 -|-
 ![](images/warbrd-pedals.webp)|![](images/vpc-ace-torq-pedals.webp)
 
 ### MFG Crosswind V3
-    
+
 ![](images/crosswind-v3.webp)
-    
+
 ### Slaw Device pedals
-    
+
 ![](images/slaw-device-pedals.webp)
-    
+
 ## Recommended with Reservations
 
 ### Winwing Orion Metal Flight Rudder Pedals
 
 Included spring is slightly on the strong side. Otherwise very similar to the MFG Crosswinds, but more expensive and with less customization. May be a good choice for shipping to some regions.
-    
+
 ![](images/orion-pedals.webp)
-    
+
 ### CH Products Pro Pedals
 
 Can be found for a good price used. Very narrow.
-    
+
 ![](images/pro-pedals.webp)
-    
+
 ### Virpil VPC ACE
 
 Similar to the MFG Crosswind V3. Might be a good choice if you’re buying other Virpil products and can bundle the shipping
-    
+
 ![](images/vpc-ace-pedals.webp)
-    
+
 ### Thrustmaster TPR
 
 Expensive, some reports of reliability issues
-    
+
 ![](images/tpr.webp)
-    
+
 ## Not Recommended
 
 ### Logitech/Saitek Pro Flight

@@ -3,6 +3,7 @@ title: Falcon BMS Quick Campaign Setup
 summary: How to start your first BMS campaign.
 tags:
   - falcon
+weight: 5
 ---
 
 From the main menu, click Campaign.

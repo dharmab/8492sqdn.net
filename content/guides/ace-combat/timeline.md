@@ -1,8 +1,9 @@
 ---
-title: Ace Combat Mission Timeline 
+title: Ace Combat Mission Timeline
 summary: "Chronological Order of Ace Combat Missions"
 tags:
   - ace combat
+weight: 10
 ---
 
 Date|Campaign|Mission|Title|Canon Aircraft

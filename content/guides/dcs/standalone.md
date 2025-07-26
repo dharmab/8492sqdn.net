@@ -3,6 +3,7 @@ title: DCS Steam vs. Standalone
 summary: Differences between the Steam and standalone versions of DCS World. Most players should use the standalone version.
 tags:
   - digital combat simulator
+weight: 7
 ---
 
 The Standalone and Steam versions can crossplay together in multiplayer. Updates are released for both versions simultaneously.
@@ -13,7 +14,7 @@ The Standalone and Steam versions can crossplay together in multiplayer. Updates
 
 ### Choice of Store
 
-The Steam version of DCS World only allows the use of content purchased on Steam. The Standalone version allows the use of content purchased from Steam, the ED store, the Heatblur store, and the OrbX store. 
+The Steam version of DCS World only allows the use of content purchased on Steam. The Standalone version allows the use of content purchased from Steam, the ED store, the Heatblur store, and the OrbX store.
 
 Competition between stores can help you get a better deal on your purchases.
 

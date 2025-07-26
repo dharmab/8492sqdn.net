@@ -3,6 +3,7 @@ title: DCS Livery Folder Names
 summary: List of Livery folder names for each DCS World module.
 tags:
   - digital combat simulator
+weight: 7
 ---
 
 Recommended path for downloaded liveries is `%userprofile%\Saved Games\DCS\Liveries`, unless you upgraded from the standalone Open Beta version prior to patch [2.9.3.51704](https://www.digitalcombatsimulator.com/en/news/changelog/stable/2.9.3.51704/),, then the path is `%userprofile%\Saved Games\DCS.openbeta\Liveries`

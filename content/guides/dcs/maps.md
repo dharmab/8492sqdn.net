@@ -2,6 +2,7 @@
 title: DCS Terrain Tier List
 summary: Recommended DCS World terrains for Singleplayer and Multiplayer
 date: 2025-07-25
+weight: 7
 ---
 
 # Ranking System

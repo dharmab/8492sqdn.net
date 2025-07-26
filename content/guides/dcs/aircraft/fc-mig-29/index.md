@@ -3,15 +3,16 @@ title: "DCS Flaming Cliffs: MiG-29 Fulcrum Quick Start Guide"
 summary: "Getting started with the fastest red fighter in DCS World."
 tags:
   - digital combat simulator
+weight: 6
 ---
 
 # Introduction
 
 <img src="images/Untitled.webp" width="618" height="835" loading="lazy" alt="">
 
-The Mikoyan MiG-29 “Fulcrum” is a Soviet-designed 4th generation fighter that first entered service in 1983. The Fulcrum was intended as an “Advanced Lightweight Tactical Fighter”, a high-speed air superiority fighter that could operate from austere runways to protect the battlefield’s frontline. It is, roughly speaking, the Soviet counterpart to the F-16. 
+The Mikoyan MiG-29 “Fulcrum” is a Soviet-designed 4th generation fighter that first entered service in 1983. The Fulcrum was intended as an “Advanced Lightweight Tactical Fighter”, a high-speed air superiority fighter that could operate from austere runways to protect the battlefield’s frontline. It is, roughly speaking, the Soviet counterpart to the F-16.
 
-Downgraded versions were widely exported to the Warsaw Pact and other nations. MiG-29 variants have seen combat in Iraq, Iran, Kuwait, Yugoslavia, Croatia, Kosovo, Kashmir, Sudan, Georgia, Syria, Libya, and Ukraine. Once feared as one of the most agile and dangerous fighters ever made and a threat to the free world, the MiG-29 is now an aging platform- and an a unexpected symbol of resistance against Russian aggression. 
+Downgraded versions were widely exported to the Warsaw Pact and other nations. MiG-29 variants have seen combat in Iraq, Iran, Kuwait, Yugoslavia, Croatia, Kosovo, Kashmir, Sudan, Georgia, Syria, Libya, and Ukraine. Once feared as one of the most agile and dangerous fighters ever made and a threat to the free world, the MiG-29 is now an aging platform- and an a unexpected symbol of resistance against Russian aggression.
 
 > 📰 [The Truth About the MiG-29](https://www.smithsonianmag.com/air-space-magazine/truth-about-mig-29-180952403/): A fantastic article on the MiG-29’s history.
 
@@ -188,49 +189,49 @@ Can lock at slightly longer range than Vertical Scan |
 
 1. Arming the aircraft requires both engines stopped and the canopy open, so always check your loadout before startup.
 2. Turn on the electrical systems
-    
+
     <img src="images/Untitled 1.webp" width="1831" height="1440" loading="lazy" alt="">
-    
+
     Click anywhere on the highlighted BATT-GND SUPPLY panel to turn on the electrical systems.
-    
+
 3. Turn on the internal lights, if desired
-    
+
     <img src="images/Untitled 2.webp" width="960" height="968" loading="lazy" alt="">
-    
+
     Click anywhere on the highlighted LIGHTING panel to turn on the console and instrument lights
-    
-4. Turn on the engines 
+
+4. Turn on the engines
     1. For a simple startup, press the Engines Start button
     2. If you prefer to start each engine individually, start the left engine, wait for the RPM to settle, then start the right engine.
 5. Wait for the for the DAMPER OFF warning light to extinguish
-    
+
     <img src="images/Untitled 3.webp" width="1044" height="1010" loading="lazy" alt="">
-    
+
     After about 3 minutes, the DAMPER OFF light will extinguish and the aircraft is ready to taxi
-    
+
 
 ## Taxi
 
 1. Ensure the flaps are raised. High-range nose wheel steering is inhibited when the flaps are lowered.
-    
-    
+
+
     <img src="images/Untitled 4.webp" width="2560" height="1440" loading="lazy" alt="">
-    
+
     Click the highlighted button to toggle the flaps. The indicated instrument will illuminate when the flaps are lowered and extinguish when the flaps are raised.
-    
+
 2. Set external lights as required
-    
+
     <img src="images/Untitled 5.webp" width="764" height="800" loading="lazy" alt="">
-    
+
     Click the highlighted switch to toggle the position lights.
-    
+
 3. Turn on the taxi light
-    
-    
+
+
     <img src="images/Untitled 6.webp" width="735" height="412" loading="lazy" alt="">
-    
+
     Click the highlighted switch to cycle the taxi and landing lights
-    
+
 4. Slowly advance the throttles until the aircraft begins to roll.
 5. Test the brakes before continuing to taxi.
 6. Use nose wheel steering to steer the aircraft. Hold the Nose Wheel Steering button to engage high-range steering around tight turns.
@@ -239,11 +240,11 @@ Can lock at slightly longer range than Vertical Scan |
 
 1. Line up on the runway.
 2. Ensure canopy is closed.
-    
+
     <img src="images/Untitled 7.webp" width="871" height="712" loading="lazy" alt="">
-    
+
     Click anywhere on the highlighted canopy lever to close or open the canopy.
-    
+
 3. Ensure flaps are raised.
 4. Fully apply the wheel brakes.
     1. For a short takeoff, press and hold the Wheel Brake Start button *instead of* the wheel brakes.
@@ -262,12 +263,12 @@ Can lock at slightly longer range than Vertical Scan |
     3. Select weapon as required
 2. ECM
     1. Turn on RWR
-        
-        
+
+
         <img src="images/Untitled 8.webp" width="936" height="778" loading="lazy" alt="">
-        
+
         Click the highlighted switch to toggle the RWR on and off. The knob labeled BRT next to it is mapped to RWR volume control.
-        
+
     2. Turn on Gardeniya as required
 3. NAVAIDS
     1. N/A
@@ -275,11 +276,11 @@ Can lock at slightly longer range than Vertical Scan |
     1. N/A
 5. EMITTERS
     1. Turn off external lights
-        
+
         <img src="images/Untitled 5.webp" width="764" height="800" loading="lazy" alt="">
-        
+
         Click the highlighted switch to toggle the position lights.
-        
+
 
 ## FENCE Out
 
@@ -287,12 +288,12 @@ Can lock at slightly longer range than Vertical Scan |
     1. Select navigation mode to disarm weapons
 2. ECM
     1. Turn off RWR as required
-        
-        
+
+
         <img src="images/Untitled 8.webp" width="936" height="778" loading="lazy" alt="">
-        
+
         Click the highlighted switch to toggle the RWR on and off. The knob labeled BRT is mapped to RWR volume control.
-        
+
     2. Turn off Gardeniya if equipped
 3. NAVAIDS
     1. Select navigation submode as required
@@ -304,12 +305,12 @@ Can lock at slightly longer range than Vertical Scan |
     1. Turn off radar as required
     2. Turn off EO
     3. Set external lights as required
-        
-        
+
+
         <img src="images/Untitled 5.webp" width="764" height="800" loading="lazy" alt="">
-        
+
         Click the highlighted switch to toggle the position lights.
-        
+
 
 ## Approach and Landing
 
@@ -341,7 +342,7 @@ Can lock at slightly longer range than Vertical Scan |
 7. Turn on landing light
 8. Intercept the glide slope at 350 kph (190 knots)
 9. During the final approach, gradually slow down to 290 kph (155 knots) by the time you are over the runway threshold. If you are using the ILS system, reference speed will be displayed in the HUD during the approach.
-10. Flare the aircraft over the runway threshold. Speed should reduce to about 270 kph (135 knots) Use throttle to maintain a 1 m/s descent rate at touchdown; do not exceed 5 m/s descent rate at touchdown. 
+10. Flare the aircraft over the runway threshold. Speed should reduce to about 270 kph (135 knots) Use throttle to maintain a 1 m/s descent rate at touchdown; do not exceed 5 m/s descent rate at touchdown.
 11. Touch down the rear wheels first, and hold the nose high to aerobrake. Point the nose no higher than 15° to prevent a tail strike.
 12. Deploy the drogue parachute.
 13. Hold the stick back to continue aerobraking.
@@ -373,7 +374,7 @@ Landing mode enables ILS for instrument landing approaches. It is useful even in
 
 The MiG-29 has two main sensors: A radar and an Electro-Optical (EO) system. They can be used separately or together to search for and track targets.
 
-The sensor symbology is displayed on both the HUD and the HUD repeater on the Head-Down Display (HDD). Normally, you’ll use the HUD unless you can’t see it clearly due to glare. 
+The sensor symbology is displayed on both the HUD and the HUD repeater on the Head-Down Display (HDD). Normally, you’ll use the HUD unless you can’t see it clearly due to glare.
 
 HUD repeater location in cockpit:
 
@@ -391,17 +392,17 @@ Generally, you’ll use the following workflow for BVR:
 
 1. Enter Scan mode
 2. Turn on the radar
-    
+
     <img src="images/Untitled 3.webp" width="1044" height="1010" loading="lazy" alt="">
-    
+
 3. Talk to a GCI to be assigned a target. The GCI will provide Bearing, Range, Altitude and Aspect. If working with a human GCI, you may need to specifically request BRAA instead of Bullseye and SI units instead of imperial.
 4. Set the display range scale to an appropriate scale
 5. Set the expected target range to the range to target. This will set the vertical volume of the radar scan appropriately for the given range.
 6. Point the aircraft nose at the target and look for a matching radar hit. Adjust the radar elevation as required. Radar hits will appear as 1-2 lines of 1-4 dots. 2 lines means friendly, 1 line means otherwise. More dots per line mean larger RCS - in DCS you’ll usually see 3-4 dots per line
 7. Slew the cursor over the contact and press Target Lock to transition to Single Target Track.
-    
+
     <img src="images/Untitled 4.webp" width="2560" height="1440" loading="lazy" alt="">
-    
+
 8. Either wait for Launch Authorization (LA) to appear in the HUD, or hold the Launch Permission Override button down.
 9. Hold down Weapon fire to release a missile.
     1. If using a SARH missile, keep the target locked until the missile hits or is defeated.
@@ -427,14 +428,14 @@ Alternatively, use the following workflow to lock an off-boresight target in a d
 ## Guns Workflow
 
 1. Press the Cannon button to switch to the guns. By default, you’ll be in Gun Funnel mode with a funnel appropriate for a target with a 20 meter wingspan. (F-14: 11-20m, F-15: 13m, F-16: 10m, F/A-18: 14m)
-    
+
     <img src="images/Untitled 5.webp" width="764" height="800" loading="lazy" alt="">
-    
+
 2. Maneuver so the target is within the HUD frame.
 3. Press the Target Lock button to transition to Lead Computed Optical Sight (LCOS).
-    
+
     <img src="images/Untitled 6.webp" width="735" height="412" loading="lazy" alt="">
-    
+
 4. Align the target marker in the center of the aiming crosshair.
 5. Employ the gun as required.
 
@@ -482,7 +483,7 @@ The MiG-29 can use unguided rockets and bombs. It’s not a precision bomber- th
 2. Repeatedly press the Weapon Change button to cycle the selected weapon stations until the equipped bombs are selected.
 3. A circular reticle will appear in the HUD. Fly the appropriate delivery approach to superimpose the circle over the target.
 4. Press and hold the Weapon Fire button. This will not release the bombs yet! Instead, a steering ring will appear in the HUD.
-5. Fly to place the tip of the “aircraft tail” symbol precisely on the center of the steering ring. 
+5. Fly to place the tip of the “aircraft tail” symbol precisely on the center of the steering ring.
 6. Continue to hold the Weapon Fire button as the Time-To-Release scale on the right side of the HUD counts down.
 7. The bomb will release if the release parameters are met when the Time-To-Release scale reaches zero.
 

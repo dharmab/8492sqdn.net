@@ -3,6 +3,7 @@ title: Falcon BMS Learning Resources
 summary: Resources for learning Falcon BMS in depth.
 tags:
   - falcon
+weight: 7
 ---
 
 # Official Manuals

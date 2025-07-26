@@ -3,6 +3,7 @@ title: DCS A-4E-C Mod Quick Start Guide
 summary: "Getting started with the best mod for DCS World."
 tags:
   - digital combat simulator
+weight: 6
 ---
 <img src="images/Untitled.webp" width="1024" height="852" loading="lazy" alt="Untitled">
 
@@ -117,7 +118,7 @@ The A-4E does not have nosewheel steering, instead the nose wheel freely casters
 2. Navigation Computer Function Selector to D1 or D2 as required
 3. AFCS stability augmentation switch on left side to STAB AUG
 4. Chaff power switch on left dash eyebrow to PWR
-5. RHWS  (Electronic Countermeasures) on left eyebrow as required 
+5. RHWS  (Electronic Countermeasures) on left eyebrow as required
     1. APR 25 switch to APR 25
     2. Audio ALQ switch to AUDIO ALQ
     3. Function Selector to REC
@@ -140,7 +141,7 @@ The A-4E does not have nosewheel steering, instead the nose wheel freely casters
 
 1. Doppler Navigation Radar Mode Selector on right side to LAND or SEA as required
 2. Navigation Computer Function Selector to D1 or D2 as required over starting point
-3. BDHI as required 
+3. BDHI as required
 4. Radar Altimeter on/off and adjusted as required
 
 ## Airfield Approach and Landing

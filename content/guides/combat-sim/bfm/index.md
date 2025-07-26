@@ -5,6 +5,7 @@ date: 2025-05-15
 tags:
   - digital combat simulator
   - falcon
+weight: 5
 ---
 
 _Work in Progress_

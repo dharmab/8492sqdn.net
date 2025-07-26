@@ -3,6 +3,7 @@ title: Project Wingman Mission Timeline
 summary: "Chronological Order of Project Wingman and Frontline 59 Missions"
 tags:
   - project wingman
+weight: 10
 ---
 Date|Campaign|Mission|Title
 -|-|-|-

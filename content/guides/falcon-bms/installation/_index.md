@@ -3,6 +3,7 @@ title: Falcon BMS Installation Guide
 summary: "How to install Falcon BMS"
 tags:
   - falcon
+weight: 4
 ---
 # Things You Need
 
@@ -17,7 +18,7 @@ A HOTAS. This guide assumes you have a quality HOTAS with plenty of buttons, not
 
 [HOTAS Buyers Guide for Combat Flight simulation](../../hotas/)
 
-Some type of [head tracker](../../headtracker/) so you don’t have to use the mouse to look around. Alternatively, BMS has VR support. See my DCS VR headset guide for some good choices for flight simulation: [VR Headset](../../dcs/performance/#virtual-reality) 
+Some type of [head tracker](../../headtracker/) so you don’t have to use the mouse to look around. Alternatively, BMS has VR support. See my DCS VR headset guide for some good choices for flight simulation: [VR Headset](../../dcs/performance/#virtual-reality)
 
 # Buy Falcon 4.0
 
@@ -57,7 +58,7 @@ Launch Falcon BMS through `Launcher.exe`. The game resolution may be incorrect, 
 
 ## Assign Axes
 
-Open the Falcon BMS Alternative Launcher (`Launcher\FalconBMS_Alternative_Launcher.exe`). 
+Open the Falcon BMS Alternative Launcher (`Launcher\FalconBMS_Alternative_Launcher.exe`).
 
 Click AXISASSIGN and map the following Axes:
 
