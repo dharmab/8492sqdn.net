@@ -38,7 +38,7 @@ Set the Profile dropdown to F-15.
 
 Set the Category dropdown to RIGHT CONSOLE. Scroll down and find the section for FLIGHT STICK.
 
-![](images/Untitled.webp)
+<img src="images/Untitled.webp" width="938" height="344" loading="lazy" alt="">
 
 Map the controls in the diagram to your stick as you see fit. Reference both `Docs\02 Aircraft Manuals & Checklists\01 F-16\TO 1F-16CMAM-1 BMS.pdf`, section 17.1 and `Docs\02 Aircraft Manuals & Checklists\01 F-16\TO 1F-16CMAM-34-1-1 BMS.pdf`, section 2.1.5 for a description of functions.
 
@@ -50,11 +50,11 @@ Set the category dropdown to LEFT CONSOLE. Scroll down and find the section for 
 
 Diagram from the DCS manual, because BMS’ manuals don’t have a complete diagram of the throttle…
 
-![](images/Untitled%201.webp)
+<img src="images/Untitled 1.webp" width="2000" height="916" loading="lazy" alt="">
 
 Diagram from the BMS manual - SPD BRK switch is unlabeled
 
-![](images/Untitled%202.webp)
+<img src="images/Untitled 2.webp" width="742" height="376" loading="lazy" alt="">
 
 Assign the controls as you see fit. Reference both `Docs\02 Aircraft Manuals & Checklists\01 F-16\TO 1F-16CMAM-1 BMS.pdf`, section 2.45 and `Docs\02 Aircraft Manuals & Checklists\01 F-16\TO 1F-16CMAM-34-1-1 BMS.pdf`, section 2.1.5 for a description of functions.
 

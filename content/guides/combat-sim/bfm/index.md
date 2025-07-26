@@ -46,7 +46,7 @@ You can break a 1v1 dogfight down into phases:
 - Merge: The aircraft pass close to each other.
 - Fight: The aircraft compete to turn better than each other to set up a kill shot.
 
-![](images/circles.jpg)
+<img src="images/circles.jpg" width="928" height="842" loading="lazy" alt="">
 
 **In a mission, you should do everything you can to win before the merge.** The merge is an extremely dangerous moment because the enemy gets a free opportunity to shoot you at close range, where evading or flaring the enemy's shot is very difficult. It is the most likely time you will die. Don't give the enemy an easy shot; come at them from an angle or above, not head on, and try to set up a good missile shot to kill them during pre-merge.
 
@@ -56,7 +56,7 @@ In training, you and your sparring partner will typically agree on rules on when
 
 Once past the merge, you will usually enter a turning fight. You will bank your aircraft so that your lift vector intersects the enemy, and then pull the stick to turn. Your goal is to turn towards the enemy at the optimal rate, setting up a kill shot. If you pull too hard on the stick, you'll bleed too much speed and lose maneuverability. If you don't pull hard enough, you won't turn fast enough to catch the enemy.
 
-![](images/lift-vector.webp)
+<img src="images/lift-vector.webp" width="979" height="679" loading="lazy" alt="">
 
 To find your aircraft's optimal turn rate, use an Energy-Maneuverability Diagram. A user named "Contact Light" computed and published E-M diagrams for many DCS aircraft in 2023. I have mirrored the diagrams PDF [here](docs/em.pdf). The key number is the _maximum sustained turn speed_. The exact number varies with altitude/pressure. You should memorize this number at several altitudes that you expect to fight at.
 

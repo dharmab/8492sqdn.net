@@ -38,7 +38,7 @@ Set the Profile dropdown to F-15.
 
 Set the Category dropdown to CENTER CONSOLE. Scroll down and find the section for CONTROL STICK.
 
-![](images/Untitled.webp)
+<img src="images/Untitled.webp" width="938" height="344" loading="lazy" alt="">
 
 Map the controls in the diagram to your stick as you see fit.  Reference `Docs\02 Aircraft Manuals & Checklists\TO 1F-15C-1 BMS.pdf`, section 4.1.2.2.49 for a description of functions.
 
@@ -48,7 +48,7 @@ All controls on the stick are important.
 
 Set the category dropdown to LEFT CONSOLE. Scroll down and find the section for THROTTLE.
 
-![](images/Untitled%201.webp)
+<img src="images/Untitled 1.webp" width="2000" height="916" loading="lazy" alt="">
 
 Assign the controls as you see fit. Reference `Docs\02 Aircraft Manuals & Checklists\TO 1F-15C-1 BMS.pdf`, section 4.1.2.1.16 for a description of functions.
 

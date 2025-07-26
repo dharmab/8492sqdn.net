@@ -5,7 +5,7 @@ date: 2025-01-01
 weight: 2
 ---
 
-![](images/orion-2-hotas-max-f-15ex.webp)
+<img src="images/orion-2-hotas-max-f-15ex.webp" width="1600" height="1600" loading="lazy" alt="">
 
 # Note On Current Events
 
@@ -27,7 +27,7 @@ You may already have one!
 
 If not, an 8BitDo Ultimate series gamepad can be found for under $20, and has either [Hall effect](https://en.wikipedia.org/wiki/Hall_effect_sensor) or [tunneling magneto-resistance](https://en.wikipedia.org/wiki/Tunnel_magnetoresistance) sensors which are more accurate and durable than most mass-market flight sticks.  For slightly more, controllers from FlyDigi or Gamesir add additional buttons which can be mapped in DCS using Steam Input, or high quality microswitch buttons. We don't recommend buying mass market devices from Xbox/PlayStation at this time due to stick drift issues, though they're fine if you already have one.
 
-![](images/ultimate-2c.webp)
+<img src="images/ultimate-2c.webp" loading="lazy" alt="">
 
 See Tuuvas' setup guides:
 
@@ -43,25 +43,25 @@ See this demonstration of how Hall Effect gamepads are great for vehicle games w
 
 A budget clone of the VKB Gladiator with more buttons and a vibration motor. Made from a cheaper-feeling plastic compared to the Gladiator. Has a fairly short throw.
 
-![](images/ursa-minor-fighter-joystick.bmp)
+<img src="images/ursa-minor-fighter-joystick.bmp" width="1600" height="1600" loading="lazy" alt="">
 
 ### VKB Gladiator NXT EVO Space Combat Edition Premium 
 
 Best value!
 
-![](images/gladiator-nxt-evo-sce-premium.webp)
+<img src="images/gladiator-nxt-evo-sce-premium.webp" width="1100" height="1100" loading="lazy" alt="">
 
 ### Winwing Orion 2 ViperAce EX (formerly F-16EX)
 
-![](images/orion-2-f-16ex.webp)
+<img src="images/orion-2-f-16ex.webp" width="1600" height="1600" loading="lazy" alt="">
 
 ### Virpil Constellation Alpha grip with WarBRD-D base
 
-![](images/constellation-alpha.webp)
+<img src="images/constellation-alpha.webp" width="1000" height="1000" loading="lazy" alt="">
 
 ### VKB Gunfighter Modern Combat Edition Ultimate
 
-![](images/gunfighter-mcg.webp)
+<img src="images/gunfighter-mcg.webp" loading="lazy" alt="">
 
 ## Recommended with Reservations
 
@@ -69,37 +69,37 @@ Best value!
 
 This used to be recommended as a first joystick to try flight simulators before buying an expensive HOTAS. However, the price of this joystick has increased while the price of a general-purpose gamepad has decreased, so it's not longer the best option in the price range.
 
-![](images/extreme-3d-pro.webp)
+<img src="images/extreme-3d-pro.webp" width="1920" height="1920" loading="lazy" alt="">
 
 ### Thrustmaster T16000M FCS
 
 Widely available. Commonly develops problems with axis sensors. Button layout is difficult to use while keeping hands on the HOTAS. Overall similar to the Logitech 3D Extreme Pro, but costs more.
 
-![](images/t16000m-fcs.webp)
+<img src="images/t16000m-fcs.webp" width="474" height="474" loading="lazy" alt="">
 
 ### VKB Gladiator NXT EVO Space Combat Edition Standard
 
 The Premium is worth the extra $30 for the extra hat, trigger and analog stick. However, the Standard may fit within import *de minimis* limits in some European countries.
 
-![](images/gladiator-nxt-evo-sce-standard.webp)
+<img src="images/gladiator-nxt-evo-sce-standard.webp" width="1100" height="1100" loading="lazy" alt="">
 
 ### VKB Gladiator NXT EVO WWII Combat Edition
 
 Good choice if you only play WWII simulations.
 
-![](images/nxt-evo-ww2ce.webp)
+<img src="images/nxt-evo-ww2ce.webp" width="1100" height="1100" loading="lazy" alt="">
 
 ### VKB Gladiator NXT EVO F-14 Combat Edition
 
 Good choice if you only play *DCS: F-14 Tomcat*
 
-![](images/gladiator-nxt-evo-f-14ce.webp)
+<img src="images/gladiator-nxt-evo-f-14ce.webp" width="1100" height="1100" loading="lazy" alt="">
 
 ### Virpil VPC VFX grip with WarBRD-D base
 
 Good choice if you only play *DCS: F-14 Tomcat*
 
-![](images/vpc-vfx.webp)
+<img src="images/vpc-vfx.webp" width="1000" height="1000" loading="lazy" alt="">
 
 ### Thrustmaster AVA base with F-16C or F/A-18C grip
 
@@ -107,13 +107,13 @@ Significantly more expensive than an Orion 2. Only consider this if shipping and
 
  | 
 -|-
-![](images/ava-f-16c.webp)|![](images/ava-fa-18c.webp)
+<img src="images/ava-f-16c.webp" width="1500" height="1500" loading="lazy" alt="">|<img src="images/ava-fa-18c.webp" width="600" height="600" loading="lazy" alt="">
 
 ### RealSimulator F-16 side grip with FSSB-R3 base
 
 For serious F-16 enthusiasts with very high budgets.
 
-![](images/realsimulator.webp)
+<img src="images/realsimulator.webp" width="700" height="933" loading="lazy" alt="">
 
 {{< youtube feqtkpDfuN0 >}}
 
@@ -169,30 +169,30 @@ Customizable, best value!
 
  |  
 -|-
-![](images/stecs-mini.webp)|![](images/stecs-mini-plus.bmp)
-![](images/stecs-standard.bmp)|![](images/stecs-max.webp)
+<img src="images/stecs-mini.webp" width="1800" height="1800" loading="lazy" alt="">|<img src="images/stecs-mini-plus.bmp" width="1800" height="1800" loading="lazy" alt="">
+<img src="images/stecs-standard.bmp" width="1800" height="1800" loading="lazy" alt="">|<img src="images/stecs-max.webp" width="1800" height="1800" loading="lazy" alt="">
 
 ### Winwing Orion 2 NavyAce (formerly F/A-18)
     
-![](images/orion-2-fa-18-throttle.webp)
+<img src="images/orion-2-fa-18-throttle.webp" width="1600" height="1600" loading="lazy" alt="">
     
 ### Winwing Orion 2 StrikeAce EX II (formerly StrikeAce EX / F-15EX)
     
-![](images/orion-2-f15-ex-throttle.webp)
+<img src="images/orion-2-f15-ex-throttle.webp" width="1600" height="1600" loading="lazy" alt="">
 
 ### Virpil VMAX Prime Throttle
 
-![](images/vpc-vmax-prime-throttle.bmp)
+<img src="images/vpc-vmax-prime-throttle.bmp" width="1000" height="1320" loading="lazy" alt="">
 
 ### Virpil VPC MongoosT-50CM3
     
-![](images/mongoost-50cm3.webp)
+<img src="images/mongoost-50cm3.webp" width="1000" height="1000" loading="lazy" alt="">
     
 ### Virpil VPC CDT-VMAX
 
 Smaller version of the MongoosT-50M3.
     
-![](images/vpc-cdt-vmax.webp)
+<img src="images/vpc-cdt-vmax.webp" width="1000" height="1000" loading="lazy" alt="">
 
 ## Recommended with Reservations
 
@@ -200,43 +200,43 @@ Smaller version of the MongoosT-50M3.
 
 Widely available. Has [stiction](https://en.wikipedia.org/wiki/Stiction) issues, which can be fixed by [replacing the lubricant](https://www.youtube.com/watch?v=sa0Qb2hq6tQ) or [replacing the slider](https://www.etsy.com/search?explicit=1&q=twcs+slider+mod&ref=s2_trn&order=highest_reviews). Commonly develops issues with the thrust and paddle axes.
     
-![](images/twcs.webp)
+<img src="images/twcs.webp" width="474" height="474" loading="lazy" alt="">
 
 ### Winwing Ursa Minor Space Joystick
 
 A budget clone of the VKB Gladiator Omni Throttle with more buttons and a vibration motor. Designed for space simulation, but can also be used as a serviceable flight simulation throttle. Made from a cheaper-feeling plastic compared to the Gladiator.
 
-![](images/ursa-minor-space-joystick-l.bmp)
+<img src="images/ursa-minor-space-joystick-l.bmp" width="1600" height="1600" loading="lazy" alt="">
     
 ### VKB Gladiator NXT EVO Omni Throttle
 
 A great device for space simulation, which can also be used as a serviceable flight simulation throttle.
     
-![](images/gladiator-nxt-evo-omni-throttle.webp)
+<img src="images/gladiator-nxt-evo-omni-throttle.webp" width="474" height="474" loading="lazy" alt="">
     
 ### Thrustmaster HOTAS Warthog throttle
 
 Throttle grip and axis is good. The switches on the base are overly specific to *DCS: A-10C Warthog*. Can be found used for a decent value, but VKB STECS is almost always a better choice. Units made before late 2022 have a poor quality slew control which benefits from a [third-party replacement](https://deltasimelectronics.com/products/thumbstick-slew-sensor-adapter). All versions benefit from the [third-party firmware](https://deltasimelectronics.com/pages/install-instructions).
     
-![](images/warthog-throttle.webp)
+<img src="images/warthog-throttle.webp" width="2560" height="2222" loading="lazy" alt="">
     
 ### Winwing Orion 2 ViperAce (formerly F-16)
 
 If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS*
     
-![](images/orion-2-f-16-throttle.webp)
+<img src="images/orion-2-f-16-throttle.webp" width="1600" height="1600" loading="lazy" alt="">
     
 ### Thrustmaster Viper TQS
 
 If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS* and you live somewhere this is cheaper than a Winwing Orion 2 F-16 throttle
     
-![](images/viper-tqs.webp)
+<img src="images/viper-tqs.webp" width="1000" height="1000" loading="lazy" alt="">
     
 ### Winwing Orion 2 StrikeAce E (formerly F-15E)
 
 If you mostly play *DCS: F-15E Strike Eagle.* Notably, it has a speedbrake switch which the StrikeAce EX grip lacks.
     
-![](images/orion-2-f-15e.webp)
+<img src="images/orion-2-f-15e.webp" width="1600" height="1600" loading="lazy" alt="">
     
 ### VKB GNX WWII Throttle
 

@@ -27,7 +27,7 @@ Falcon BMS is a total conversion mod of Falcon 4.0. Per the BMS team’s agreeme
 
 The best place to get Falcon 4.0 is from GOG as part of [Falcon Collection](https://www.gog.com/en/game/falcon_collection). This version is DRM-free, meaning the installer can be saved offline and can be copied to any of your computers. It is the closest thing to actually owning a digital game. As a bonus, it also includes the first three Falcon games.
 
-![](images/w.webp)
+<img src="images/w.webp" width="1197" height="1325" loading="lazy" alt="">
 
 After buying Falcon Collection, Falcon 4.0 will be a download in the extras for Falcon 3.0 Gold.
 

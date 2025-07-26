@@ -7,7 +7,7 @@ tags:
 
 # Introduction
 
-![](images/Untitled.webp)
+<img src="images/Untitled.webp" width="618" height="835" loading="lazy" alt="">
 
 The Mikoyan MiG-29 “Fulcrum” is a Soviet-designed 4th generation fighter that first entered service in 1983. The Fulcrum was intended as an “Advanced Lightweight Tactical Fighter”, a high-speed air superiority fighter that could operate from austere runways to protect the battlefield’s frontline. It is, roughly speaking, the Soviet counterpart to the F-16. 
 
@@ -77,9 +77,9 @@ After installing the `Cockpit_MiG29(A,G,S)` folders in `%userprofile%\Saved Game
 
 For the curious, here is the real-world control layout of a German MiG-29. Note that the MiG-29 does not follow the HOTAS design philosophy- important buttons are scattered over the controls and cockpit. Bind your controls however you see fit.
 
-![](images/Untitled.webp)
+<img src="images/Untitled.webp" width="618" height="835" loading="lazy" alt="">
 
-![](images/Untitled%201.webp)
+<img src="images/Untitled 1.webp" width="1831" height="1440" loading="lazy" alt="">
 
 Essential controls to bind to the HOTAS are in **bold with a** ⭐.
 
@@ -189,13 +189,13 @@ Can lock at slightly longer range than Vertical Scan |
 1. Arming the aircraft requires both engines stopped and the canopy open, so always check your loadout before startup.
 2. Turn on the electrical systems
     
-    ![](images/Untitled%201.webp)
+    <img src="images/Untitled 1.webp" width="1831" height="1440" loading="lazy" alt="">
     
     Click anywhere on the highlighted BATT-GND SUPPLY panel to turn on the electrical systems.
     
 3. Turn on the internal lights, if desired
     
-    ![](images/Untitled%202.webp)
+    <img src="images/Untitled 2.webp" width="960" height="968" loading="lazy" alt="">
     
     Click anywhere on the highlighted LIGHTING panel to turn on the console and instrument lights
     
@@ -204,7 +204,7 @@ Can lock at slightly longer range than Vertical Scan |
     2. If you prefer to start each engine individually, start the left engine, wait for the RPM to settle, then start the right engine.
 5. Wait for the for the DAMPER OFF warning light to extinguish
     
-    ![](images/Untitled%203.webp)
+    <img src="images/Untitled 3.webp" width="1044" height="1010" loading="lazy" alt="">
     
     After about 3 minutes, the DAMPER OFF light will extinguish and the aircraft is ready to taxi
     
@@ -214,20 +214,20 @@ Can lock at slightly longer range than Vertical Scan |
 1. Ensure the flaps are raised. High-range nose wheel steering is inhibited when the flaps are lowered.
     
     
-    ![](images/Untitled%204.webp)
+    <img src="images/Untitled 4.webp" width="2560" height="1440" loading="lazy" alt="">
     
     Click the highlighted button to toggle the flaps. The indicated instrument will illuminate when the flaps are lowered and extinguish when the flaps are raised.
     
 2. Set external lights as required
     
-    ![](images/Untitled%205.webp)
+    <img src="images/Untitled 5.webp" width="764" height="800" loading="lazy" alt="">
     
     Click the highlighted switch to toggle the position lights.
     
 3. Turn on the taxi light
     
     
-    ![](images/Untitled%206.webp)
+    <img src="images/Untitled 6.webp" width="735" height="412" loading="lazy" alt="">
     
     Click the highlighted switch to cycle the taxi and landing lights
     
@@ -240,7 +240,7 @@ Can lock at slightly longer range than Vertical Scan |
 1. Line up on the runway.
 2. Ensure canopy is closed.
     
-    ![](images/Untitled%207.webp)
+    <img src="images/Untitled 7.webp" width="871" height="712" loading="lazy" alt="">
     
     Click anywhere on the highlighted canopy lever to close or open the canopy.
     
@@ -264,7 +264,7 @@ Can lock at slightly longer range than Vertical Scan |
     1. Turn on RWR
         
         
-        ![](images/Untitled%208.webp)
+        <img src="images/Untitled 8.webp" width="936" height="778" loading="lazy" alt="">
         
         Click the highlighted switch to toggle the RWR on and off. The knob labeled BRT next to it is mapped to RWR volume control.
         
@@ -276,7 +276,7 @@ Can lock at slightly longer range than Vertical Scan |
 5. EMITTERS
     1. Turn off external lights
         
-        ![](images/Untitled%205.webp)
+        <img src="images/Untitled 5.webp" width="764" height="800" loading="lazy" alt="">
         
         Click the highlighted switch to toggle the position lights.
         
@@ -289,7 +289,7 @@ Can lock at slightly longer range than Vertical Scan |
     1. Turn off RWR as required
         
         
-        ![](images/Untitled%208.webp)
+        <img src="images/Untitled 8.webp" width="936" height="778" loading="lazy" alt="">
         
         Click the highlighted switch to toggle the RWR on and off. The knob labeled BRT is mapped to RWR volume control.
         
@@ -306,7 +306,7 @@ Can lock at slightly longer range than Vertical Scan |
     3. Set external lights as required
         
         
-        ![](images/Untitled%205.webp)
+        <img src="images/Untitled 5.webp" width="764" height="800" loading="lazy" alt="">
         
         Click the highlighted switch to toggle the position lights.
         
@@ -363,7 +363,7 @@ Route mode displays navigation cues to waypoints in the programmed flight plan f
 
 > 🗺️ Real MiG-29s have used external navigation devices mounted to the cockpit, so I don't consider using external maps unrealistic.
 >
-> ![](images/Untitled%209.webp)
+> <img src="images/Untitled 9.webp" width="706" height="404" loading="lazy" alt="">
 
 Return mode is used to navigate to the approach for an airfield.
 
@@ -377,7 +377,7 @@ The sensor symbology is displayed on both the HUD and the HUD repeater on the He
 
 HUD repeater location in cockpit:
 
-![](images/Untitled%202.webp)
+<img src="images/Untitled 2.webp" width="960" height="968" loading="lazy" alt="">
 
 When using the radar as the primary sensor, the horizontal axis represents azimuth and the vertical axis represents range. This is similar to the attack radar MFD page in the F-15, F-16 and F/A-18.
 
@@ -392,7 +392,7 @@ Generally, you’ll use the following workflow for BVR:
 1. Enter Scan mode
 2. Turn on the radar
     
-    ![](images/Untitled%203.webp)
+    <img src="images/Untitled 3.webp" width="1044" height="1010" loading="lazy" alt="">
     
 3. Talk to a GCI to be assigned a target. The GCI will provide Bearing, Range, Altitude and Aspect. If working with a human GCI, you may need to specifically request BRAA instead of Bullseye and SI units instead of imperial.
 4. Set the display range scale to an appropriate scale
@@ -400,7 +400,7 @@ Generally, you’ll use the following workflow for BVR:
 6. Point the aircraft nose at the target and look for a matching radar hit. Adjust the radar elevation as required. Radar hits will appear as 1-2 lines of 1-4 dots. 2 lines means friendly, 1 line means otherwise. More dots per line mean larger RCS - in DCS you’ll usually see 3-4 dots per line
 7. Slew the cursor over the contact and press Target Lock to transition to Single Target Track.
     
-    ![](images/Untitled%204.webp)
+    <img src="images/Untitled 4.webp" width="2560" height="1440" loading="lazy" alt="">
     
 8. Either wait for Launch Authorization (LA) to appear in the HUD, or hold the Launch Permission Override button down.
 9. Hold down Weapon fire to release a missile.
@@ -428,12 +428,12 @@ Alternatively, use the following workflow to lock an off-boresight target in a d
 
 1. Press the Cannon button to switch to the guns. By default, you’ll be in Gun Funnel mode with a funnel appropriate for a target with a 20 meter wingspan. (F-14: 11-20m, F-15: 13m, F-16: 10m, F/A-18: 14m)
     
-    ![](images/Untitled%205.webp)
+    <img src="images/Untitled 5.webp" width="764" height="800" loading="lazy" alt="">
     
 2. Maneuver so the target is within the HUD frame.
 3. Press the Target Lock button to transition to Lead Computed Optical Sight (LCOS).
     
-    ![](images/Untitled%206.webp)
+    <img src="images/Untitled 6.webp" width="735" height="412" loading="lazy" alt="">
     
 4. Align the target marker in the center of the aiming crosshair.
 5. Employ the gun as required.
@@ -500,7 +500,7 @@ The SPO-15 RWR shows:
 - Category, direction and intensity of one primary threat
 - Categories and directions of multiple secondary threats
 
-![](images/Untitled%207.webp)
+<img src="images/Untitled 7.webp" width="871" height="712" loading="lazy" alt="">
 
 | Cyrillic | English Cockpit Mod | Type |
 | - | - | - |
