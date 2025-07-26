@@ -48,9 +48,9 @@ However, any fast, high end gaming-oriented CPU is fine. As of current writing, 
 
 Ideally, use an upgraded CPU cooler. We're fans of Thermaltake's series of budget-friendly air coolers and the Arctic Liquid Freezer III AIO liquid cooler.
 
-## GPU
+### GPU
 
-### Nvida vs AMD vs Intel
+#### Nvida vs AMD vs Intel
 
 For VR, high-VRAM Nvidia GPUs are preferable to AMD GPUs if the budget allows. Nvidia's GPUs and drivers have signifcantly better software support for VR.
 
@@ -60,7 +60,7 @@ However, if a high-VRAM Nvidia GPU is out of budget or otherwise unavailable, AM
 
 It is technically possible to use Intel Arc GPUs with certain headsets usch as Meta and Pico, but we don't recommend it for flight sims due to poor performance.
 
-### Recommended GPUs
+#### Recommended GPUs
 
 Tier | Nvidia | AMD |
 -|-|-
@@ -80,7 +80,7 @@ Deprioritize:
 - Frame generation (DLSS/FSR/XeSS)
 - Ray tracing performance
 
-## RAM
+### RAM
 
 Buy a 2x48GB or 2x32GB kit, with the correct compatibility for your CPU and motherboard. Do not use a 4x kit, because they may have stability issue at higher frequencies.
 
@@ -95,7 +95,7 @@ _In most cases_ you can follow this table, but always check with your motherboar
 
 See the [RAM section of the DCS performance guide](guides/dcs/performance#ram) for more details.
 
-## PSU
+### PSU
 
 It is important to use a high quality power supply that provides stable power under high load. Wattage and 80PLUS ratings are not enough to tell if a power supply is good or bad.
 
