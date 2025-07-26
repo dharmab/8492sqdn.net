@@ -16,12 +16,12 @@ weight: 3
 ⚠️ Don’t bother with VR for flight sims unless:
 1. You have money and time to <span style="color:red">burn</span>.
 > A **great** VR experience will likely cost you $1000-3000 USD for the headset, PC upgrades, and accessories.
-1. You have a very high end PC.
-2. You are willing and able to troubleshoot all manner of obscure technical issues.
-3. You are comfortable installing software from GitHub and very carefully reading technical instructions written by software engineers.
-4. You are OK with your headset breaking for absolutely no fault of your own due to software updates. This includes being OK with headsets becoming permanently bricked and unusuable.
+2. You have a very high end PC.
+3. You are willing and able to troubleshoot all manner of obscure technical issues.
+4. You are comfortable installing software from GitHub and very carefully reading technical instructions written by software engineers.
+5. You are OK with your headset breaking for absolutely no fault of your own due to software updates. This includes being OK with headsets becoming permanently bricked and unusuable.
 > This is not a hypothetical; it has _already happened_ to the HP Reverb G2 and some Meta Quest headsets.
-5. You have a [head tracker](guides/headtracker) to fall back on when updates break VR support from time to time.
+6. You have a [head tracker](guides/headtracker) to fall back on when updates break VR support from time to time.
 
 _This page contains contributions from my friend Lynx._
 
