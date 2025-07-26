@@ -9,11 +9,12 @@ tags:
 weight: 3
 ---
 
-# Abandon All Hope, Ye Who Don Thy Heaset
+# <span style="color:red">Abandon All Hope, Ye Who Don Thy Headset and Gaze Into the Infinite Abyss</span>
 
 ⚠️ Don’t bother with VR for flight sims unless:
-1. You have a very high end PC.
+1. You have money and time to burn.
 > A **great** VR experience will likely cost you $1000-3000 USD for the headset, PC upgrades, and accessories.
+1. You have a very high end PC.
 2. You are willing and able to troubleshoot all manner of obscure technical issues.
 3. You are comfortable installing software from GitHub and very carefully reading technical instructions written by software engineers.
 4. You are OK with your headset breaking for absolutely no fault of your own due to software updates. This includes being OK with headsets becoming permanently bricked and unusuable.
@@ -137,28 +138,6 @@ If you use a Virtual Reality headset, there are some additional tweaks and consi
 
 In most cases, you should install the latest drivers for your GPU. In some cases a new driver may have a performance issue for VR and you may need to install an older version.
 
-## Prefer DCS Standalone Over Steam
-
-Launching DCS through SteamVR runs the game use the older OpenVR API rather than directly using the OpenXR API. This causes a significant performance hit (though the exact amount may vary by system).
-
-{{< youtube id="TVmYgjMyJIQ" start=1051 >}}
-
-For the best performance, run the Standalone version of DCS directly with VR mode enabled in DCS settings.
-
-If you must use Steam, launch the game normally through the desktop client with VR enabled in DCS settings, rather than through SteamVR.
-
-To convert an existing Steam installation to Standalone:
-
-1. [Download and run the standalone installer](https://www.digitalcombatsimulator.com/en/downloads/world/)
-2. Untick "download" at the end of the setup wizard
-3. Manually copy or move your files from the Steam installation to the Standalone installation
-4. Delete `<DCS standalone installation folder>\Config\retail.cfg`
-5. Run the “Repair DCS World” application in your Start Menu
-
-## Remove OpenXR Toolkit
-
-OpenXR Toolkit is discontinued software and should be removed if you previously installed it.
-
 ## Quad Views Rendering
 
 [Quad Views Rendering](https://github.com/mbucchia/Quad-Views-Foveated/wiki/What-is-Quad-Views-rendering%3F) is a technique that renders the focus area within your headset at a higher resolution than the rest of the headset. If your headset has eye-tracking, the high-resolution render area will follow your gaze; otherwise, it will be centered within your headset.
@@ -182,37 +161,6 @@ RedKite has a good video demoing eye-tracked Foveated Rendering:
 
 *Note: If you are using a Meta Quest Pro, you’ll need to install [OpenXR Eye Trackers](https://github.com/mbucchia/OpenXR-Eye-Trackers/wiki/Meta-Quest-Pro) to enable eye tracking on PC. You will probably need a verified Developer account.*
 
-## Virtual Desktop or Steam Link
-
-Meta's Airlink streaming application is suboptimal; Since Meta makes money from standalone VR applications sold through the Quest store, their Airlink app for PCVR is a minimal effort with poorly selected video compression settings. Third-party streaming applications can produce better results by more thoughtfully tuning the video stream quality and latency.
-
-[Virtual Desktop](https://www.vrdesktop.net/) is a paid third-party streaming application. Although its primary use case is for displaying 2D content in VR, it also provides advanced options for improved stream quality for VR content. In my testing with Meta Quest devices, I was able to see a higher level of clarity using Virtual Desktop over wifi compared to Meta Quest Link over either USB or wifi. It also recovers from errors better than Quest Link; with Virtual Desktop I can reliably take my headset off, get a drink from the fridge, put my headset back on and resume flight. With Quest Link, I usually had to restart DCS in that situation!
-
-[Steam Link](https://www.meta.com/experiences/steam-link/5841245619310585/) is a free third-party streaming application that works with Meta Quest devices, although it isn't quite as simple to set up as Virtual Desktop.
-
-Your experience may vary depending on your hardware, especially your network bandwidth and wireless access points.
-
-## Meta Quest Link Cable
-
-If you have a Meta Quest headset, and are using Quest Link instead of Virtual Desktop or Steam Link, a link cable will provide better video quality than Quest Link over Wifi, though it will likely be inferior to Virtual Desktop or Steam Link. Meta sells an [official link cable](https://www.meta.com/quest/accessories/link-cable/) if you don’t have one, and more affordable third-party cables are also available.
-
-A tradeoff is that you may not be able to charge your headset and use the link cable at the same time, which may limit how long you can fly at a time. [This third party cable](https://a.co/d/765REiP) allows connecting both a charger and link at once, which extends battery life sufficiently for very long flights.
-
-## Asynchronous Space Warp on Meta Quest Headsets using Quest Link/Airlink
-
-[Asynchronous Space Warp](https://developer.oculus.com/blog/asynchronous-spacewarp/) (ASW) is a technology that improves perceived smoothness in VR, at the tradeoff of locking the framerate to an integer divisor of the headset’s refresh rate. This feature is great if you can maintain your headset’s refresh rate. However, if your framerate dips below the refresh rate even slightly, it will immediately drop to 1/2 the refresh rate. It can also cause judder when using helmet-mounted displays.
-
-On Meta Quest headsets using Quest Link or Airlink, you can toggle ASW while playing with these keys:
-
-| Keybind   | ASW      | Framerate |
-| --------- | -------- | --------- |
-| Ctrl+Num1 | Disabled | Unlocked  |
-| Ctrl+Num2 | Disabled | Locked    |
-| Ctrl+Num3 | Enabled  | Locked    |
-| Ctrl+Num4 | Auto     | Unlocked  |
-
-> ℹ️ My personal preference is ASW disabled and framerate unlocked (Ctrl+Num1)
-
 ## Lower Refresh Rate
 
 You should lock your headset to the _lowest_ refresh rate that you can use comfortably. This helps reduce the visual impact of stuttering. I personally find a refresh rate of 72Hz to work best for me, but if you are impacted by VR sickness or motion sickness, you may need a higher setting such as 90Hz.
@@ -221,4 +169,49 @@ You should lock your headset to the _lowest_ refresh rate that you can use comfo
 
 If you find it uncomfortable or painful to twist your torso and neck to look behind you/over your wing, you can use [XRNeckSafer](https://gitlab.com/NobiWan/xrnecksafer) to provide an assist.
 
-## Separate Profiles for 2D and VR
+## Remove OpenXR Toolkit
+
+OpenXR Toolkit is discontinued software and should be removed if you previously installed it.
+
+## Meta-Specific Tweaks
+
+On Meta headsets (Quest 3, Quest 3S, Quest Pro, Quest 2), see our [Meta-specifc tweak guide](tweaks/meta).
+
+## DCS-Specific Tweaks
+
+For tweaks specific to DCS, see the [VR Tweaks section of the DCS Performance Guide](guides/dcs/performance#virtual-reality).
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+_This space intentionally left blank._
