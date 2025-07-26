@@ -1,7 +1,7 @@
 ---
 title: DCS Terrain Tier List
 summary: Recommended DCS World terrains for Singleplayer and Multiplayer
-date: 2025-01-29
+date: 2025-07-25
 ---
 
 # Ranking System
@@ -19,12 +19,14 @@ F|Do not buy.
 Tier|Terrains
 -|-
 S|Syria, Normandy (WW2)
-A|Persian Gulf, Nevada
+A|Persian Gulf, Nevada, Germany
 B|Kola, Channel (WW2)
 C|Afghanistan, Iraq, Sinai, South Atlantic
 F|
 
 Syria has excellent content for practically every post-WW2 module.
+
+Germany is rapidly becoming one of the best and most popular terrains in DCS overall.
 
 Normandy is the standard WW2 terrain.
 
@@ -38,13 +40,15 @@ Kola and Channel have some good campaigns, if you've already played the ones on 
 
 Tier|Terrains
 -|-
-S|Syria, Normandy (WW2)
+S|Syria, Germany, Normandy (WW2)
 A|Persian Gulf
 B|
 C|Afghanistan, Iraq, Kola, Nevada, Sinai
 F|South Atlantic, Channel (WW2)
 
 Syria is the de facto standard multiplayer map.
+
+Germany is rapidly becoming one of the best and most popular terrains in DCS overall.
 
 Normandy is the standard WW2 terrain.
 
