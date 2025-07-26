@@ -13,9 +13,13 @@ We have not purchased or demoed this headset ourselves. This review is based on 
 
 # Pros
 
+- High resolution display with good colors
 - Have you _seen_ this guy's jawline _holy shit_
 
 # Cons
 
+- Very high price!
 - Only compatible with Nvidia GPUs
-- Optical quality issues
+- Optical quality and lens distortion issues
+- Software is subpar
+- Mixed reports of comfort issues
