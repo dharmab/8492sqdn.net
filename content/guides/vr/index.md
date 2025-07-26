@@ -11,10 +11,10 @@ weight: 3
 
 <img src="images/hero.webp" width="1024" height="1536" loading="lazy" alt="">
 
-# <span style="color:red">Abandon All Hope, Ye Who Don Thy Headset and Gaze Into the Infinite Abyss</span>
+# <span style="color:red">Abandon All Hope, Ye Who Don Thy Headset and Gaze Into the Abyss</span>
 
 ⚠️ Don’t bother with VR for flight sims unless:
-1. You have money and time to burn.
+1. You have money and time to <span style="color:red">burn</span>.
 > A **great** VR experience will likely cost you $1000-3000 USD for the headset, PC upgrades, and accessories.
 1. You have a very high end PC.
 2. You are willing and able to troubleshoot all manner of obscure technical issues.
@@ -109,25 +109,17 @@ We **are likely to recommend** these upcoming devices:
 
 - [Bigscreen Beyond 2](../../reviews/vr/bigscreen-beyond-2)
 - [Pimax Crystal Super](../../reviews/vr/pimax-crystal-super)
-- [Pimax Crystal Light](../../reviews/vr/pimax-crystal-light)
 
-We **only reluctantly recommend** these devices:
+We **previously recommended** these devices, but now recommend waiting for the above upcoming devices:
 
 - [Pimax Crystal](../../reviews/vr/pimax-crystal)
+- [Pimax Crystal Light](../../reviews/vr/pimax-crystal-light)
+
+We **only reluctantly recommend** these devices for those on a budget:
+
 - [Meta Quest 3](../../reviews/vr/meta-quest-3)
 
-We **do not recommend, or no longer recommend** these devices:
-
-- [Apple Vision Pro](../../reviews/vr/apple-vision-pro)
-- [Bigscreen Beyond](../../reviews/vr/bigscreen-beyond) (Bigscreen Beyond 1)
-- [HP Reverb G2](../../reviews/vr/hp-reverb-g2)
-- [MeganeX superlight](../../reviews/vr/meganeX-superlight)A
-- [Meta Quest 2](../../reviews/vr/meta-quest-2)
-- [Meta Quest 3S](../../reviews/vr/meta-quest-3s)
-- [Meta Quest Pro](../../reviews/vr/meta-quest-pro)
-- [Pimax Dream Air](../../reviews/vr/pimax-dream-air)
-- [Valve Index](../../reviews/vr/valve-index)
-- [HTC Vive Focus Vision](../../reviews/vr/htc-vive-focus-vision)
+[See all of our reviews here](../../../reviews)!
 
 ## Recommended Audio
 
@@ -182,7 +174,7 @@ On Meta headsets (Quest 3, Quest 3S, Quest Pro, Quest 2), see our [Meta-specifc 
 
 ## DCS-Specific Tweaks
 
-For tweaks specific to DCS, see the [VR Tweaks section of the DCS Performance Guide](guides/dcs/performance#virtual-reality).
+For tweaks specific to DCS, see the [VR Tweaks section of the DCS Performance Guide](guides/dcs/performance#vr-tweaks)
 
 <br/>
 <br/>

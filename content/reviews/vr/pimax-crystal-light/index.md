@@ -1,28 +1,28 @@
 ---
 title: "Pimax Crystal Light"
 tags:
-  - vr
+  - virtual reality
   - review
+summary: "Our previous top pick."
+weight: 1
 ---
 
-### [Pimax Crystal Light](https://pimax.com/pages/crystal-light)
+TL;DR We used to recommend the Pimax Crystal Light (and [Crystal](../pimax-crystal)) as one of our top picks for a high-end VR headset. However, we now recommend waiting for reviews for the [Pimax Crystal Super](../pimax-crystal-super) and [Bigscreen Beyond 2](../bigscreen-beyond-2).
 
-<img src="images/pimax-crystal-light.webp" loading="lazy" alt="">
+![](images/headset.webp)
 
-**Pros**|
--|
-Good field of view (104°x104°)
-Excellent display with great pixel density (35 PPD)
-Available with or without controllers
-Offers both external lighthouse and inside-out tracking options, allowing flexible choice between convenience or tracking fidelity
+# Pros
 
-**Cons**|
--|
-Expensive when bundled with controllers or if including the cost of lighthouses
-Heavy and bulky, though lighter than the standard Pimax Crytsal
-Some users report issues with inside-out tracking
-No eye tracking
-Mixed experiences with customer support
-Medicore microphone and speaker quality
+- Good field of view (104°x104°)
+- Excellent display with great pixel density (35 PPD)
+- Available with or without controllers
+- Offers both external lighthouse and inside-out tracking options, allowing flexible choice between convenience or tracking fidelity
 
-### [Meta Quest 3](https://www.meta.com/quest/quest-3/)
+# Cons
+
+- Expensive when bundled with controllers or if including the cost of lighthouses
+- Heavy and bulky, though lighter than the standard [Pimax Crystal](../pimax-crystal)
+- Some users report issues with inside-out tracking
+- No eye tracking
+- Mixed experiences with customer support
+- Medicore microphone and speaker quality

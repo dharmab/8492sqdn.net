@@ -1,10 +1,15 @@
 ---
 title: "Bigscreen Beyond"
+summary: "Buy a Bigscreen Beyond 2 instead."
 tags:
-  - vr
+  - virtual reality
+  - review
+weight: 4
 ---
 
 TL;DR: Buy the [Bigscreen Beyond 2](guides/vr/headsets/bigscreen-beyond-2/) instead.
+
+![](images/headset.webp)
 
 **We purchased this headset with our own money for this review.**
 

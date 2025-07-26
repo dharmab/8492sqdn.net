@@ -306,7 +306,7 @@ Very large kneeboard pages can cause a performance impact. Use image editing sof
 
 See our [VR tweaks guide](../../vr#vr-tweaks) for general VR performance tweaks and settings.
 
-This section covers additional tweak specific to DCS.
+This section covers additional tweaks specific to DCS.
 
 ## Prefer Standalone Over Steam
 

@@ -1,12 +1,25 @@
 ---
 title: "Valve Index"
 tags:
-  - vr
+  - virtual reality
   - review
+summary: Would be perfect if the screen wasn't so blurry.
+weight: 3
 ---
 
 TL;DR: We no longer recommend the Valve Index for flight sims.
 
+![](images/headset.webp)
+
 **We purchased this headset with our own money for this review.**
 
-- The Index is severely outdated hardware, overpriced and underperforming compared to the Meta Quest 3 and other current options.
+# Pros
+
+- Reliable
+- Great software with easy compatibility with many VR games
+
+# Cons
+
+- Extremely outdated - around six years old now without any updates
+- Outdated, blurry screen
+- _Severely_ overpriced

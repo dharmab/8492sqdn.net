@@ -1,11 +1,15 @@
 ---
 title: "HTC Vive Focus Vision"
+summary: "One of the worst headsets you can buy."
 tags:
- - vr
+ - virtual reality
  - review
+weight: 4
 ---
 
 TL;DR: We do not recommend the HTC Vive Focus Vision.
+
+![](images/headset.webp)
 
 - The lenses in the Focus Vision are very poor in quality, resulting in a mostly blurry image.
 - General problems with tracking, video stability and eye tracking.
