@@ -50,7 +50,7 @@ Ideally, use an upgraded CPU cooler. We're fans of Thermaltake's series of budge
 
 ### GPU
 
-#### Nvida vs AMD vs Intel
+#### Nvidia vs AMD vs Intel
 
 For VR, high-VRAM Nvidia GPUs are preferable to AMD GPUs if the budget allows. Nvidia's GPUs and drivers have signifcantly better software support for VR.
 
