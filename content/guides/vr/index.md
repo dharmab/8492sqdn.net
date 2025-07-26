@@ -105,7 +105,7 @@ See the [PSU section of the DCS performance guide](guides/dcs/performance#psu) f
 
 There are no perfect VR headsets, but there are a few worth consideration for flight sims.
 
-_These recommendations are for flight simulation use. Some of these devices are good for other applications; we mainly evaluate whether they are good choices for flight sims._
+_These recommendations are for flight simulation use. Some headsets are good for other applications, but not good for flight sim, and thus won't appear in our recommendations_
 
 We **are likely to recommend** these upcoming devices:
 
