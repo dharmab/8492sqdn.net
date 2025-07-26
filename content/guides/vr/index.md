@@ -9,6 +9,8 @@ tags:
 weight: 3
 ---
 
+<img src="images/hero.webp" width="1024" height="1536" loading="lazy" alt="">
+
 # <span style="color:red">Abandon All Hope, Ye Who Don Thy Headset and Gaze Into the Infinite Abyss</span>
 
 ⚠️ Don’t bother with VR for flight sims unless:
@@ -42,15 +44,17 @@ The best CPUs for VR are AMD X3D series CPUs such as:
 
 However, any fast, high end gaming-oriented CPU is fine. As of current writing, AMD beats Intel in performance across the board, but high end Intel CPUs are acceptable.
 
-Ideally, use an upgraded CPU cooler. We're fans of the Thermaltake's series of budget-friendly air coolers and the Arctic Liquid Freezer III AIO liquid cooler.
+Ideally, use an upgraded CPU cooler. We're fans of Thermaltake's series of budget-friendly air coolers and the Arctic Liquid Freezer III AIO liquid cooler.
 
 ## GPU
 
 ### Nvida vs AMD vs Intel
 
-For VR, Nvidia is preferable to AMD if the budget allows. Nvidia's GPUs and drivers have signifcantly better software support for VR.
+For VR, high-VRAM Nvidia GPUs are preferable to AMD GPUs if the budget allows. Nvidia's GPUs and drivers have signifcantly better software support for VR.
 
-However, if a high-VRAM Nvidia GPU is out of budget or otherwise unavailable, AMD GPUs can be acceptable. You will generally get more performance per dollar with AMD, but won't achieve the same level of performance or compatibility as Nvidia's highest tier GPUs. Note that some VR headsets, such as the MeganeX superlight, are not compatible with AMD GPUs at all.
+However, if a high-VRAM Nvidia GPU is out of budget or otherwise unavailable, AMD GPUs can be acceptable. You will generally get more performance per dollar with AMD, but won't achieve the same level of performance or compatibility as Nvidia's highest tier GPUs.
+
+> Note that some VR headsets, such as the MeganeX superlight, are not compatible with AMD GPUs at all.
 
 It is technically possible to use Intel Arc GPUs with certain headsets usch as Meta and Pico, but we don't recommend it for flight sims due to poor performance.
 
@@ -68,7 +72,6 @@ The main things to look for in a GPU for VR are:
 
 - As much VRAM as possible. Ideally 16-32GB. The more the better. **Do not skimp on VRAM!**
 - Fast _raster_ performance (i.e. without raytracing or frame generation)
-- As much memory bandwidth as possible
 
 Deprioritize:
 
