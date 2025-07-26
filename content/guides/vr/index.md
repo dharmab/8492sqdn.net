@@ -95,157 +95,39 @@ It is important to use a high quality power supply that provides stable power un
 
 See the [PSU section of the DCS performance guide](guides/dcs/performance#PSU) for a buyer's guide.
 
-## Recommended Devices
+## Recommended Headsets
 
 There are no perfect VR headsets, but there are a few worth consideration for flight sims.
 
-We previously recommended the **Pimax Crystal Light** as our primary recommendation and the **Meta Quest 3** as a budget option.
+_These recommendations are for flight simulation use. Some of these devices are good for other applications; we mainly evaluate whether they are good choices for flight sims._
+
+We **are likely to recommend** these upcoming devices:
+
+- [Bigscreen Beyond 2](../../reviews/vr/bigscreen-beyond-2)
+- [Pimax Crystal Super](../../reviews/vr/pimax-crystal-super)
+- [Pimax Crystal Light](../../reviews/vr/pimax-crystal-light)
+
+We **only reluctantly recommend** these devices:
+
+- [Pimax Crystal](../../reviews/vr/pimax-crystal)
+- [Meta Quest 3](../../reviews/vr/meta-quest-3)
+
+We **do not recommend, or no longer recommend** these devices:
+
+- [Apple Vision Pro](../../reviews/vr/apple-vision-pro)
+- [Bigscreen Beyond](../../reviews/vr/bigscreen-beyond) (Bigscreen Beyond 1)
+- [HP Reverb G2](../../reviews/vr/hp-reverb-g2)
+- [MeganeX superlight](../../reviews/vr/meganeX-superlight)A
+- [Meta Quest 2](../../reviews/vr/meta-quest-2)
+- [Meta Quest 3S](../../reviews/vr/meta-quest-3s)
+- [Meta Quest Pro](../../reviews/vr/meta-quest-pro)
+- [Pimax Dream Air](../../reviews/vr/pimax-dream-air)
+- [Valve Index](../../reviews/vr/valve-index)
+- [HTC Vive Focus Vision](../../reviews/vr/htc-vive-focus-vision)
+
+## Recommended Audio
 
 We also recommend using IEMs for audio instead of the mediocre speakers included with most headsets. For budget IEMs, I like the [7HZ x Crinacle Zero:2](https://www.linsoul.com/products/7hz-x-crinacle-zero-2) and [Moondrop CHU II](https://moondroplab.com/en/products/chu-ii). If you have more money, check out the [Crinear Daybreak](https://crinear.com/daybreak).
-
-### [Pimax Crystal Light](https://pimax.com/pages/crystal-light)
-
-<img src="images/pimax-crystal-light.webp" loading="lazy" alt="">
-
-**Pros**|
--|
-Good field of view (104°x104°)
-Excellent display with great pixel density (35 PPD)
-Available with or without controllers
-Offers both external lighthouse and inside-out tracking options, allowing flexible choice between convenience or tracking fidelity
-
-**Cons**|
--|
-Expensive when bundled with controllers or if including the cost of lighthouses
-Heavy and bulky, though lighter than the standard Pimax Crytsal
-Some users report issues with inside-out tracking
-No eye tracking
-Mixed experiences with customer support
-Medicore microphone and speaker quality
-
-### [Meta Quest 3](https://www.meta.com/quest/quest-3/)
-
-<img src="images/meta-quest.webp" width="1200" height="1200" loading="lazy" alt="">
-
-> ⚠️  We do not recommend buying a Quest headset without a warranty. Meta has had issues with mandatory software updates bricking headsets, including out-of-warranty devices.
-
-**Pros**|
--|
-Decent field of view (110°x96°)
-Relatively affordable
-Easy to configure for PCVR use
-Good warranty with easy returns/exchanges
-Also good for roomscale
-Standalone capbilities
-Includes controllers
-**Cons**|
-Requires a quality WiFi5/WiFi6 dedicated router or wireless access point *or* a third party charging+link cable for long sessions
-Significantly lower pixel density than our other recommendations (25 PPD)
-Significant compression artifacts including image noise and color banding
-Forced Oculus/Meta software updates contain breaking changes and sometimes unfixable issues
-No eye tracking
-Medicore microphone and speaker quality
-
-### [Pimax Crystal](https://pimax.com/crystal/)
-
-<img src="images/pimax-crystal.webp" width="1200" height="1200" loading="lazy" alt="">
-
-**Pros**|
--|
-Same Pros as Crystal Light
-Excellent eye tracking
-**Cons**|
-Expensive
-Requires a separate battery, even when connected to power source
-Heavy and bulky
-Similar cons to Crystal Light: Inside-out tracking issues, medicore microphone and speaker quality, mixed customer support experiences
-
-## Why not…?
-
-### Bigscreen Beyond
-
-Bigscreen has announced the [Beyond 2](https://store.bigscreenvr.com/products/bigscreen-beyond-2) and the orignal Beyond is no longer available. Anyone interested in the Beyond should wait for the Beyond 2 instead.
-
-We do not recommend buying a used Beyond:
-
-1. The original Beyond has a non-adjustable IPD, so you would need to have the exact same IPD as the original owner.
-2. Many of the Beyond's parts, such as the head cushion, head strap, and connectors to connect to a PC, are forward-compatible with the Beyond 2. Many Beyond owners are listing the non-reusable core for sale, but these are only useful for replacing a broken out-of-warranty Beyond. Therefore, most used Beyond listings are not usable out of the box.
-
-### Meta Quest 3S
-
-> ⚠️  We do not recommend buying a Quest headset without a warranty. Meta has had issues with mandatory software updates bricking headsets, including out-of-warranty devices.
-
-- The Quest 3S is optically identical to the Quest 2, with some additional features such as passthrough and hand tracking, and upgraded onboard hardware.
-- Meta uses multiple suppliers for the LCD panel, with significant variance in color and visibly different pixelation. You might get a panel with good color, or one with washed out colors.
-- The much better display on the Quest 3 is preferred, but the Quest 3S may be a decent introductory headset if you get it at a good price.
-- If you are only interested in PCVR and not standalone VR, consider a used or refurbished Quest 2 instead. It is optically identical to the 3S for PCVR use.
-
-### Meta Quest 2
-
-> ⚠️  We do not recommend buying a Quest headset without a warranty. Meta has had issues with mandatory software updates bricking headsets, including out-of-warranty devices.
-
-- Meta used multiple suppliers for the LCD panel, with significant variance in color and visibly different pixelation. You might get a panel with good color, or one with washed out colors.
-- The much better display on the Quest 3 is preferred, but a used or refurbished Quest 2 may be a decent introductory headset if you get it at a good price.
-
-### Meta Quest Pro
-
-> ⚠️  We do not recommend buying a Quest headset without a warranty. Meta has had issues with mandatory software updates bricking headsets, including out-of-warranty devices.
-
-- The Quest 3 is both cheaper and higher resolution.
-- On Meta headsets, eye tracking with OpenXR is only available in debug mode. This requires a developer account, which must be verified by Meta. *The author had to send their driver’s license to Meta to pass verification. Your experience may vary.*
-- The eye tracking on the Quest Pro is not as good as the Pimax Crystal when used with PC VR. It lags behind your gaze by a few frames. *The author finds this noticeable but tolerable. Your experience may vary.*
-- Some users report eye & face tracking hardware failure due to sweat/moisture.
-- The slightly better controllers on the Quest Pro compared to the Quest 3 are of limited use for stationary simulations.
-- There are *some* advantages - good comfort, ability to see your HOTAS and keyboard through the gap between the headset and your face, and the included controllers are great for roomscale games. But the advantages aren’t worth the tradeoffs for most people, given this price point.
-- Awkward middle child between the Meta Quest 3 and Pimax Crystal.
-
-### HTC Vive Focus Vision
-
-- The lenses in the Focus Vision are very poor in quality, resulting in a mostly blurry image.
-- General problems with tracking, video stability and eye tracking.
-- Probably the worst value headset on the market as of this writing.
-
-### HP Reverb G2
-
-- Microsoft has removed Windows Mixed Reality from Windows, and the G2 relied on WMR to function. (Existing installations continue to work if Windows updates are deferred, but this will become increasingly impractical over time.)
-- There is some hope that [Monado](https://monado.freedesktop.org/) will provide support in the future, but this is not guaranteed.
-- Very common hardware failures due to internal damage to the proprietary video cable.
-
-### Valve Index
-
-- The Index is severely outdated hardware, overpriced and underperforming compared to the Meta Quest 3 and other current options.
-
-### Apple Vision Pro
-
-- Not officially compatible with OpenXR, which is required for DCS/BMS.
-- A workaround is available using ALVR streaming, but it has no guarantees of continuing to work.
-- Extremely high price!
-
-## Upcoming Devices
-
-### Bigscreen Beyond 2
-
-We are optimistic that the Beyond 2 will be on our recommended list in late 2025. We have ordered one for testing and will update this guide once we have hands-on experience.
-
-### Pimax Crystal Super
-
-We are watching this one. For now, our recommendation is to wait for independent reviews before deciding whether to purchase.
-
-### Pimax Dream Air
-
-We expect most simmers will prefer the Pimax Crystal models instead. The Dream Air is significantly more expensive while providing a broadly similar PCVR experience. Pimax themselves are marketing the Dream Air as a lightweight and portable device rather than a simulation cockpit device.
-
-### Unannounced Valve headset ("Deckard")
-
-We are currently waiting until we can publicly share more information.
-
-### MeganeX superlight 8K
-
-We are watching this one. It's been having some teething issues with optical
-quality and compatibility issues with some RTX 5000 series GPUs. We're unsure if
-it will be added to our recommended list at this time, especially compared to
-other headsets coming out in 2025 which don't require vendor lock-in to specific
-GPUs.
 
 # VR Tweaks
 

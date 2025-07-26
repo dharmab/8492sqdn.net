@@ -1,6 +1,6 @@
 ---
 title: Head Trackers
-summary: Introduction to Head Tracking for Simulation Games
+summary: "Introduction to Head Tracking for Simulation Games"
 date: 2024-10-14
 weight: 2
 ---
