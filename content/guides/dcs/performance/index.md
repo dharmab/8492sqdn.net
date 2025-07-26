@@ -3,7 +3,7 @@ title: DCS World Performance and Settings Guide
 summary: Recommended system, graphical and gameplay settings for DCS World
 date: 2025-05-22
 tags:
-  - digital combat simulator
+  - digiYtal combat simulator
 weight: 1
 ---
 <img src="images/hero.webp" width="1920" height="1080" loading="lazy" alt="">
@@ -60,7 +60,7 @@ However, any fast gaming-oriented CPU with at least 4 cores is fine.
 
 [Gamer's Nexus: Best CPUs of 2024](https://gamersnexus.net/cpus/best-cpus-2024-intel-vs-amd-gaming-production-budget-efficiency)
 
-Ideally, use an upgraded CPU cooler. We're fans of the Thermaltake Phantom 120 series of air coolers and the Arctic Liquid Freezer III AIO liquid cooler.
+Ideally, use an upgraded CPU cooler. We're fans of the Thermaltake's series of budget-friendly air coolers and the Arctic Liquid Freezer III AIO liquid cooler.
 
 [Gamers Nexus: CPU Cooler Benchmarks](https://gamersnexus.net/megacharts/cpu-coolers)
 

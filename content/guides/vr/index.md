@@ -13,11 +13,87 @@ weight: 3
 
 ⚠️ Don’t bother with VR for flight sims unless:
 1. You have a very high end PC.
+> A **great** VR experience will likely cost you $1000-3000 USD for the headset, PC upgrades, and accessories.
 2. You are willing and able to troubleshoot all manner of obscure technical issues.
 3. You are comfortable installing software from GitHub and very carefully reading technical instructions written by software engineers.
 4. You are OK with your headset breaking for absolutely no fault of your own due to software updates. This includes being OK with headsets becoming permanently bricked and unusuable.
 > This is not a hypothetical; it has _already happened_ to the HP Reverb G2 and some Meta Quest headsets.
 5. You have a [head tracker](guides/headtracker) to fall back on when updates break VR support from time to time.
+
+## Recommended PC Specs
+
+### Operating System
+
+This guide assumes you are using Windows 11. Windows 10 is missing some features necessary to properly use modern CPUs with heterogenous core layout (e.g. dual CCD, separate performance and efficiency cores).
+
+VR is possible on Linux, but we don't recommend attempting it unless you are a software developer, or at least a very comfortable Linux power user.
+
+### CPU
+
+The best CPUs for VR are AMD X3D series CPUs such as:
+
+- AMD 9800X3D
+- AMD 7800X3D
+- AMD 7600X3D
+- AMD 5800X3D
+- AMD 5700X3D
+- AMD 5600X3D
+
+However, any fast, high end gaming-oriented CPU is fine. As of current writing, AMD beats Intel in performance across the board, but high end Intel CPUs are acceptable.
+
+Ideally, use an upgraded CPU cooler. We're fans of the Thermaltake's series of budget-friendly air coolers and the Arctic Liquid Freezer III AIO liquid cooler.
+
+## GPU
+
+### Nvida vs AMD vs Intel
+
+For VR, Nvidia is preferable to AMD if the budget allows. Nvidia's GPUs and drivers have signifcantly better software support for VR.
+
+However, if a high-VRAM Nvidia GPU is out of budget or otherwise unavailable, AMD GPUs can be acceptable. You will generally get more performance per dollar with AMD, but won't achieve the same level of performance or compatibility as Nvidia's highest tier GPUs. Note that some VR headsets, such as the MeganeX superlight, are not compatible with AMD GPUs at all.
+
+It is technically possible to use Intel Arc GPUs with certain headsets usch as Meta and Pico, but we don't recommend it for flight sims due to poor performance.
+
+### Recommended GPUs
+
+Tier | Nvidia | AMD |
+-|-|-
+S+|RTX 5090 |
+S|RTX 4090 |
+A|RTX 5080, RTX 4080 Super, RTX 5070 Ti, RTX 4080, RTX 3090 Ti, RTX 3090 | 7900 XTX, 7900 XT, 9070XT
+B|RTX 5070, RTX 4070 Ti Super, RTX 4070 Ti |  9070†, 7900 GRE, 7800 XT, 6950 XT, 6900 XT
+C|RTX 4070 Super, RTX 4070, RTX 3080 Ti, RTX 3080 12GB | 6800 XT
+
+The main things to look for in a GPU for VR are:
+
+- As much VRAM as possible. Ideally 16-32GB. The more the better. **Do not skimp on VRAM!**
+- Fast _raster_ performance (i.e. without raytracing or frame generation)
+- As much memory bandwidth as possible
+
+Deprioritize:
+
+- Frame generation (DLSS/FSR/XeSS)
+- Ray tracing performance
+
+## RAM
+
+Buy a 2x48GB or 2x32GB kit, with the correct compatibility for your CPU and motherboard. Do not use a 4x kit, because they may have stability issue at higher frequencies.
+
+_In most cases_ you can follow this table, but always check with your motherboard manufactuer's recommendations on their website.
+
+|CPU Mfr.|RAM Type|Speed|CAS Latency|Note|
+|-|-|-|-|-|
+|AMD|DDR5|6000MHz|CL30|
+|AMD|DDR4|3600MHz|CL16-18|
+|Intel|DDR5|6000-7200MHz|CL26-30|Varies by motherboard - check motherboard documentation!|
+|Intel|DDR4|3200-4000MHz|CL16|Diminishing returns past 3200-3600MHz|
+
+See the [RAM section of the DCS performance guide](guides/dcs/performance#ram) for more details.
+
+## PSU
+
+It is important to use a high quality power supply that provides stable power under high load. Wattage and 80PLUS ratings are not enough to tell if a power supply is good or bad.
+
+See the [PSU section of the DCS performance guide](guides/dcs/performance#PSU) for a buyer's guide.
 
 ## Recommended Devices
 
