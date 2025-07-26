@@ -19,10 +19,13 @@ languages:
       main:
         - name: Guides
           url: guides/
-        - name: Missions
-          url: missions
-        - name: Updates
+          weight: 1
+        - name: Reviews
+          url: reviews/
+          weight: 2
+        - name: Blog
           url: posts/
+          weight: 10
 params:
   footer:
     hideCopyright: true
