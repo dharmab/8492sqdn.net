@@ -84,7 +84,7 @@ Deprioritize:
 
 Buy a 2x48GB or 2x32GB kit, with the correct compatibility for your CPU and motherboard. Do not use a 4x kit, because they may have stability issue at higher frequencies.
 
-_In most cases_ you can follow this table, but always check with your motherboard manufactuer's recommendations on their website.
+_In most cases_ you can follow this table, but always check with your motherboard manufacturer's recommendations on their website.
 
 |CPU Mfr.|RAM Type|Speed|CAS Latency|Note|
 |-|-|-|-|-|
