@@ -11,4 +11,4 @@ weight: 3
 
 **We have ordered this headset with our own money and will update this review once we have received and tested it.**
 
-Based on preview material, we expect most flight simmers to prefer the [Pimax Crystal Super](../pimax-crystal-super) instead.
+Based on preview material, we expect most flight simmers will prefer the [Pimax Crystal Super](../pimax-crystal-super) instead.

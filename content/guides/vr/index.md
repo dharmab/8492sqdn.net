@@ -23,6 +23,8 @@ weight: 3
 > This is not a hypothetical; it has _already happened_ to the HP Reverb G2 and some Meta Quest headsets.
 5. You have a [head tracker](guides/headtracker) to fall back on when updates break VR support from time to time.
 
+_This page contains contributions from my friend Lynx._
+
 ## Recommended PC Specs
 
 ### Operating System

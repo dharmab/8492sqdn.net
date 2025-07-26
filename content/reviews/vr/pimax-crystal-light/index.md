@@ -11,6 +11,8 @@ TL;DR We used to recommend the Pimax Crystal Light (and [Crystal](../pimax-cryst
 
 ![](images/headset.webp)
 
+We have not purchased or demoed this headset ourselves. This review contains information from online sources, as well as from our review of the [Pimax Crystal](../pimax-crystal).
+
 # Pros
 
 - Good field of view (104°x104°)
