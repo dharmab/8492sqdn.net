@@ -125,7 +125,11 @@ We **only reluctantly recommend** these devices for those on a budget:
 
 # Recommended Audio
 
-We also recommend using IEMs for audio instead of the mediocre speakers included with most headsets. For budget IEMs, I like the [7HZ x Crinacle Zero:2](https://www.linsoul.com/products/7hz-x-crinacle-zero-2) and [Moondrop CHU II](https://moondroplab.com/en/products/chu-ii). If you have more money, check out the [Crinear Daybreak](https://crinear.com/daybreak).
+We also recommend using IEMs for audio instead of the mediocre speakers included with most headsets.
+
+If you're on a budget, try the [7HZ x Crinacle Zero:2](https://www.linsoul.com/products/7hz-x-crinacle-zero-2), which you can find for $20-30.
+
+If you have more money, check out the [Crinear Daybreak](https://crinear.com/daybreak).
 
 # VR Tweaks
 
