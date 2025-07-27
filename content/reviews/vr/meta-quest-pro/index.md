@@ -28,7 +28,7 @@ TL;DR: We do not recommend the Meta Quest Pro for flight simmers.
 # Cons
 
 - The Quest Pro is lower resolution than modern headsets, including the [Quest 3](guides/vr/headsets/meta-quest-3).
-- [Meta's Quest Link software is a pain for flight simmers.](../../../guides/vr/tweaks/meta)
+- [Meta's Quest Link software is a pain for flight simmers.](../../../guides/vr/meta)
 - High price point!
 - Some users report eye & face tracking hardware failure due to sweat/moisture.
 - My Quest Pro controllers also bricked themselves in less than a year, becoming completely unusable.

@@ -174,7 +174,7 @@ OpenXR Toolkit is discontinued software and should be removed if you previously 
 
 ## Meta-Specific Tweaks
 
-On Meta headsets (Quest 3, Quest 3S, Quest Pro, Quest 2), see our [Meta-specifc tweak guide](tweaks/meta).
+On Meta headsets (Quest 3, Quest 3S, Quest Pro, Quest 2), see our [Meta-specifc tweak guide](meta/).
 
 ## DCS-Specific Tweaks
 

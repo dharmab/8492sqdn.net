@@ -27,7 +27,7 @@ TL;DR: We _reluctantly_ recommend the Meta Quest 3 for flight simmers who want t
 
 # Cons
 
-- [Meta's Quest Link software is a pain for flight simmers.](../../../guides/vr/tweaks/meta)
+- [Meta's Quest Link software is a pain for flight simmers.](../../../guides/vr/meta)
 - Requires a quality WiFi5/WiFi6 dedicated router or wireless access point *or* a third party charging+link cable for long PCVR sessions
 - Significantly lower pixel density than our other recommendations (25 PPD)
 - Significant compression artifacts including image noise and color banding
