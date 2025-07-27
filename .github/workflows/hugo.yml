@@ -55,6 +55,7 @@ jobs:
           TZ: America/Los_Angeles
         run: |
           hugo \
+            --logLevel debug \
             --gc \
             --minify \
             --buildFuture \
