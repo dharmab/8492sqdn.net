@@ -5,7 +5,7 @@ date: 2025-07-25
 tags:
   - digital combat simulator
   - falcon
-
+  - virtual reality
 weight: 3
 ---
 

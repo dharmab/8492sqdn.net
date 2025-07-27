@@ -1,9 +1,9 @@
 ---
-Title: "Meta VR Tweaks"
-Summary: "Tweaks specific to Meta VR headsets."
-weight: 7
+title: "Meta VR Tweaks"
+summary: "Tweaks specific to Meta VR headsets."
 tags:
   - virtual reality
+weight: 7
 ---
 
 ## Use Virtual Desktop or Steam Link
