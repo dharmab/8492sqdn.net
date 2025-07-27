@@ -1,6 +1,7 @@
 ---
 title: "Meta VR Tweaks"
 summary: "Tweaks specific to Meta VR headsets."
+date: 2025-07-25
 tags:
   - virtual reality
 weight: 7
