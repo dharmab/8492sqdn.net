@@ -7,6 +7,8 @@ tags:
 weight: 7
 ---
 
+![](images/zuckerberg.jpg)
+
 ## Use Virtual Desktop or Steam Link
 
 Meta's Airlink streaming application is suboptimal; Since Meta makes money from standalone VR applications sold through the Quest store, their Airlink app for PCVR is a minimal effort with poorly selected video compression settings. Third-party streaming applications can produce better results by more thoughtfully tuning the video stream quality and latency.
