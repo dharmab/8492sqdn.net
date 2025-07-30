@@ -7,7 +7,7 @@ tags:
 weight: 7
 ---
 
-![](images/zuckerberg.jpg)
+![](images/zuckerberg.webp)
 
 ## Use Virtual Desktop or Steam Link
 
