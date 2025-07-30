@@ -7,7 +7,7 @@ tags:
 weight: 4
 ---
 
-TL;DR: Buy the [Bigscreen Beyond 2](guides/vr/headsets/bigscreen-beyond-2/) instead.
+TL;DR: Buy the [Bigscreen Beyond 2](../../reviews/vr/headsets/bigscreen-beyond-2/) instead.
 
 ![](images/headset.webp)
 
