@@ -127,7 +127,7 @@ A head tracker is ideal for anyone who is not using VR. See [the companion artic
 
 # Virtual Reality
 
-See our [VR guide](../../vr) for our recommended VR headsets and general VR performance tweaks.
+See our [VR guide](../../vr/main) for our recommended VR headsets and general VR performance tweaks.
 
 # Windows Settings and Tweaks
 
