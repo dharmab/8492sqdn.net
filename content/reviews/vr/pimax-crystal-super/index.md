@@ -9,6 +9,6 @@ weight: 1
 
 ![](images/headset.webp)
 
-**We have ordered this headset with our own money and will update this review once we have received and tested it.**
+**We have purchased this headset with our own money and will update this review once we completed our testing.**
 
-Based on preview material and speaking with people who have received their Pimax Crystal Supers, this headset is likely to be in our top picks overall.
+Our initial impression is that the display is excellent, but requires an extremely powerful PC. We are evaluating the software and overall experience to provide a detailed review.
