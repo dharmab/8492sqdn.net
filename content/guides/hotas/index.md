@@ -1,7 +1,7 @@
 ---
 title: HOTAS Buyer's Guide for Combat Flight Simulation
 summary: Flight sticks, throttles and pedals organized into recommended, recommended with reservations, and not recommended.
-date: 2025-01-01
+date: 2025-10-25
 weight: 2
 ---
 
@@ -324,29 +324,24 @@ Single axis, no toe brakes
 
 ![](images/t-rudders.webp)
 
-### Virpil WarBRD/VPC ACE Torq
-
-Single axis, no toe brakes.
-
- |
--|-
-![](images/warbrd-pedals.webp)|![](images/vpc-ace-torq-pedals.webp)
-
 ### MFG Crosswind V3
 
 ![](images/crosswind-v3.webp)
+
+### Virpil Pedals
+
+![](images/vpc-ace-pedals.webp)
+
+
+### Winwing Orion Metal Flight Rudder Pedals
+
+![](images/orion-pedals.webp)
 
 ### Slaw Device pedals
 
 ![](images/slaw-device-pedals.webp)
 
 ## Recommended with Reservations
-
-### Winwing Orion Metal Flight Rudder Pedals
-
-Included spring is slightly on the strong side. Otherwise very similar to the MFG Crosswinds, but more expensive and with less customization. May be a good choice for shipping to some regions.
-
-![](images/orion-pedals.webp)
 
 ### CH Products Pro Pedals
 
@@ -358,14 +353,6 @@ Can be found for a good price used. Very narrow.
 
 Similar to the MFG Crosswind V3. Might be a good choice if you’re buying other Virpil products and can bundle the shipping
 
-![](images/vpc-ace-pedals.webp)
-
-### Thrustmaster TPR
-
-Expensive, some reports of reliability issues
-
-![](images/tpr.webp)
-
 ## Not Recommended
 
 ### Logitech/Saitek Pro Flight
@@ -375,3 +362,9 @@ Very poor build quality
 ### Thrustmaster T.Flight
 
 Very poor build quality
+
+### Thrustmaster TPR
+
+Far too expensive - for this price, you can buy Slaw Device pedals and get a superior product.
+
+![](images/tpr.webp)
