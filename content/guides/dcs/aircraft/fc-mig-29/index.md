@@ -20,7 +20,7 @@ Downgraded versions were widely exported to the Warsaw Pact and other nations. M
 
 The MiG-29 is one of the fastest aircraft in DCS World - certainly the fastest player aircraft available to REDFOR - and the earliest to have a helmet-mounted sight for off-boresight missile employment. Although surpassed in capability by modernized 4th-and 5th-generation fighters, it remains an iconic aircraft.
 
-# Variants in DCS
+# Variants in DCS: Flaming Cliffs
 
 ## MiG-29A
 
