@@ -8,7 +8,7 @@ macOS: `brew install hugo`
 
 Linux: [Install using a package manager](https://gohugo.io/installation/linux/#repository-packages)
 
-Windows: [Install a prebuilt binary](https://gohugo.io/installation/windows/#prebuilt-binaries)
+Windows: [Install using winget](https://gohugo.io/installation/windows/#winget)
 
 ## Run the site locally
 

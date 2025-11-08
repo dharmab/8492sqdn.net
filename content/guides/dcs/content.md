@@ -16,7 +16,7 @@ Flying a module for the first time? Start a free flight mission and just fly aro
 
 Then, learn how to start up the aircraft. Make your own checklists as you learn to help internalize the steps.
 
-Practice take-offs and landings. Do ten touch-and-go landings in a row. Do a few full stop landings.
+Practice take-offs and landings. Do ten touch-and-go landings in a row. Do a few full stop landings. Practice until you can safely land the jet every time.
 
 If your plane is naval, practice carrier launches and CASE I recoveries using [Bankler's CASE 1 Recovery Trainer](https://forum.dcs.world/topic/189005-banklers-case-1-recovery-trainer/).
 
@@ -327,8 +327,6 @@ Cage the Bear - Story-based campaign included with the module.
 
 [DCS Retribution campaign generator](https://github.com/dcs-retribution/dcs-retribution) - Complex, powerful dynamic campaign generator
 
-[Digital Crew Chief](https://web.digitalcrewchief.at/) - Easy to use campaign generator
-
 [Pretense](https://github.com/Dzsek/pretense) - Persistent dynamic campaign where you operate as a mercenary and earn money for completing missions
 
 [Apache Hunting Ground](https://www.digitalcombatsimulator.com/en/files/3321127/) - 130 CAS missions on the Syria map
@@ -341,19 +339,15 @@ Operation Reforger, Cage the Bear, Inherent Resolve for F-15E, and Operation Mou
 
 [Flashpoint Levant](https://discord.gg/jrVjAjUd) - 80s PvE. Has a scripted mission system and loadout restrictions to focus on a variety of late Cold War aircraft.
 
-[Enigma’s Cold War](https://discord.gg/3ZMttnKmkh) - 50s-80s PvPvE. Has a dynamic PvP battlefield system and a points system where completing objectives with lower tier aircraft unlocks more capable aircraft.
+[Contention](https://forum.dcs.world/topic/334682-sps-contention-pvp-server-1-80s90smodern-server-2-cold-war-new-persistent-dynamic-campaigns/) - Large scale PvP server with multiple maps and eras
 
-[Tempest’s Blue Flash](https://discord.gg/uFedKrhU) - 90s PvPvE. Similar to Enigma’s, but with a 1990s setting.
+[Heatblur Cold War](https://discord.com/servers/heatblur-simulations-1071433028045377637) - 50s-80s PvPvE. Has a dynamic PvP battlefield system and a points system where completing objectives with lower tier aircraft unlocks more capable aircraft.
+
+[Victor Romeo Sierra](https://victorromeosierra.com/index.php/Main_Page) - Dynamic campaign server
 
 [Rotorheads](https://discord.gg/SE8phsRc) - Helicopter focused PvE server, with smaller missions suitable for rotary wing aircraft.
 
-[Contention](https://forum.dcs.world/topic/334682-sps-contention-new-dcs-pvp-server-syria-sinai/) - Large scale PvP server with multiple maps and eras
-
 [Growling Sidewinder](https://discord.gg/kA6x5R4) - Modern PvP team deathmatch. Nicknamed “Airquake”.
-
-World War X - 40s-70s PvPvE, with a focus on supply and A2G gameplay. Features some unique missions like anti-submarine warfare.
-
-[Shadow Reapers Dynamic Campaign](https://www.shadowreapers.org/manual) - A complex, randomzied PvPvE dynamic campaign server.
 
 ## Open Event Groups
 
