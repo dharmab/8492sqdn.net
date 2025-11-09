@@ -149,6 +149,7 @@
                         id: "era",
                         text: "What eras of aviation interest you?",
                         type: "multiple",
+                        operator: "or",
                         answers: [
                             {
                                 id: "era-ww2",
@@ -602,9 +603,10 @@
                 ],
             };
 
-            // Track selected tags separately for single (OR) and multiple (AND) questions
+            // Track selected tags separately for single (OR) and multiple (AND/OR) questions
             let singleQuestionTags = new Set(); // Tags from radio button questions (OR logic)
-            let multipleQuestionTags = new Set(); // Tags from checkbox questions (AND logic)
+            let multipleQuestionTagsAnd = new Set(); // Tags from checkbox questions with AND logic
+            let multipleQuestionTagsOr = new Set(); // Tags from checkbox questions with OR logic
             let selectedAnswersByQuestion = {}; // For tracking radio button selections
             let hasNonDefaultInput = false; // Track if user has made any non-default selections
 
@@ -707,14 +709,25 @@
                 });
             }
 
-            // Handle checkbox selection changes (AND logic across questions)
+            // Handle checkbox selection changes (AND or OR logic depending on question)
             function handleCheckboxChange(event, answerId, tags, questionId) {
+                // Find the question to check its operator
+                const question = data.questions.find(
+                    (q) => q.id === questionId,
+                );
+                const operator = question.operator || "and"; // Default to AND if not specified
+
+                const targetSet =
+                    operator === "or"
+                        ? multipleQuestionTagsOr
+                        : multipleQuestionTagsAnd;
+
                 if (event.target.checked) {
-                    // Add tags to multiple question set
-                    tags.forEach((tag) => multipleQuestionTags.add(tag));
+                    // Add tags to appropriate set
+                    tags.forEach((tag) => targetSet.add(tag));
                 } else {
-                    // Remove tags from multiple question set
-                    tags.forEach((tag) => multipleQuestionTags.delete(tag));
+                    // Remove tags from appropriate set
+                    tags.forEach((tag) => targetSet.delete(tag));
                 }
                 // Mark that user has made a selection (checkbox questions don't have defaults)
                 // But exclude the "type" question
@@ -764,14 +777,16 @@
                         card.classList.add("hidden");
                     } else if (
                         singleQuestionTags.size === 0 &&
-                        multipleQuestionTags.size === 0
+                        multipleQuestionTagsAnd.size === 0 &&
+                        multipleQuestionTagsOr.size === 0
                     ) {
                         // Show all if no filters selected but user has made input
                         card.classList.remove("hidden");
                     } else {
                         const choiceTags = card.dataset.tags.split(",");
                         let matchesSingle = true;
-                        let matchesMultiple = true;
+                        let matchesMultipleAnd = true;
+                        let matchesMultipleOr = true;
 
                         // Check single (radio) questions - choice must match ANY of the selected tags (OR logic)
                         if (singleQuestionTags.size > 0) {
@@ -780,15 +795,26 @@
                             );
                         }
 
-                        // Check multiple (checkbox) questions - choice must match ALL selected tags (AND logic)
-                        if (multipleQuestionTags.size > 0) {
-                            matchesMultiple = Array.from(
-                                multipleQuestionTags,
+                        // Check multiple (checkbox) questions with AND logic - choice must match ALL selected tags
+                        if (multipleQuestionTagsAnd.size > 0) {
+                            matchesMultipleAnd = Array.from(
+                                multipleQuestionTagsAnd,
                             ).every((tag) => choiceTags.includes(tag));
                         }
 
-                        // Show choice only if it matches both conditions
-                        if (matchesSingle && matchesMultiple) {
+                        // Check multiple (checkbox) questions with OR logic - choice must match ANY selected tag
+                        if (multipleQuestionTagsOr.size > 0) {
+                            matchesMultipleOr = Array.from(
+                                multipleQuestionTagsOr,
+                            ).some((tag) => choiceTags.includes(tag));
+                        }
+
+                        // Show choice only if it matches all conditions
+                        if (
+                            matchesSingle &&
+                            matchesMultipleAnd &&
+                            matchesMultipleOr
+                        ) {
                             card.classList.remove("hidden");
                         } else {
                             card.classList.add("hidden");
@@ -866,7 +892,8 @@
             // Reset all filters
             function resetFilters() {
                 singleQuestionTags.clear();
-                multipleQuestionTags.clear();
+                multipleQuestionTagsAnd.clear();
+                multipleQuestionTagsOr.clear();
                 selectedAnswersByQuestion = {};
                 hasNonDefaultInput = false;
                 document
