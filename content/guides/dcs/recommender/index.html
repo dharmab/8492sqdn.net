@@ -226,7 +226,7 @@
                         id: "origin",
                         text: "What country should your aircraft originate from?",
                         type: "multiple",
-                        operator: "or",
+                        operator: "any",
                         answers: [
                             {
                                 id: "origin-us",
@@ -716,10 +716,11 @@
                 ],
             };
 
-            // Track selected tags separately for single (OR) and multiple (AND/OR) questions
+            // Track selected tags separately for single (OR) and multiple (AND/OR/ANY) questions
             let singleQuestionTags = new Set(); // Tags from radio button questions (OR logic)
             let multipleQuestionTagsAnd = new Set(); // Tags from checkbox questions with AND logic
             let multipleQuestionTagsByQuestion = {}; // Tags from checkbox questions with OR logic, grouped by question
+            let multipleQuestionTagsAny = new Set(); // Tags from checkbox questions with ANY logic (combined across all ANY questions)
             let selectedAnswersByQuestion = {}; // For tracking radio button selections
             let hasNonDefaultInput = false; // Track if user has made any non-default selections
 
@@ -822,7 +823,7 @@
                 });
             }
 
-            // Handle checkbox selection changes (AND or OR logic depending on question)
+            // Handle checkbox selection changes (AND, OR, or ANY logic depending on question)
             function handleCheckboxChange(event, answerId, tags, questionId) {
                 // Find the question to check its operator
                 const question = data.questions.find(
@@ -851,6 +852,15 @@
                     // Clean up empty sets
                     if (multipleQuestionTagsByQuestion[questionId].size === 0) {
                         delete multipleQuestionTagsByQuestion[questionId];
+                    }
+                } else if (operator === "any") {
+                    // For ANY questions, combine all tags into a single set
+                    if (event.target.checked) {
+                        tags.forEach((tag) => multipleQuestionTagsAny.add(tag));
+                    } else {
+                        tags.forEach((tag) =>
+                            multipleQuestionTagsAny.delete(tag),
+                        );
                     }
                 } else {
                     // For AND questions, use the global set
@@ -912,7 +922,9 @@
                     } else if (
                         singleQuestionTags.size === 0 &&
                         multipleQuestionTagsAnd.size === 0 &&
-                        Object.keys(multipleQuestionTagsByQuestion).length === 0
+                        Object.keys(multipleQuestionTagsByQuestion).length ===
+                            0 &&
+                        multipleQuestionTagsAny.size === 0
                     ) {
                         // Show all if no filters selected but user has made input
                         card.classList.remove("hidden");
@@ -921,6 +933,7 @@
                         let matchesSingle = true;
                         let matchesMultipleAnd = true;
                         let matchesMultipleOr = true;
+                        let matchesMultipleAny = true;
 
                         // Check single (radio) questions - choice must match ANY of the selected tags (OR logic)
                         if (singleQuestionTags.size > 0) {
@@ -951,11 +964,20 @@
                             );
                         }
 
+                        // Check multiple (checkbox) questions with ANY logic -
+                        // Choice must match at least ONE tag from ALL selected ANY tags
+                        if (multipleQuestionTagsAny.size > 0) {
+                            matchesMultipleAny = Array.from(
+                                multipleQuestionTagsAny,
+                            ).some((tag) => choiceTags.includes(tag));
+                        }
+
                         // Show choice only if it matches all conditions
                         if (
                             matchesSingle &&
                             matchesMultipleAnd &&
-                            matchesMultipleOr
+                            matchesMultipleOr &&
+                            matchesMultipleAny
                         ) {
                             card.classList.remove("hidden");
                         } else {
@@ -1036,6 +1058,7 @@
                 singleQuestionTags.clear();
                 multipleQuestionTagsAnd.clear();
                 multipleQuestionTagsByQuestion = {};
+                multipleQuestionTagsAny.clear();
                 selectedAnswersByQuestion = {};
                 hasNonDefaultInput = false;
                 document
