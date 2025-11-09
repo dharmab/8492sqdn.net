@@ -132,6 +132,7 @@
                         id: "type",
                         text: "Airplane or Helicopter?",
                         type: "multiple",
+                        operator: "or",
                         answers: [
                             {
                                 id: "fixed-wing",
@@ -187,6 +188,7 @@
                         id: "role",
                         text: "What missions/roles most interest you?",
                         type: "multiple",
+                        operator: "and",
                         answers: [
                             {
                                 id: "role-fighter",
@@ -224,6 +226,7 @@
                         id: "origin",
                         text: "What country should your aircraft originate from?",
                         type: "multiple",
+                        operator: "or",
                         answers: [
                             {
                                 id: "origin-us",
@@ -244,6 +247,16 @@
                                 id: "origin-fr",
                                 text: "France",
                                 tags: ["origin-fr"],
+                            },
+                            {
+                                id: "origin-de",
+                                text: "Germany",
+                                tags: ["origin-de"],
+                            },
+                            {
+                                id: "origin-uk",
+                                text: "United Kingdom",
+                                tags: ["origin-uk"],
                             },
                             {
                                 id: "origin-pk",
@@ -598,6 +611,103 @@
                             "era-1990s",
                             "era-gwot",
                             "origin-us",
+                        ],
+                    },
+                    {
+                        title: "F4U-1D Corsair",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-fighter",
+                            "role-attack",
+                            "era-ww2",
+                            "origin-us",
+                            "naval",
+                        ],
+                    },
+                    {
+                        title: "P-51D Mustang",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-fighter",
+                            "role-attack",
+                            "era-ww2",
+                            "origin-us",
+                        ],
+                    },
+                    {
+                        title: "Mosquito FB VI",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-fighter",
+                            "role-attack",
+                            "era-ww2",
+                            "origin-uk",
+                        ],
+                    },
+                    {
+                        title: "P-47D Thunderbolt",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-fighter",
+                            "role-attack",
+                            "era-ww2",
+                            "origin-us",
+                        ],
+                    },
+                    {
+                        title: "Fw 190A-8",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-fighter",
+                            "role-attack",
+                            "era-ww2",
+                            "origin-de",
+                        ],
+                    },
+                    {
+                        title: "I-16",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-fighter",
+                            "era-ww2",
+                            "origin-su",
+                        ],
+                    },
+                    {
+                        title: "Spitfire L.F. Mk IX",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-fighter",
+                            "era-ww2",
+                            "origin-su",
+                        ],
+                    },
+                    {
+                        title: "Bf 109K-4",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-fighter",
+                            "era-ww2",
+                            "origin-de",
+                        ],
+                    },
+                    {
+                        title: "Fw 190D-9 Dora",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-fighter",
+                            "role-attack",
+                            "era-ww2",
+                            "origin-de",
                         ],
                     },
                 ],
