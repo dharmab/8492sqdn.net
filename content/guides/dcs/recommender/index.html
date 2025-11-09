@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DCS Module Recommender</title>
+        <style>
+            /* Checkbox and radio button sizing */
+            .answer-option input[type="checkbox"],
+            .answer-option input[type="radio"] {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+
+            /* Reset button styling */
+            .reset-button {
+                background: #0066cc;
+                color: #ffffff;
+                border: none;
+                padding: 12px 24px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-top: 15px;
+                transition: background-color 0.2s;
+            }
+
+            .reset-button:hover {
+                background: #0052a3;
+            }
+
+            /* Questions panel spacing */
+            .questions-panel {
+                margin-bottom: 30px;
+            }
+
+            /* Result card styling */
+            .choice-card {
+                background: rgba(0, 0, 0, 0.05);
+                border-radius: 12px;
+                padding: 25px;
+                transition:
+                    transform 0.2s,
+                    box-shadow 0.2s;
+                margin-bottom: 15px;
+            }
+
+            .choice-card:hover {
+                transform: translateY(-2px);
+            }
+
+            .choice-title {
+                font-size: 1.4rem;
+                margin-bottom: 12px;
+                font-weight: 700;
+            }
+
+            .choice-description {
+                line-height: 1.6;
+                margin-bottom: 15px;
+            }
+
+            .no-results {
+                background: rgba(0, 0, 0, 0.05);
+                border-radius: 12px;
+                padding: 40px;
+                text-align: center;
+            }
+
+            .no-results h3 {
+                font-size: 1.3rem;
+                margin-bottom: 10px;
+            }
+
+            /* Dark theme */
+            @media (prefers-color-scheme: dark) {
+                .choice-card {
+                    background: rgba(255, 255, 255, 0.05);
+                }
+
+                .no-results {
+                    background: rgba(255, 255, 255, 0.05);
+                }
+
+                .reset-button {
+                    background: #ab4642;
+                    color: #f7f7f7;
+                }
+
+                .reset-button:hover {
+                    background: #8c3633;
+                }
+            }
+
+            /* Utility classes for layout */
+            .choice-card.hidden {
+                display: none;
+            }
+
+            .choice-tags {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>DCS Module Recommender</h1>
+            </header>
+
+            <div class="content">
+                <div class="questions-panel">
+                    <div id="questions-container"></div>
+                    <button class="reset-button" onclick="resetFilters()">
+                        Reset All Filters
+                    </button>
+                </div>
+
+                <div class="results-panel">
+                    <div id="choices-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Data structure containing questions, answers, and choices
+            const data = {
+                questions: [
+                    {
+                        id: "type",
+                        text: "Airplane or Helicopter?",
+                        type: "multiple",
+                        answers: [
+                            {
+                                id: "fixed-wing",
+                                text: "Airplane",
+                                tags: ["fixed-wing"],
+                            },
+                            {
+                                id: "rotary-wing",
+                                text: "Helicopter",
+                                tags: ["rotary-wing"],
+                            },
+                        ],
+                    },
+                    {
+                        id: "era",
+                        text: "What eras of aviation interest you?",
+                        type: "multiple",
+                        answers: [
+                            {
+                                id: "era-ww2",
+                                text: "World War 2 (1939-1945)",
+                                tags: ["era-ww2"],
+                            },
+                            {
+                                id: "era-early-cold-war",
+                                text: "Early Cold War (50s to early 60s)",
+                                tags: ["era-early-cold-war"],
+                            },
+                            {
+                                id: "era-mid-cold-war",
+                                text: "Mid Cold War (late 60s to late 70s)",
+                                tags: ["era-mid-cold-war"],
+                            },
+                            {
+                                id: "era-late-cold-war",
+                                text: "Late Cold War (80s to early 90s)",
+                                tags: ["era-late-cold-war"],
+                            },
+                            {
+                                id: "era-1990s",
+                                text: "1990s",
+                                tags: ["era-late-cold-war"],
+                            },
+                            {
+                                id: "era-gwot",
+                                text: "Global War on Terror (2000s to mid 2010s)",
+                                tags: ["era-gwot"],
+                            },
+                        ],
+                    },
+                    {
+                        id: "role",
+                        text: "What missions/roles most interest you?",
+                        type: "multiple",
+                        answers: [
+                            {
+                                id: "role-fighter",
+                                text: "Air to air missions (fighters, interceptors & multirole)",
+                                tags: ["role-fighter"],
+                            },
+                            {
+                                id: "role-strike",
+                                text: "Preplanned air to ground strike missions (strike & multirole)",
+                                tags: ["role-strike"],
+                            },
+                            {
+                                id: "role-attack",
+                                text: "Loitering air to ground missions and Close Air Support (attack & CAS)",
+                                tags: ["role-attack"],
+                            },
+                            {
+                                id: "role-sead",
+                                text: "Suppression and destruction of enemy air defenses (SEAD, DEAD & Wild Weasel)",
+                                tags: ["role-sead"],
+                            },
+                            {
+                                id: "role-logistics",
+                                text: "Logistics missions (transport, cargo & utility)",
+                                tags: ["role-logistics"],
+                            },
+                            {
+                                id: "role-scout",
+                                text: "Scout helicopter missions (recon, AFAC & light attack)",
+                                tags: ["role-scout"],
+                            },
+                        ],
+                    },
+                    {
+                        id: "origin",
+                        text: "What country should your aircraft originate from?",
+                        type: "multiple",
+                        answers: [
+                            {
+                                id: "origin-us",
+                                text: "United States",
+                                tags: ["origin-us"],
+                            },
+                            {
+                                id: "origin-su",
+                                text: "Soviet Union & Russian Federation",
+                                tags: ["origin-su"],
+                            },
+                            {
+                                id: "origin-cn",
+                                text: "People's Republic of China",
+                                tags: ["origin-cn"],
+                            },
+                            {
+                                id: "origin-fr",
+                                text: "France",
+                                tags: ["origin-fr"],
+                            },
+                            {
+                                id: "origin-pk",
+                                text: "Pakistan",
+                                tags: ["origin-pk"],
+                            },
+                        ],
+                    },
+                    {
+                        id: "naval",
+                        text: "Is naval aviation important to you?",
+                        type: "single",
+                        default: "naval-no-pref", // Optional: specify default answer ID
+                        answers: [
+                            {
+                                id: "naval-yes",
+                                text: "Yes, I need a naval aircraft",
+                                tags: ["naval"],
+                            },
+                            {
+                                id: "naval-no-pref",
+                                text: "No preference",
+                                tags: [],
+                            },
+                        ],
+                    },
+                ],
+                choices: [
+                    {
+                        title: "F-86F Sabre",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "era-early-cold-war",
+                            "role-fighter",
+                            "origin-us",
+                        ],
+                    },
+                    {
+                        title: "MiG-15",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "era-early-cold-war",
+                            "role-fighter",
+                            "origin-su",
+                        ],
+                    },
+                    {
+                        title: "F-4E Phantom",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "era-mid-cold-war",
+                            "role-fighter",
+                            "role-strike",
+                            "role-sead",
+                            "origin-us",
+                        ],
+                    },
+                    {
+                        title: "MiG-21bis",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "era-mid-cold-war",
+                            "role-fighter",
+                            "role-strike",
+                            "origin-su",
+                        ],
+                    },
+                    {
+                        title: "Mirage F1",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "era-mid-cold-war",
+                            "role-fighter",
+                            "role-strike",
+                            "origin-fr",
+                        ],
+                    },
+                    {
+                        title: "AJS-37 Viggen",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "era-mid-cold-war",
+                            "role-strike",
+                            "origin-se",
+                        ],
+                    },
+                    {
+                        title: "A-4E Scooter (Free Mod)",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "era-mid-cold-war",
+                            "role-strike",
+                            "role-attack",
+                            "origin-us",
+                            "naval",
+                        ],
+                    },
+                    {
+                        title: "F-14 Tomcat",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "era-mid-cold-war",
+                            "era-late-cold-war",
+                            "role-fighter",
+                            "role-strike",
+                            "origin-us",
+                            "naval",
+                        ],
+                    },
+                    {
+                        title: "MiG-29A Fulcrum",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "role-fighter",
+                            "role-strike",
+                            "origin-su",
+                        ],
+                    },
+                    {
+                        title: "A-10C Warthog",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "era-gwot",
+                            "role-attack",
+                            "origin-us",
+                        ],
+                    },
+                    {
+                        title: "F/A-18C Hornet",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "era-gwot",
+                            "role-fighter",
+                            "role-strike",
+                            "role-sead",
+                            "origin-us",
+                            "naval",
+                        ],
+                    },
+                    {
+                        title: "F-16C Viper",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "era-gwot",
+                            "role-fighter",
+                            "role-strike",
+                            "role-sead",
+                            "origin-us",
+                        ],
+                    },
+                    {
+                        title: "F-15C Eagle (Flaming Cliffs)",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "era-gwot",
+                            "role-fighter",
+                            "origin-us",
+                        ],
+                    },
+                    {
+                        title: "JF-17 Thunder",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-fighter",
+                            "role-strike",
+                            "era-gwot",
+                            "origin-cn",
+                            "origin-pk",
+                        ],
+                    },
+                    {
+                        title: "Su-27 Flanker (Flaming Cliffs)",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-fighter",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "era-gwot",
+                            "origin-su",
+                        ],
+                    },
+                    {
+                        title: "Su-33 Flanker (Flaming Cliffs)",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-fighter",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "era-gwot",
+                            "origin-su",
+                            "naval",
+                        ],
+                    },
+                    {
+                        title: "J-11 Flanker (Flaming Cliffs)",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-fighter",
+                            "era-1990s",
+                            "era-gwot",
+                            "origin-su",
+                            "origin-cn",
+                        ],
+                    },
+                    {
+                        title: "Su-25 Frogfoot (Flaming Cliffs)",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-attack",
+                            "era-1990s",
+                            "era-gwot",
+                            "origin-su",
+                        ],
+                    },
+                    {
+                        title: "Su-25T Frogfoot (Free)",
+                        description: "",
+                        tags: [
+                            "fixed-wing",
+                            "role-attack",
+                            "role-sead",
+                            "era-1990s",
+                            "era-gwot",
+                            "origin-su",
+                        ],
+                    },
+                    {
+                        title: "AH-64D Apache",
+                        description: "",
+                        tags: [
+                            "rotary-wing",
+                            "role-attack",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "era-gwot",
+                            "origin-us",
+                        ],
+                    },
+                    {
+                        title: "Mi-24P Hind",
+                        description: "",
+                        tags: [
+                            "rotary-wing",
+                            "role-attack",
+                            "role-logsitics",
+                            "era-mid-cold-war",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "origin-su",
+                        ],
+                    },
+                    {
+                        title: "Ka-50 Black Shark",
+                        description: "",
+                        tags: [
+                            "rotary-wing",
+                            "role-attack",
+                            "era-1990s",
+                            "origin-su",
+                        ],
+                    },
+                    {
+                        title: "CH-47D Chinook",
+                        description: "",
+                        tags: [
+                            "rotary-wing",
+                            "role-logistics",
+                            "era-mid-cold-war",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "era-gwot",
+                            "origin-us",
+                        ],
+                    },
+                    {
+                        title: "OH-58 Kiowa",
+                        description: "",
+                        tags: [
+                            "rotary-wing",
+                            "role-scout",
+                            "era-mid-cold-war",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "era-gwot",
+                            "origin-us",
+                        ],
+                    },
+                    {
+                        title: "SA342 Gazelle",
+                        description: "",
+                        tags: [
+                            "rotary-wing",
+                            "role-scout",
+                            "era-mid-cold-war",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "era-gwot",
+                            "origin-fr",
+                        ],
+                    },
+                    {
+                        title: "UH-1H Huey",
+                        description: "",
+                        tags: [
+                            "rotary-wing",
+                            "role-scout",
+                            "role-logistics",
+                            "era-mid-cold-war",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "era-gwot",
+                            "origin-us",
+                        ],
+                    },
+                    {
+                        title: "Mi-8MTV2 Magnificent Eight (Mi-17 Hip)",
+                        description: "",
+                        tags: [
+                            "rotary-wing",
+                            "role-scout",
+                            "role-logistics",
+                            "era-mid-cold-war",
+                            "era-late-cold-war",
+                            "era-1990s",
+                            "era-gwot",
+                            "origin-us",
+                        ],
+                    },
+                ],
+            };
+
+            // Track selected tags separately for single (OR) and multiple (AND) questions
+            let singleQuestionTags = new Set(); // Tags from radio button questions (OR logic)
+            let multipleQuestionTags = new Set(); // Tags from checkbox questions (AND logic)
+            let selectedAnswersByQuestion = {}; // For tracking radio button selections
+            let hasNonDefaultInput = false; // Track if user has made any non-default selections
+
+            // Initialize the page
+            function init() {
+                renderQuestions();
+                initializeDefaults();
+                renderChoices();
+                filterChoices();
+            }
+
+            // Initialize default selections
+            function initializeDefaults() {
+                data.questions.forEach((question) => {
+                    if (question.type === "single" && question.default) {
+                        // For single-choice questions with a default, select it
+                        const defaultAnswer = question.answers.find(
+                            (a) => a.id === question.default,
+                        );
+                        if (defaultAnswer) {
+                            const input = document.getElementById(
+                                defaultAnswer.id,
+                            );
+                            if (input) {
+                                input.checked = true;
+                                // Add default tags to singleQuestionTags
+                                defaultAnswer.tags.forEach((tag) =>
+                                    singleQuestionTags.add(tag),
+                                );
+                                // Track the default selection
+                                selectedAnswersByQuestion[question.id] = {
+                                    answerId: defaultAnswer.id,
+                                    tags: defaultAnswer.tags,
+                                };
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Render all questions
+            function renderQuestions() {
+                const container = document.getElementById(
+                    "questions-container",
+                );
+                container.innerHTML = "";
+
+                data.questions.forEach((question) => {
+                    const questionDiv = document.createElement("div");
+                    questionDiv.className = "question";
+
+                    const questionText = document.createElement("h3");
+                    questionText.textContent = question.text;
+
+                    const answersDiv = document.createElement("div");
+                    answersDiv.className = "answers";
+
+                    question.answers.forEach((answer) => {
+                        const answerDiv = document.createElement("div");
+                        answerDiv.className = "answer-option";
+
+                        const input = document.createElement("input");
+                        const inputType =
+                            question.type === "single" ? "radio" : "checkbox";
+                        input.type = inputType;
+                        input.id = answer.id;
+                        input.name = question.id; // Group radio buttons by question
+
+                        if (inputType === "radio") {
+                            input.addEventListener("change", (e) =>
+                                handleRadioChange(
+                                    e,
+                                    question.id,
+                                    answer.id,
+                                    answer.tags,
+                                ),
+                            );
+                        } else {
+                            input.addEventListener("change", (e) =>
+                                handleCheckboxChange(
+                                    e,
+                                    answer.id,
+                                    answer.tags,
+                                    question.id,
+                                ),
+                            );
+                        }
+
+                        const label = document.createElement("label");
+                        label.textContent = answer.text;
+
+                        answerDiv.appendChild(input);
+                        answerDiv.appendChild(label);
+                        answersDiv.appendChild(answerDiv);
+                    });
+
+                    questionDiv.appendChild(questionText);
+                    questionDiv.appendChild(answersDiv);
+                    container.appendChild(questionDiv);
+                });
+            }
+
+            // Handle checkbox selection changes (AND logic across questions)
+            function handleCheckboxChange(event, answerId, tags, questionId) {
+                if (event.target.checked) {
+                    // Add tags to multiple question set
+                    tags.forEach((tag) => multipleQuestionTags.add(tag));
+                } else {
+                    // Remove tags from multiple question set
+                    tags.forEach((tag) => multipleQuestionTags.delete(tag));
+                }
+                // Mark that user has made a selection (checkbox questions don't have defaults)
+                // But exclude the "type" question
+                if (questionId !== "type") {
+                    hasNonDefaultInput = true;
+                }
+                filterChoices();
+            }
+
+            // Handle radio button selection changes (OR logic across questions)
+            function handleRadioChange(event, questionId, answerId, tags) {
+                // Remove tags from previously selected answer in this question
+                if (selectedAnswersByQuestion[questionId]) {
+                    const previousAnswer =
+                        selectedAnswersByQuestion[questionId];
+                    previousAnswer.tags.forEach((tag) =>
+                        singleQuestionTags.delete(tag),
+                    );
+                }
+
+                // Add tags from newly selected answer
+                tags.forEach((tag) => singleQuestionTags.add(tag));
+
+                // Track the current selection for this question
+                selectedAnswersByQuestion[questionId] = { answerId, tags };
+
+                // Check if this is a non-default selection on a question other than "type"
+                if (questionId !== "type") {
+                    const question = data.questions.find(
+                        (q) => q.id === questionId,
+                    );
+                    if (!question.default || question.default !== answerId) {
+                        hasNonDefaultInput = true;
+                    }
+                }
+
+                filterChoices();
+            }
+
+            // Filter and display choices
+            function filterChoices() {
+                const choiceCards = document.querySelectorAll(".choice-card");
+
+                choiceCards.forEach((card) => {
+                    // Hide all results if user hasn't made any non-default selections
+                    if (!hasNonDefaultInput) {
+                        card.classList.add("hidden");
+                    } else if (
+                        singleQuestionTags.size === 0 &&
+                        multipleQuestionTags.size === 0
+                    ) {
+                        // Show all if no filters selected but user has made input
+                        card.classList.remove("hidden");
+                    } else {
+                        const choiceTags = card.dataset.tags.split(",");
+                        let matchesSingle = true;
+                        let matchesMultiple = true;
+
+                        // Check single (radio) questions - choice must match ANY of the selected tags (OR logic)
+                        if (singleQuestionTags.size > 0) {
+                            matchesSingle = Array.from(singleQuestionTags).some(
+                                (tag) => choiceTags.includes(tag),
+                            );
+                        }
+
+                        // Check multiple (checkbox) questions - choice must match ALL selected tags (AND logic)
+                        if (multipleQuestionTags.size > 0) {
+                            matchesMultiple = Array.from(
+                                multipleQuestionTags,
+                            ).every((tag) => choiceTags.includes(tag));
+                        }
+
+                        // Show choice only if it matches both conditions
+                        if (matchesSingle && matchesMultiple) {
+                            card.classList.remove("hidden");
+                        } else {
+                            card.classList.add("hidden");
+                        }
+                    }
+                });
+
+                checkForResults();
+            }
+
+            // Render all choices
+            function renderChoices() {
+                const container = document.getElementById("choices-container");
+                container.innerHTML = "";
+
+                data.choices.forEach((choice) => {
+                    const card = document.createElement("div");
+                    card.className = "choice-card";
+                    card.dataset.tags = choice.tags.join(",");
+
+                    const title = document.createElement("div");
+                    title.className = "choice-title";
+                    title.textContent = choice.title;
+
+                    const description = document.createElement("div");
+                    description.className = "choice-description";
+                    description.textContent = choice.description;
+
+                    const tagsContainer = document.createElement("div");
+                    tagsContainer.className = "choice-tags";
+
+                    choice.tags.forEach((tag) => {
+                        const tagSpan = document.createElement("span");
+                        tagSpan.className = "tag";
+                        tagSpan.textContent = tag;
+                        tagsContainer.appendChild(tagSpan);
+                    });
+
+                    card.appendChild(title);
+                    card.appendChild(description);
+                    card.appendChild(tagsContainer);
+                    container.appendChild(card);
+                });
+
+                checkForResults();
+            }
+
+            // Update the results count
+
+            // Check if there are any visible results
+            function checkForResults() {
+                const container = document.getElementById("choices-container");
+                const visibleChoices = document.querySelectorAll(
+                    ".choice-card:not(.hidden)",
+                ).length;
+
+                // Remove existing no-results message if any
+                const existingNoResults = document.querySelector(".no-results");
+                if (existingNoResults) {
+                    existingNoResults.remove();
+                }
+
+                // Add no-results message if needed
+                if (visibleChoices === 0 && hasNonDefaultInput) {
+                    const noResults = document.createElement("div");
+                    noResults.className = "no-results";
+                    noResults.innerHTML = `
+                    <h3>No matches found</h3>
+                    <p>No modules found that meet all options. Try selecting fewer options.</p>
+                `;
+                    container.appendChild(noResults);
+                }
+            }
+
+            // Reset all filters
+            function resetFilters() {
+                singleQuestionTags.clear();
+                multipleQuestionTags.clear();
+                selectedAnswersByQuestion = {};
+                hasNonDefaultInput = false;
+                document
+                    .querySelectorAll(
+                        'input[type="checkbox"], input[type="radio"]',
+                    )
+                    .forEach((input) => {
+                        input.checked = false;
+                    });
+                filterChoices();
+            }
+
+            // Initialize on page load
+            init();
+        </script>
+    </body>
+</html>
