@@ -716,7 +716,7 @@
             // Track selected tags separately for single (OR) and multiple (AND/OR) questions
             let singleQuestionTags = new Set(); // Tags from radio button questions (OR logic)
             let multipleQuestionTagsAnd = new Set(); // Tags from checkbox questions with AND logic
-            let multipleQuestionTagsOr = new Set(); // Tags from checkbox questions with OR logic
+            let multipleQuestionTagsByQuestion = {}; // Tags from checkbox questions with OR logic, grouped by question
             let selectedAnswersByQuestion = {}; // For tracking radio button selections
             let hasNonDefaultInput = false; // Track if user has made any non-default selections
 
@@ -827,18 +827,39 @@
                 );
                 const operator = question.operator || "and"; // Default to AND if not specified
 
-                const targetSet =
-                    operator === "or"
-                        ? multipleQuestionTagsOr
-                        : multipleQuestionTagsAnd;
+                if (operator === "or") {
+                    // For OR questions, track tags per question
+                    if (!multipleQuestionTagsByQuestion[questionId]) {
+                        multipleQuestionTagsByQuestion[questionId] = new Set();
+                    }
 
-                if (event.target.checked) {
-                    // Add tags to appropriate set
-                    tags.forEach((tag) => targetSet.add(tag));
+                    if (event.target.checked) {
+                        tags.forEach((tag) =>
+                            multipleQuestionTagsByQuestion[questionId].add(tag),
+                        );
+                    } else {
+                        tags.forEach((tag) =>
+                            multipleQuestionTagsByQuestion[questionId].delete(
+                                tag,
+                            ),
+                        );
+                    }
+
+                    // Clean up empty sets
+                    if (multipleQuestionTagsByQuestion[questionId].size === 0) {
+                        delete multipleQuestionTagsByQuestion[questionId];
+                    }
                 } else {
-                    // Remove tags from appropriate set
-                    tags.forEach((tag) => targetSet.delete(tag));
+                    // For AND questions, use the global set
+                    if (event.target.checked) {
+                        tags.forEach((tag) => multipleQuestionTagsAnd.add(tag));
+                    } else {
+                        tags.forEach((tag) =>
+                            multipleQuestionTagsAnd.delete(tag),
+                        );
+                    }
                 }
+
                 // Mark that user has made a selection (checkbox questions don't have defaults)
                 // But exclude the "type" question
                 if (questionId !== "type") {
@@ -888,7 +909,7 @@
                     } else if (
                         singleQuestionTags.size === 0 &&
                         multipleQuestionTagsAnd.size === 0 &&
-                        multipleQuestionTagsOr.size === 0
+                        Object.keys(multipleQuestionTagsByQuestion).length === 0
                     ) {
                         // Show all if no filters selected but user has made input
                         card.classList.remove("hidden");
@@ -912,11 +933,19 @@
                             ).every((tag) => choiceTags.includes(tag));
                         }
 
-                        // Check multiple (checkbox) questions with OR logic - choice must match ANY selected tag
-                        if (multipleQuestionTagsOr.size > 0) {
-                            matchesMultipleOr = Array.from(
-                                multipleQuestionTagsOr,
-                            ).some((tag) => choiceTags.includes(tag));
+                        // Check multiple (checkbox) questions with OR logic -
+                        // For each OR question, choice must match at least ONE tag from that question
+                        if (
+                            Object.keys(multipleQuestionTagsByQuestion).length >
+                            0
+                        ) {
+                            matchesMultipleOr = Object.values(
+                                multipleQuestionTagsByQuestion,
+                            ).every((questionTags) =>
+                                Array.from(questionTags).some((tag) =>
+                                    choiceTags.includes(tag),
+                                ),
+                            );
                         }
 
                         // Show choice only if it matches all conditions
@@ -1003,7 +1032,7 @@
             function resetFilters() {
                 singleQuestionTags.clear();
                 multipleQuestionTagsAnd.clear();
-                multipleQuestionTagsOr.clear();
+                multipleQuestionTagsByQuestion = {};
                 selectedAnswersByQuestion = {};
                 hasNonDefaultInput = false;
                 document
