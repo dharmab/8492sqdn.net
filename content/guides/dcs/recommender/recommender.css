@@ -1,0 +1,97 @@
+/* Checkbox and radio button sizing */
+.answer-option input[type="checkbox"],
+.answer-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Reset button styling */
+.reset-button {
+    background: #0066cc;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+    background: #0052a3;
+}
+
+/* Questions panel spacing */
+.questions-panel {
+    margin-bottom: 30px;
+}
+
+/* Result card styling */
+.choice-card {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 25px;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    margin-bottom: 15px;
+}
+
+.choice-card:hover {
+    transform: translateY(-2px);
+}
+
+.choice-title {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.choice-description {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.no-results {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+}
+
+.no-results h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    .choice-card {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .no-results {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .reset-button {
+        background: #ab4642;
+        color: #f7f7f7;
+    }
+
+    .reset-button:hover {
+        background: #8c3633;
+    }
+}
+
+/* Utility classes for layout */
+.choice-card.hidden {
+    display: none;
+}
+
+.choice-tags {
+    display: none;
+}

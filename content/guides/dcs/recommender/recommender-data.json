@@ -1,0 +1,554 @@
+{
+  "questions": [
+    {
+      "id": "type",
+      "text": "Airplane or Helicopter?",
+      "type": "multiple",
+      "operator": "or",
+      "answers": [
+        {
+          "id": "fixed-wing",
+          "text": "Airplane",
+          "tags": ["fixed-wing"]
+        },
+        {
+          "id": "rotary-wing",
+          "text": "Helicopter",
+          "tags": ["rotary-wing"]
+        }
+      ]
+    },
+    {
+      "id": "era",
+      "text": "What eras of aviation interest you?",
+      "type": "multiple",
+      "operator": "or",
+      "answers": [
+        {
+          "id": "era-ww2",
+          "text": "World War 2 (1939-1945)",
+          "tags": ["era-ww2"]
+        },
+        {
+          "id": "era-early-cold-war",
+          "text": "Early Cold War (50s to early 60s)",
+          "tags": ["era-early-cold-war"]
+        },
+        {
+          "id": "era-mid-cold-war",
+          "text": "Mid Cold War (late 60s to late 70s)",
+          "tags": ["era-mid-cold-war"]
+        },
+        {
+          "id": "era-late-cold-war",
+          "text": "Late Cold War (80s to early 90s)",
+          "tags": ["era-late-cold-war"]
+        },
+        {
+          "id": "era-1990s",
+          "text": "1990s",
+          "tags": ["era-late-cold-war"]
+        },
+        {
+          "id": "era-gwot",
+          "text": "Global War on Terror (2000s to mid 2010s)",
+          "tags": ["era-gwot"]
+        }
+      ]
+    },
+    {
+      "id": "role",
+      "text": "What missions/roles most interest you?",
+      "type": "multiple",
+      "operator": "and",
+      "answers": [
+        {
+          "id": "role-fighter",
+          "text": "Air to air missions (fighters, interceptors & multirole)",
+          "tags": ["role-fighter"]
+        },
+        {
+          "id": "role-strike",
+          "text": "Preplanned air to ground strike missions (strike & multirole)",
+          "tags": ["role-strike"]
+        },
+        {
+          "id": "role-attack",
+          "text": "Loitering air to ground missions and Close Air Support (attack & CAS)",
+          "tags": ["role-attack"]
+        },
+        {
+          "id": "role-sead",
+          "text": "Suppression and destruction of enemy air defenses (SEAD, DEAD & Wild Weasel)",
+          "tags": ["role-sead"]
+        },
+        {
+          "id": "role-logistics",
+          "text": "Logistics missions (transport, cargo & utility)",
+          "tags": ["role-logistics"]
+        },
+        {
+          "id": "role-scout",
+          "text": "Scout helicopter missions (recon, AFAC & light attack)",
+          "tags": ["role-scout"]
+        }
+      ]
+    },
+    {
+      "id": "origin",
+      "text": "What country should your aircraft originate from?",
+      "type": "multiple",
+      "operator": "any",
+      "answers": [
+        {
+          "id": "origin-us",
+          "text": "United States",
+          "tags": ["origin-us"]
+        },
+        {
+          "id": "origin-su",
+          "text": "Soviet Union & Russian Federation",
+          "tags": ["origin-su"]
+        },
+        {
+          "id": "origin-cn",
+          "text": "People's Republic of China",
+          "tags": ["origin-cn"]
+        },
+        {
+          "id": "origin-fr",
+          "text": "France",
+          "tags": ["origin-fr"]
+        },
+        {
+          "id": "origin-de",
+          "text": "Germany",
+          "tags": ["origin-de"]
+        },
+        {
+          "id": "origin-uk",
+          "text": "United Kingdom",
+          "tags": ["origin-uk"]
+        },
+        {
+          "id": "origin-pk",
+          "text": "Pakistan",
+          "tags": ["origin-pk"]
+        }
+      ]
+    },
+    {
+      "id": "naval",
+      "text": "Is naval aviation important to you?",
+      "type": "single",
+      "default": "naval-no-pref",
+      "answers": [
+        {
+          "id": "naval-yes",
+          "text": "Yes, I need a naval aircraft",
+          "tags": ["naval"]
+        },
+        {
+          "id": "naval-no-pref",
+          "text": "No preference",
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "choices": [
+    {
+      "title": "F-86F Sabre",
+      "description": "",
+      "tags": ["fixed-wing", "era-early-cold-war", "role-fighter", "origin-us"]
+    },
+    {
+      "title": "MiG-15",
+      "description": "",
+      "tags": ["fixed-wing", "era-early-cold-war", "role-fighter", "origin-su"]
+    },
+    {
+      "title": "F-4E Phantom",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "era-mid-cold-war",
+        "role-fighter",
+        "role-strike",
+        "role-sead",
+        "origin-us"
+      ]
+    },
+    {
+      "title": "MiG-21bis",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "era-mid-cold-war",
+        "role-fighter",
+        "role-strike",
+        "origin-su"
+      ]
+    },
+    {
+      "title": "Mirage F1",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "era-mid-cold-war",
+        "era-late-cold-war",
+        "era-1990s",
+        "era-gwot",
+        "role-fighter",
+        "role-strike",
+        "origin-fr"
+      ]
+    },
+    {
+      "title": "AJS-37 Viggen",
+      "description": "",
+      "tags": ["fixed-wing", "era-mid-cold-war", "role-strike", "origin-se"]
+    },
+    {
+      "title": "A-4E Scooter (Free Mod)",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "era-mid-cold-war",
+        "role-strike",
+        "role-attack",
+        "origin-us",
+        "naval"
+      ]
+    },
+    {
+      "title": "F-14 Tomcat",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "era-mid-cold-war",
+        "era-late-cold-war",
+        "role-fighter",
+        "role-strike",
+        "origin-us",
+        "naval"
+      ]
+    },
+    {
+      "title": "MiG-29A Fulcrum",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "era-late-cold-war",
+        "era-1990s",
+        "role-fighter",
+        "role-strike",
+        "origin-su"
+      ]
+    },
+    {
+      "title": "A-10C Warthog",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "era-late-cold-war",
+        "era-1990s",
+        "era-gwot",
+        "role-attack",
+        "origin-us"
+      ]
+    },
+    {
+      "title": "F/A-18C Hornet",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "era-late-cold-war",
+        "era-1990s",
+        "era-gwot",
+        "role-fighter",
+        "role-strike",
+        "role-sead",
+        "origin-us",
+        "naval"
+      ]
+    },
+    {
+      "title": "F-16C Viper",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "era-late-cold-war",
+        "era-1990s",
+        "era-gwot",
+        "role-fighter",
+        "role-strike",
+        "role-sead",
+        "origin-us"
+      ]
+    },
+    {
+      "title": "F-15C Eagle (Flaming Cliffs)",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "era-late-cold-war",
+        "era-1990s",
+        "era-gwot",
+        "role-fighter",
+        "origin-us"
+      ]
+    },
+    {
+      "title": "JF-17 Thunder",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "role-fighter",
+        "role-strike",
+        "era-gwot",
+        "origin-cn",
+        "origin-pk"
+      ]
+    },
+    {
+      "title": "Su-27 Flanker (Flaming Cliffs)",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "role-fighter",
+        "era-late-cold-war",
+        "era-1990s",
+        "era-gwot",
+        "origin-su"
+      ]
+    },
+    {
+      "title": "Su-33 Flanker (Flaming Cliffs)",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "role-fighter",
+        "era-late-cold-war",
+        "era-1990s",
+        "era-gwot",
+        "origin-su",
+        "naval"
+      ]
+    },
+    {
+      "title": "J-11 Flanker (Flaming Cliffs)",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "role-fighter",
+        "era-1990s",
+        "era-gwot",
+        "origin-su",
+        "origin-cn"
+      ]
+    },
+    {
+      "title": "Su-25 Frogfoot (Flaming Cliffs)",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "role-attack",
+        "era-1990s",
+        "era-gwot",
+        "origin-su"
+      ]
+    },
+    {
+      "title": "Su-25T Frogfoot (Free)",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "role-attack",
+        "role-sead",
+        "era-1990s",
+        "era-gwot",
+        "origin-su"
+      ]
+    },
+    {
+      "title": "AH-64D Apache",
+      "description": "",
+      "tags": [
+        "rotary-wing",
+        "role-attack",
+        "era-late-cold-war",
+        "era-1990s",
+        "era-gwot",
+        "origin-us"
+      ]
+    },
+    {
+      "title": "Mi-24P Hind",
+      "description": "",
+      "tags": [
+        "rotary-wing",
+        "role-attack",
+        "role-logsitics",
+        "era-mid-cold-war",
+        "era-late-cold-war",
+        "era-1990s",
+        "origin-su"
+      ]
+    },
+    {
+      "title": "Ka-50 Black Shark",
+      "description": "",
+      "tags": ["rotary-wing", "role-attack", "era-1990s", "origin-su"]
+    },
+    {
+      "title": "CH-47D Chinook",
+      "description": "",
+      "tags": [
+        "rotary-wing",
+        "role-logistics",
+        "era-mid-cold-war",
+        "era-late-cold-war",
+        "era-1990s",
+        "era-gwot",
+        "origin-us"
+      ]
+    },
+    {
+      "title": "OH-58 Kiowa",
+      "description": "",
+      "tags": [
+        "rotary-wing",
+        "role-scout",
+        "era-mid-cold-war",
+        "era-late-cold-war",
+        "era-1990s",
+        "era-gwot",
+        "origin-us"
+      ]
+    },
+    {
+      "title": "SA342 Gazelle",
+      "description": "",
+      "tags": [
+        "rotary-wing",
+        "role-scout",
+        "era-mid-cold-war",
+        "era-late-cold-war",
+        "era-1990s",
+        "era-gwot",
+        "origin-fr"
+      ]
+    },
+    {
+      "title": "UH-1H Huey",
+      "description": "",
+      "tags": [
+        "rotary-wing",
+        "role-scout",
+        "role-logistics",
+        "era-mid-cold-war",
+        "era-late-cold-war",
+        "era-1990s",
+        "era-gwot",
+        "origin-us"
+      ]
+    },
+    {
+      "title": "Mi-8MTV2 Magnificent Eight (Mi-17 Hip)",
+      "description": "",
+      "tags": [
+        "rotary-wing",
+        "role-scout",
+        "role-logistics",
+        "era-mid-cold-war",
+        "era-late-cold-war",
+        "era-1990s",
+        "era-gwot",
+        "origin-us"
+      ]
+    },
+    {
+      "title": "F4U-1D Corsair",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "role-fighter",
+        "role-attack",
+        "era-ww2",
+        "origin-us",
+        "naval"
+      ]
+    },
+    {
+      "title": "P-51D Mustang",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "role-fighter",
+        "role-attack",
+        "era-ww2",
+        "origin-us"
+      ]
+    },
+    {
+      "title": "Mosquito FB VI",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "role-fighter",
+        "role-attack",
+        "era-ww2",
+        "origin-uk"
+      ]
+    },
+    {
+      "title": "P-47D Thunderbolt",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "role-fighter",
+        "role-attack",
+        "era-ww2",
+        "origin-us"
+      ]
+    },
+    {
+      "title": "Fw 190A-8",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "role-fighter",
+        "role-attack",
+        "era-ww2",
+        "origin-de"
+      ]
+    },
+    {
+      "title": "I-16",
+      "description": "",
+      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-su"]
+    },
+    {
+      "title": "Spitfire L.F. Mk IX",
+      "description": "",
+      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-su"]
+    },
+    {
+      "title": "Bf 109K-4",
+      "description": "",
+      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-de"]
+    },
+    {
+      "title": "Fw 190D-9 Dora",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "role-fighter",
+        "role-attack",
+        "era-ww2",
+        "origin-de"
+      ]
+    }
+  ]
+}
