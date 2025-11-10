@@ -34,14 +34,7 @@
     background: rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     padding: 25px;
-    transition:
-        transform 0.2s,
-        box-shadow 0.2s;
     margin-bottom: 15px;
-}
-
-.choice-card:hover {
-    transform: translateY(-2px);
 }
 
 .choice-title {
@@ -53,6 +46,31 @@
 .choice-description {
     line-height: 1.6;
     margin-bottom: 15px;
+}
+
+.choice-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.store-link {
+    padding: 4px 8px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.85rem;
+}
+
+.steam-link {
+    background: #1b2838;
+}
+
+.dcs-link {
+    background: #f59e0f;
+}
+
+.heatblur-link {
+    background: #af6101;
 }
 
 .no-results {

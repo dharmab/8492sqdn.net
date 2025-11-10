@@ -276,6 +276,45 @@ function renderChoices() {
     card.appendChild(title);
     card.appendChild(description);
     card.appendChild(tagsContainer);
+
+    // Create store links container if any links exist
+    const hasLinks = choice.steamURL || choice.eShopURL || choice.heatblurURL;
+    if (hasLinks) {
+      const linksContainer = document.createElement("div");
+      linksContainer.className = "choice-links";
+
+      if (choice.steamURL) {
+        const steamLink = document.createElement("a");
+        steamLink.href = choice.steamURL;
+        steamLink.target = "_blank";
+        steamLink.rel = "noopener noreferrer";
+        steamLink.className = "store-link steam-link";
+        steamLink.textContent = "Steam";
+        linksContainer.appendChild(steamLink);
+      }
+
+      if (choice.eShopURL) {
+        const dcsLink = document.createElement("a");
+        dcsLink.href = choice.eShopURL;
+        dcsLink.target = "_blank";
+        dcsLink.rel = "noopener noreferrer";
+        dcsLink.className = "store-link dcs-link";
+        dcsLink.textContent = "DCS E-Shop";
+        linksContainer.appendChild(dcsLink);
+      }
+
+      if (choice.heatblurURL) {
+        const heatblurLink = document.createElement("a");
+        heatblurLink.href = choice.heatblurURL;
+        heatblurLink.target = "_blank";
+        heatblurLink.rel = "noopener noreferrer";
+        heatblurLink.className = "store-link heatblur-link";
+        heatblurLink.textContent = "Heatblur Store";
+        linksContainer.appendChild(heatblurLink);
+      }
+
+      card.appendChild(linksContainer);
+    }
     container.appendChild(card);
   });
 

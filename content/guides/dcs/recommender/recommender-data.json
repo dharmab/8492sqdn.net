@@ -160,12 +160,18 @@
     {
       "title": "F-86F Sabre",
       "description": "",
-      "tags": ["fixed-wing", "era-early-cold-war", "role-fighter", "origin-us"]
+      "tags": ["fixed-wing", "era-early-cold-war", "role-fighter", "origin-us"],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "MiG-15",
       "description": "",
-      "tags": ["fixed-wing", "era-early-cold-war", "role-fighter", "origin-su"]
+      "tags": ["fixed-wing", "era-early-cold-war", "role-fighter", "origin-su"],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "F-4E Phantom",
@@ -177,7 +183,10 @@
         "role-strike",
         "role-sead",
         "origin-us"
-      ]
+      ],
+      "steamURL": "https://store.steampowered.com/app/2518950/DCS_F4E_Phantom_II_by_Heatblur_Simulations/",
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/phantom/",
+      "heatblurURL": "https://store.heatblur.com/products/dcs-f-4-phantom-1"
     },
     {
       "title": "MiG-21bis",
@@ -188,7 +197,10 @@
         "role-fighter",
         "role-strike",
         "origin-su"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "Mirage F1",
@@ -202,12 +214,18 @@
         "role-fighter",
         "role-strike",
         "origin-fr"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "AJS-37 Viggen",
       "description": "",
-      "tags": ["fixed-wing", "era-mid-cold-war", "role-strike", "origin-se"]
+      "tags": ["fixed-wing", "era-mid-cold-war", "role-strike", "origin-se"],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "A-4E Scooter (Free Mod)",
@@ -219,7 +237,10 @@
         "role-attack",
         "origin-us",
         "naval"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "F-14 Tomcat",
@@ -232,7 +253,10 @@
         "role-strike",
         "origin-us",
         "naval"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "MiG-29A Fulcrum",
@@ -244,7 +268,10 @@
         "role-fighter",
         "role-strike",
         "origin-su"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "A-10C Warthog",
@@ -256,7 +283,10 @@
         "era-gwot",
         "role-attack",
         "origin-us"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "F/A-18C Hornet",
@@ -271,7 +301,10 @@
         "role-sead",
         "origin-us",
         "naval"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "F-16C Viper",
@@ -285,7 +318,10 @@
         "role-strike",
         "role-sead",
         "origin-us"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "F-15C Eagle (Flaming Cliffs)",
@@ -297,7 +333,10 @@
         "era-gwot",
         "role-fighter",
         "origin-us"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "JF-17 Thunder",
@@ -309,7 +348,10 @@
         "era-gwot",
         "origin-cn",
         "origin-pk"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "Su-27 Flanker (Flaming Cliffs)",
@@ -321,7 +363,10 @@
         "era-1990s",
         "era-gwot",
         "origin-su"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "Su-33 Flanker (Flaming Cliffs)",
@@ -334,7 +379,10 @@
         "era-gwot",
         "origin-su",
         "naval"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "J-11 Flanker (Flaming Cliffs)",
@@ -346,7 +394,10 @@
         "era-gwot",
         "origin-su",
         "origin-cn"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "Su-25 Frogfoot (Flaming Cliffs)",
@@ -357,7 +408,10 @@
         "era-1990s",
         "era-gwot",
         "origin-su"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "Su-25T Frogfoot (Free)",
@@ -369,7 +423,10 @@
         "era-1990s",
         "era-gwot",
         "origin-su"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "AH-64D Apache",
@@ -381,7 +438,10 @@
         "era-1990s",
         "era-gwot",
         "origin-us"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "Mi-24P Hind",
@@ -394,12 +454,18 @@
         "era-late-cold-war",
         "era-1990s",
         "origin-su"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "Ka-50 Black Shark",
       "description": "",
-      "tags": ["rotary-wing", "role-attack", "era-1990s", "origin-su"]
+      "tags": ["rotary-wing", "role-attack", "era-1990s", "origin-su"],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "CH-47D Chinook",
@@ -412,7 +478,10 @@
         "era-1990s",
         "era-gwot",
         "origin-us"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "OH-58 Kiowa",
@@ -425,7 +494,10 @@
         "era-1990s",
         "era-gwot",
         "origin-us"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "SA342 Gazelle",
@@ -438,7 +510,10 @@
         "era-1990s",
         "era-gwot",
         "origin-fr"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "UH-1H Huey",
@@ -452,7 +527,10 @@
         "era-1990s",
         "era-gwot",
         "origin-us"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "Mi-8MTV2 Magnificent Eight (Mi-17 Hip)",
@@ -466,7 +544,10 @@
         "era-1990s",
         "era-gwot",
         "origin-us"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "F4U-1D Corsair",
@@ -478,7 +559,10 @@
         "era-ww2",
         "origin-us",
         "naval"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "P-51D Mustang",
@@ -489,7 +573,10 @@
         "role-attack",
         "era-ww2",
         "origin-us"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "Mosquito FB VI",
@@ -500,7 +587,10 @@
         "role-attack",
         "era-ww2",
         "origin-uk"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "P-47D Thunderbolt",
@@ -511,7 +601,10 @@
         "role-attack",
         "era-ww2",
         "origin-us"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "Fw 190A-8",
@@ -522,22 +615,34 @@
         "role-attack",
         "era-ww2",
         "origin-de"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "I-16",
       "description": "",
-      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-su"]
+      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-su"],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "Spitfire L.F. Mk IX",
       "description": "",
-      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-su"]
+      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-uk"],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "Bf 109K-4",
       "description": "",
-      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-de"]
+      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-de"],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     },
     {
       "title": "Fw 190D-9 Dora",
@@ -548,7 +653,10 @@
         "role-attack",
         "era-ww2",
         "origin-de"
-      ]
+      ],
+      "steamURL": "",
+      "eShopURL": "",
+      "heatblurURL": ""
     }
   ]
 }
