@@ -12,7 +12,7 @@ Head tracking can also enrich other types of simulation games such as civil flig
 
 {{< youtube id=9wXx3vMy_AQ start=270 >}}
 
-Originally, head tracking was pioneered by NaturalPoint with their TrackIR product. For this reason, you'll sometimes hear people say "TrackIR" to refer to any head tracking system. However, NaturalPoint TrackIR has long been surpassed in both functionality and value by the competition, so I no longer recommend purchasing new TrackIR units. Instead, check out the following:
+Originally, head tracking for simulators was pioneered by NaturalPoint with their TrackIR product. For this reason, you'll sometimes hear people say "TrackIR" to refer to any head tracking system. However, NaturalPoint TrackIR has long been surpassed in both functionality and value by the competition, so I no longer recommend purchasing new TrackIR units. Instead, check out the following:
 
 - [SmoothTrack](https://smoothtrack.app/), : Smartphone app. Very affordable if you already have a phone with face unlock. These apps are particularly good on iPhone, since iPhones have infrared laser head tracking sensors built in, and can also use AirPods for tracking. You can also buy a used iPhone X or newer to use as a dedicated head tracking device with this app. The price of the phone and app together is comparable to a dedicated device, but then you also have a full-featured phone to use for other things.
 - [JBC Head Tracker](https://jbcconsulting448679429.wordpress.com/): Older smartphone app. It's about $8 cheaper than Smoothtrack, but Smoothtrack works much better on newer iPhones than JBC Head Tracker.
