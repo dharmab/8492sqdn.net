@@ -9,12 +9,16 @@
         {
           "id": "fixed-wing",
           "text": "Airplane",
-          "tags": ["fixed-wing"]
+          "tags": [
+            "fixed-wing"
+          ]
         },
         {
           "id": "rotary-wing",
           "text": "Helicopter",
-          "tags": ["rotary-wing"]
+          "tags": [
+            "rotary-wing"
+          ]
         }
       ]
     },
@@ -27,32 +31,44 @@
         {
           "id": "era-ww2",
           "text": "World War 2 (1939-1945)",
-          "tags": ["era-ww2"]
+          "tags": [
+            "era-ww2"
+          ]
         },
         {
           "id": "era-early-cold-war",
           "text": "Early Cold War (50s to early 60s)",
-          "tags": ["era-early-cold-war"]
+          "tags": [
+            "era-early-cold-war"
+          ]
         },
         {
           "id": "era-mid-cold-war",
           "text": "Mid Cold War (late 60s to late 70s)",
-          "tags": ["era-mid-cold-war"]
+          "tags": [
+            "era-mid-cold-war"
+          ]
         },
         {
           "id": "era-late-cold-war",
           "text": "Late Cold War (80s to early 90s)",
-          "tags": ["era-late-cold-war"]
+          "tags": [
+            "era-late-cold-war"
+          ]
         },
         {
           "id": "era-1990s",
           "text": "1990s",
-          "tags": ["era-late-cold-war"]
+          "tags": [
+            "era-late-cold-war"
+          ]
         },
         {
           "id": "era-gwot",
           "text": "Global War on Terror (2000s to mid 2010s)",
-          "tags": ["era-gwot"]
+          "tags": [
+            "era-gwot"
+          ]
         }
       ]
     },
@@ -65,32 +81,44 @@
         {
           "id": "role-fighter",
           "text": "Air to air missions (fighters, interceptors & multirole)",
-          "tags": ["role-fighter"]
+          "tags": [
+            "role-fighter"
+          ]
         },
         {
           "id": "role-strike",
           "text": "Preplanned air to ground strike missions (strike & multirole)",
-          "tags": ["role-strike"]
+          "tags": [
+            "role-strike"
+          ]
         },
         {
           "id": "role-attack",
           "text": "Loitering air to ground missions and Close Air Support (attack & CAS)",
-          "tags": ["role-attack"]
+          "tags": [
+            "role-attack"
+          ]
         },
         {
           "id": "role-sead",
           "text": "Suppression and destruction of enemy air defenses (SEAD, DEAD & Wild Weasel)",
-          "tags": ["role-sead"]
+          "tags": [
+            "role-sead"
+          ]
         },
         {
           "id": "role-logistics",
           "text": "Logistics missions (transport, cargo & utility)",
-          "tags": ["role-logistics"]
+          "tags": [
+            "role-logistics"
+          ]
         },
         {
           "id": "role-scout",
           "text": "Scout helicopter missions (recon, AFAC & light attack)",
-          "tags": ["role-scout"]
+          "tags": [
+            "role-scout"
+          ]
         }
       ]
     },
@@ -103,37 +131,51 @@
         {
           "id": "origin-us",
           "text": "United States",
-          "tags": ["origin-us"]
+          "tags": [
+            "origin-us"
+          ]
         },
         {
           "id": "origin-su",
           "text": "Soviet Union & Russian Federation",
-          "tags": ["origin-su"]
+          "tags": [
+            "origin-su"
+          ]
         },
         {
           "id": "origin-cn",
           "text": "People's Republic of China",
-          "tags": ["origin-cn"]
+          "tags": [
+            "origin-cn"
+          ]
         },
         {
           "id": "origin-fr",
           "text": "France",
-          "tags": ["origin-fr"]
+          "tags": [
+            "origin-fr"
+          ]
         },
         {
           "id": "origin-de",
           "text": "Germany",
-          "tags": ["origin-de"]
+          "tags": [
+            "origin-de"
+          ]
         },
         {
           "id": "origin-uk",
           "text": "United Kingdom",
-          "tags": ["origin-uk"]
+          "tags": [
+            "origin-uk"
+          ]
         },
         {
           "id": "origin-pk",
           "text": "Pakistan",
-          "tags": ["origin-pk"]
+          "tags": [
+            "origin-pk"
+          ]
         }
       ]
     },
@@ -146,7 +188,9 @@
         {
           "id": "naval-yes",
           "text": "Yes, I need a naval aircraft",
-          "tags": ["naval"]
+          "tags": [
+            "naval"
+          ]
         },
         {
           "id": "naval-no-pref",
@@ -160,14 +204,24 @@
     {
       "title": "F-86F Sabre",
       "description": "",
-      "tags": ["fixed-wing", "era-early-cold-war", "role-fighter", "origin-us"],
+      "tags": [
+        "fixed-wing",
+        "era-early-cold-war",
+        "role-fighter",
+        "origin-us"
+      ],
       "steamURL": "https://store.steampowered.com/app/306240/DCS_F86F_Sabre/",
       "eShopURL": ""
     },
     {
       "title": "MiG-15bis",
       "description": "",
-      "tags": ["fixed-wing", "era-early-cold-war", "role-fighter", "origin-su"],
+      "tags": [
+        "fixed-wing",
+        "era-early-cold-war",
+        "role-fighter",
+        "origin-su"
+      ],
       "steamURL": "https://store.steampowered.com/app/316967/DCS_MiG15Bis/",
       "eShopURL": ""
     },
@@ -218,7 +272,12 @@
     {
       "title": "AJS-37 Viggen",
       "description": "",
-      "tags": ["fixed-wing", "era-mid-cold-war", "role-strike", "origin-se"],
+      "tags": [
+        "fixed-wing",
+        "era-mid-cold-war",
+        "role-strike",
+        "origin-se"
+      ],
       "steamURL": "https://store.steampowered.com/app/411930/DCS_AJS37_Viggen_by_Heatblur_Simulations/",
       "eShopURL": "",
       "heatblurURL": "https://store.heatblur.com/products/dcs-ajs37-viggen"
@@ -377,6 +436,7 @@
       "tags": [
         "fixed-wing",
         "role-attack",
+        "era-late-cold-war",
         "era-1990s",
         "era-gwot",
         "origin-su"
@@ -430,7 +490,12 @@
     {
       "title": "Ka-50 Black Shark",
       "description": "",
-      "tags": ["rotary-wing", "role-attack", "era-1990s", "origin-su"],
+      "tags": [
+        "rotary-wing",
+        "role-attack",
+        "era-1990s",
+        "origin-su"
+      ],
       "steamURL": "https://store.steampowered.com/app/2214600/DCS_Black_Shark_3/",
       "eShopURL": ""
     },
@@ -580,21 +645,36 @@
     {
       "title": "I-16",
       "description": "",
-      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-su"],
+      "tags": [
+        "fixed-wing",
+        "role-fighter",
+        "era-ww2",
+        "origin-su"
+      ],
       "steamURL": "https://store.steampowered.com/app/1084210/DCS_I16/",
       "eShopURL": ""
     },
     {
       "title": "Spitfire LF Mk IX",
       "description": "",
-      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-uk"],
+      "tags": [
+        "fixed-wing",
+        "role-fighter",
+        "era-ww2",
+        "origin-uk"
+      ],
       "steamURL": "https://store.steampowered.com/app/411920/DCS_Spitfire_LF_Mk_IX/",
       "eShopURL": ""
     },
     {
       "title": "Bf 109K-4",
       "description": "",
-      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-de"],
+      "tags": [
+        "fixed-wing",
+        "role-fighter",
+        "era-ww2",
+        "origin-de"
+      ],
       "steamURL": "https://store.steampowered.com/app/316960/DCS_Bf_109_K4_Kurfrst/",
       "eShopURL": ""
     },
