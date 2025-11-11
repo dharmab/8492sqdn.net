@@ -73,6 +73,10 @@
     background: #af6101;
 }
 
+.download-link {
+    background: #4a90e2;
+}
+
 .no-results {
     background: rgba(0, 0, 0, 0.05);
     border-radius: 12px;

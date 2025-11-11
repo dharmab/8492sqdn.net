@@ -278,7 +278,11 @@ function renderChoices() {
     card.appendChild(tagsContainer);
 
     // Create store links container if any links exist
-    const hasLinks = choice.steamURL || choice.eShopURL || choice.heatblurURL;
+    const hasLinks =
+      choice.steamURL ||
+      choice.eShopURL ||
+      choice.heatblurURL ||
+      choice.downloadURL;
     if (hasLinks) {
       const linksContainer = document.createElement("div");
       linksContainer.className = "choice-links";
@@ -311,6 +315,16 @@ function renderChoices() {
         heatblurLink.className = "store-link heatblur-link";
         heatblurLink.textContent = "Heatblur Store";
         linksContainer.appendChild(heatblurLink);
+      }
+
+      if (choice.downloadURL) {
+        const downloadLink = document.createElement("a");
+        downloadLink.href = choice.downloadURL;
+        downloadLink.target = "_blank";
+        downloadLink.rel = "noopener noreferrer";
+        downloadLink.className = "store-link download-link";
+        downloadLink.textContent = "Download";
+        linksContainer.appendChild(downloadLink);
       }
 
       card.appendChild(linksContainer);
