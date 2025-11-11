@@ -159,6 +159,7 @@
   "choices": [
     {
       "title": "F-86F Sabre",
+      "coverImage": "f86.webp",
       "description": "",
       "tags": ["fixed-wing", "era-early-cold-war", "role-fighter", "origin-us"],
       "steamURL": "https://store.steampowered.com/app/306240/DCS_F86F_Sabre/",
@@ -168,6 +169,7 @@
     },
     {
       "title": "MiG-15bis",
+      "coverImage": "mig15.webp",
       "description": "",
       "tags": ["fixed-wing", "era-early-cold-war", "role-fighter", "origin-su"],
       "steamURL": "https://store.steampowered.com/app/316967/DCS_MiG15Bis/",
@@ -177,6 +179,7 @@
     },
     {
       "title": "F-4E Phantom",
+      "coverImage": "f4e.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -194,6 +197,7 @@
     },
     {
       "title": "MiG-21bis",
+      "coverImage": "mig21.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -209,6 +213,7 @@
     },
     {
       "title": "Mirage F1",
+      "coverImage": "f1.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -226,6 +231,7 @@
     },
     {
       "title": "AJS-37 Viggen",
+      "coverImage": "ajs37.webp",
       "description": "",
       "tags": ["fixed-wing", "era-mid-cold-war", "role-strike", "origin-se"],
       "steamURL": "https://store.steampowered.com/app/411930/DCS_AJS37_Viggen_by_Heatblur_Simulations/",
@@ -251,6 +257,7 @@
     },
     {
       "title": "F-14A/B Tomcat",
+      "coverImage": "F14.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -269,6 +276,7 @@
     },
     {
       "title": "MiG-29A Fulcrum",
+      "coverImage": "mig29a.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -285,6 +293,7 @@
     },
     {
       "title": "A-10C Warthog",
+      "coverImage": "a10c.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -301,6 +310,7 @@
     },
     {
       "title": "F/A-18C Hornet",
+      "coverImage": "f18.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -320,6 +330,7 @@
     },
     {
       "title": "F-16C Viper",
+      "coverImage": "f16.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -338,6 +349,7 @@
     },
     {
       "title": "F-15C Eagle (Flaming Cliffs)",
+      "coverImage": "f15c.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -354,6 +366,7 @@
     },
     {
       "title": "JF-17 Thunder",
+      "coverImage": "jf17.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -370,6 +383,7 @@
     },
     {
       "title": "Su-27/J-11 Flanker (Flaming Cliffs)",
+      "coverImage": "su27.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -387,6 +401,7 @@
     },
     {
       "title": "Su-33 Flanker (Flaming Cliffs)",
+      "coverImage": "su33.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -404,6 +419,7 @@
     },
     {
       "title": "Su-25 Frogfoot (Flaming Cliffs)",
+      "coverImage": "su25.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -435,6 +451,7 @@
     },
     {
       "title": "AH-64D Apache",
+      "coverImage": "ah64.webp",
       "description": "",
       "tags": [
         "rotary-wing",
@@ -451,6 +468,7 @@
     },
     {
       "title": "Mi-24P Hind",
+      "coverImage": "mi24.webp",
       "description": "",
       "tags": [
         "rotary-wing",
@@ -468,6 +486,7 @@
     },
     {
       "title": "Ka-50 Black Shark",
+      "coverImage": "ka50.webp",
       "description": "",
       "tags": [
         "rotary-wing",
@@ -483,6 +502,7 @@
     },
     {
       "title": "CH-47F Chinook",
+      "coverImage": "ch47.webp",
       "description": "",
       "tags": [
         "rotary-wing",
@@ -500,6 +520,7 @@
     },
     {
       "title": "OH-58 Kiowa",
+      "coverImage": "oh58.webp",
       "description": "",
       "tags": [
         "rotary-wing",
@@ -517,6 +538,7 @@
     },
     {
       "title": "SA342 Gazelle",
+      "coverImage": "sa342.webp",
       "description": "",
       "tags": [
         "rotary-wing",
@@ -534,6 +556,7 @@
     },
     {
       "title": "UH-1H Huey",
+      "coverImage": "uh1h.webp",
       "description": "",
       "tags": [
         "rotary-wing",
@@ -552,6 +575,7 @@
     },
     {
       "title": "Mi-8MTV2 Magnificent Eight (Mi-17 Hip)",
+      "coverImage": "mi8.webp",
       "description": "",
       "tags": [
         "rotary-wing",
@@ -570,6 +594,7 @@
     },
     {
       "title": "F4U-1D Corsair",
+      "coverImage": "f4u.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -586,6 +611,7 @@
     },
     {
       "title": "P-51D Mustang",
+      "coverImage": "p51.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -601,6 +627,7 @@
     },
     {
       "title": "Mosquito FB VI",
+      "coverImage": "mossie.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -616,6 +643,7 @@
     },
     {
       "title": "P-47D Thunderbolt",
+      "coverImage": "p47.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -631,6 +659,7 @@
     },
     {
       "title": "I-16",
+      "coverImage": "i16.webp",
       "description": "",
       "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-su"],
       "steamURL": "https://store.steampowered.com/app/1084210/DCS_I16/",
@@ -640,6 +669,7 @@
     },
     {
       "title": "Spitfire LF Mk IX",
+      "coverImage": "spitfire.webp",
       "description": "",
       "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-uk"],
       "steamURL": "https://store.steampowered.com/app/411920/DCS_Spitfire_LF_Mk_IX/",
@@ -649,6 +679,7 @@
     },
     {
       "title": "Bf 109K-4",
+      "coverImage": "bf109.webp",
       "description": "",
       "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-de"],
       "steamURL": "https://store.steampowered.com/app/316960/DCS_Bf_109_K4_Kurfrst/",
@@ -658,6 +689,7 @@
     },
     {
       "title": "Fw 190A-8",
+      "coverImage": "fw190a8.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -673,6 +705,7 @@
     },
     {
       "title": "Fw 190D-9 Dora",
+      "coverImage": "fw190d9.webp",
       "description": "",
       "tags": [
         "fixed-wing",

@@ -279,6 +279,25 @@ function renderChoices() {
     title.className = "choice-title";
     title.textContent = choice.title;
 
+    card.appendChild(title);
+
+    // Create a content wrapper for the image and text content
+    const contentWrapper = document.createElement("div");
+    contentWrapper.className = "choice-content-wrapper";
+
+    // Add cover image if available
+    if (choice.coverImage) {
+      const coverImg = document.createElement("img");
+      coverImg.src = `images/${choice.coverImage}`;
+      coverImg.alt = `${choice.title} cover art`;
+      coverImg.className = "choice-cover";
+      contentWrapper.appendChild(coverImg);
+    }
+
+    // Create a container for description and tags
+    const textContent = document.createElement("div");
+    textContent.className = "choice-text-content";
+
     const description = document.createElement("div");
     description.className = "choice-description";
     description.textContent = choice.description;
@@ -293,9 +312,10 @@ function renderChoices() {
       tagsContainer.appendChild(tagSpan);
     });
 
-    card.appendChild(title);
-    card.appendChild(description);
-    card.appendChild(tagsContainer);
+    textContent.appendChild(description);
+    textContent.appendChild(tagsContainer);
+    contentWrapper.appendChild(textContent);
+    card.appendChild(contentWrapper);
 
     // Create store links container if any links exist
     const hasLinks =

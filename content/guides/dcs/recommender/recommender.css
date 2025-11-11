@@ -43,6 +43,25 @@
     font-weight: 700;
 }
 
+.choice-content-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.choice-cover {
+    width: auto;
+    height: 195px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.choice-text-content {
+    flex: 1;
+    min-width: 0;
+}
+
 .choice-description {
     line-height: 1.6;
     margin-bottom: 15px;
