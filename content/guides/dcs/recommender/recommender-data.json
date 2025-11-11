@@ -362,7 +362,56 @@
       "steamURL": "https://store.steampowered.com/app/250300/DCS_F15C_Flaming_Cliffs/",
       "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/f-15c_flaming_cliffs/",
       "rating": 1,
-      "sortKey": "f15"
+      "sortKey": "f15c"
+    },
+    {
+      "title": "F-15E Strike Eagle",
+      "coverImage": "f15e.webp",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "era-post-cold-war",
+        "era-gwot",
+        "role-fighter",
+        "role-strike",
+        "role-attack",
+        "origin-us"
+      ],
+      "rating": 3,
+      "sortKey": "f15e"
+    },
+    {
+      "title": "AV-8B Harrier",
+      "description": "",
+      "coverImage": "av8b.webp",
+      "tags": [
+        "fixed-wing",
+        "era-late-cold-war",
+        "era-post-cold-war",
+        "era-gwot",
+        "role-strike",
+        "role-attack",
+        "origin-uk",
+        "origin-us"
+      ],
+      "rating": 3,
+      "sortKey": "av8b"
+    },
+    {
+      "title": "Mirage 2000C",
+      "description": "",
+      "coverImage": "m2000.webp",
+      "tags": [
+        "fixed-wing",
+        "era-late-cold-war",
+        "era-post-cold-war",
+        "era-gwot",
+        "role-fighter",
+        "role-strike",
+        "origin-fr"
+      ],
+      "rating": 3,
+      "sortKey": "miragef2000"
     },
     {
       "title": "JF-17 Thunder",

@@ -317,16 +317,17 @@ function renderChoices() {
     contentWrapper.appendChild(textContent);
     card.appendChild(contentWrapper);
 
-    // Create store links container if any links exist
+    // Create store links container or not available message
     const hasLinks =
       choice.steamURL ||
       choice.eShopURL ||
       choice.heatblurURL ||
       choice.downloadURL;
-    if (hasLinks) {
-      const linksContainer = document.createElement("div");
-      linksContainer.className = "choice-links";
 
+    const linksContainer = document.createElement("div");
+    linksContainer.className = "choice-links";
+
+    if (hasLinks) {
       if (choice.steamURL) {
         const steamLink = document.createElement("a");
         steamLink.href = choice.steamURL;
@@ -366,9 +367,15 @@ function renderChoices() {
         downloadLink.textContent = "Download";
         linksContainer.appendChild(downloadLink);
       }
-
-      card.appendChild(linksContainer);
+    } else {
+      const notAvailable = document.createElement("span");
+      notAvailable.className = "not-available";
+      notAvailable.style.color = "red";
+      notAvailable.textContent = "Delisted - No longer available for purchase";
+      linksContainer.appendChild(notAvailable);
     }
+
+    card.appendChild(linksContainer);
     container.appendChild(card);
   });
 
