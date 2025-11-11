@@ -250,7 +250,27 @@ function renderChoices() {
   const container = document.getElementById("choices-container");
   container.innerHTML = "";
 
-  data.choices.forEach((choice) => {
+  // Sort choices by rating (descending), then sortKey, then title
+  const sortedChoices = [...data.choices].sort((a, b) => {
+    // First, sort by rating (higher rating first)
+    const ratingA = a.rating || 2;
+    const ratingB = b.rating || 2;
+    if (ratingB !== ratingA) {
+      return ratingB - ratingA;
+    }
+
+    // Then by sortKey
+    const sortKeyA = a.sortKey || "";
+    const sortKeyB = b.sortKey || "";
+    if (sortKeyA !== sortKeyB) {
+      return sortKeyA.localeCompare(sortKeyB);
+    }
+
+    // Finally by title
+    return a.title.localeCompare(b.title);
+  });
+
+  sortedChoices.forEach((choice) => {
     const card = document.createElement("div");
     card.className = "choice-card";
     card.dataset.tags = choice.tags.join(",");
