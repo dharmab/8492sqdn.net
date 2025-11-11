@@ -3,8 +3,7 @@
     {
       "id": "type",
       "text": "Airplane or Helicopter?",
-      "type": "multiple",
-      "operator": "or",
+      "type": "single",
       "answers": [
         {
           "id": "fixed-wing",
@@ -58,7 +57,7 @@
     },
     {
       "id": "role",
-      "text": "What missions/roles most interest you?",
+      "text": "What missions/roles most interest you? Pick the top 1-2.",
       "type": "multiple",
       "operator": "and",
       "answers": [
@@ -141,17 +140,12 @@
       "id": "naval",
       "text": "Is naval aviation important to you?",
       "type": "single",
-      "default": "naval-no-pref",
+      "default": "naval-no-preference",
       "answers": [
         {
           "id": "naval-yes",
           "text": "Yes, I need a naval aircraft",
           "tags": ["naval"]
-        },
-        {
-          "id": "naval-no-pref",
-          "text": "No preference",
-          "tags": []
         }
       ]
     }

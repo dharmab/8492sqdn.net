@@ -93,14 +93,92 @@ function renderQuestions() {
       answersDiv.appendChild(answerDiv);
     });
 
+    // Add "No preference" option to all questions
+    const noPreferenceDiv = document.createElement("div");
+    noPreferenceDiv.className = "answer-option";
+
+    const noPreferenceInput = document.createElement("input");
+    // Use radio button for single questions, checkbox for multiple questions
+    noPreferenceInput.type = question.type === "single" ? "radio" : "checkbox";
+    noPreferenceInput.id = `${question.id}-no-preference`;
+    noPreferenceInput.name =
+      question.type === "single" ? question.id : `${question.id}-no-preference`;
+
+    if (question.type === "single") {
+      // For radio buttons, use handleRadioChange with empty tags
+      noPreferenceInput.addEventListener("change", (e) =>
+        handleRadioChange(e, question.id, `${question.id}-no-preference`, []),
+      );
+    } else {
+      // For checkboxes, use handleNoPreferenceChange
+      noPreferenceInput.addEventListener("change", (e) =>
+        handleNoPreferenceChange(e, question.id, question.type),
+      );
+    }
+
+    const noPreferenceLabel = document.createElement("label");
+    noPreferenceLabel.textContent = "No preference";
+
+    noPreferenceDiv.appendChild(noPreferenceInput);
+    noPreferenceDiv.appendChild(noPreferenceLabel);
+    answersDiv.appendChild(noPreferenceDiv);
+
     questionDiv.appendChild(questionText);
     questionDiv.appendChild(answersDiv);
     container.appendChild(questionDiv);
   });
 }
 
+// Handle "No preference" checkbox
+function handleNoPreferenceChange(event, questionId, questionType) {
+  if (event.target.checked) {
+    // Uncheck all other options in this question
+    const question = data.questions.find((q) => q.id === questionId);
+    question.answers.forEach((answer) => {
+      const input = document.getElementById(answer.id);
+      if (input && input.checked) {
+        input.checked = false;
+        // Trigger the appropriate handler to clean up tags
+        if (questionType === "single") {
+          // Remove tags for radio buttons
+          if (selectedAnswersByQuestion[questionId]) {
+            const previousAnswer = selectedAnswersByQuestion[questionId];
+            previousAnswer.tags.forEach((tag) =>
+              singleQuestionTags.delete(tag),
+            );
+            delete selectedAnswersByQuestion[questionId];
+          }
+        } else {
+          // Remove tags for checkboxes
+          const operator = question.operator || "and";
+          if (operator === "or") {
+            if (multipleQuestionTagsByQuestion[questionId]) {
+              delete multipleQuestionTagsByQuestion[questionId];
+            }
+          } else if (operator === "any") {
+            answer.tags.forEach((tag) => multipleQuestionTagsAny.delete(tag));
+          } else {
+            answer.tags.forEach((tag) => multipleQuestionTagsAnd.delete(tag));
+          }
+        }
+      }
+    });
+    filterChoices();
+  }
+}
+
 // Handle checkbox selection changes (AND, OR, or ANY logic depending on question)
 function handleCheckboxChange(event, answerId, tags, questionId) {
+  // Uncheck "No preference" if any option is selected
+  if (event.target.checked) {
+    const noPreferenceInput = document.getElementById(
+      `${questionId}-no-preference`,
+    );
+    if (noPreferenceInput) {
+      noPreferenceInput.checked = false;
+    }
+  }
+
   // Find the question to check its operator
   const question = data.questions.find((q) => q.id === questionId);
   const operator = question.operator || "and"; // Default to AND if not specified
