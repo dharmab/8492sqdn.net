@@ -8,7 +8,7 @@ macOS: `brew install hugo`
 
 Linux: [Install using a package manager](https://gohugo.io/installation/linux/#repository-packages)
 
-Windows: [Install using winget](https://gohugo.io/installation/windows/#winget)
+Windows: `winget install Hugo.Hugo.Extended`
 
 ## Run the site locally
 
