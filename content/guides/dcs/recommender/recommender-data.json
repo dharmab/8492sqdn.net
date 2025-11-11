@@ -9,16 +9,12 @@
         {
           "id": "fixed-wing",
           "text": "Airplane",
-          "tags": [
-            "fixed-wing"
-          ]
+          "tags": ["fixed-wing"]
         },
         {
           "id": "rotary-wing",
           "text": "Helicopter",
-          "tags": [
-            "rotary-wing"
-          ]
+          "tags": ["rotary-wing"]
         }
       ]
     },
@@ -31,44 +27,32 @@
         {
           "id": "era-ww2",
           "text": "World War 2 (1939-1945)",
-          "tags": [
-            "era-ww2"
-          ]
+          "tags": ["era-ww2"]
         },
         {
           "id": "era-early-cold-war",
           "text": "Early Cold War (50s to early 60s)",
-          "tags": [
-            "era-early-cold-war"
-          ]
+          "tags": ["era-early-cold-war"]
         },
         {
           "id": "era-mid-cold-war",
           "text": "Mid Cold War (late 60s to late 70s)",
-          "tags": [
-            "era-mid-cold-war"
-          ]
+          "tags": ["era-mid-cold-war"]
         },
         {
           "id": "era-late-cold-war",
           "text": "Late Cold War (80s to early 90s)",
-          "tags": [
-            "era-late-cold-war"
-          ]
+          "tags": ["era-late-cold-war"]
         },
         {
           "id": "era-1990s",
           "text": "1990s",
-          "tags": [
-            "era-late-cold-war"
-          ]
+          "tags": ["era-late-cold-war"]
         },
         {
           "id": "era-gwot",
           "text": "Global War on Terror (2000s to mid 2010s)",
-          "tags": [
-            "era-gwot"
-          ]
+          "tags": ["era-gwot"]
         }
       ]
     },
@@ -81,44 +65,32 @@
         {
           "id": "role-fighter",
           "text": "Air to air missions (fighters, interceptors & multirole)",
-          "tags": [
-            "role-fighter"
-          ]
+          "tags": ["role-fighter"]
         },
         {
           "id": "role-strike",
           "text": "Preplanned air to ground strike missions (strike & multirole)",
-          "tags": [
-            "role-strike"
-          ]
+          "tags": ["role-strike"]
         },
         {
           "id": "role-attack",
           "text": "Loitering air to ground missions and Close Air Support (attack & CAS)",
-          "tags": [
-            "role-attack"
-          ]
+          "tags": ["role-attack"]
         },
         {
           "id": "role-sead",
           "text": "Suppression and destruction of enemy air defenses (SEAD, DEAD & Wild Weasel)",
-          "tags": [
-            "role-sead"
-          ]
+          "tags": ["role-sead"]
         },
         {
           "id": "role-logistics",
           "text": "Logistics missions (transport, cargo & utility)",
-          "tags": [
-            "role-logistics"
-          ]
+          "tags": ["role-logistics"]
         },
         {
           "id": "role-scout",
           "text": "Scout helicopter missions (recon, AFAC & light attack)",
-          "tags": [
-            "role-scout"
-          ]
+          "tags": ["role-scout"]
         }
       ]
     },
@@ -131,51 +103,37 @@
         {
           "id": "origin-us",
           "text": "United States",
-          "tags": [
-            "origin-us"
-          ]
+          "tags": ["origin-us"]
         },
         {
           "id": "origin-su",
           "text": "Soviet Union & Russian Federation",
-          "tags": [
-            "origin-su"
-          ]
+          "tags": ["origin-su"]
         },
         {
           "id": "origin-cn",
           "text": "People's Republic of China",
-          "tags": [
-            "origin-cn"
-          ]
+          "tags": ["origin-cn"]
         },
         {
           "id": "origin-fr",
           "text": "France",
-          "tags": [
-            "origin-fr"
-          ]
+          "tags": ["origin-fr"]
         },
         {
           "id": "origin-de",
           "text": "Germany",
-          "tags": [
-            "origin-de"
-          ]
+          "tags": ["origin-de"]
         },
         {
           "id": "origin-uk",
           "text": "United Kingdom",
-          "tags": [
-            "origin-uk"
-          ]
+          "tags": ["origin-uk"]
         },
         {
           "id": "origin-pk",
           "text": "Pakistan",
-          "tags": [
-            "origin-pk"
-          ]
+          "tags": ["origin-pk"]
         }
       ]
     },
@@ -188,9 +146,7 @@
         {
           "id": "naval-yes",
           "text": "Yes, I need a naval aircraft",
-          "tags": [
-            "naval"
-          ]
+          "tags": ["naval"]
         },
         {
           "id": "naval-no-pref",
@@ -204,26 +160,16 @@
     {
       "title": "F-86F Sabre",
       "description": "",
-      "tags": [
-        "fixed-wing",
-        "era-early-cold-war",
-        "role-fighter",
-        "origin-us"
-      ],
+      "tags": ["fixed-wing", "era-early-cold-war", "role-fighter", "origin-us"],
       "steamURL": "https://store.steampowered.com/app/306240/DCS_F86F_Sabre/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/sabre/"
     },
     {
       "title": "MiG-15bis",
       "description": "",
-      "tags": [
-        "fixed-wing",
-        "era-early-cold-war",
-        "role-fighter",
-        "origin-su"
-      ],
+      "tags": ["fixed-wing", "era-early-cold-war", "role-fighter", "origin-su"],
       "steamURL": "https://store.steampowered.com/app/316967/DCS_MiG15Bis/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/mig15bis/"
     },
     {
       "title": "F-4E Phantom",
@@ -251,7 +197,7 @@
         "origin-su"
       ],
       "steamURL": "https://store.steampowered.com/app/316964/DCS_MiG21Bis/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/mig21bis/"
     },
     {
       "title": "Mirage F1",
@@ -267,19 +213,14 @@
         "origin-fr"
       ],
       "steamURL": "https://store.steampowered.com/app/2071330/DCS_Mirage_F1/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/mirage/"
     },
     {
       "title": "AJS-37 Viggen",
       "description": "",
-      "tags": [
-        "fixed-wing",
-        "era-mid-cold-war",
-        "role-strike",
-        "origin-se"
-      ],
+      "tags": ["fixed-wing", "era-mid-cold-war", "role-strike", "origin-se"],
       "steamURL": "https://store.steampowered.com/app/411930/DCS_AJS37_Viggen_by_Heatblur_Simulations/",
-      "eShopURL": "",
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/viggen/",
       "heatblurURL": "https://store.heatblur.com/products/dcs-ajs37-viggen"
     },
     {
@@ -308,7 +249,7 @@
         "naval"
       ],
       "steamURL": "https://store.steampowered.com/app/411893/DCS_F14AB_Tomcat_by_Heatblur_Simulations/",
-      "eShopURL": "",
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/tomcat/",
       "heatblurURL": "https://store.heatblur.com/products/dcs-f-14-tomcat"
     },
     {
@@ -337,7 +278,7 @@
         "origin-us"
       ],
       "steamURL": "https://store.steampowered.com/app/1417260/DCS_A10C_II_Tank_Killer/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/tank_killer/"
     },
     {
       "title": "F/A-18C Hornet",
@@ -354,7 +295,7 @@
         "naval"
       ],
       "steamURL": "https://store.steampowered.com/app/411950/DCS_FA18C/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/hornet/"
     },
     {
       "title": "F-16C Viper",
@@ -370,7 +311,7 @@
         "origin-us"
       ],
       "steamURL": "https://store.steampowered.com/app/1090850/DCS_F16C_Viper/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/viper/"
     },
     {
       "title": "F-15C Eagle (Flaming Cliffs)",
@@ -384,7 +325,7 @@
         "origin-us"
       ],
       "steamURL": "https://store.steampowered.com/app/250300/DCS_F15C_Flaming_Cliffs/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/f-15c_flaming_cliffs/"
     },
     {
       "title": "JF-17 Thunder",
@@ -398,7 +339,7 @@
         "origin-pk"
       ],
       "steamURL": "https://store.steampowered.com/app/1199120/DCS_JF17_Thunder/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/thunder/"
     },
     {
       "title": "Su-27/J-11 Flanker (Flaming Cliffs)",
@@ -413,7 +354,7 @@
         "origin-cn"
       ],
       "steamURL": "https://store.steampowered.com/app/250310/DCS_Su27_Flaming_Cliffs/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/su-27_flaming_cliffs/"
     },
     {
       "title": "Su-33 Flanker (Flaming Cliffs)",
@@ -428,7 +369,7 @@
         "naval"
       ],
       "steamURL": "https://store.steampowered.com/app/726690/DCS_Su33_Flaming_Cliffs/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/su-33_flaming_cliffs/"
     },
     {
       "title": "Su-25 Frogfoot (Flaming Cliffs)",
@@ -442,7 +383,7 @@
         "origin-su"
       ],
       "steamURL": "https://store.steampowered.com/app/245580/DCS_Su25_Flaming_Cliffs/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/su-25_flaming_cliffs/"
     },
     {
       "title": "Su-25T Frogfoot (Free)",
@@ -456,7 +397,7 @@
         "origin-su"
       ],
       "steamURL": "https://store.steampowered.com/app/223750/DCS_World_Steam_Edition/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/downloads/world/stable/"
     },
     {
       "title": "AH-64D Apache",
@@ -470,7 +411,7 @@
         "origin-us"
       ],
       "steamURL": "https://store.steampowered.com/app/1770580/DCS_AH64D/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/ah-64d/"
     },
     {
       "title": "Mi-24P Hind",
@@ -485,19 +426,14 @@
         "origin-su"
       ],
       "steamURL": "https://store.steampowered.com/app/1593360/DCS_Mi24P_HIND/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/hind/"
     },
     {
       "title": "Ka-50 Black Shark",
       "description": "",
-      "tags": [
-        "rotary-wing",
-        "role-attack",
-        "era-1990s",
-        "origin-su"
-      ],
+      "tags": ["rotary-wing", "role-attack", "era-1990s", "origin-su"],
       "steamURL": "https://store.steampowered.com/app/2214600/DCS_Black_Shark_3/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/black_shark_3/"
     },
     {
       "title": "CH-47F Chinook",
@@ -512,7 +448,7 @@
         "origin-us"
       ],
       "steamURL": "https://store.steampowered.com/app/2943690/DCS_CH47F/?curator_clanid=4471395",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/ch-47f/"
     },
     {
       "title": "OH-58 Kiowa",
@@ -527,7 +463,7 @@
         "origin-us"
       ],
       "steamURL": "https://store.steampowered.com/app/2948500/DCS_OH58D_Kiowa_Warrior_by_Polychop_Simulations/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/kiowa/"
     },
     {
       "title": "SA342 Gazelle",
@@ -542,7 +478,7 @@
         "origin-fr"
       ],
       "steamURL": "https://store.steampowered.com/app/411910/DCS_SA342_Gazelle/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/gazelle/"
     },
     {
       "title": "UH-1H Huey",
@@ -558,7 +494,7 @@
         "origin-us"
       ],
       "steamURL": "https://store.steampowered.com/app/240500/DCS_UH1H_Huey/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/dcs_uh1h_huey/"
     },
     {
       "title": "Mi-8MTV2 Magnificent Eight (Mi-17 Hip)",
@@ -574,7 +510,7 @@
         "origin-us"
       ],
       "steamURL": "https://store.steampowered.com/app/249310/DCS_Mi8_MTV2_Magnificent_Eight/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/dcs_mi8mtv2_magnificent_eight/"
     },
     {
       "title": "F4U-1D Corsair",
@@ -588,7 +524,7 @@
         "naval"
       ],
       "steamURL": "https://store.steampowered.com/app/411940/DCS_F4U1D_Corsair/?curator_clanid=4471395",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/corsair/"
     },
     {
       "title": "P-51D Mustang",
@@ -601,7 +537,7 @@
         "origin-us"
       ],
       "steamURL": "https://store.steampowered.com/app/223770/DCS_P51D_Mustang/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/dcs_p51d_mustang/"
     },
     {
       "title": "Mosquito FB VI",
@@ -614,7 +550,7 @@
         "origin-uk"
       ],
       "steamURL": "https://store.steampowered.com/app/1724230/DCS_Mosquito_FB_VI/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/mosquito/"
     },
     {
       "title": "P-47D Thunderbolt",
@@ -627,56 +563,28 @@
         "origin-us"
       ],
       "steamURL": "https://store.steampowered.com/app/1120304/DCS_P47D_Thunderbolt/",
-      "eShopURL": ""
-    },
-    {
-      "title": "Fw 190A-8",
-      "description": "",
-      "tags": [
-        "fixed-wing",
-        "role-fighter",
-        "role-attack",
-        "era-ww2",
-        "origin-de"
-      ],
-      "steamURL": "https://store.steampowered.com/app/1101970/DCS_Fw_190_A8/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/thunderbolt/"
     },
     {
       "title": "I-16",
       "description": "",
-      "tags": [
-        "fixed-wing",
-        "role-fighter",
-        "era-ww2",
-        "origin-su"
-      ],
+      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-su"],
       "steamURL": "https://store.steampowered.com/app/1084210/DCS_I16/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/i-16/"
     },
     {
       "title": "Spitfire LF Mk IX",
       "description": "",
-      "tags": [
-        "fixed-wing",
-        "role-fighter",
-        "era-ww2",
-        "origin-uk"
-      ],
+      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-uk"],
       "steamURL": "https://store.steampowered.com/app/411920/DCS_Spitfire_LF_Mk_IX/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/spitfire/"
     },
     {
       "title": "Bf 109K-4",
       "description": "",
-      "tags": [
-        "fixed-wing",
-        "role-fighter",
-        "era-ww2",
-        "origin-de"
-      ],
+      "tags": ["fixed-wing", "role-fighter", "era-ww2", "origin-de"],
       "steamURL": "https://store.steampowered.com/app/316960/DCS_Bf_109_K4_Kurfrst/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/kurfurst/"
     },
     {
       "title": "Fw 190A-8",
@@ -689,7 +597,7 @@
         "origin-de"
       ],
       "steamURL": "https://store.steampowered.com/app/1101970/DCS_Fw_190_A8/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/anton/"
     },
     {
       "title": "Fw 190D-9 Dora",
@@ -702,7 +610,7 @@
         "origin-de"
       ],
       "steamURL": "https://store.steampowered.com/app/250990/DCS_Fw_190_D9_Dora/",
-      "eShopURL": ""
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/dora/"
     }
   ]
 }
