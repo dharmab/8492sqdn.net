@@ -109,7 +109,7 @@ _These recommendations are for flight simulation use. Some headsets are good for
 
 If you can wait, we currently recommend waiting for the [Steam Frame](https://store.steampowered.com/sale/steamframe) to launch in 2026.
 
-If you need a VR headset now and cannoy wait, we reluctantly recommend the [Meta Quest 3](../../reviews/vr/meta-quest-3).
+If you need a VR headset now and cannot wait, we reluctantly recommend the [Meta Quest 3](../../reviews/vr/meta-quest-3).
 
 Based on our indepdendent purchases and testing, we like the [Bigscreen Beyond 2](../../reviews/vr/bigscreen-beyond-2). However, there are long delays on order fufillment, so even if you order now you may not get one before the Steam Frame launches. We will have a full review of the BSB2 by the end of 2025.
 
