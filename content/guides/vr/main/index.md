@@ -1,7 +1,7 @@
 ---
 title: "Virtual Reality Guide for Combat Flight Simulation"
 summary: "A guide to the painful setup of using VR in DCS World and Falcon BMS"
-date: 2025-07-25
+date: 2025-11-13
 tags:
   - digital combat simulator
   - falcon
