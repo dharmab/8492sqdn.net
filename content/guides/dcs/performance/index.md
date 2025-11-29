@@ -46,7 +46,7 @@ However, any fast gaming-oriented CPU with at least 4 cores is fine.
 
 [Gamer's Nexus: Best CPUs of 2024](https://gamersnexus.net/cpus/best-cpus-2024-intel-vs-amd-gaming-production-budget-efficiency)
 
-Ideally, use an upgraded CPU cooler. We're fans of the Thermaltake's series of budget-friendly air coolers and the Arctic Liquid Freezer III AIO liquid cooler.
+Ideally, use an upgraded CPU cooler. We're fans of Thermalright and ID-COOLING's budget-friendly coolers.
 
 [Gamers Nexus: CPU Cooler Benchmarks](https://gamersnexus.net/megacharts/cpu-coolers)
 
