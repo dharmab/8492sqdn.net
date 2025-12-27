@@ -1,7 +1,7 @@
 ---
 title: HOTAS Buyer's Guide for Combat Flight Simulation
 summary: Flight sticks, throttles and pedals organized into recommended, recommended with reservations, and not recommended.
-date: 2025-10-25
+date: 2025-12-27
 weight: 2
 ---
 
@@ -39,7 +39,7 @@ See this demonstration of how Hall Effect gamepads are great for vehicle games w
 
 ([Not suitable for Falcon BMS](https://forum.falcon-bms.com/topic/23233/throttle-up-down-key-bindings-are-too-coarse?_=1683335735387&lang=en-US))
 
-### WINCTRL Ursa Minor Fighter Joystick
+### WINCTRL Ursa Minor Fighter Joystick (Formerly Winwing)
 
 A budget clone of the VKB Gladiator with more buttons and a vibration motor. Made from a cheaper-feeling plastic compared to the Gladiator. Has a fairly short throw.
 
@@ -51,7 +51,11 @@ Best value!
 
 <img src="images/gladiator-nxt-evo-sce-premium.webp" width="1100" height="1100" loading="lazy" alt="">
 
-### WINCTRL Orion 2 ViperAce EX (formerly F-16EX)
+### Virpil CDT-AERO-R Flightstick
+
+<img src="images/vpc-cdt-aero-r.webp" width="1200" height="1200" loading="lazy" alt="">
+
+### WINCTRL Orion 2 ViperAce EX (formerly Winwing F-16EX)
 
 <img src="images/orion-2-f-16ex.webp" width="1600" height="1600" loading="lazy" alt="">
 
@@ -94,12 +98,6 @@ Good choice if you only play WWII simulations.
 Good choice if you only play *DCS: F-14 Tomcat*
 
 <img src="images/gladiator-nxt-evo-f-14ce.webp" width="1100" height="1100" loading="lazy" alt="">
-
-### Virpil VPC VFX grip with WarBRD-D base
-
-Good choice if you only play *DCS: F-14 Tomcat*
-
-<img src="images/vpc-vfx.webp" width="1000" height="1000" loading="lazy" alt="">
 
 ### Thrustmaster AVA base with F-16C or F/A-18C grip
 
@@ -188,12 +186,6 @@ Customizable, best value!
 
 <img src="images/mongoost-50cm3.webp" width="1000" height="1000" loading="lazy" alt="">
 
-### Virpil VPC CDT-VMAX
-
-Smaller version of the MongoosT-50M3.
-
-<img src="images/vpc-cdt-vmax.webp" width="1000" height="1000" loading="lazy" alt="">
-
 ## Recommended with Reservations
 
 ### Thrustmaster TWCS
@@ -213,6 +205,12 @@ A budget clone of the VKB Gladiator Omni Throttle with more buttons and a vibrat
 A great device for space simulation, which can also be used as a serviceable flight simulation throttle.
 
 <img src="images/gladiator-nxt-evo-omni-throttle.webp" width="474" height="474" loading="lazy" alt="">
+
+### CDT-VMAX Throttle
+
+Nothing wrong this this throttle, but for most people, VKB STECS is a better value.
+
+<img src="images/vpc-cdt-vmax.webp" width="1200" height="1200" loading="lazy" alt="">
 
 ### Thrustmaster HOTAS Warthog throttle
 
@@ -326,18 +324,25 @@ Single axis, no toe brakes
 
 ### MFG Crosswind V3
 
+A great choice. Buy once, cry once.
+
 ![](images/crosswind-v3.webp)
 
 ### Virpil Pedals
 
+Good choice if you are bundling with other Virpil products to save on shipping.
+
 ![](images/vpc-ace-pedals.webp)
 
-
 ### WINCTRL Orion Metal Flight Rudder Pedals
+
+Good choice if you are bundling with other WINCTRL products to save on shipping.
 
 ![](images/orion-pedals.webp)
 
 ### Slaw Device pedals
+
+High end built-to-order devices. Built in small batches by an obsessive engineer.
 
 ![](images/slaw-device-pedals.webp)
 
@@ -348,10 +353,6 @@ Single axis, no toe brakes
 Can be found for a good price used. Very narrow.
 
 ![](images/pro-pedals.webp)
-
-### Virpil VPC ACE
-
-Similar to the MFG Crosswind V3. Might be a good choice if you’re buying other Virpil products and can bundle the shipping
 
 ## Not Recommended
 
@@ -365,6 +366,6 @@ Very poor build quality
 
 ### Thrustmaster TPR
 
-Far too expensive - for this price, you can buy Slaw Device pedals and get a superior product.
+Far too expensive - for this price, you can buy Slaw Device pedals and get a far superior product.
 
 ![](images/tpr.webp)
