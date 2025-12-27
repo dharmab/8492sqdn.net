@@ -39,7 +39,7 @@ See this demonstration of how Hall Effect gamepads are great for vehicle games w
 
 ([Not suitable for Falcon BMS](https://forum.falcon-bms.com/topic/23233/throttle-up-down-key-bindings-are-too-coarse?_=1683335735387&lang=en-US))
 
-### Winwing Ursa Minor Fighter Joystick
+### WINCTRL Ursa Minor Fighter Joystick
 
 A budget clone of the VKB Gladiator with more buttons and a vibration motor. Made from a cheaper-feeling plastic compared to the Gladiator. Has a fairly short throw.
 
@@ -51,7 +51,7 @@ Best value!
 
 <img src="images/gladiator-nxt-evo-sce-premium.webp" width="1100" height="1100" loading="lazy" alt="">
 
-### Winwing Orion 2 ViperAce EX (formerly F-16EX)
+### WINCTRL Orion 2 ViperAce EX (formerly F-16EX)
 
 <img src="images/orion-2-f-16ex.webp" width="1600" height="1600" loading="lazy" alt="">
 
@@ -103,7 +103,7 @@ Good choice if you only play *DCS: F-14 Tomcat*
 
 ### Thrustmaster AVA base with F-16C or F/A-18C grip
 
-Significantly more expensive than an Orion 2. Only consider this if shipping and import fees make it cheaper than a Winwing.
+Significantly more expensive than an Orion 2. Only consider this if shipping and import fees make it cheaper than a WINCTRL.
 
  |
 -|-
@@ -127,7 +127,7 @@ For serious DIYers with extraordinary budgets and patience. Grip not included, r
 
 ### CH Products Fighterstick
 
-This used to be Recommended with Reservations as a used option, but the Winwing Ursa Minor is now a significantly better option in that price range.
+This used to be Recommended with Reservations as a used option, but the WINCTRL Ursa Minor is now a significantly better option in that price range.
 
 ### Turtle Beach Velocity One Flightstick
 
@@ -141,7 +141,7 @@ Multiple sources have reported reliability issues with the hats and switches fal
 
 Poor gimbal quality, stick is too heavy for the base, you can get much better sticks for less money
 
-### Winwing Orion 2 NavyAce (formerly F/A-18 Hornet)
+### WINCTRL Orion 2 NavyAce (formerly Winwing F/A-18 Hornet)
 
 More expensive than the ViperAce grip for fewer buttons. Even if you only play *DCS: F/A-18C Hornet*, you should get the F-16 grip since you’ll want extra buttons for communications. If you play *DCS: F-15E Strike Eagle*, the ViperAce grip is recommended instead to provide an analog input for the WSO’s Hand Controller Unit.
 
@@ -172,11 +172,11 @@ Customizable, best value!
 <img src="images/stecs-mini.webp" width="1800" height="1800" loading="lazy" alt="">|<img src="images/stecs-mini-plus.bmp" width="1800" height="1800" loading="lazy" alt="">
 <img src="images/stecs-standard.bmp" width="1800" height="1800" loading="lazy" alt="">|<img src="images/stecs-max.webp" width="1800" height="1800" loading="lazy" alt="">
 
-### Winwing Orion 2 NavyAce (formerly F/A-18)
+### WINCTRL Orion 2 NavyAce (formerly Winwing F/A-18)
 
 <img src="images/orion-2-fa-18-throttle.webp" width="1600" height="1600" loading="lazy" alt="">
 
-### Winwing Orion 2 StrikeAce EX II (formerly StrikeAce EX / F-15EX)
+### WINCTRL Orion 2 StrikeAce EX II (formerly Winwing StrikeAce EX / F-15EX)
 
 <img src="images/orion-2-f15-ex-throttle.webp" width="1600" height="1600" loading="lazy" alt="">
 
@@ -202,7 +202,7 @@ Widely available. Has [stiction](https://en.wikipedia.org/wiki/Stiction) issues,
 
 <img src="images/twcs.webp" width="474" height="474" loading="lazy" alt="">
 
-### Winwing Ursa Minor Space Joystick
+### WINCTRL Ursa Minor Space Joystick
 
 A budget clone of the VKB Gladiator Omni Throttle with more buttons and a vibration motor. Designed for space simulation, but can also be used as a serviceable flight simulation throttle. Made from a cheaper-feeling plastic compared to the Gladiator.
 
@@ -220,7 +220,7 @@ Throttle grip and axis is good. The switches on the base are overly specific to 
 
 <img src="images/warthog-throttle.webp" width="2560" height="2222" loading="lazy" alt="">
 
-### Winwing Orion 2 ViperAce (formerly F-16)
+### Winwing Orion 2 ViperAce (formerly Winwing F-16)
 
 If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS*
 
@@ -228,11 +228,11 @@ If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS*
 
 ### Thrustmaster Viper TQS
 
-If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS* and you live somewhere this is cheaper than a Winwing Orion 2 F-16 throttle
+If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS* and you live somewhere this is cheaper than a WINCTRL Orion 2 ViperAce throttle
 
 <img src="images/viper-tqs.webp" width="1000" height="1000" loading="lazy" alt="">
 
-### Winwing Orion 2 StrikeAce E (formerly F-15E)
+### WINCTRL Orion 2 StrikeAce E (formerly Winwing F-15E)
 
 If you mostly play *DCS: F-15E Strike Eagle.* Notably, it has a speedbrake switch which the StrikeAce EX grip lacks.
 
@@ -260,9 +260,9 @@ Worse than a modded Thrustmaster TWCS.
 
 ## Recommended
 
-### Winwing Orion 2 HOTAS MAX
+### WINCTRL Orion 2 HOTAS MAX
 
-Bundle of the Winwing Orion 2 ViperAce EX Viper stick and Orion 2 throttle. Choice of replica F/A-18, replica F-15E and fictionalized F-15EX throttle grips available. A close match to the real controls of an A-10 or F-15E.
+Bundle of the WINCTRL Orion 2 ViperAce EX Viper stick and Orion 2 throttle. Choice of replica F/A-18, replica F-15E and fictionalized F-15EX throttle grips available. A close match to the real controls of an A-10 or F-15E.
 
  | |
 -|-|-
@@ -276,9 +276,9 @@ Bundle of the Thrustmaster T16000M FCS stick and TWCS throttle
 
 ![](images/t16000m-fcs-hotas.webp)
 
-### Winwing Orion 2 HOTAS ViperAce
+### WINCTRL Orion 2 HOTAS ViperAce
 
-Bundle of the Winwing Orion 2 ViperAce EX stick and Orion 2 ViperAce throttle. A close match to the real controls of an F-16.
+Bundle of the WINCTRL Orion 2 ViperAce EX stick and Orion 2 ViperAce throttle. A close match to the real controls of an F-16.
 
 ![](images/orion-2-hotas-f-16.webp)
 
@@ -333,7 +333,7 @@ Single axis, no toe brakes
 ![](images/vpc-ace-pedals.webp)
 
 
-### Winwing Orion Metal Flight Rudder Pedals
+### WINCTRL Orion Metal Flight Rudder Pedals
 
 ![](images/orion-pedals.webp)
 
