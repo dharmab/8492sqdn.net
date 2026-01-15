@@ -111,7 +111,7 @@ If you can wait, we currently recommend waiting for the [Steam Frame](https://st
 
 If you need a VR headset now and cannot wait, we reluctantly recommend the [Meta Quest 3](../../reviews/vr/meta-quest-3).
 
-Based on our indepdendent purchases and testing, we like the [Bigscreen Beyond 2](../../reviews/vr/bigscreen-beyond-2). However, it requires Valve Lighthouses to function, and Lighthouses are a discontinued product which will fail over time. We don't recommend buying a Bigscreen Beyond 2 until some alternative to the Lighthouses is available.
+Based on our indepdendent purchases and testing, we like the [Bigscreen Beyond 2](../../reviews/vr/bigscreen-beyond-2). However, it requires Valve/HTC Vive/Index Base Stations ("lighthouses") to function. :ighthouses are a legacy product which will fail over time and no guarantee that replacement units will be available long term. We don't recommend buying a Bigscreen Beyond 2 until a long-term source of replacement lighthouses is available.
 
 Based on our indepdendent purchases and testing, we are no longer recommending Pimax headsets due to the software issues we experienced using them, especially in comparison to the software from Valve and Bigscreen. 
 
