@@ -1,7 +1,7 @@
 ---
 title: DCS World Performance and Settings Guide
 summary: Recommended system, graphical and gameplay settings for DCS World
-date: 2025-05-22
+date: 2026-01-14
 tags:
   - digital combat simulator
 weight: 1
