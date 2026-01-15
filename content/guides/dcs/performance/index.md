@@ -7,6 +7,7 @@ tags:
 weight: 1
 ---
 <img src="images/hero.webp" width="1920" height="1080" loading="lazy" alt="">
+
 _Photo by Generic (@generic_dcs)_
 
 _This page contains contributions from my friend Lynx._
@@ -173,9 +174,15 @@ Disable [ShadowPlay](https://www.nvidia.com/en-us/geforce/geforce-experience/sha
 
 ### DLSS
 
-DLSS (Dynamic Learning Super Sampling) is a feature on Nvidia GPUs that renders the game at a lower resolution and then uses an AI model to generate a higher resolution image. This can be faster than rendering at the full resolution, at the tradeoff of blurriness/visual artifacts.
+DLSS (Dynamic Learning Super Sampling) is a feature on Nvidia GPUs that renders the game at a lower resolution and then uses an AI model to generate a higher resolution image. This can be faster than rendering at the full resolution, at the tradeoff of blurriness/visual artifacts. Some people prefer the softer look and higher framerate with DLSS, some prefer the higher clarity without DLSS.
 
-The default settings for DLSS in DCS cause ghosting issues on fast-moving objects and blurs the HUD and MFDs in your cockpit. You can improve these issues by following these steps to use a better DLSS preset and exclude the HUD/MFDs from DLSS:
+The default settings for DLSS in DCS cause ghosting issues on fast-moving objects and blur the HUD and MFDs in your cockpit. You can improve these issues:
+
+#### Override DLSS Version
+
+DCS uses an old version of DLSS, which is blurrier than the latest version. You can use the Nvidia App to override this with the latest version of DLSS, which is significantly improved. Use the Nvidia App to set to the the DLSS Override setting to Latest.
+
+#### Exclude the HUD/MFDs from DLSS
 
 1. Navigate to your [Saved Games folder](#saved-games-folder)
 2. Create a `Config/` folder if it doesn't already exist
@@ -183,11 +190,8 @@ The default settings for DLSS in DCS cause ghosting issues on fast-moving object
 4. Edit `autoexec.cfg` with a text editor and ensure the following values are set - edit them if they're already in there, or add them if they're missing:
 
 ```
-DLSS_Preset = 'K'
 HUD_MFD_after_DLSS = true
 ```
-
-Try both without and without DLSS. Some people prefer the softer look and higher framerate with DLSS, some prefer the higher clarity without DLSS.
 
 ## AMD GPU Tweaks
 
