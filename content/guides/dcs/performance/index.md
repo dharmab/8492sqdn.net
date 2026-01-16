@@ -314,11 +314,11 @@ See our [VR tweaks guide](../../vr#vr-tweaks) for general VR performance tweaks 
 
 ## Prefer Standalone Over Steam
 
-Launching DCS through SteamVR runs the game use the older OpenVR API rather than directly using the OpenXR API. This causes a significant performance hit (though the exact amount may vary by system).
+Launching DCS through SteamVR may run the game use the older OpenVR API rather than directly using the OpenXR API. This can cause a performance hit, depending on your particular VR headset and system.
 
 {{< youtube id="TVmYgjMyJIQ" start=1051 >}}
 
-For the best performance, run the Standalone version of DCS directly with VR mode enabled in DCS settings.
+To guarantee the best performance, run the Standalone version of DCS directly with VR mode enabled in DCS settings.
 
 If you must use Steam, launch the game normally through the desktop client with VR enabled in DCS settings, rather than through SteamVR.
 
