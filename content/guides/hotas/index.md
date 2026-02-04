@@ -17,6 +17,10 @@ by customs authorities on packages.
 You should expect significantly increased prices on most HOTAS equipment,
 since all consumer HOTAS devices are manufactured outside of the United States.
 
+# Note on Winwing/WINCTRL
+
+Winwing and WINCTRL are the same company. For trademark reasons, they use the WINCTRL brand in the United States.
+
 # Sticks & Gamepads
 
 ## Recommended
@@ -39,7 +43,7 @@ See this demonstration of how Hall Effect gamepads are great for vehicle games w
 
 ([Not suitable for Falcon BMS](https://forum.falcon-bms.com/topic/23233/throttle-up-down-key-bindings-are-too-coarse?_=1683335735387&lang=en-US))
 
-### WINCTRL Ursa Minor Fighter Joystick (Formerly Winwing)
+### Winwing (WINCTRL) Ursa Minor Fighter Joystick
 
 A budget clone of the VKB Gladiator with more buttons and a vibration motor. Made from a cheaper-feeling plastic compared to the Gladiator. Has a fairly short throw.
 
@@ -55,7 +59,7 @@ Best value!
 
 <img src="images/vpc-cdt-aero-r.webp" width="1200" height="1200" loading="lazy" alt="">
 
-### WINCTRL Orion 2 ViperAce EX (formerly Winwing F-16EX)
+### Winwing (WINCTRL) Orion 2 ViperAce EX (formerly Winwing F-16EX)
 
 <img src="images/orion-2-f-16ex.webp" width="1600" height="1600" loading="lazy" alt="">
 
@@ -101,7 +105,7 @@ Good choice if you only play *DCS: F-14 Tomcat*
 
 ### Thrustmaster AVA base with F-16C or F/A-18C grip
 
-Significantly more expensive than an Orion 2. Only consider this if shipping and import fees make it cheaper than a WINCTRL.
+Significantly more expensive than an Orion 2. Only consider this if shipping and import fees make it cheaper than a Winwing/WINCTRL.
 
  |
 -|-
@@ -125,7 +129,7 @@ For serious DIYers with extraordinary budgets and patience. Grip not included, r
 
 ### CH Products Fighterstick
 
-This used to be Recommended with Reservations as a used option, but the WINCTRL Ursa Minor is now a significantly better option in that price range.
+This used to be Recommended with Reservations as a used option, but the Winwing/WINCTRL Ursa Minor is now a significantly better option in that price range.
 
 ### Turtle Beach Velocity One Flightstick
 
@@ -170,11 +174,11 @@ Customizable, best value!
 <img src="images/stecs-mini.webp" width="1800" height="1800" loading="lazy" alt="">|<img src="images/stecs-mini-plus.bmp" width="1800" height="1800" loading="lazy" alt="">
 <img src="images/stecs-standard.bmp" width="1800" height="1800" loading="lazy" alt="">|<img src="images/stecs-max.webp" width="1800" height="1800" loading="lazy" alt="">
 
-### WINCTRL Orion 2 NavyAce (formerly Winwing F/A-18)
+### Winwing (WINCTRL) Orion 2 NavyAce (formerly Winwing F/A-18)
 
 <img src="images/orion-2-fa-18-throttle.webp" width="1600" height="1600" loading="lazy" alt="">
 
-### WINCTRL Orion 2 StrikeAce EX II (formerly Winwing StrikeAce EX / F-15EX)
+### Winwing (WINCTRL) Orion 2 StrikeAce EX II (formerly Winwing StrikeAce EX / F-15EX)
 
 <img src="images/orion-2-f15-ex-throttle.webp" width="1600" height="1600" loading="lazy" alt="">
 
@@ -226,11 +230,11 @@ If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS*
 
 ### Thrustmaster Viper TQS
 
-If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS* and you live somewhere this is cheaper than a WINCTRL Orion 2 ViperAce throttle
+If you mostly play *DCS: F-16C Viper, DCS: JF-17 Thunder* and *Falcon BMS* and you live somewhere this is cheaper than a Winwing/WINCTRL Orion 2 ViperAce throttle
 
 <img src="images/viper-tqs.webp" width="1000" height="1000" loading="lazy" alt="">
 
-### WINCTRL Orion 2 StrikeAce E (formerly Winwing F-15E)
+### Winwing (WINCTRL) Orion 2 StrikeAce E (formerly Winwing F-15E)
 
 If you mostly play *DCS: F-15E Strike Eagle.* Notably, it has a speedbrake switch which the StrikeAce EX grip lacks.
 
@@ -258,9 +262,9 @@ Worse than a modded Thrustmaster TWCS.
 
 ## Recommended
 
-### WINCTRL Orion 2 HOTAS MAX
+### Winwing (WINCTRL) Orion 2 HOTAS MAX
 
-Bundle of the WINCTRL Orion 2 ViperAce EX Viper stick and Orion 2 throttle. Choice of replica F/A-18, replica F-15E and fictionalized F-15EX throttle grips available. A close match to the real controls of an A-10 or F-15E.
+Bundle of the Winwing/WINCTRL Orion 2 ViperAce EX Viper stick and Orion 2 throttle. Choice of replica F/A-18, replica F-15E and fictionalized F-15EX throttle grips available. A close match to the real controls of an A-10 or F-15E.
 
  | |
 -|-|-
@@ -274,9 +278,9 @@ Bundle of the Thrustmaster T16000M FCS stick and TWCS throttle
 
 ![](images/t16000m-fcs-hotas.webp)
 
-### WINCTRL Orion 2 HOTAS ViperAce
+### Winwing/WINCTRL Orion 2 HOTAS ViperAce
 
-Bundle of the WINCTRL Orion 2 ViperAce EX stick and Orion 2 ViperAce throttle. A close match to the real controls of an F-16.
+Bundle of the Winwing/WINCTRL Orion 2 ViperAce EX stick and Orion 2 ViperAce throttle. A close match to the real controls of an F-16.
 
 ![](images/orion-2-hotas-f-16.webp)
 
@@ -334,9 +338,9 @@ Good choice if you are bundling with other Virpil products to save on shipping.
 
 ![](images/vpc-ace-pedals.webp)
 
-### WINCTRL Orion Metal Flight Rudder Pedals
+### Winwing/WINCTRL Orion Metal Flight Rudder Pedals
 
-Good choice if you are bundling with other WINCTRL products to save on shipping.
+Good choice if you are bundling with other Winwing/WINCTRL products to save on shipping.
 
 ![](images/orion-pedals.webp)
 
