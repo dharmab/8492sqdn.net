@@ -619,6 +619,24 @@
       "sortKey": "uh1"
     },
     {
+      "title": "C-130J Hercules",
+      "coverImage": "c130j.webp",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "role-logistics",
+        "era-mid-cold-war",
+        "era-late-cold-war",
+        "era-post-cold-war",
+        "era-gwot",
+        "origin-us"
+      ],
+      "steamURL": "https://store.steampowered.com/app/3899930/DCS_C130J/",
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/c-130j/",
+      "rating": 2,
+      "sortKey": "c130j"
+    },
+    {
       "title": "Mi-8MTV2 Magnificent Eight (Mi-17 Hip)",
       "coverImage": "mi8.webp",
       "description": "",
