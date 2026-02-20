@@ -27,6 +27,7 @@ languages:
           url: posts/
           weight: 10
 params:
+  Author: "Zaid"
   footer:
     hideCopyright: true
   editPost:
