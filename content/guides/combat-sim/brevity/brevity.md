@@ -12,7 +12,7 @@ weight: 20
 
 Terminate action prior to execution, especially terminating an attack prior to weapons release.
 
-_Eagle 11 is preparing to execute a close air support attack when the JTAC calls out "Eagle 11, ABORT ABORT ABORT!" Eagle 11 terminates the attack and breaks off without release weapons.
+_Eagle 11 is preparing to execute a close air support attack when the JTAC calls out "Eagle 11, ABORT ABORT ABORT!" Eagle 11 terminates the attack and breaks off without releasing weapons._
 
 #### ALPHA CHECK
 
