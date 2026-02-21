@@ -8,6 +8,8 @@ tags:
 weight: 20
 ---
 
+This is a short, simplified set of brevity terms you may encounter playing combat flight simulators. It is not an exhaustive list of all real world brevity. It is also designed to balance accessibility and real-world accuracy.
+
 #### ABORT
 
 Terminate action prior to execution, especially terminating an attack prior to weapons release.
@@ -18,9 +20,15 @@ _Eagle 11 is preparing to execute a close air support attack when the JTAC calls
 
 Request for bearing and range from aircraft to a specific point.
 
+_Eagle 11 pushes to the strike channel and contacts the controller. "Magic, Eagle 11 checking in as fragged, request alpha check bullseye." Magic responds with a bearing and range "Eagle 11, contact, alpha check bullseye 144/28."_
+
 #### ANCHOR
 
-To orbit around a specific point.
+To orbit around a specific point, or to be in a turning fight around a specific point.
+
+_The flight lead called out "Eagle flight, anchor rock." The flight turned to orbit around the ROCK waypoint listed on their kneeboard card._
+
+_Eagle 11 merged with the hostile and began a two-circle dogfight. "Eagle 11 anchored bullseye 024/20!" the pilot called out._
 
 #### ANGELS
 
