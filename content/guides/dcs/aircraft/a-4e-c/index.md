@@ -11,7 +11,7 @@ The A-4 Skyhawk is a naval light attack plane introduced in the 1950s. It served
 
 # Installation
 
-Download the latest version at [https://heclak.github.io/community-a4e-c](https://heclak.github.io/community-a4e-c/). Download the ZIP file and extract it to `%userprofile%\Saved Games\DCS\Mods\aircraft\A-4E-C`.
+Download the latest version at [https://community-a-4e.github.io/](https://community-a-4e.github.io/). Download the ZIP file and extract it to `%userprofile%\Saved Games\DCS\Mods\aircraft\A-4E-C`.
 
 The folder will look like this when correctly installed:
 
