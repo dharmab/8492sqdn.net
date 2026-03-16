@@ -5,7 +5,7 @@ tags:
   - digital combat simulator
 weight: 6
 ---
-<img src="images/Untitled.webp" width="1024" height="852" loading="lazy" alt="Untitled">
+<img src="images/hero.webp" width="1024" height="852" loading="lazy" alt="Photo of the A-4 in flight">
 
 The A-4 Skyhawk is a naval light attack plane introduced in the 1950s. It served the US in a combat role, most notably during the Vietnam War. It was also operated by the IDF in the Yom Kippur War, Argentina in the Falklands War and the Free Kuwaiti Air Force during Operation Desert Storm. The US continued to use it in a training role until the early 2000s. It is notable for its light weight, agility, toughness, ease of maintenance, and low cost. It is best suited for low-level ground attack and strike missions using guns, rockets, and bombs. It was also used as an adversary aircraft for air-to-air combat training at TOPGUN.
 
@@ -15,7 +15,7 @@ Download the latest version at [https://community-a-4e.github.io/](https://commu
 
 The folder will look like this when correctly installed:
 
-<img src="images/Untitled 1.webp" width="1154" height="781" loading="lazy" alt="Untitled">
+<img src="images/install.webp" width="1125" height="944" loading="lazy" alt="Screenshot of the A-4E-C folder in the DCS Mods directory">
 
 # Controls
 
