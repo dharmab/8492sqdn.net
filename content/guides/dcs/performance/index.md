@@ -1,7 +1,7 @@
 ---
 title: DCS World Performance and Settings Guide
 summary: Recommended system, graphical and gameplay settings for DCS World
-date: 2026-01-14
+date: 2026-03-16
 tags:
   - digital combat simulator
 weight: 1
@@ -362,13 +362,14 @@ These settings are a good starting baseline; you may need to tweak and test furt
 
 | | |
 |-|-|
-| Res of Cockpit Displays | 1024 Every Frame |
+| Cockpit Displays Resolution | 1024 Every Frame |
+| Mirrors Resolution | User preference. I fold my mirrors away most of the time anyway. |
+| Mirrors Sequential Rendering | I have no idea what this does. It seems to be undocumented. |
 | Anti-Aliasing | Off or MSAA 2x/MSAA 4x. Do not use TAA or DLAA, because they cause blurring/ghosting that makes it very difficult to spot aircraft. MSAA may reduce shimmer in VR |
 | Upscaling | Off has best fidelity (no blurring/ghosting), especially on 1080p monitors. Try DLSS Quality and sharpening 0.5 on newer Nvidia graphics, especially with [this tweak](#dlss). Try FSR with scaling 0.9 and sharpening 0.8 on AMD graphics or older Nvidia graphics. Tune sharpening to user preference. If this is grayed out, turn off anti-aliasing and verify drivers are fully updated |
+| Sharpening | User preference. Values aboove 0.8 can look "crunchy" |
 | Textures | High. Do not lower this, as anything below High makes the cockpit difficult to read. |
 | Terrain textures | Low or High |
-|Lens Effects| User preference. I prefer Off for general gameplay or High for recording videos. Can cause problems in VR when using Quad Views. |
-| Heat Blur | High (2D) or Off (VR). In VR, the blur renders incorrectly, causing it to blur objects in front of the heat. |
 | Shadows | Off or High |
 | Flat Shadows Blur | Off |
 | Secondary Shadows | User preference. Particularly impactful on carriers and at large airbases |
@@ -376,12 +377,17 @@ These settings are a good starting baseline; you may need to tweak and test furt
 | Visib Range | Medium or High |
 | Civ Traffic | Off |
 | Clouds | High or Ultra |
+| Lens Effects| User preference. I prefer Off for general gameplay or High for recording videos. Can cause problems in VR when using Quad Views. |
+| Heat Blur | High (2D) or Off (VR). In VR, the blur renders incorrectly, causing it to blur objects in front of the heat. |
+| Motion Blur | Off. Causes artifacting in both 2D and VR |
 | Depth of Field | Off. Causes artifacting in VR when using Quad Views Rendering |
 | Water | Medium |
 | SSAO | Off. Causes artifacting in VR when using Quad Views Rendering |
 | SSLR | Off. Causes artifacting in VR when using Quad Views Rendering |
 | Lens Effects | Off. Causes artifacting in VR when using Quad Views Rendering |
-| Motion Blur | Off. Causes artifacting in both 2D and VR |
+| Color grading | User preference. I like some of these, as I find the default colors to be a little muted for my personal taste. |
+| Canopy Reflections | User preference. |
+| Volumetric Lights | USer preference. |
 | Clutter/Grass | 0 |
 | Forest Visibility | 100% |
 | Forest Details Factor | 1 |
