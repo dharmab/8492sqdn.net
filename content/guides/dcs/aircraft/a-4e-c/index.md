@@ -242,3 +242,7 @@ Reference kneeboard page 3-4 and 3-5 for gunsight elevation and gun usage
     3. Weapon Function Selector Switch to BOMBS & GM ARM
     4. VOL as required
 2. Point missile’s boresight towards rear aspect of target, wait for loud tone
+
+## Custom Cockpit Photo
+
+You can replace the photograph in the cockpit by replacing the file `%userprofile%\Saved Games\DCS\Mods\aircraft\A-4E-C\Cockpit\Textures\a4e_cockpit_photo.png`. You can use the default photo as a template in your preferred editing software.
