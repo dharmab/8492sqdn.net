@@ -367,7 +367,7 @@ These settings are a good starting baseline; you may need to tweak and test furt
 | Mirrors Sequential Rendering | I have no idea what this does. It seems to be undocumented. |
 | Anti-Aliasing | Off or MSAA 2x/MSAA 4x. Do not use TAA or DLAA, because they cause blurring/ghosting that makes it very difficult to spot aircraft. MSAA may reduce shimmer in VR |
 | Upscaling | Off has best fidelity (no blurring/ghosting), especially on 1080p monitors. Try DLSS Quality and sharpening 0.5 on newer Nvidia graphics, especially with [this tweak](#dlss). Try FSR with scaling 0.9 and sharpening 0.8 on AMD graphics or older Nvidia graphics. Tune sharpening to user preference. If this is grayed out, turn off anti-aliasing and verify drivers are fully updated |
-| Sharpening | User preference. Values aboove 0.8 can look "crunchy" |
+| Sharpening | User preference. Values aboove 0.8 can look "crunchy." Unconfirmed user reports that values above 0.0 cause a perforamnce hit. |
 | Textures | High. Do not lower this, as anything below High makes the cockpit difficult to read. |
 | Terrain textures | Low or High |
 | Shadows | Off or High |
