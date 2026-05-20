@@ -54,11 +54,11 @@ Ideally, use an upgraded CPU cooler. We're fans of Thermalright and ID-COOLING's
 
 ## RAM
 
-DCS World requires 16GB+ RAM minimum for small missions on the Caucases map. 32GB RAM is required for large multiplayer servers and the Syria map. 64-96GB RAM is recommended if you have the budget available.
+DCS World requires 16GB+ RAM minimum for small missions on the Caucasus map. 32GB RAM is required for large multiplayer servers and the Syria map. 64-96GB RAM is recommended if you have the budget available.
 
-You should ideally use two sticks of RAM and not one or four sticks. Using one stick with halve the data rate of the kit compared to usinng multiple sticks. Meanwhile, most systems have lower performance with four sticks due to motherboard and CPU bandwidth limits. If you use overclocked RAM, you are more likely to have stability issues with 4 sticks than with 2.
+You should ideally use two sticks of RAM and not one or four sticks. Using one stick will halve the data rate of the kit compared to using multiple sticks. Meanwhile, most systems have lower performance with four sticks due to motherboard and CPU bandwidth limits. If you use overclocked RAM, you are more likely to have stability issues with 4 sticks than with 2.
 
-When purchasing RAM, try to match the frequency and timings of the RAM to the CPU manufacturer's recommendation. The recommendation may vary by specifc CPU and motherboard. AMD provides a table of their test results with overclocked memory [here](https://www.amd.com/en/products/processors/ryzen-compatible-memory.html). On Intel systems, you are generally limited by the motherboard. Check with the manufacturer of the RAM, as some provide tables on their websites for selecting an appropriate kit. Do _not_ buy a higher frequency of RAM than recommended for your configuration because it may be unstable in combination with your CPU. **However, this is an appropriate place to compromise if fast RAM is excessively expensive**; the returns on faster RAM quickly diminish, and more RAM is more important than faster RAM.
+When purchasing RAM, try to match the frequency and timings of the RAM to the CPU manufacturer's recommendation. The recommendation may vary by specific CPU and motherboard. AMD provides a table of their test results with overclocked memory [here](https://www.amd.com/en/products/processors/ryzen-compatible-memory.html). On Intel systems, you are generally limited by the motherboard. Check with the manufacturer of the RAM, as some provide tables on their websites for selecting an appropriate kit. Do _not_ buy a higher frequency of RAM than recommended for your configuration because it may be unstable in combination with your CPU. **However, this is an appropriate place to compromise if fast RAM is excessively expensive**; the returns on faster RAM quickly diminish, and more RAM is more important than faster RAM.
 
 _In most cases_ the optimal speeds are:
 
@@ -95,9 +95,9 @@ C|RTX 4070 Super, RTX 4070, RTX 3080 Ti, RTX 3080 12GB | 6800 XT
 
 You should have a sufficient power supply for your CPU and GPU.
 
-**PSU wattage alone is not a good indicator of reliability under load. 80PLUS ratings are not useful** for determining overall power delivery and efficiency across a range of scenarios. The 80PLUS rating only test efficiency at a few specific loads, and does not test for performance or reliability. Manufacturers can and do game these ratings!
+**PSU wattage alone is not a good indicator of reliability under load. 80PLUS ratings are not useful** for determining overall power delivery and efficiency across a range of scenarios. The 80PLUS rating only tests efficiency at a few specific loads, and does not test for performance or reliability. Manufacturers can and do game these ratings!
 
-You need to select a PSU based on results from bench testing by knowledgeable people with the appropriate equipment. Check any power supply you plan to purchase against the [Cultist Tier List](https://cultists.network/140/psu-tier-list/) (see [spreadsheet](https://docs.google.com/spreadsheets/d/1eL0893Ramlwk6E3s3uSvH1_juom7SMG5SCNzP2Uov8w/edit?gid=1719706335#gid=1719706335) for newer data not yet on the website), as well as  [LTT Labs' PSU testing](https://www.lttlabs.com/categories/power-supplies) testing. Only buy if it is Tier B on the Cultist list and/or recommended by LTT Labs.
+You need to select a PSU based on results from bench testing by knowledgeable people with the appropriate equipment. Check any power supply you plan to purchase against the [Cultist Tier List](https://cultists.network/140/psu-tier-list/) (see [spreadsheet](https://docs.google.com/spreadsheets/d/1eL0893Ramlwk6E3s3uSvH1_juom7SMG5SCNzP2Uov8w/edit?gid=1719706335#gid=1719706335) for newer data not yet on the website), as well as [LTT Labs' PSU testing](https://www.lttlabs.com/categories/power-supplies). Only buy if it is Tier B on the Cultist list and/or recommended by LTT Labs.
 
 ## USB
 
@@ -116,7 +116,7 @@ Some motherboards have a separate USB controller for the front and rear I/O, whi
 You can add a USB PCIe expansion card to your system and move some devices to the expansion card. We have tested a few of the cheaper and lower end PCIe cards and found them lacking. The very cheapest cards do not actually contain a dedicated controller chip and are simply internal hubs. With other cheap cards we encountered issues such as:
 
 - Cards failing after a few weeks of driving a VR headset
-- Driver incompatibilies
+- Driver incompatibilities
 - System stability issues such as BSOD crashes and boot loops
 
 In the worst case, a malfunctioning USB card can damage your motherboard through the PCIe port.
@@ -181,7 +181,7 @@ The default settings for DLSS in DCS cause ghosting issues on fast-moving object
 
 #### Override DLSS Version
 
-DCS uses an old version of DLSS, which is blurrier than the latest version. You can use the Nvidia App to override this with the latest version of DLSS, which is significantly improved. Use the Nvidia App to set to the the DLSS Override setting to Latest.
+DCS uses an old version of DLSS, which is blurrier than the latest version. You can use the Nvidia App to override this with the latest version of DLSS, which is significantly improved. Use the Nvidia App to set the DLSS Override setting to Latest.
 
 #### Exclude the HUD/MFDs from DLSS
 
@@ -291,7 +291,7 @@ Certain SSDs have reduced write performance when close to full because the size 
 
 ### Periodically Delete Tracks
 
-Every so often, delete Track files from your [Saved Games folder](#saved-games-folder) to free up disk space. You can find `.trk` files in `<Saved Games folder>Tracks\Multiplayer`.
+Every so often, delete Track files from your [Saved Games folder](#saved-games-folder) to free up disk space. You can find `.trk` files in `<Saved Games folder>\Tracks\Multiplayer`.
 
 If you use Tacview, also delete old `.acmi` files in `%userprofile%\Documents\Tacview`.
 
@@ -315,7 +315,7 @@ See our [VR tweaks guide](../../vr#vr-tweaks) for general VR performance tweaks 
 
 ## Prefer Standalone Over Steam
 
-Launching DCS through SteamVR may run the game use the older OpenVR API rather than directly using the OpenXR API. This can cause a performance hit, depending on your particular VR headset and system.
+Launching DCS through SteamVR may cause the game to use the older OpenVR API rather than directly using the OpenXR API. This can cause a performance hit, depending on your particular VR headset and system.
 
 {{< youtube id="TVmYgjMyJIQ" start=1051 >}}
 
@@ -367,7 +367,7 @@ These settings are a good starting baseline; you may need to tweak and test furt
 | Mirrors Sequential Rendering | I have no idea what this does. It seems to be undocumented. |
 | Anti-Aliasing | Off or MSAA 2x/MSAA 4x. Do not use TAA or DLAA, because they cause blurring/ghosting that makes it very difficult to spot aircraft. MSAA may reduce shimmer in VR |
 | Upscaling | Off has best fidelity (no blurring/ghosting), especially on 1080p monitors. Try DLSS Quality and sharpening 0.5 on newer Nvidia graphics, especially with [this tweak](#dlss). Try FSR with scaling 0.9 and sharpening 0.8 on AMD graphics or older Nvidia graphics. Tune sharpening to user preference. If this is grayed out, turn off anti-aliasing and verify drivers are fully updated |
-| Sharpening | User preference. Values aboove 0.8 can look "crunchy." Unconfirmed user reports that values above 0.0 cause a perforamnce hit. |
+| Sharpening | User preference. Values above 0.8 can look "crunchy." Unconfirmed user reports that values above 0.0 cause a performance hit. |
 | Textures | High. Do not lower this, as anything below High makes the cockpit difficult to read. |
 | Terrain textures | Low or High |
 | Shadows | Off or High |
@@ -406,7 +406,7 @@ These settings are a good starting baseline; you may need to tweak and test furt
 |-|-|
 | Game Flight Mode | Disabled (Breaks the entire game!) |
 | Easy Communication | Disabled (Breaks missions) |
-| G-Effects | None (User preference, but the effect is probably too aggressive while AI are not effected at all) |
+| G-Effects | None (User preference, but the effect is probably too aggressive while AI are not affected at all) |
 | Birds | 0 (Causes random engine failures at low altitudes) |
 
 ## Misc
