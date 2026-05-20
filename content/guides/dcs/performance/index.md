@@ -1,7 +1,7 @@
 ---
 title: DCS World Performance and Settings Guide
 summary: Recommended system, graphical and gameplay settings for DCS World
-date: 2026-03-16
+date: 2026-05-19
 tags:
   - digital combat simulator
 weight: 1
@@ -83,11 +83,9 @@ Tier | Nvidia | AMD |
 -|-|-
 S+|RTX 5090 |
 S|RTX 4090 |
-A|RTX 5080†, RTX 4080 Super, RTX 5070 Ti†, RTX 4080, RTX 3090 Ti, RTX 3090 | 7900 XTX, 7900 XT, 9070XT†
-B|RTX 5070†, RTX 4070 Ti Super, RTX 4070 Ti |  9070†, 7900 GRE, 7800 XT, 6950 XT, 6900 XT
+A|RTX 5080, RTX 4080 Super, RTX 5070 Ti†, RTX 4080, RTX 3090 Ti, RTX 3090 | 7900 XTX, 7900 XT, 9070XT
+B|RTX 5070, RTX 4070 Ti Super, RTX 4070 Ti |  9070, 7900 GRE, 7800 XT, 6950 XT, 6900 XT
 C|RTX 4070 Super, RTX 4070, RTX 3080 Ti, RTX 3080 12GB | 6800 XT
-
-† Tentative position, pending additional benchmarks and testing.
 
 [Tom's Hardware: GPU Hierarchy](https://www.tomshardware.com/reviews/gpu-hierarchy,4388.html)
 
