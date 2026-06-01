@@ -6,9 +6,9 @@ export const OWN_SPEED_KT = 350;
 export const FT_PER_NMI = 6076.12;
 
 export const AZ_OPTIONS = [20, 40, 60, 80, 120, 140, 180]; // total cone width, degrees
-export const BARS_OPTIONS = [1, 2, 4, 8];
+export const BARS_OPTIONS = [1, 2, 4, 6];
 export const RANGE_OPTIONS = [5, 10, 20, 40, 80, 160]; // nmi
-export const BAR_DEG = 2; // elevation degrees covered per bar
+export const BAR_DEG = 3.75; // elevation degrees covered per bar (4B = 15° total, ±7.5°)
 export const ELEV_LIMIT_DEG = 30; // max antenna tilt up/down
 export const SCOPE_AZ_DEG = 90; // B-scope shows +/- this azimuth (fits the 180 option)
 export const MAX_DETECT_NMI = 80; // Hornet radar detection ceiling; contacts beyond this never paint
