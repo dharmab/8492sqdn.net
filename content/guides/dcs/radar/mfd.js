@@ -135,7 +135,7 @@ export class MFD {
 
 function brick(ctx, x, y, isLS) {
   ctx.fillStyle = GREEN;
-  ctx.fillRect(x - 3, y - 5, 6, 10);
+  ctx.fillRect(x - 5, y - 3, 10, 6);
   if (isLS) {
     ctx.strokeStyle = GREEN;
     ctx.lineWidth = 1.5;
