@@ -1,0 +1,352 @@
+// MFD rendering: a shared bezel/OSB framework plus the three page renderers.
+
+import {
+  SCOPE_AZ_DEG,
+  azBounds,
+  elBounds,
+  scanCenter,
+  azWidth,
+  displayRange,
+  saRange,
+  contactElevation,
+  isDetected,
+  coneAltitudesAt,
+  cursorRange,
+  lsContact,
+} from "./model.js";
+
+export const GREEN = "#33ff66";
+const DIM = "#1a6b33";
+const FAINT = "rgba(51,255,102,0.10)";
+const GREY = "#555";
+
+const RES = 380; // internal canvas resolution (square)
+const BEZEL = 42; // margin reserved for OSB labels
+
+// OSB slot center positions along each side (0..4).
+function osbAnchor(side, slot) {
+  const inset = BEZEL;
+  const span = RES - 2 * inset;
+  const pos = inset + span * ((slot + 0.5) / 5);
+  switch (side) {
+    case "top":
+      return { x: pos, y: inset * 0.5, align: "center" };
+    case "bottom":
+      return { x: RES - pos, y: RES - inset * 0.5, align: "center" };
+    case "right":
+      return { x: RES - inset * 0.4, y: pos, align: "right" };
+    case "left":
+      return { x: inset * 0.4, y: RES - pos, align: "left" };
+  }
+}
+
+export class MFD {
+  constructor(canvas, config) {
+    this.canvas = canvas;
+    this.config = config; // { title, osbs(state)->[], drawDisplay(ctx, area, state) }
+    this.osbRects = [];
+    canvas.addEventListener("click", (e) => this.onClick(e));
+  }
+
+  get area() {
+    return { x: BEZEL, y: BEZEL, w: RES - 2 * BEZEL, h: RES - 2 * BEZEL };
+  }
+
+  onClick(e) {
+    const r = this.canvas.getBoundingClientRect();
+    const sx = RES / r.width;
+    const sy = RES / r.height;
+    const x = (e.clientX - r.left) * sx;
+    const y = (e.clientY - r.top) * sy;
+    for (const o of this.osbRects) {
+      if (x >= o.x && x <= o.x + o.w && y >= o.y && y <= o.y + o.h) {
+        if (!o.disabled && o.action) o.action();
+        return;
+      }
+    }
+  }
+
+  draw(state) {
+    const ctx = this.canvas.getContext("2d");
+    // Backing store at devicePixelRatio for crispness.
+    const r = this.canvas.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    const px = Math.max(1, Math.round(r.width * dpr));
+    if (this.canvas.width !== px) {
+      this.canvas.width = px;
+      this.canvas.height = px;
+    }
+    ctx.setTransform(this.canvas.width / RES, 0, 0, this.canvas.height / RES, 0, 0);
+
+    ctx.fillStyle = "#000";
+    ctx.fillRect(0, 0, RES, RES);
+
+    const a = this.area;
+    // Display border.
+    ctx.strokeStyle = DIM;
+    ctx.lineWidth = 1;
+    ctx.strokeRect(a.x, a.y, a.w, a.h);
+
+    // OSB labels.
+    const osbs = this.config.osbs ? this.config.osbs(state) : [];
+    this.osbRects = [];
+    ctx.font = "13px monospace";
+    ctx.textBaseline = "middle";
+    for (const o of osbs) {
+      const an = osbAnchor(o.side, o.slot);
+      ctx.textAlign = an.align;
+      ctx.fillStyle = o.disabled ? GREY : GREEN;
+      ctx.fillText(o.label, an.x, an.y);
+      // Hit rect around the label.
+      const tw = ctx.measureText(o.label).width;
+      let rx = an.x;
+      if (an.align === "center") rx = an.x - tw / 2;
+      if (an.align === "right") rx = an.x - tw;
+      const rect = { x: rx - 4, y: an.y - 11, w: tw + 8, h: 22, action: o.action, disabled: o.disabled };
+      this.osbRects.push(rect);
+      if (o.active) {
+        ctx.strokeStyle = GREEN;
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(rect.x, rect.y, rect.w, rect.h);
+      }
+    }
+
+    // Title (top-left of display).
+    if (this.config.title) {
+      ctx.fillStyle = GREEN;
+      ctx.font = "12px monospace";
+      ctx.textAlign = "left";
+      ctx.textBaseline = "top";
+      ctx.fillText(this.config.title, a.x + 4, a.y + 4);
+    }
+
+    // Page content, clipped to display area.
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(a.x, a.y, a.w, a.h);
+    ctx.clip();
+    this.config.drawDisplay(ctx, a, state);
+    ctx.restore();
+  }
+}
+
+// --- Shared helpers ---
+
+function brick(ctx, x, y, isLS) {
+  ctx.fillStyle = GREEN;
+  ctx.fillRect(x - 3, y - 5, 6, 10);
+  if (isLS) {
+    ctx.strokeStyle = GREEN;
+    ctx.lineWidth = 1.5;
+    const r = 11;
+    ctx.beginPath();
+    ctx.moveTo(x - r, y);
+    ctx.lineTo(x + r, y);
+    ctx.moveTo(x, y - r);
+    ctx.lineTo(x, y + r);
+    ctx.stroke();
+  }
+}
+
+// Map azimuth (deg) to display X across the fixed +/- scope.
+function azToX(a, azDeg) {
+  return a.x + ((azDeg + SCOPE_AZ_DEG) / (2 * SCOPE_AZ_DEG)) * a.w;
+}
+
+function k(ft) {
+  return Math.round(ft / 1000);
+}
+
+// --- ATK RDR (B-scope: azimuth x range) ---
+
+export function drawAtkRdr(ctx, a, state) {
+  const range = displayRange(state);
+  const { lo, hi } = azBounds(state);
+
+  // Scanned azimuth sector band.
+  const xl = azToX(a, lo);
+  const xr = azToX(a, hi);
+  ctx.fillStyle = FAINT;
+  ctx.fillRect(xl, a.y, xr - xl, a.h);
+  ctx.strokeStyle = DIM;
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(xl, a.y);
+  ctx.lineTo(xl, a.y + a.h);
+  ctx.moveTo(xr, a.y);
+  ctx.lineTo(xr, a.y + a.h);
+  ctx.stroke();
+
+  // Boresight (nose) reference line.
+  const xc = azToX(a, 0);
+  ctx.setLineDash([4, 4]);
+  ctx.beginPath();
+  ctx.moveTo(xc, a.y);
+  ctx.lineTo(xc, a.y + a.h);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  if (!state.radar.declutter) {
+    // Range scale label (top-right).
+    ctx.fillStyle = GREEN;
+    ctx.font = "12px monospace";
+    ctx.textAlign = "right";
+    ctx.textBaseline = "top";
+    ctx.fillText(range + "", a.x + a.w - 4, a.y + 4);
+
+    // Elevation readout: cone top/bottom altitude at cursor range.
+    const { topFt, bottomFt } = coneAltitudesAt(state, cursorRange(state));
+    ctx.textAlign = "left";
+    ctx.fillText(k(topFt) + "↑", a.x + 4, a.y + 20);
+    ctx.textBaseline = "bottom";
+    ctx.fillText(k(bottomFt) + "↓", a.x + 4, a.y + a.h - 4);
+  }
+
+  // Contacts within the scan volume and display range.
+  const ls = lsContact(state);
+  for (const c of state.contacts) {
+    if (!isDetected(state, c) || c.rangeNmi > range) continue;
+    const x = azToX(a, c.azDeg);
+    const y = a.y + a.h - (c.rangeNmi / range) * a.h; // near at bottom
+    brick(ctx, x, y, ls && c.id === ls.id);
+  }
+
+  // L&S designation indicator.
+  if (ls) {
+    ctx.fillStyle = GREEN;
+    ctx.font = "12px monospace";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "top";
+    ctx.fillText("L&S", a.x + a.w / 2, a.y + 4);
+  }
+
+  // Radar cursor.
+  const cx = a.x + state.cursor.x * a.w;
+  const cy = a.y + a.h - state.cursor.y * a.h;
+  drawCursor(ctx, cx, cy);
+}
+
+function drawCursor(ctx, cx, cy) {
+  ctx.strokeStyle = GREEN;
+  ctx.lineWidth = 1.5;
+  const s = 9;
+  ctx.beginPath();
+  ctx.moveTo(cx - s, cy);
+  ctx.lineTo(cx - 3, cy);
+  ctx.moveTo(cx + 3, cy);
+  ctx.lineTo(cx + s, cy);
+  ctx.moveTo(cx, cy - s);
+  ctx.lineTo(cx, cy - 3);
+  ctx.moveTo(cx, cy + 3);
+  ctx.lineTo(cx, cy + s);
+  ctx.stroke();
+}
+
+// --- AZ/EL (front view: azimuth x elevation) ---
+
+export function drawAzEl(ctx, a, state) {
+  const { lo: azLo, hi: azHi } = azBounds(state);
+  const { lo: elLo, hi: elHi } = elBounds(state);
+  const elRange = elHi - elLo;
+
+  // Scanned azimuth band.
+  const xl = azToX(a, azLo);
+  const xr = azToX(a, azHi);
+  ctx.fillStyle = FAINT;
+  ctx.fillRect(xl, a.y, xr - xl, a.h);
+  ctx.strokeStyle = DIM;
+  ctx.beginPath();
+  ctx.moveTo(xl, a.y);
+  ctx.lineTo(xl, a.y + a.h);
+  ctx.moveTo(xr, a.y);
+  ctx.lineTo(xr, a.y + a.h);
+  ctx.stroke();
+
+  // Horizon line (elevation 0) if within the scanned elevation band.
+  if (0 >= elLo && 0 <= elHi) {
+    const yh = a.y + a.h - ((0 - elLo) / elRange) * a.h;
+    ctx.setLineDash([4, 4]);
+    ctx.beginPath();
+    ctx.moveTo(a.x, yh);
+    ctx.lineTo(a.x + a.w, yh);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // Boresight vertical.
+  const xc = azToX(a, 0);
+  ctx.setLineDash([4, 4]);
+  ctx.beginPath();
+  ctx.moveTo(xc, a.y);
+  ctx.lineTo(xc, a.y + a.h);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Contacts in the scan volume.
+  const ls = lsContact(state);
+  for (const c of state.contacts) {
+    if (!isDetected(state, c)) continue;
+    const el = contactElevation(state, c);
+    const x = azToX(a, c.azDeg);
+    const y = a.y + a.h - ((el - elLo) / elRange) * a.h;
+    brick(ctx, x, y, ls && c.id === ls.id);
+  }
+}
+
+// --- SA (top-down) ---
+
+export function drawSa(ctx, a, state) {
+  const cx = a.x + a.w / 2;
+  const cy = a.y + a.h / 2;
+  const R = Math.min(a.w, a.h) / 2 - 6;
+  const range = saRange(state);
+
+  // Range rings.
+  ctx.strokeStyle = DIM;
+  ctx.lineWidth = 1;
+  for (let i = 1; i <= 4; i++) {
+    ctx.beginPath();
+    ctx.arc(cx, cy, (R * i) / 4, 0, Math.PI * 2);
+    ctx.stroke();
+  }
+
+  // Radar cone wedge (azimuth sector out to ATK display range).
+  const { lo, hi } = azBounds(state);
+  const coneR = (Math.min(displayRange(state), range) / range) * R;
+  const a0 = ((lo - 90) * Math.PI) / 180; // up = nose; screen angle offset
+  const a1 = ((hi - 90) * Math.PI) / 180;
+  ctx.fillStyle = FAINT;
+  ctx.beginPath();
+  ctx.moveTo(cx, cy);
+  ctx.arc(cx, cy, coneR, a0, a1);
+  ctx.closePath();
+  ctx.fill();
+
+  // Ownship chevron (nose up).
+  ctx.strokeStyle = GREEN;
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(cx, cy - 9);
+  ctx.lineTo(cx - 7, cy + 7);
+  ctx.moveTo(cx, cy - 9);
+  ctx.lineTo(cx + 7, cy + 7);
+  ctx.stroke();
+
+  // Range label.
+  ctx.fillStyle = GREEN;
+  ctx.font = "12px monospace";
+  ctx.textAlign = "right";
+  ctx.textBaseline = "top";
+  ctx.fillText(range + "", a.x + a.w - 4, a.y + 4);
+
+  // Only contacts the radar currently detects (in the scan volume, within range).
+  const ls = lsContact(state);
+  for (const c of state.contacts) {
+    if (!isDetected(state, c) || c.rangeNmi > range) continue;
+    const ang = ((c.azDeg - 90) * Math.PI) / 180;
+    const d = (c.rangeNmi / range) * R;
+    const x = cx + Math.cos(ang) * d;
+    const y = cy + Math.sin(ang) * d;
+    brick(ctx, x, y, ls && c.id === ls.id);
+  }
+}

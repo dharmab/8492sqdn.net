@@ -1,0 +1,147 @@
+.radar-app {
+    background: #0a0d10;
+    color: #cdd6cf;
+    padding: 16px;
+    border-radius: 8px;
+    font-family: monospace;
+}
+
+.radar-app .intro {
+    max-width: 70ch;
+    margin: 0 auto 16px;
+    line-height: 1.5;
+}
+
+.scene3d {
+    display: block;
+    width: 100%;
+    height: 360px;
+    border: 1px solid #1a6b33;
+    border-radius: 6px;
+    background: #05080a;
+    touch-action: none;
+}
+
+.mfd-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.mfd {
+    flex: 1 1 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #000;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.status {
+    margin: 12px 0;
+    padding: 8px 10px;
+    background: #05080a;
+    border: 1px solid #1a6b33;
+    border-radius: 6px;
+    color: #33ff66;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.hotas-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8px;
+}
+
+.hotas-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.hotas-label {
+    font-size: 11px;
+    color: #7a8a7f;
+    letter-spacing: 1px;
+}
+
+.tdc-pad {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    background: #11171b;
+    border: 2px solid #33ff66;
+    border-radius: 10px;
+    touch-action: none;
+    cursor: grab;
+}
+
+.tdc-pad:active {
+    cursor: grabbing;
+}
+
+.tdc-knob {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #33ff66;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hotas-btn {
+    background: #11171b;
+    color: #33ff66;
+    border: 2px solid #33ff66;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.1;
+    cursor: pointer;
+    min-width: 70px;
+}
+
+.hotas-btn:hover {
+    background: #16331f;
+}
+
+.hotas-btn:active {
+    background: #33ff66;
+    color: #000;
+}
+
+.rocker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.rocker .hotas-btn {
+    min-width: 48px;
+    padding: 6px 10px;
+}
+
+.rocker-mid {
+    font-size: 11px;
+    color: #7a8a7f;
+}
+
+@media (max-width: 640px) {
+    .mfd-row {
+        flex-wrap: wrap;
+    }
+    .mfd {
+        flex-basis: 100%;
+    }
+}

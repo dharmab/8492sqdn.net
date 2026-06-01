@@ -1,0 +1,77 @@
+---
+title: Interactive Radar Trainer (F/A-18C)
+summary: An interactive tool for learning the basics of the air-to-air radar in the DCS F/A-18C Hornet.
+tags:
+    - digital combat simulator
+weight: 6
+date: 2026-06-01
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="radar.css" />
+    </head>
+    <body>
+        <div class="radar-app">
+            <p class="intro">
+                This tool shows a single snapshot of an air-to-air radar picture
+                in the F/A-18C. You fly straight and level at 20,000 ft; a few
+                contacts are scattered in the airspace ahead. Use the HOTAS
+                controls to point the radar and step through its settings, and
+                watch how the same contacts appear across the AZ/EL, SA, and ATK
+                RDR formats and in the 3D view. Reload the page for a new
+                picture.
+            </p>
+
+            <canvas id="scene3d" class="scene3d"></canvas>
+
+            <div class="mfd-row">
+                <canvas id="mfd-azel" class="mfd"></canvas>
+                <canvas id="mfd-sa" class="mfd"></canvas>
+                <canvas id="mfd-atk" class="mfd"></canvas>
+            </div>
+
+            <div class="status" id="status"></div>
+
+            <div class="hotas-row">
+                <div class="hotas-group">
+                    <div id="tdc-pad" class="tdc-pad">
+                        <div id="tdc-knob" class="tdc-knob"></div>
+                    </div>
+                    <span class="hotas-label">TDC SLEW</span>
+                </div>
+
+                <div class="hotas-group">
+                    <button id="tdc-depress" class="hotas-btn">TDC<br />DEPRESS</button>
+                    <span class="hotas-label">DESIGNATE L&amp;S</span>
+                </div>
+
+                <div class="hotas-group">
+                    <div class="rocker">
+                        <button id="elev-up" class="hotas-btn">▲</button>
+                        <span class="rocker-mid">ELEV</span>
+                        <button id="elev-dn" class="hotas-btn">▼</button>
+                    </div>
+                    <span class="hotas-label">ANTENNA ELEV</span>
+                </div>
+
+                <div class="hotas-group">
+                    <button id="undesig" class="hotas-btn">UNDESIG</button>
+                    <span class="hotas-label">STEP L&amp;S</span>
+                </div>
+            </div>
+        </div>
+
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "./vendor/three.module.js",
+                    "three/addons/": "./vendor/addons/"
+                }
+            }
+        </script>
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
