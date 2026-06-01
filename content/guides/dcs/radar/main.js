@@ -26,7 +26,7 @@ function bars(state) {
 const azel = new MFD(document.getElementById("mfd-azel"), {
   title: "AZ/EL",
   osbs: (s) => [
-    { side: "left", slot: 4, label: `${bars(s)}B`, action: () => change(() => cycleBars(s)) },
+    { osb: 5, label: `${bars(s)}B`, action: () => change(() => cycleBars(s)) },
   ],
   drawDisplay: drawAzEl,
 });
@@ -34,8 +34,8 @@ const azel = new MFD(document.getElementById("mfd-azel"), {
 const sa = new MFD(document.getElementById("mfd-sa"), {
   title: "SA",
   osbs: (s) => [
-    { side: "right", slot: 4, label: "RNG↑", action: () => change(() => saRangeUp(s)) },
-    { side: "bottom", slot: 2, label: "RNG↓", action: () => change(() => saRangeDown(s)) },
+    { osb: 15, label: "RNG↑", action: () => change(() => saRangeUp(s)) },
+    { osb: 18, label: "RNG↓", action: () => change(() => saRangeDown(s)) },
   ],
   drawDisplay: drawSa,
 });
@@ -43,14 +43,14 @@ const sa = new MFD(document.getElementById("mfd-sa"), {
 const atk = new MFD(document.getElementById("mfd-atk"), {
   title: "ATK RDR",
   osbs: (s) => [
-    { side: "top", slot: 1, label: "DCLT", active: s.radar.declutter, action: () => change(() => toggleDeclutter(s)) },
-    { side: "top", slot: 4, label: "AACQ", disabled: true },
-    { side: "right", slot: 0, label: "RAID", disabled: true },
-    { side: "right", slot: 2, label: "FRNG", disabled: true },
-    { side: "right", slot: 4, label: "RNG↑", action: () => change(() => rangeUp(s)) },
-    { side: "bottom", slot: 2, label: "RNG↓", action: () => change(() => rangeDown(s)) },
-    { side: "left", slot: 3, label: `AZ${azWidth(s)}`, action: () => change(() => cycleAz(s)) },
-    { side: "left", slot: 4, label: `${bars(s)}B`, action: () => change(() => cycleBars(s)) },
+    { osb: 7,  label: "DCLT", active: s.radar.declutter, action: () => change(() => toggleDeclutter(s)) },
+    { osb: 10, label: "AACQ", disabled: true },
+    { osb: 11, label: "RNG↑", action: () => change(() => rangeUp(s)) },
+    { osb: 12, label: "RNG↓", action: () => change(() => rangeDown(s)) },
+    { osb: 13, label: "FRNG", disabled: true },
+    { osb: 15, label: "RAID", disabled: true },
+    { osb: 4,  label: `AZ${azWidth(s)}`, action: () => change(() => cycleAz(s)) },
+    { osb: 5,  label: `${bars(s)}B`, action: () => change(() => cycleBars(s)) },
   ],
   drawDisplay: drawAtkRdr,
 });

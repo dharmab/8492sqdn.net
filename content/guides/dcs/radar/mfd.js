@@ -23,20 +23,21 @@ const GREY = "#555";
 const RES = 380; // internal canvas resolution (square)
 const BEZEL = 42; // margin reserved for OSB labels
 
-// OSB slot center positions along each side (0..4).
-function osbAnchor(side, slot) {
+// OSB positions by number (1–20, clockwise from bottom of left edge).
+function osbAnchor(osb) {
   const inset = BEZEL;
   const span = RES - 2 * inset;
+  let side, slot;
+  if (osb <= 5)       { side = "left";   slot = osb - 1; }
+  else if (osb <= 10) { side = "top";    slot = osb - 6; }
+  else if (osb <= 15) { side = "right";  slot = osb - 11; }
+  else                { side = "bottom"; slot = osb - 16; }
   const pos = inset + span * ((slot + 0.5) / 5);
   switch (side) {
-    case "top":
-      return { x: pos, y: inset * 0.5, align: "center" };
-    case "bottom":
-      return { x: RES - pos, y: RES - inset * 0.5, align: "center" };
-    case "right":
-      return { x: RES - inset * 0.4, y: pos, align: "right" };
-    case "left":
-      return { x: inset * 0.4, y: RES - pos, align: "left" };
+    case "top":    return { x: pos,              y: inset * 0.5,       align: "center" };
+    case "bottom": return { x: RES - pos,        y: RES - inset * 0.5, align: "center" };
+    case "right":  return { x: RES - inset * 0.4, y: pos,             align: "right" };
+    case "left":   return { x: inset * 0.4,      y: RES - pos,        align: "left" };
   }
 }
 
@@ -93,7 +94,7 @@ export class MFD {
     ctx.font = "13px monospace";
     ctx.textBaseline = "middle";
     for (const o of osbs) {
-      const an = osbAnchor(o.side, o.slot);
+      const an = osbAnchor(o.osb);
       ctx.textAlign = an.align;
       ctx.fillStyle = o.disabled ? GREY : GREEN;
       ctx.fillText(o.label, an.x, an.y);
