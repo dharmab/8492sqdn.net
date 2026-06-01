@@ -244,38 +244,35 @@ function drawCursor(ctx, cx, cy) {
 
 // --- AZ/EL (front view: azimuth x elevation) ---
 
+// Fixed vertical scale for the AZ/EL view: display spans +/- this elevation, so
+// the scanned band visibly grows/shrinks with bars and slides with antenna tilt.
+const VIEW_EL_DEG = 45;
+
 export function drawAzEl(ctx, a, state) {
   const { lo: azLo, hi: azHi } = azBounds(state);
   const { lo: elLo, hi: elHi } = elBounds(state);
-  const elRange = elHi - elLo;
+  const elToY = (el) => a.y + a.h - ((el + VIEW_EL_DEG) / (2 * VIEW_EL_DEG)) * a.h;
 
-  // Scanned azimuth band.
+  // Scanned volume: azimuth width x elevation band, on a fixed elevation scale.
   const xl = azToX(a, azLo);
   const xr = azToX(a, azHi);
+  const yt = elToY(elHi);
+  const yb = elToY(elLo);
   ctx.fillStyle = FAINT;
-  ctx.fillRect(xl, a.y, xr - xl, a.h);
+  ctx.fillRect(xl, yt, xr - xl, yb - yt);
   ctx.strokeStyle = DIM;
-  ctx.beginPath();
-  ctx.moveTo(xl, a.y);
-  ctx.lineTo(xl, a.y + a.h);
-  ctx.moveTo(xr, a.y);
-  ctx.lineTo(xr, a.y + a.h);
-  ctx.stroke();
+  ctx.strokeRect(xl, yt, xr - xl, yb - yt);
 
-  // Horizon line (elevation 0) if within the scanned elevation band.
-  if (0 >= elLo && 0 <= elHi) {
-    const yh = a.y + a.h - ((0 - elLo) / elRange) * a.h;
-    ctx.setLineDash([4, 4]);
-    ctx.beginPath();
-    ctx.moveTo(a.x, yh);
-    ctx.lineTo(a.x + a.w, yh);
-    ctx.stroke();
-    ctx.setLineDash([]);
-  }
+  // Horizon line (elevation 0).
+  const yh = elToY(0);
+  ctx.setLineDash([4, 4]);
+  ctx.beginPath();
+  ctx.moveTo(a.x, yh);
+  ctx.lineTo(a.x + a.w, yh);
+  ctx.stroke();
 
   // Boresight vertical.
   const xc = azToX(a, 0);
-  ctx.setLineDash([4, 4]);
   ctx.beginPath();
   ctx.moveTo(xc, a.y);
   ctx.lineTo(xc, a.y + a.h);
@@ -286,9 +283,8 @@ export function drawAzEl(ctx, a, state) {
   const ls = lsContact(state);
   for (const c of state.contacts) {
     if (!isDetected(state, c)) continue;
-    const el = contactElevation(state, c);
     const x = azToX(a, c.azDeg);
-    const y = a.y + a.h - ((el - elLo) / elRange) * a.h;
+    const y = elToY(contactElevation(state, c));
     brick(ctx, x, y, ls && c.id === ls.id);
   }
 }
