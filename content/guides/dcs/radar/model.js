@@ -222,15 +222,23 @@ export function tdcDepress(state) {
   }
 }
 
-// Step the L&S designation to the next detected contact (Undesignate button).
+// Step the L&S designation to the next contact in the radar cone (Undesignate
+// button). Candidates need not be on screen; the display range is bumped up if
+// the next contact lies beyond the current range so it becomes visible.
 export function stepLS(state) {
   const detected = state.contacts
-    .filter((c) => isDetected(state, c) && c.rangeNmi <= displayRange(state))
+    .filter((c) => isDetected(state, c))
     .sort((a, b) => a.rangeNmi - b.rangeNmi);
   if (detected.length === 0) return;
   let idx = state.lsId !== null ? detected.findIndex((c) => c.id === state.lsId) : -1;
   const next = detected[(idx + 1) % detected.length];
   state.lsId = next.id;
+  while (
+    next.rangeNmi > displayRange(state) &&
+    state.radar.rangeIndex < RANGE_OPTIONS.length - 1
+  ) {
+    state.radar.rangeIndex++;
+  }
   state.cursor.x = (next.azDeg + SCOPE_AZ_DEG) / (2 * SCOPE_AZ_DEG);
   state.cursor.y = next.rangeNmi / displayRange(state);
 }
