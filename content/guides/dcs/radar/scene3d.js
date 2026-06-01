@@ -111,13 +111,13 @@ export class Scene3D {
         const crossGeo = new THREE.BufferGeometry().setFromPoints([
           new THREE.Vector3(-r, 0, 0), new THREE.Vector3(r, 0, 0),
           new THREE.Vector3(0, -r, 0), new THREE.Vector3(0, r, 0),
+          new THREE.Vector3(0, 0, -r), new THREE.Vector3(0, 0, r),
         ]);
         const cross = new THREE.LineSegments(
           crossGeo,
           new THREE.LineBasicMaterial({ color: GREEN }),
         );
         cross.position.copy(pos);
-        cross.lookAt(this.camera.position);
         this.contactGroup.add(cross);
       }
     }
