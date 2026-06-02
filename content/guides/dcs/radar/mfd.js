@@ -95,15 +95,32 @@ export class MFD {
     ctx.textBaseline = "middle";
     for (const o of osbs) {
       const an = osbAnchor(o.osb);
-      ctx.textAlign = an.align;
       ctx.fillStyle = o.disabled ? GREY : GREEN;
-      ctx.fillText(o.label, an.x, an.y);
-      // Hit rect around the label.
-      const tw = ctx.measureText(o.label).width;
-      let rx = an.x;
-      if (an.align === "center") rx = an.x - tw / 2;
-      if (an.align === "right") rx = an.x - tw;
-      const rect = { x: rx - 4, y: an.y - 11, w: tw + 8, h: 22, action: o.action, disabled: o.disabled };
+      let rect;
+      if (o.vertical) {
+        const lineH = 14;
+        const cw = ctx.measureText("M").width;
+        ctx.textAlign = "center";
+        const words = o.label.split(" ");
+        const rows = Math.max(...words.map(w => w.length));
+        const totalH = rows * lineH;
+        const totalW = words.length * cw + (words.length - 1) * 2;
+        words.forEach((word, col) => {
+          const cx = an.x - totalW / 2 + col * (cw + 2) + cw / 2;
+          [...word].forEach((ch, row) => {
+            ctx.fillText(ch, cx, an.y - totalH / 2 + row * lineH + lineH / 2);
+          });
+        });
+        rect = { x: an.x - totalW / 2 - 2, y: an.y - totalH / 2, w: totalW + 4, h: totalH, action: o.action, disabled: o.disabled };
+      } else {
+        ctx.textAlign = an.align;
+        ctx.fillText(o.label, an.x, an.y);
+        const tw = ctx.measureText(o.label).width;
+        let rx = an.x;
+        if (an.align === "center") rx = an.x - tw / 2;
+        if (an.align === "right") rx = an.x - tw;
+        rect = { x: rx - 4, y: an.y - 11, w: tw + 8, h: 22, action: o.action, disabled: o.disabled };
+      }
       this.osbRects.push(rect);
       if (o.active) {
         ctx.strokeStyle = GREEN;
