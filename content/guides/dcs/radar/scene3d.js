@@ -42,6 +42,7 @@ export class Scene3D {
 
     this.controls = new OrbitControls(this.camera, canvas);
     this.controls.enableDamping = true;
+    this.controls.enableZoom = false;
     this.controls.target.set(0, 0, -25);
 
     this.scene.add(new THREE.AmbientLight(0xffffff, 0.7));
