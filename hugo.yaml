@@ -43,3 +43,6 @@ privacy:
   youtube:
     disable: false
     privacyEnhanced: true
+security:
+  allowContent:
+    - '.'
