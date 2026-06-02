@@ -64,6 +64,7 @@ export function createState() {
     saRangeIndex: saIdx,
     // Cursor in normalized ATK RDR display coords: x 0..1 (left..right), y 0..1 (near..far)
     cursor: { x: 0.5, y: 0.5 },
+    tdcDepressed: false,
     lsId: null, // Launch & Steer designated contact
   };
 }

@@ -63,10 +63,10 @@ export function setupHotas(state, onChange) {
   }
   requestAnimationFrame(tick);
 
-  bindButton("tdc-depress", () => {
-    tdcDepress(state);
-    onChange();
-  });
+  bindHold("tdc-depress",
+    () => { state.tdcDepressed = true; tdcDepress(state); onChange(); },
+    () => { state.tdcDepressed = false; onChange(); }
+  );
   bindHold("elev-up", () => (elevDir = 1), () => (elevDir = 0));
   bindHold("elev-dn", () => (elevDir = -1), () => (elevDir = 0));
   bindButton("undesig", () => {

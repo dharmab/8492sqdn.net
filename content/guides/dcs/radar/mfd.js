@@ -277,22 +277,32 @@ export function drawAtkRdr(ctx, a, state) {
   // Radar cursor.
   const cx = a.x + state.cursor.x * a.w;
   const cy = a.y + a.h - state.cursor.y * a.h;
-  drawCursor(ctx, cx, cy);
+  drawCursor(ctx, cx, cy, state.tdcDepressed);
 }
 
-function drawCursor(ctx, cx, cy) {
+function drawCursor(ctx, cx, cy, depressed) {
   ctx.strokeStyle = GREEN;
   ctx.lineWidth = 1.5;
-  const s = 9;
+  const s = 16;
+  const g = 2;
+  const vg = 5;
+  const vs = 8;
   ctx.beginPath();
-  ctx.moveTo(cx - s, cy);
-  ctx.lineTo(cx - 3, cy);
-  ctx.moveTo(cx + 3, cy);
-  ctx.lineTo(cx + s, cy);
-  ctx.moveTo(cx, cy - s);
-  ctx.lineTo(cx, cy - 3);
-  ctx.moveTo(cx, cy + 3);
-  ctx.lineTo(cx, cy + s);
+  if (depressed) {
+    ctx.moveTo(cx - s, cy);
+    ctx.lineTo(cx - g, cy);
+    ctx.moveTo(cx + g, cy);
+    ctx.lineTo(cx + s, cy);
+    ctx.moveTo(cx, cy - s);
+    ctx.lineTo(cx, cy - g);
+    ctx.moveTo(cx, cy + g);
+    ctx.lineTo(cx, cy + s);
+  } else {
+    ctx.moveTo(cx - vg, cy - vs);
+    ctx.lineTo(cx - vg, cy + vs);
+    ctx.moveTo(cx + vg, cy - vs);
+    ctx.lineTo(cx + vg, cy + vs);
+  }
   ctx.stroke();
 }
 
