@@ -204,6 +204,28 @@ export function drawAtkRdr(ctx, a, state) {
   ctx.stroke();
   ctx.setLineDash([]);
 
+  // Azimuth tick marks at 0°, ±30°, ±60° along top and bottom inner edges.
+  ctx.strokeStyle = DIM;
+  ctx.lineWidth = 1;
+  const tickLen = 18;
+  ctx.beginPath();
+  for (const az of [-60, -30, 0, 30, 60]) {
+    const xt = azToX(a, az);
+    ctx.moveTo(xt, a.y);
+    ctx.lineTo(xt, a.y + tickLen);
+    ctx.moveTo(xt, a.y + a.h);
+    ctx.lineTo(xt, a.y + a.h - tickLen);
+  }
+  // Range tick marks at 1/4, 1/2, 3/4 along left and right inner edges.
+  for (const frac of [0.25, 0.5, 0.75]) {
+    const yt = a.y + frac * a.h;
+    ctx.moveTo(a.x, yt);
+    ctx.lineTo(a.x + tickLen, yt);
+    ctx.moveTo(a.x + a.w, yt);
+    ctx.lineTo(a.x + a.w - tickLen, yt);
+  }
+  ctx.stroke();
+
   if (!state.radar.declutter) {
     // Range scale label (top-right).
     ctx.fillStyle = GREEN;
