@@ -64,6 +64,8 @@ export function createState() {
     saRangeIndex: saIdx,
     // Cursor in normalized ATK RDR display coords: x 0..1 (left..right), y 0..1 (near..far)
     cursor: { x: 0.5, y: 0.5 },
+    azBump: { edge: null, time: 0 }, // azimuth bump gesture state
+    rangeBump: { edge: null, time: 0 }, // range bump gesture state
     tdcDepressed: false,
     lsId: null, // Launch & Steer designated contact
   };
@@ -192,18 +194,52 @@ export function toggleDeclutter(state) {
   state.radar.declutter = !state.radar.declutter;
 }
 
-// Move the cursor by a normalized delta, handling range stepping at top/bottom.
+// Move the cursor by a normalized delta.
+// Azimuth bumping: push TDC into a horizontal edge, then reverse within 1s to
+// step the azimuth scan width down (left edge) or up (right edge).
+// Range bumping: push TDC into a vertical edge, then reverse within 1s to
+// step the display range up (top edge) or down (bottom edge).
 export function slewCursor(state, dx, dy) {
-  state.cursor.x = Math.max(0, Math.min(1, state.cursor.x + dx));
-  let y = state.cursor.y + dy;
-  if (y >= 1) {
-    rangeUp(state);
-    y = 0.5;
-  } else if (y <= 0) {
-    rangeDown(state);
-    y = 0.5;
+  const prevX = state.cursor.x;
+  const prevY = state.cursor.y;
+
+  if (prevX > 0 && prevX + dx <= 0) {
+    state.azBump = { edge: 'left', time: Date.now() };
+  } else if (prevX < 1 && prevX + dx >= 1) {
+    state.azBump = { edge: 'right', time: Date.now() };
   }
-  state.cursor.y = y;
+
+  if (prevY < 1 && prevY + dy >= 1) {
+    state.rangeBump = { edge: 'top', time: Date.now() };
+  } else if (prevY > 0 && prevY + dy <= 0) {
+    state.rangeBump = { edge: 'bottom', time: Date.now() };
+  }
+
+  state.cursor.x = Math.max(0, Math.min(1, prevX + dx));
+
+  const azElapsed = Date.now() - state.azBump.time;
+  if (azElapsed > 1000) {
+    state.azBump = { edge: null, time: 0 };
+  } else if (state.azBump.edge === 'left' && dx > 0) {
+    state.radar.azIndex = (state.radar.azIndex - 1 + AZ_OPTIONS.length) % AZ_OPTIONS.length;
+    state.azBump = { edge: null, time: 0 };
+  } else if (state.azBump.edge === 'right' && dx < 0) {
+    state.radar.azIndex = (state.radar.azIndex + 1) % AZ_OPTIONS.length;
+    state.azBump = { edge: null, time: 0 };
+  }
+
+  const rangeElapsed = Date.now() - state.rangeBump.time;
+  if (rangeElapsed > 1000) {
+    state.rangeBump = { edge: null, time: 0 };
+  } else if (state.rangeBump.edge === 'top' && dy < 0) {
+    rangeUp(state);
+    state.rangeBump = { edge: null, time: 0 };
+  } else if (state.rangeBump.edge === 'bottom' && dy > 0) {
+    rangeDown(state);
+    state.rangeBump = { edge: null, time: 0 };
+  }
+
+  state.cursor.y = Math.max(0, Math.min(1, prevY + dy));
 }
 
 // TDC depress: over a contact, designate it as the Launch & Steer target.
