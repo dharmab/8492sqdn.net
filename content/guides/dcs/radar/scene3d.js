@@ -97,14 +97,18 @@ export class Scene3D {
         -Math.cos(az) * horiz,
       );
       const inside = isDetected(state, c);
-      const geo = new THREE.BoxGeometry(2.5, 2.5, 2.5);
+      const geo = new THREE.ConeGeometry(1.5, 5, 3);
+      geo.rotateX(-Math.PI / 2); // tip points along -Z (forward)
       const mat = new THREE.MeshStandardMaterial({
         color: inside ? GREEN : CONTACT,
         emissive: inside ? GREEN : 0x000000,
         emissiveIntensity: inside ? 0.4 : 0,
+        flatShading: true,
       });
       const mesh = new THREE.Mesh(geo, mat);
       mesh.position.copy(pos);
+      const relHeading = ((c.headingDeg - state.ownship.headingDeg) * Math.PI) / 180;
+      mesh.rotation.y = relHeading;
       this.contactGroup.add(mesh);
 
       if (ls && c.id === ls.id) {
