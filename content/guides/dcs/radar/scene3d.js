@@ -16,6 +16,15 @@ const DIM = 0x1a6b33;
 const CONTACT = 0xcccccc;
 const FAR = 80; // cone draw length, scene units (1 unit = 1 nmi)
 
+const ARC = 24;
+const NA = 16;
+const NE = 6;
+// Fixed point counts for pre-allocated cone geometry buffers:
+//   Wireframe: 4 edge pairs (O→corner) + 4*ARC boundary segment pairs
+const WIRE_PTS = 4 * 2 + 4 * ARC * 2; // 200
+//   Cap: NA*NE quads × 2 triangles × 3 vertices
+const CAP_PTS = NA * NE * 6; // 576
+
 // Unit direction from azimuth/elevation in the ownship frame.
 // forward = -Z, right = +X, up = +Y.
 function dir(azDeg, elDeg) {
@@ -60,9 +69,11 @@ export class Scene3D {
 
     this.contactGroup = new THREE.Group();
     this.scene.add(this.contactGroup);
+    this._contactPool = null; // lazily initialized on first update()
 
     this.coneGroup = new THREE.Group();
     this.scene.add(this.coneGroup);
+    this._initCone();
 
     this.animate = this.animate.bind(this);
     requestAnimationFrame(this.animate);
@@ -76,6 +87,77 @@ export class Scene3D {
     this.scene.add(new THREE.Mesh(geo, mat));
   }
 
+  // Pre-allocate cone geometry with fixed-size buffers so buildCone() can
+  // write positions in-place without touching the GPU allocator each frame.
+  _initCone() {
+    const wireGeo = new THREE.BufferGeometry();
+    wireGeo.setAttribute(
+      "position",
+      new THREE.BufferAttribute(new Float32Array(WIRE_PTS * 3), 3),
+    );
+    this._coneLines = new THREE.LineSegments(
+      wireGeo,
+      new THREE.LineBasicMaterial({ color: GREEN, transparent: true, opacity: 0.7 }),
+    );
+    this.coneGroup.add(this._coneLines);
+
+    const capGeo = new THREE.BufferGeometry();
+    capGeo.setAttribute(
+      "position",
+      new THREE.BufferAttribute(new Float32Array(CAP_PTS * 3), 3),
+    );
+    this._coneCap = new THREE.Mesh(
+      capGeo,
+      new THREE.MeshBasicMaterial({
+        color: GREEN,
+        transparent: true,
+        opacity: 0.06,
+        side: THREE.DoubleSide,
+      }),
+    );
+    this.coneGroup.add(this._coneCap);
+  }
+
+  // Create one mesh per contact (contacts never move) and one shared L&S cross.
+  // Called once on the first update(); subsequent calls only swap materials.
+  _initContactPool(state) {
+    const geo = new THREE.ConeGeometry(1.5, 5, 3);
+    geo.rotateX(-Math.PI / 2); // tip points along -Z (forward)
+
+    this._detectedMat = new THREE.MeshStandardMaterial({
+      color: GREEN, emissive: GREEN, emissiveIntensity: 0.4, flatShading: true,
+    });
+    this._undetectedMat = new THREE.MeshStandardMaterial({
+      color: CONTACT, emissive: 0x000000, emissiveIntensity: 0, flatShading: true,
+    });
+
+    this._contactPool = state.contacts.map(c => {
+      const az = (c.azDeg * Math.PI) / 180;
+      const mesh = new THREE.Mesh(geo, this._undetectedMat);
+      mesh.position.set(
+        Math.sin(az) * c.rangeNmi,
+        (c.altFt - state.ownship.altFt) / FT_PER_NMI,
+        -Math.cos(az) * c.rangeNmi,
+      );
+      mesh.rotation.y = ((c.headingDeg - state.ownship.headingDeg) * Math.PI) / 180;
+      this.contactGroup.add(mesh);
+      return { id: c.id, mesh };
+    });
+
+    const r = 4;
+    const crossGeo = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(-r, 0, 0), new THREE.Vector3(r, 0, 0),
+      new THREE.Vector3(0, -r, 0), new THREE.Vector3(0, r, 0),
+      new THREE.Vector3(0, 0, -r), new THREE.Vector3(0, 0, r),
+    ]);
+    this._lsCross = new THREE.LineSegments(
+      crossGeo,
+      new THREE.LineBasicMaterial({ color: GREEN }),
+    );
+    this._lsCross.visible = false;
+    this.contactGroup.add(this._lsCross);
+  }
+
   resize() {
     const r = this.canvas.getBoundingClientRect();
     if (r.width === 0 || r.height === 0) return;
@@ -85,61 +167,32 @@ export class Scene3D {
   }
 
   update(state) {
-    // Contacts.
-    this.contactGroup.clear();
-    const ls = lsContact(state);
-    for (const c of state.contacts) {
-      const horiz = c.rangeNmi;
-      const az = (c.azDeg * Math.PI) / 180;
-      const pos = new THREE.Vector3(
-        Math.sin(az) * horiz,
-        (c.altFt - state.ownship.altFt) / FT_PER_NMI,
-        -Math.cos(az) * horiz,
-      );
-      const inside = isDetected(state, c);
-      const geo = new THREE.ConeGeometry(1.5, 5, 3);
-      geo.rotateX(-Math.PI / 2); // tip points along -Z (forward)
-      const mat = new THREE.MeshStandardMaterial({
-        color: inside ? GREEN : CONTACT,
-        emissive: inside ? GREEN : 0x000000,
-        emissiveIntensity: inside ? 0.4 : 0,
-        flatShading: true,
-      });
-      const mesh = new THREE.Mesh(geo, mat);
-      mesh.position.copy(pos);
-      const relHeading = ((c.headingDeg - state.ownship.headingDeg) * Math.PI) / 180;
-      mesh.rotation.y = relHeading;
-      this.contactGroup.add(mesh);
+    if (!this._contactPool) this._initContactPool(state);
 
-      if (ls && c.id === ls.id) {
-        const r = 4;
-        const crossGeo = new THREE.BufferGeometry().setFromPoints([
-          new THREE.Vector3(-r, 0, 0), new THREE.Vector3(r, 0, 0),
-          new THREE.Vector3(0, -r, 0), new THREE.Vector3(0, r, 0),
-          new THREE.Vector3(0, 0, -r), new THREE.Vector3(0, 0, r),
-        ]);
-        const cross = new THREE.LineSegments(
-          crossGeo,
-          new THREE.LineBasicMaterial({ color: GREEN }),
-        );
-        cross.position.copy(pos);
-        this.contactGroup.add(cross);
-      }
+    // Contacts don't move; just swap materials as detection state changes.
+    const ls = lsContact(state);
+    for (const entry of this._contactPool) {
+      const c = state.contacts.find(c => c.id === entry.id);
+      entry.mesh.material = isDetected(state, c) ? this._detectedMat : this._undetectedMat;
+    }
+
+    if (ls) {
+      const entry = this._contactPool.find(e => e.id === ls.id);
+      this._lsCross.position.copy(entry.mesh.position);
+      this._lsCross.visible = true;
+    } else {
+      this._lsCross.visible = false;
     }
 
     this.buildCone(state);
   }
 
   buildCone(state) {
-    this.coneGroup.clear();
     const azC = scanCenter(state);
     const elC = state.radar.elevDeg;
     const azH = azWidth(state) / 2;
     const elH = barSpan(state) / 2;
 
-    // Build the az x el raster around forward (-Z), then rotate it to point along
-    // the antenna boresight. The scan volume tilts as a rigid panel, so its far
-    // rim stays on the 80 nmi sphere and curves down at the edges when tilted.
     const boresight = dir(azC, elC);
     const q = new THREE.Quaternion().setFromUnitVectors(
       new THREE.Vector3(0, 0, -1),
@@ -147,21 +200,14 @@ export class Scene3D {
     );
     const far = (a, e) => dir(a, e).applyQuaternion(q).multiplyScalar(FAR);
 
-    // Edges from origin to the four corners.
-    const pts = [];
+    // Write wireframe positions directly into the pre-allocated buffer.
+    const wireArr = this._coneLines.geometry.attributes.position.array;
+    let wi = 0;
+    const wv = v => { wireArr[wi++] = v.x; wireArr[wi++] = v.y; wireArr[wi++] = v.z; };
     const O = new THREE.Vector3(0, 0, 0);
-    for (const [a, e] of [
-      [-azH, -elH],
-      [azH, -elH],
-      [azH, elH],
-      [-azH, elH],
-    ]) {
-      pts.push(O.clone(), far(a, e));
+    for (const [a, e] of [[-azH, -elH], [azH, -elH], [azH, elH], [-azH, elH]]) {
+      wv(O); wv(far(a, e));
     }
-
-    // Curved far boundary: each point sits exactly FAR (80 nmi) from ownship,
-    // so the cone reaches its full range across the whole arc, not just the corners.
-    const ARC = 24;
     const boundary = [];
     const sweep = (a0, e0, a1, e1) => {
       for (let i = 0; i < ARC; i++) {
@@ -174,36 +220,26 @@ export class Scene3D {
     sweep(azH, elH, -azH, elH);
     sweep(-azH, elH, -azH, -elH);
     for (let i = 0; i < boundary.length; i++) {
-      pts.push(boundary[i].clone(), boundary[(i + 1) % boundary.length].clone());
+      wv(boundary[i]); wv(boundary[(i + 1) % boundary.length]);
     }
+    this._coneLines.geometry.attributes.position.needsUpdate = true;
 
-    const geo = new THREE.BufferGeometry().setFromPoints(pts);
-    const mat = new THREE.LineBasicMaterial({ color: GREEN, transparent: true, opacity: 0.7 });
-    this.coneGroup.add(new THREE.LineSegments(geo, mat));
-
-    // Faint translucent far cap, triangulated over the az x el patch at radius FAR.
-    const NA = 16;
-    const NE = 6;
-    const tri = [];
-    const at = (ai, ei) =>
-      far(-azH + (2 * azH * ai) / NA, -elH + (2 * elH * ei) / NE);
+    // Write cap triangle positions into the pre-allocated buffer.
+    const capArr = this._coneCap.geometry.attributes.position.array;
+    let ci = 0;
+    const cv = v => { capArr[ci++] = v.x; capArr[ci++] = v.y; capArr[ci++] = v.z; };
+    const at = (ai, ei) => far(-azH + (2 * azH * ai) / NA, -elH + (2 * elH * ei) / NE);
     for (let ai = 0; ai < NA; ai++) {
       for (let ei = 0; ei < NE; ei++) {
         const a = at(ai, ei);
         const b = at(ai + 1, ei);
         const c = at(ai + 1, ei + 1);
         const d = at(ai, ei + 1);
-        tri.push(a, b, c, a, c, d);
+        cv(a); cv(b); cv(c);
+        cv(a); cv(c); cv(d);
       }
     }
-    const capGeo = new THREE.BufferGeometry().setFromPoints(tri);
-    const capMat = new THREE.MeshBasicMaterial({
-      color: GREEN,
-      transparent: true,
-      opacity: 0.06,
-      side: THREE.DoubleSide,
-    });
-    this.coneGroup.add(new THREE.Mesh(capGeo, capMat));
+    this._coneCap.geometry.attributes.position.needsUpdate = true;
   }
 
   animate() {
