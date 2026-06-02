@@ -277,10 +277,11 @@ export function drawAtkRdr(ctx, a, state) {
   // Radar cursor.
   const cx = a.x + state.cursor.x * a.w;
   const cy = a.y + a.h - state.cursor.y * a.h;
-  drawCursor(ctx, cx, cy, state.tdcDepressed);
+  const { topFt, bottomFt } = coneAltitudesAt(state, cursorRange(state));
+  drawCursor(ctx, cx, cy, state.tdcDepressed, topFt, bottomFt);
 }
 
-function drawCursor(ctx, cx, cy, depressed) {
+function drawCursor(ctx, cx, cy, depressed, topFt, bottomFt) {
   ctx.strokeStyle = GREEN;
   ctx.lineWidth = 1.5;
   const s = 16;
@@ -304,6 +305,18 @@ function drawCursor(ctx, cx, cy, depressed) {
     ctx.lineTo(cx + vg, cy + vs);
   }
   ctx.stroke();
+
+  if (!depressed) {
+    const clamp = ft => Math.max(0, Math.min(99, Math.round(ft / 1000)));
+    const fmt = n => String(n).padStart(2, '0');
+    ctx.fillStyle = GREEN;
+    ctx.font = '11px monospace';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'bottom';
+    ctx.fillText(fmt(clamp(topFt)), cx, cy - vs - 2);
+    ctx.textBaseline = 'top';
+    ctx.fillText(fmt(clamp(bottomFt)), cx, cy + vs + 2);
+  }
 }
 
 // --- AZ/EL (front view: azimuth x elevation) ---
