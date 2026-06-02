@@ -2,6 +2,7 @@
 
 import {
   SCOPE_AZ_DEG,
+  ELEV_LIMIT_DEG,
   azBounds,
   elBounds,
   scanCenter,
@@ -224,6 +225,19 @@ export function drawAtkRdr(ctx, a, state) {
     ctx.moveTo(a.x + a.w, yt);
     ctx.lineTo(a.x + a.w - tickLen, yt);
   }
+  ctx.stroke();
+
+  // Elevation caret (<) on the left inner edge.
+  // Neutral (0°) → midpoint; fully raised → 3/4 tick; fully lowered → 1/4 tick.
+  const elevFrac = 0.5 - 0.25 * (state.radar.elevDeg / ELEV_LIMIT_DEG);
+  const caretY = a.y + elevFrac * a.h;
+  const cs = 7; // caret arm half-size
+  ctx.strokeStyle = GREEN;
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(a.x + cs, caretY - cs);
+  ctx.lineTo(a.x, caretY);
+  ctx.lineTo(a.x + cs, caretY + cs);
   ctx.stroke();
 
   if (!state.radar.declutter) {
