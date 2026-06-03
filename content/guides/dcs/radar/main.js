@@ -1,7 +1,6 @@
 import {
   createState,
   azWidth,
-  displayRange,
   saRange,
   cycleAz,
   cycleBars,
@@ -9,7 +8,6 @@ import {
   rangeDown,
   cycleSaScale,
   toggleSaCenter,
-  lsContact,
   pruneLS,
   BARS_OPTIONS,
 } from "./model.js";
@@ -80,7 +78,6 @@ function render() {
   sa.draw(state);
   atk.draw(state);
   scene.update(state);
-  updateStatus();
 }
 
 function change(mutate) {
@@ -89,16 +86,14 @@ function change(mutate) {
   render();
 }
 
-function updateStatus() {
-  const ls = lsContact(state);
-  const el = document.getElementById("status");
-  if (!el) return;
-  el.textContent =
-    `AZ ${azWidth(state)}°   ${bars(state)}BAR   ` +
-    `RNG ${displayRange(state)} nmi   SA ${saRange(state)} nmi   ` +
-    `ELEV ${state.radar.elevDeg >= 0 ? "+" : ""}${Math.round(state.radar.elevDeg)}°   ` +
-    `L&S ${ls ? "DESIGNATED" : "—"}`;
-}
+document.getElementById("assist-3d").addEventListener("change", (e) => {
+  state.assists.show3dVolume = e.target.checked;
+  render();
+});
+document.getElementById("assist-sa-cone").addEventListener("change", (e) => {
+  state.assists.showSaCone = e.target.checked;
+  render();
+});
 
-setupHotas(state, render);
+setupHotas(state, () => { pruneLS(state); render(); });
 render();

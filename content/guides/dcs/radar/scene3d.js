@@ -169,11 +169,15 @@ export class Scene3D {
   update(state) {
     if (!this._contactPool) this._initContactPool(state);
 
-    // Contacts don't move; just swap materials as detection state changes.
+    const showVolume = state.assists.show3dVolume;
+    this.coneGroup.visible = showVolume;
+
+    // Contacts don't move; swap materials as detection state changes.
+    // When the volume assist is off, show all contacts as undetected.
     const ls = lsContact(state);
     for (const entry of this._contactPool) {
       const c = state.contacts.find(c => c.id === entry.id);
-      entry.mesh.material = isDetected(state, c) ? this._detectedMat : this._undetectedMat;
+      entry.mesh.material = (showVolume && isDetected(state, c)) ? this._detectedMat : this._undetectedMat;
     }
 
     if (ls) {

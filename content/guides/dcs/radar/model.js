@@ -63,6 +63,10 @@ export function createState() {
     },
     saRangeIndex: saIdx,
     saCentered: true,
+    assists: {
+      show3dVolume: true,
+      showSaCone: true,
+    },
     // Cursor in normalized ATK RDR display coords: x 0..1 (left..right), y 0..1 (near..far)
     cursor: { x: 0.5, y: 0.5 },
     azBump: { edge: null, time: 0 }, // azimuth bump gesture state

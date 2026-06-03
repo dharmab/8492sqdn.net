@@ -60,21 +60,6 @@
     cursor: pointer;
 }
 
-.status {
-    flex-shrink: 0;
-    padding: 6px 10px;
-    background: #05080a;
-    border: 1px solid #1a6b33;
-    border-radius: 6px;
-    color: #33ff66;
-    font-size: 13px;
-    letter-spacing: 0.5px;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .hotas-row {
     flex-shrink: 0;
     display: flex;
@@ -162,4 +147,28 @@
 .rocker-mid {
     font-size: 11px;
     color: #7a8a7f;
+}
+
+.assists-row {
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 2px 8px;
+}
+
+.assists-row label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #7a8a7f;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.assists-row input[type="checkbox"] {
+    accent-color: #33ff66;
+    cursor: pointer;
 }

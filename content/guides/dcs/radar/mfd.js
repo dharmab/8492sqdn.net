@@ -442,17 +442,19 @@ export function drawSa(ctx, a, state) {
   const R = centered ? Math.min(a.w, a.h) / 2 - 6 : a.h - 14;
   const range = saRange(state);
 
-  // Radar cone wedge (azimuth sector, always 80 nmi deep).
-  const { lo, hi } = azBounds(state);
-  const coneR = (80 / range) * R;
-  const a0 = ((lo - 90) * Math.PI) / 180; // up = nose; screen angle offset
-  const a1 = ((hi - 90) * Math.PI) / 180;
-  ctx.fillStyle = FAINT;
-  ctx.beginPath();
-  ctx.moveTo(cx, oy);
-  ctx.arc(cx, oy, coneR, a0, a1);
-  ctx.closePath();
-  ctx.fill();
+  if (state.assists.showSaCone) {
+    // Radar cone wedge (azimuth sector, always 80 nmi deep).
+    const { lo, hi } = azBounds(state);
+    const coneR = (80 / range) * R;
+    const a0 = ((lo - 90) * Math.PI) / 180; // up = nose; screen angle offset
+    const a1 = ((hi - 90) * Math.PI) / 180;
+    ctx.fillStyle = FAINT;
+    ctx.beginPath();
+    ctx.moveTo(cx, oy);
+    ctx.arc(cx, oy, coneR, a0, a1);
+    ctx.closePath();
+    ctx.fill();
+  }
 
   // Ownship chevron (nose up).
   ctx.strokeStyle = GREEN;
