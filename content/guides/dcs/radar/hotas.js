@@ -2,8 +2,8 @@
 
 import { slewCursor, slewElev, tdcDepress, stepLS } from "./model.js";
 
-const SLEW_RATE = 0.018; // normalized cursor units per frame at full deflection
-const ELEV_RATE = 0.35; // antenna elevation degrees per frame while held
+const SLEW_RATE = 1.08; // normalized cursor units per second at full deflection
+const ELEV_RATE = 21;   // antenna elevation degrees per second while held
 
 export function setupHotas(state, onChange) {
   const pad = document.getElementById("tdc-pad");
@@ -46,16 +46,19 @@ export function setupHotas(state, onChange) {
   pad.addEventListener("pointercancel", endSlew);
 
   let elevDir = 0; // -1 down, +1 up, 0 idle; set while the rocker is held
+  let lastTime = null;
 
-  function tick() {
+  function tick(now) {
+    const dt = lastTime === null ? 0 : Math.min((now - lastTime) / 1000, 0.1);
+    lastTime = now;
     let changed = false;
     if (active && (offX !== 0 || offY !== 0)) {
       // Pad up (negative screen Y) moves the cursor toward greater range (up).
-      slewCursor(state, offX * SLEW_RATE, -offY * SLEW_RATE);
+      slewCursor(state, offX * SLEW_RATE * dt, -offY * SLEW_RATE * dt);
       changed = true;
     }
     if (elevDir !== 0) {
-      slewElev(state, elevDir * ELEV_RATE);
+      slewElev(state, elevDir * ELEV_RATE * dt);
       changed = true;
     }
     if (changed) onChange();
