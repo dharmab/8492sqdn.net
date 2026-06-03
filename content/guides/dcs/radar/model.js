@@ -62,6 +62,7 @@ export function createState() {
       declutter: false,
     },
     saRangeIndex: saIdx,
+    saCentered: true,
     // Cursor in normalized ATK RDR display coords: x 0..1 (left..right), y 0..1 (near..far)
     cursor: { x: 0.5, y: 0.5 },
     azBump: { edge: null, time: 0 }, // azimuth bump gesture state
@@ -180,6 +181,14 @@ export function saRangeUp(state) {
 
 export function saRangeDown(state) {
   if (state.saRangeIndex > 0) state.saRangeIndex--;
+}
+
+export function cycleSaScale(state) {
+  state.saRangeIndex = (state.saRangeIndex + 1) % RANGE_OPTIONS.length;
+}
+
+export function toggleSaCenter(state) {
+  state.saCentered = !state.saCentered;
 }
 
 // Slew antenna elevation by a (possibly fractional) delta, clamped to the gimbal.

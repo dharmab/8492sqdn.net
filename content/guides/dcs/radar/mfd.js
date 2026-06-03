@@ -99,7 +99,8 @@ export class MFD {
       ctx.fillStyle = o.disabled ? GREY : GREEN;
       let rect;
       if (o.vertical) {
-        const lineH = 14;
+        ctx.font = "11px monospace";
+        const lineH = 12;
         const cw = ctx.measureText("M").width;
         ctx.textAlign = "center";
         const words = o.label.split(" ");
@@ -113,6 +114,7 @@ export class MFD {
           });
         });
         rect = { x: an.x - totalW / 2 - 2, y: an.y - totalH / 2, w: totalW + 4, h: totalH, action: o.action, disabled: o.disabled };
+        ctx.font = "13px monospace";
       } else {
         ctx.textAlign = an.align;
         ctx.fillText(o.label, an.x, an.y);
@@ -370,28 +372,20 @@ export function drawAzEl(ctx, a, state) {
 
 export function drawSa(ctx, a, state) {
   const cx = a.x + a.w / 2;
-  const cy = a.y + a.h / 2;
-  const R = Math.min(a.w, a.h) / 2 - 6;
+  const centered = state.saCentered !== false;
+  const oy = centered ? a.y + a.h / 2 : a.y + a.h - 12;
+  const R = centered ? Math.min(a.w, a.h) / 2 - 6 : a.h - 14;
   const range = saRange(state);
 
-  // Range rings.
-  ctx.strokeStyle = DIM;
-  ctx.lineWidth = 1;
-  for (let i = 1; i <= 4; i++) {
-    ctx.beginPath();
-    ctx.arc(cx, cy, (R * i) / 4, 0, Math.PI * 2);
-    ctx.stroke();
-  }
-
-  // Radar cone wedge (azimuth sector out to ATK display range).
+  // Radar cone wedge (azimuth sector, always 80 nmi deep).
   const { lo, hi } = azBounds(state);
-  const coneR = (Math.min(displayRange(state), range) / range) * R;
+  const coneR = (Math.min(80, range) / range) * R;
   const a0 = ((lo - 90) * Math.PI) / 180; // up = nose; screen angle offset
   const a1 = ((hi - 90) * Math.PI) / 180;
   ctx.fillStyle = FAINT;
   ctx.beginPath();
-  ctx.moveTo(cx, cy);
-  ctx.arc(cx, cy, coneR, a0, a1);
+  ctx.moveTo(cx, oy);
+  ctx.arc(cx, oy, coneR, a0, a1);
   ctx.closePath();
   ctx.fill();
 
@@ -399,27 +393,20 @@ export function drawSa(ctx, a, state) {
   ctx.strokeStyle = GREEN;
   ctx.lineWidth = 2;
   ctx.beginPath();
-  ctx.moveTo(cx, cy - 9);
-  ctx.lineTo(cx - 7, cy + 7);
-  ctx.moveTo(cx, cy - 9);
-  ctx.lineTo(cx + 7, cy + 7);
+  ctx.moveTo(cx, oy - 9);
+  ctx.lineTo(cx - 7, oy + 7);
+  ctx.moveTo(cx, oy - 9);
+  ctx.lineTo(cx + 7, oy + 7);
   ctx.stroke();
 
-  // Range label.
-  ctx.fillStyle = GREEN;
-  ctx.font = "12px monospace";
-  ctx.textAlign = "right";
-  ctx.textBaseline = "top";
-  ctx.fillText(range + "", a.x + a.w - 4, a.y + 4);
-
-  // Only contacts the radar currently detects (in the scan volume, within range).
+  // Contacts the radar currently detects (in the scan volume, within range).
   const ls = lsContact(state);
   for (const c of state.contacts) {
     if (!isDetected(state, c) || c.rangeNmi > range) continue;
     const ang = ((c.azDeg - 90) * Math.PI) / 180;
     const d = (c.rangeNmi / range) * R;
     const x = cx + Math.cos(ang) * d;
-    const y = cy + Math.sin(ang) * d;
+    const y = oy + Math.sin(ang) * d;
     brick(ctx, x, y, ls && c.id === ls.id);
   }
 }
