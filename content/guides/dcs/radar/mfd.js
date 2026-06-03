@@ -342,12 +342,19 @@ export function drawAzEl(ctx, a, state) {
   ctx.strokeStyle = DIM;
   ctx.strokeRect(xl, yt, xr - xl, yb - yt);
 
-  // Horizon line (elevation 0).
+  // Horizon line (elevation 0) with azimuth tick marks at ±30° and ±60°.
   const yh = elToY(0);
-  ctx.setLineDash([4, 4]);
+  const tickLen = 8;
+  ctx.strokeStyle = DIM;
+  ctx.lineWidth = 1;
   ctx.beginPath();
   ctx.moveTo(a.x, yh);
   ctx.lineTo(a.x + a.w, yh);
+  for (const az of [-60, -30, 30, 60]) {
+    const xt = azToX(a, az);
+    ctx.moveTo(xt, yh - tickLen);
+    ctx.lineTo(xt, yh + tickLen);
+  }
   ctx.stroke();
 
   // Boresight vertical.
@@ -356,7 +363,6 @@ export function drawAzEl(ctx, a, state) {
   ctx.moveTo(xc, a.y);
   ctx.lineTo(xc, a.y + a.h);
   ctx.stroke();
-  ctx.setLineDash([]);
 
   // Contacts in the scan volume.
   const ls = lsContact(state);
