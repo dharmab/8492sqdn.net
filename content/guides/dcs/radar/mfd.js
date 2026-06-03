@@ -379,7 +379,7 @@ export function drawSa(ctx, a, state) {
 
   // Radar cone wedge (azimuth sector, always 80 nmi deep).
   const { lo, hi } = azBounds(state);
-  const coneR = (Math.min(80, range) / range) * R;
+  const coneR = (80 / range) * R;
   const a0 = ((lo - 90) * Math.PI) / 180; // up = nose; screen angle offset
   const a1 = ((hi - 90) * Math.PI) / 180;
   ctx.fillStyle = FAINT;
