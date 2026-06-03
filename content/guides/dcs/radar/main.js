@@ -25,9 +25,6 @@ function bars(state) {
 
 const azel = new MFD(document.getElementById("mfd-azel"), {
   title: "AZ/EL",
-  osbs: (s) => [
-    { osb: 5, label: `${bars(s)}B`, action: () => change(() => cycleBars(s)) },
-  ],
   drawDisplay: drawAzEl,
 });
 
