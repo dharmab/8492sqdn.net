@@ -14,6 +14,7 @@ import {
   coneAltitudesAt,
   cursorRange,
   lsContact,
+  contactUnderCursor,
 } from "./model.js";
 
 export const GREEN = "#33ff66";
@@ -237,6 +238,12 @@ function k(ft) {
   return Math.round(ft / 1000);
 }
 
+// ISA speed of sound in knots at a given altitude (ft).
+function speedOfSound(altFt) {
+  const T = Math.max(216.65, 288.15 - 0.001981 * altFt);
+  return 661.5 * Math.sqrt(T / 288.15);
+}
+
 // --- ATK RDR (B-scope: azimuth x range) ---
 
 export function drawAtkRdr(ctx, a, state) {
@@ -319,11 +326,33 @@ export function drawAtkRdr(ctx, a, state) {
 
   // Contacts within the scan volume and display range.
   const ls = lsContact(state);
+  const tuc = contactUnderCursor(state);
   for (const c of state.contacts) {
     if (!isDetected(state, c) || c.rangeNmi > range) continue;
+    if (tuc && c.id === tuc.id) continue; // drawn separately below
     const x = azToX(a, c.azDeg);
     const y = a.y + a.h - (c.rangeNmi / range) * a.h; // near at bottom
     brick(ctx, x, y, ls && c.id === ls.id);
+  }
+
+  // TUC: brick always; HAFU with mach/angels only when LTWS is enabled.
+  if (tuc && tuc.rangeNmi <= range && isDetected(state, tuc)) {
+    const tx = azToX(a, tuc.azDeg);
+    const ty = a.y + a.h - (tuc.rangeNmi / range) * a.h;
+    if (state.assists.ltws) {
+      hafu(ctx, tx, ty, 'square', 'diamond', ls && tuc.id === ls.id, YELLOW);
+      const machStr = (tuc.speedKt / speedOfSound(tuc.altFt)).toFixed(2).replace(/^0/, '');
+      const angelsStr = String(Math.round(tuc.altFt / 1000)).padStart(2, '0');
+      ctx.fillStyle = YELLOW;
+      ctx.font = '10px monospace';
+      ctx.textBaseline = 'middle';
+      ctx.textAlign = 'right';
+      ctx.fillText(machStr, tx - HAFU_S - 4, ty);
+      ctx.textAlign = 'left';
+      ctx.fillText(angelsStr, tx + HAFU_S + 4, ty);
+    } else {
+      brick(ctx, tx, ty, ls && tuc.id === ls.id);
+    }
   }
 
   // L&S designation indicator.

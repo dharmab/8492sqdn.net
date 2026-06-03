@@ -94,6 +94,10 @@ document.getElementById("assist-sa-cone").addEventListener("change", (e) => {
   state.assists.showSaCone = e.target.checked;
   render();
 });
+document.getElementById("assist-ltws").addEventListener("change", (e) => {
+  state.assists.ltws = e.target.checked;
+  render();
+});
 
 setupHotas(state, () => { pruneLS(state); render(); });
 render();

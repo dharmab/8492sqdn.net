@@ -66,6 +66,7 @@ export function createState() {
     assists: {
       show3dVolume: true,
       showSaCone: true,
+      ltws: false,
     },
     // Cursor in normalized ATK RDR display coords: x 0..1 (left..right), y 0..1 (near..far)
     cursor: { x: 0.5, y: 0.5 },
