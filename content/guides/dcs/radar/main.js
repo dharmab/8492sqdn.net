@@ -99,5 +99,10 @@ document.getElementById("assist-ltws").addEventListener("change", (e) => {
   render();
 });
 
+// Sync model with browser-restored checkbox state before first render.
+state.assists.show3dVolume = document.getElementById("assist-3d").checked;
+state.assists.showSaCone   = document.getElementById("assist-sa-cone").checked;
+state.assists.ltws         = document.getElementById("assist-ltws").checked;
+
 setupHotas(state, () => { pruneLS(state); render(); });
 render();

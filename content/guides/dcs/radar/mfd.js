@@ -154,20 +154,25 @@ export class MFD {
 
 // --- Shared helpers ---
 
+function drawStar(ctx, x, y, r, color) {
+  const ri = r * 0.382;
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  for (let i = 0; i < 5; i++) {
+    const ao = ((i * 72) - 90) * Math.PI / 180;
+    const ai = ao + 36 * Math.PI / 180;
+    if (i === 0) ctx.moveTo(x + r * Math.cos(ao), y + r * Math.sin(ao));
+    else ctx.lineTo(x + r * Math.cos(ao), y + r * Math.sin(ao));
+    ctx.lineTo(x + ri * Math.cos(ai), y + ri * Math.sin(ai));
+  }
+  ctx.closePath();
+  ctx.fill();
+}
+
 function brick(ctx, x, y, isLS) {
   ctx.fillStyle = GREEN;
   ctx.fillRect(x - 5, y - 3, 10, 6);
-  if (isLS) {
-    ctx.strokeStyle = GREEN;
-    ctx.lineWidth = 1.5;
-    const r = 11;
-    ctx.beginPath();
-    ctx.moveTo(x - r, y);
-    ctx.lineTo(x + r, y);
-    ctx.moveTo(x, y - r);
-    ctx.lineTo(x, y + r);
-    ctx.stroke();
-  }
+  if (isLS) drawStar(ctx, x, y - 11, 5, GREEN);
 }
 
 // HAFU half-shape path builders. Each adds its half to the current path.
@@ -218,15 +223,7 @@ function hafu(ctx, x, y, top, bottom, isLS, color = GREEN) {
   if (top    && HAFU_TOP[top])       HAFU_TOP[top](ctx, x, y);
   if (bottom && HAFU_BOTTOM[bottom]) HAFU_BOTTOM[bottom](ctx, x, y);
   ctx.stroke();
-  if (isLS) {
-    const r = 14;
-    ctx.beginPath();
-    ctx.moveTo(x - r, y);
-    ctx.lineTo(x + r, y);
-    ctx.moveTo(x, y - r);
-    ctx.lineTo(x, y + r);
-    ctx.stroke();
-  }
+  if (isLS) drawStar(ctx, x, y, 4, color);
 }
 
 // Map azimuth (deg) to display X across the fixed +/- scope.
@@ -329,29 +326,23 @@ export function drawAtkRdr(ctx, a, state) {
   const tuc = contactUnderCursor(state);
   for (const c of state.contacts) {
     if (!isDetected(state, c) || c.rangeNmi > range) continue;
-    if (tuc && c.id === tuc.id) continue; // drawn separately below
     const x = azToX(a, c.azDeg);
-    const y = a.y + a.h - (c.rangeNmi / range) * a.h; // near at bottom
-    brick(ctx, x, y, ls && c.id === ls.id);
-  }
-
-  // TUC: brick always; HAFU with mach/angels only when LTWS is enabled.
-  if (tuc && tuc.rangeNmi <= range && isDetected(state, tuc)) {
-    const tx = azToX(a, tuc.azDeg);
-    const ty = a.y + a.h - (tuc.rangeNmi / range) * a.h;
-    if (state.assists.ltws) {
-      hafu(ctx, tx, ty, 'square', 'diamond', ls && tuc.id === ls.id, YELLOW);
-      const machStr = (tuc.speedKt / speedOfSound(tuc.altFt)).toFixed(2).replace(/^0/, '');
-      const angelsStr = String(Math.round(tuc.altFt / 1000)).padStart(2, '0');
+    const y = a.y + a.h - (c.rangeNmi / range) * a.h;
+    const isLs = ls && c.id === ls.id;
+    const isTuc = tuc && c.id === tuc.id;
+    if (state.assists.ltws && (isLs || isTuc)) {
+      hafu(ctx, x, y, 'square', 'diamond', isLs, YELLOW);
+      const machStr = (c.speedKt / speedOfSound(c.altFt)).toFixed(2).replace(/^0/, '');
+      const angelsStr = String(Math.round(c.altFt / 1000)).padStart(2, '0');
       ctx.fillStyle = YELLOW;
       ctx.font = '10px monospace';
       ctx.textBaseline = 'middle';
       ctx.textAlign = 'right';
-      ctx.fillText(machStr, tx - HAFU_S - 4, ty);
+      ctx.fillText(machStr, x - HAFU_S - 4, y);
       ctx.textAlign = 'left';
-      ctx.fillText(angelsStr, tx + HAFU_S + 4, ty);
+      ctx.fillText(angelsStr, x + HAFU_S + 4, y);
     } else {
-      brick(ctx, tx, ty, ls && tuc.id === ls.id);
+      brick(ctx, x, y, isLs);
     }
   }
 
@@ -368,45 +359,30 @@ export function drawAtkRdr(ctx, a, state) {
   const cx = a.x + state.cursor.x * a.w;
   const cy = a.y + a.h - state.cursor.y * a.h;
   const { topFt, bottomFt } = coneAltitudesAt(state, cursorRange(state));
-  drawCursor(ctx, cx, cy, state.tdcDepressed, topFt, bottomFt);
+  drawCursor(ctx, cx, cy, topFt, bottomFt);
 }
 
-function drawCursor(ctx, cx, cy, depressed, topFt, bottomFt) {
+function drawCursor(ctx, cx, cy, topFt, bottomFt) {
   ctx.strokeStyle = GREEN;
   ctx.lineWidth = 1.5;
-  const s = 16;
-  const g = 2;
   const vg = 5;
   const vs = 8;
   ctx.beginPath();
-  if (depressed) {
-    ctx.moveTo(cx - s, cy);
-    ctx.lineTo(cx - g, cy);
-    ctx.moveTo(cx + g, cy);
-    ctx.lineTo(cx + s, cy);
-    ctx.moveTo(cx, cy - s);
-    ctx.lineTo(cx, cy - g);
-    ctx.moveTo(cx, cy + g);
-    ctx.lineTo(cx, cy + s);
-  } else {
-    ctx.moveTo(cx - vg, cy - vs);
-    ctx.lineTo(cx - vg, cy + vs);
-    ctx.moveTo(cx + vg, cy - vs);
-    ctx.lineTo(cx + vg, cy + vs);
-  }
+  ctx.moveTo(cx - vg, cy - vs);
+  ctx.lineTo(cx - vg, cy + vs);
+  ctx.moveTo(cx + vg, cy - vs);
+  ctx.lineTo(cx + vg, cy + vs);
   ctx.stroke();
 
-  if (!depressed) {
-    const clamp = ft => Math.max(0, Math.min(99, Math.round(ft / 1000)));
-    const fmt = n => String(n).padStart(2, '0');
-    ctx.fillStyle = GREEN;
-    ctx.font = '11px monospace';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'bottom';
-    ctx.fillText(fmt(clamp(topFt)), cx, cy - vs - 2);
-    ctx.textBaseline = 'top';
-    ctx.fillText(fmt(clamp(bottomFt)), cx, cy + vs + 2);
-  }
+  const clamp = ft => Math.max(0, Math.min(99, Math.round(ft / 1000)));
+  const fmt = n => String(n).padStart(2, '0');
+  ctx.fillStyle = GREEN;
+  ctx.font = '11px monospace';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'bottom';
+  ctx.fillText(fmt(clamp(topFt)), cx, cy - vs - 2);
+  ctx.textBaseline = 'top';
+  ctx.fillText(fmt(clamp(bottomFt)), cx, cy + vs + 2);
 }
 
 // --- AZ/EL (front view: azimuth x elevation) ---
