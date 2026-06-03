@@ -30,6 +30,7 @@ params:
   Author: "Zaid"
   footer:
     hideCopyright: true
+  hideFooter: true
   editPost:
     URL: "https://github.com/dharmab/8492sqdn.net/edit/main/content"
     Text: "Edit this page on GitHub!"
