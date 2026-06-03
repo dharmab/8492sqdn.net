@@ -10,6 +10,7 @@ import {
   cycleSaScale,
   toggleSaCenter,
   lsContact,
+  pruneLS,
   BARS_OPTIONS,
 } from "./model.js";
 import { MFD, drawAtkRdr, drawAzEl, drawSa } from "./mfd.js";
@@ -87,6 +88,7 @@ function render() {
 
 function change(mutate) {
   mutate();
+  pruneLS(state);
   render();
 }
 

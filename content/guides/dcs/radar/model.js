@@ -285,8 +285,6 @@ export function stepLS(state) {
   ) {
     state.radar.rangeIndex++;
   }
-  state.cursor.x = (next.azDeg + SCOPE_AZ_DEG) / (2 * SCOPE_AZ_DEG);
-  state.cursor.y = next.rangeNmi / displayRange(state);
 }
 
 // Find the detected contact nearest the cursor, within a small pick radius.
@@ -310,4 +308,10 @@ export function contactUnderCursor(state) {
 export function lsContact(state) {
   if (state.lsId === null) return null;
   return state.contacts.find((c) => c.id === state.lsId) || null;
+}
+
+export function pruneLS(state) {
+  if (state.lsId === null) return;
+  const ls = lsContact(state);
+  if (!ls || !inScanVolume(state, ls)) state.lsId = null;
 }

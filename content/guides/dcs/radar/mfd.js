@@ -169,6 +169,65 @@ function brick(ctx, x, y, isLS) {
   }
 }
 
+// HAFU half-shape path builders. Each adds its half to the current path.
+// (x, y) is the midline center; shapes extend s px above or below it.
+const HAFU_S = 5;
+function halfTopSquare(ctx, x, y) {
+  ctx.moveTo(x - HAFU_S, y);
+  ctx.lineTo(x - HAFU_S, y - HAFU_S);
+  ctx.lineTo(x + HAFU_S, y - HAFU_S);
+  ctx.lineTo(x + HAFU_S, y);
+}
+function halfBottomSquare(ctx, x, y) {
+  ctx.moveTo(x - HAFU_S, y);
+  ctx.lineTo(x - HAFU_S, y + HAFU_S);
+  ctx.lineTo(x + HAFU_S, y + HAFU_S);
+  ctx.lineTo(x + HAFU_S, y);
+}
+function halfTopDiamond(ctx, x, y) {
+  ctx.moveTo(x - HAFU_S, y);
+  ctx.lineTo(x, y - HAFU_S);
+  ctx.lineTo(x + HAFU_S, y);
+}
+function halfBottomDiamond(ctx, x, y) {
+  ctx.moveTo(x - HAFU_S, y);
+  ctx.lineTo(x, y + HAFU_S);
+  ctx.lineTo(x + HAFU_S, y);
+}
+function halfTopCircle(ctx, x, y) {
+  ctx.moveTo(x - HAFU_S, y);
+  ctx.arc(x, y, HAFU_S, Math.PI, 0, false); // clockwise: left → top → right
+}
+function halfBottomCircle(ctx, x, y) {
+  ctx.moveTo(x - HAFU_S, y);
+  ctx.arc(x, y, HAFU_S, Math.PI, 0, true);  // anticlockwise: left → bottom → right
+}
+const HAFU_TOP    = { square: halfTopSquare,    diamond: halfTopDiamond,    circle: halfTopCircle    };
+const HAFU_BOTTOM = { square: halfBottomSquare, diamond: halfBottomDiamond, circle: halfBottomCircle };
+
+const YELLOW = "#ffff00";
+const RED    = "#ff4444";
+
+// Draw a HAFU symbol at (x, y). top/bottom are 'square'|'diamond'|'circle'|null.
+// color is GREEN, YELLOW, or RED.
+function hafu(ctx, x, y, top, bottom, isLS, color = GREEN) {
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  if (top    && HAFU_TOP[top])       HAFU_TOP[top](ctx, x, y);
+  if (bottom && HAFU_BOTTOM[bottom]) HAFU_BOTTOM[bottom](ctx, x, y);
+  ctx.stroke();
+  if (isLS) {
+    const r = 14;
+    ctx.beginPath();
+    ctx.moveTo(x - r, y);
+    ctx.lineTo(x + r, y);
+    ctx.moveTo(x, y - r);
+    ctx.lineTo(x, y + r);
+    ctx.stroke();
+  }
+}
+
 // Map azimuth (deg) to display X across the fixed +/- scope.
 function azToX(a, azDeg) {
   return a.x + ((azDeg + SCOPE_AZ_DEG) / (2 * SCOPE_AZ_DEG)) * a.w;
@@ -413,6 +472,6 @@ export function drawSa(ctx, a, state) {
     const d = (c.rangeNmi / range) * R;
     const x = cx + Math.cos(ang) * d;
     const y = oy + Math.sin(ang) * d;
-    brick(ctx, x, y, ls && c.id === ls.id);
+    hafu(ctx, x, y, 'square', 'diamond', false, YELLOW);
   }
 }
