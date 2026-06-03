@@ -12,7 +12,7 @@ Windows: `winget install Hugo.Hugo.Extended`
 
 ## Run the site locally
 
-```
+```sh
 hugo server -w
 ```
 
