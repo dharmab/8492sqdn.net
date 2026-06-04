@@ -346,15 +346,6 @@ export function drawAtkRdr(ctx, a, state) {
     }
   }
 
-  // L&S designation indicator.
-  if (ls) {
-    ctx.fillStyle = GREEN;
-    ctx.font = "12px monospace";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "top";
-    ctx.fillText("L&S", a.x + a.w / 2, a.y + 4);
-  }
-
   // Radar cursor.
   const cx = a.x + state.cursor.x * a.w;
   const cy = a.y + a.h - state.cursor.y * a.h;
