@@ -54,9 +54,9 @@ In DCS, this variant has additional features:
 
 ## Clickable Cockpit
 
-The [Clickable FC3](https://github.com/RedK0d/CLICKABLE-FC3) mod is strongly recommended. It does not transform the FC3 MiG-29 into a full fidelity module, but it does map keyboard commands to clickable regions of the cockpit. This reduces the number of keyboard keys you need to memorize; it’s especially useful for startup, lighting and individual autopilot modes.
+The [Clickable Cockpits Continued](https://github.com/TicTac-93/FC-Clickable-Cockpits-Continued/) mod is strongly recommended. It does not transform the FC3 MiG-29 into a full fidelity module, but it does map keyboard commands to clickable regions of the cockpit. This reduces the number of keyboard keys you need to memorize; it’s especially useful for startup, lighting and individual autopilot modes.
 
-> 🖱️ **This guide assumes the Clickable FC3 mod is installed.**
+> 🖱️ **This guide assumes the Clickable Cockpits Continued is installed.**
 
 ## English Cockpit
 
@@ -84,7 +84,7 @@ For the curious, here is the real-world control layout of a German MiG-29. Note 
 
 Essential controls to bind to the HOTAS are in **bold with a** ⭐.
 
-> 🖱️ This binding list assumes you have installed the Clickable FC3 mod. It excludes some infrequently used actions that are accessible using the mouse, such as some startup steps and lighting controls.
+> 🖱️ This binding list assumes you have installed the [Clickable Cockpits Continued](https://github.com/TicTac-93/FC-Clickable-Cockpits-Continued/) mod. It excludes some infrequently used actions that are accessible using the mouse, such as some startup steps and lighting controls.
 
 ## Flight Controls
 
