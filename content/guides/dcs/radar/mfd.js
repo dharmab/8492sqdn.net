@@ -15,6 +15,7 @@ import {
   cursorRange,
   lsContact,
   contactUnderCursor,
+  sweepGlow,
 } from "./model.js";
 
 export const GREEN = "#33ff66";
@@ -169,9 +170,17 @@ function drawStar(ctx, x, y, r, color) {
   ctx.fill();
 }
 
-function brick(ctx, x, y, isLS) {
-  ctx.fillStyle = GREEN;
+function brick(ctx, x, y, isLS, glow = 0) {
+  ctx.shadowColor = '#33ff66';
+  ctx.shadowBlur = 22 * glow;
+  // Brighten the brick toward white-green at peak, and draw twice to
+  // accumulate shadow intensity (canvas shadow composites additively).
+  const r = Math.round(51  + 200 * glow);
+  const b = Math.round(102 + 150 * glow);
+  ctx.fillStyle = glow > 0 ? `rgb(${r},255,${b})` : GREEN;
   ctx.fillRect(x - 5, y - 3, 10, 6);
+  if (glow > 0) ctx.fillRect(x - 5, y - 3, 10, 6); // second pass doubles glow spread
+  ctx.shadowBlur = 0;
   if (isLS) drawStar(ctx, x, y - 11, 5, GREEN);
 }
 
@@ -270,6 +279,17 @@ export function drawAtkRdr(ctx, a, state) {
   ctx.stroke();
   ctx.setLineDash([]);
 
+  // Sweep azimuth line — solid vertical line tracking the current beam position.
+  const sweepX = azToX(a, state.sweep.azDeg);
+  ctx.strokeStyle = GREEN;
+  ctx.lineWidth = 1;
+  ctx.globalAlpha = 0.6;
+  ctx.beginPath();
+  ctx.moveTo(sweepX, a.y);
+  ctx.lineTo(sweepX, a.y + a.h);
+  ctx.stroke();
+  ctx.globalAlpha = 1;
+
   // Azimuth tick marks at 0°, ±30°, ±60° along top and bottom inner edges.
   ctx.strokeStyle = DIM;
   ctx.lineWidth = 1;
@@ -342,7 +362,7 @@ export function drawAtkRdr(ctx, a, state) {
       ctx.textAlign = 'left';
       ctx.fillText(angelsStr, x + HAFU_S + 4, y);
     } else {
-      brick(ctx, x, y, isLs);
+      brick(ctx, x, y, isLs, sweepGlow(state, c.id));
     }
   }
 
@@ -419,13 +439,24 @@ export function drawAzEl(ctx, a, state) {
   ctx.lineTo(xc, a.y + a.h);
   ctx.stroke();
 
+  // Sweep azimuth line.
+  const sweepX = azToX(a, state.sweep.azDeg);
+  ctx.strokeStyle = GREEN;
+  ctx.lineWidth = 1;
+  ctx.globalAlpha = 0.6;
+  ctx.beginPath();
+  ctx.moveTo(sweepX, a.y);
+  ctx.lineTo(sweepX, a.y + a.h);
+  ctx.stroke();
+  ctx.globalAlpha = 1;
+
   // Contacts in the scan volume.
   const ls = lsContact(state);
   for (const c of state.contacts) {
     if (!isDetected(state, c)) continue;
     const x = azToX(a, c.azDeg);
     const y = elToY(contactElevation(state, c));
-    brick(ctx, x, y, ls && c.id === ls.id);
+    brick(ctx, x, y, ls && c.id === ls.id, sweepGlow(state, c.id));
   }
 }
 
@@ -450,6 +481,20 @@ export function drawSa(ctx, a, state) {
     ctx.arc(cx, oy, coneR, a0, a1);
     ctx.closePath();
     ctx.fill();
+  }
+
+  if (state.assists.showSaCone) {
+    // Sweep radial line from ownship at the current sweep azimuth.
+    const sweepAng = ((state.sweep.azDeg - 90) * Math.PI) / 180;
+    const coneR = (80 / range) * R;
+    ctx.strokeStyle = GREEN;
+    ctx.lineWidth = 1;
+    ctx.globalAlpha = 0.6;
+    ctx.beginPath();
+    ctx.moveTo(cx, oy);
+    ctx.lineTo(cx + Math.cos(sweepAng) * coneR, oy + Math.sin(sweepAng) * coneR);
+    ctx.stroke();
+    ctx.globalAlpha = 1;
   }
 
   // Ownship chevron (nose up).

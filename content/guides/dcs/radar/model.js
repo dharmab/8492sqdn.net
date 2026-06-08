@@ -13,6 +13,10 @@ export const ELEV_LIMIT_DEG = 30; // max antenna tilt up/down
 export const SCOPE_AZ_DEG = 70; // B-scope shows +/- this azimuth (fits the 140° max option)
 export const MAX_DETECT_NMI = 80; // Hornet radar detection ceiling; contacts beyond this never paint
 
+export const SWEEP_DEG_PER_SEC = 120; // angular rate of the sweep beam; 1B at 140° ≈ 2.3 s cycle
+export const SWEEP_BEAM_AZ_DEG = 6;   // total azimuth width of sweep sub-beam (visual + detection)
+export const GLOW_DURATION_MS = 3000; // ms over which a contact's sweep glow fades to baseline
+
 const N_HOSTILE = 2;
 const N_FRIENDLY = 2;
 
@@ -74,6 +78,12 @@ export function createState() {
     rangeBump: { edge: null, time: 0 }, // range bump gesture state
     tdcDepressed: false,
     lsId: null, // Launch & Steer designated contact
+    sweep: {
+      azDeg: -70, // starts at left edge of the default 140° cone
+      dir: 1,     // +1 = left-to-right, -1 = right-to-left
+      barIdx: 0,  // current bar being swept (0 = bottom)
+    },
+    contactGlowTimes: {}, // contact id → performance.now() at last sweep illumination
   };
 }
 
@@ -313,6 +323,83 @@ export function contactUnderCursor(state) {
 export function lsContact(state) {
   if (state.lsId === null) return null;
   return state.contacts.find((c) => c.id === state.lsId) || null;
+}
+
+// Elevation center (degrees) of bar barIdx within the current elevation band.
+export function sweepBarCenterEl(state, barIdx) {
+  const s = barSpan(state);
+  return state.radar.elevDeg - s / 2 + (barIdx + 0.5) * BAR_DEG;
+}
+
+// Advance the sweep beam by dtSec seconds.
+// Updates state.sweep and records illumination times in state.contactGlowTimes.
+//
+// Sweep patterns:
+//   1B: L→R then R→L, bouncing in bar 0
+//   2B: L→R bar0, up to bar1, R→L bar1, reset to bar0
+//   4B: L→R bar0, up, R→L bar1, up, L→R bar2, up, R→L bar3, reset to bar0
+export function tickSweep(state, dtSec) {
+  const nBars = BARS_OPTIONS[state.radar.barsIndex];
+  const { lo, hi } = azBounds(state);
+
+  let { azDeg, dir, barIdx } = state.sweep;
+  // Clamp to current cone if radar config changed since last tick.
+  azDeg = Math.max(lo, Math.min(hi, azDeg));
+  barIdx = Math.min(barIdx, nBars - 1);
+
+  azDeg += dir * SWEEP_DEG_PER_SEC * dtSec;
+
+  if (dir > 0 && azDeg >= hi) {
+    azDeg = hi;
+    if (nBars === 1) {
+      dir = -1;
+    } else {
+      barIdx = Math.min(barIdx + 1, nBars - 1);
+      dir = -1;
+    }
+  } else if (dir < 0 && azDeg <= lo) {
+    azDeg = lo;
+    if (nBars === 1) {
+      dir = 1;
+    } else if (barIdx === nBars - 1) {
+      // Top bar finished — reset to bottom.
+      barIdx = 0;
+      dir = 1;
+    } else {
+      barIdx++;
+      dir = 1;
+    }
+  }
+
+  state.sweep.azDeg = azDeg;
+  state.sweep.dir = dir;
+  state.sweep.barIdx = barIdx;
+
+  // Illuminate contacts within the sweep beam footprint.
+  const beamHalf = SWEEP_BEAM_AZ_DEG / 2;
+  const barElCenter = sweepBarCenterEl(state, barIdx);
+  const barElHalf = BAR_DEG / 2;
+  const now = performance.now();
+
+  for (const c of state.contacts) {
+    if (!inAzCone(state, c) || c.rangeNmi > MAX_DETECT_NMI) continue;
+    const el = contactElevation(state, c);
+    if (
+      Math.abs(c.azDeg - azDeg) <= beamHalf &&
+      el >= barElCenter - barElHalf &&
+      el <= barElCenter + barElHalf
+    ) {
+      state.contactGlowTimes[c.id] = now;
+    }
+  }
+}
+
+// Glow factor (0..1) for a contact: 1.0 just after sweep, fading to 0 over GLOW_DURATION_MS.
+export function sweepGlow(state, contactId) {
+  const t = state.contactGlowTimes[contactId];
+  if (t == null) return 0;
+  const age = (performance.now() - t) / GLOW_DURATION_MS;
+  return age >= 1 ? 0 : 1 - age;
 }
 
 export function pruneLS(state) {

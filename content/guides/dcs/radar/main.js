@@ -9,6 +9,7 @@ import {
   cycleSaScale,
   toggleSaCenter,
   pruneLS,
+  tickSweep,
   BARS_OPTIONS,
 } from "./model.js";
 import { MFD, drawAtkRdr, drawAzEl, drawSa } from "./mfd.js";
@@ -105,4 +106,16 @@ state.assists.showSaCone   = document.getElementById("assist-sa-cone").checked;
 state.assists.ltws         = document.getElementById("assist-ltws").checked;
 
 setupHotas(state, () => { pruneLS(state); render(); });
-render();
+render(); // initial paint
+
+// Continuous animation loop: advance sweep and re-render every frame.
+let lastTs = null;
+function loop(ts) {
+  const dt = lastTs == null ? 0 : (ts - lastTs) / 1000;
+  lastTs = ts;
+  tickSweep(state, Math.min(dt, 0.1)); // cap dt so a backgrounded tab doesn't jump
+  pruneLS(state);
+  render();
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);

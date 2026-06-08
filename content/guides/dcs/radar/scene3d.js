@@ -4,11 +4,15 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import {
   FT_PER_NMI,
+  BAR_DEG,
+  SWEEP_BEAM_AZ_DEG,
   scanCenter,
   azWidth,
   barSpan,
   lsContact,
   isDetected,
+  sweepBarCenterEl,
+  sweepGlow,
 } from "./model.js";
 
 const GREEN = 0x33ff66;
@@ -73,7 +77,7 @@ export class Scene3D {
 
     this.coneGroup = new THREE.Group();
     this.scene.add(this.coneGroup);
-    this._initCone();
+    this._initCone(); // main cone + sweep sub-cone
 
     this.animate = this.animate.bind(this);
     requestAnimationFrame(this.animate);
@@ -113,27 +117,37 @@ export class Scene3D {
         transparent: true,
         opacity: 0.06,
         side: THREE.DoubleSide,
+        depthWrite: false, // don't occlude geometry behind a semi-transparent face
       }),
     );
     this.coneGroup.add(this._coneCap);
+
+    // Sweep sub-cone: narrower wireframe that moves through the full cone volume.
+    const sweepGeo = new THREE.BufferGeometry();
+    sweepGeo.setAttribute(
+      "position",
+      new THREE.BufferAttribute(new Float32Array(WIRE_PTS * 3), 3),
+    );
+    this._sweepLines = new THREE.LineSegments(
+      sweepGeo,
+      new THREE.LineBasicMaterial({ color: GREEN, transparent: true, opacity: 1.0 }),
+    );
+    this.coneGroup.add(this._sweepLines);
   }
 
   // Create one mesh per contact (contacts never move) and one shared L&S cross.
-  // Called once on the first update(); subsequent calls only swap materials.
+  // Called once on the first update(); each contact gets its own material so
+  // emissive intensity can be varied independently for sweep glow.
   _initContactPool(state) {
     const geo = new THREE.ConeGeometry(1.5, 5, 3);
     geo.rotateX(-Math.PI / 2); // tip points along -Z (forward)
 
-    this._detectedMat = new THREE.MeshStandardMaterial({
-      color: GREEN, emissive: GREEN, emissiveIntensity: 0.4, flatShading: true,
-    });
-    this._undetectedMat = new THREE.MeshStandardMaterial({
-      color: CONTACT, emissive: 0x000000, emissiveIntensity: 0, flatShading: true,
-    });
-
     this._contactPool = state.contacts.map(c => {
       const az = (c.azDeg * Math.PI) / 180;
-      const mesh = new THREE.Mesh(geo, this._undetectedMat);
+      const mat = new THREE.MeshStandardMaterial({
+        color: CONTACT, emissive: 0x000000, emissiveIntensity: 0, flatShading: true,
+      });
+      const mesh = new THREE.Mesh(geo, mat);
       mesh.position.set(
         Math.sin(az) * c.rangeNmi,
         (c.altFt - state.ownship.altFt) / FT_PER_NMI,
@@ -141,7 +155,7 @@ export class Scene3D {
       );
       mesh.rotation.y = ((c.headingDeg - state.ownship.headingDeg) * Math.PI) / 180;
       this.contactGroup.add(mesh);
-      return { id: c.id, mesh };
+      return { id: c.id, mesh, mat };
     });
 
     const r = 4;
@@ -172,12 +186,22 @@ export class Scene3D {
     const showVolume = state.assists.show3dVolume;
     this.coneGroup.visible = showVolume;
 
-    // Contacts don't move; swap materials as detection state changes.
-    // When the volume assist is off, show all contacts as undetected.
+    // Contacts don't move; update each contact's individual material so glow
+    // intensity can vary per-contact as the sweep beam passes over them.
     const ls = lsContact(state);
     for (const entry of this._contactPool) {
       const c = state.contacts.find(c => c.id === entry.id);
-      entry.mesh.material = (showVolume && isDetected(state, c)) ? this._detectedMat : this._undetectedMat;
+      const detected = showVolume && isDetected(state, c);
+      const glow = sweepGlow(state, c.id);
+      if (detected) {
+        entry.mat.color.setHex(GREEN);
+        entry.mat.emissive.setHex(GREEN);
+        entry.mat.emissiveIntensity = 0.4 + glow * 1.6; // 0.4 baseline → 2.0 peak
+      } else {
+        entry.mat.color.setHex(CONTACT);
+        entry.mat.emissive.setHex(0x000000);
+        entry.mat.emissiveIntensity = 0;
+      }
     }
 
     if (ls) {
@@ -189,6 +213,7 @@ export class Scene3D {
     }
 
     this.buildCone(state);
+    this.buildSweepCone(state);
   }
 
   buildCone(state) {
@@ -244,6 +269,60 @@ export class Scene3D {
       }
     }
     this._coneCap.geometry.attributes.position.needsUpdate = true;
+  }
+
+  // Write sweep sub-cone wireframe positions into the pre-allocated buffer.
+  // The sub-cone spans one bar in elevation and SWEEP_BEAM_AZ_DEG in azimuth,
+  // centered on the current sweep beam position.
+  buildSweepCone(state) {
+    // Clamp beam azimuth edges to the full scan cone so the sub-cone never protrudes.
+    const fullAzLo = scanCenter(state) - azWidth(state) / 2;
+    const fullAzHi = scanCenter(state) + azWidth(state) / 2;
+    const beamAzLo = Math.max(fullAzLo, state.sweep.azDeg - SWEEP_BEAM_AZ_DEG / 2);
+    const beamAzHi = Math.min(fullAzHi, state.sweep.azDeg + SWEEP_BEAM_AZ_DEG / 2);
+
+    // Clamp beam elevation edges to the full elevation band.
+    const fullElLo = state.radar.elevDeg - barSpan(state) / 2;
+    const fullElHi = state.radar.elevDeg + barSpan(state) / 2;
+    const elC = sweepBarCenterEl(state, state.sweep.barIdx);
+    const beamElLo = Math.max(fullElLo, elC - BAR_DEG / 2);
+    const beamElHi = Math.min(fullElHi, elC + BAR_DEG / 2);
+
+    // Derive center + half-widths from the clamped edges.
+    const azC = (beamAzLo + beamAzHi) / 2;
+    const azH = (beamAzHi - beamAzLo) / 2;
+    const elCc = (beamElLo + beamElHi) / 2;
+    const elH = (beamElHi - beamElLo) / 2;
+
+    const boresight = dir(azC, elCc);
+    const q = new THREE.Quaternion().setFromUnitVectors(
+      new THREE.Vector3(0, 0, -1),
+      boresight,
+    );
+    const far = (a, e) => dir(a, e).applyQuaternion(q).multiplyScalar(FAR);
+
+    const wireArr = this._sweepLines.geometry.attributes.position.array;
+    let wi = 0;
+    const wv = v => { wireArr[wi++] = v.x; wireArr[wi++] = v.y; wireArr[wi++] = v.z; };
+    const O = new THREE.Vector3(0, 0, 0);
+    for (const [a, e] of [[-azH, -elH], [azH, -elH], [azH, elH], [-azH, elH]]) {
+      wv(O); wv(far(a, e));
+    }
+    const boundary = [];
+    const sweep = (a0, e0, a1, e1) => {
+      for (let i = 0; i < ARC; i++) {
+        const t = i / ARC;
+        boundary.push(far(a0 + (a1 - a0) * t, e0 + (e1 - e0) * t));
+      }
+    };
+    sweep(-azH, -elH, azH, -elH);
+    sweep(azH, -elH, azH, elH);
+    sweep(azH, elH, -azH, elH);
+    sweep(-azH, elH, -azH, -elH);
+    for (let i = 0; i < boundary.length; i++) {
+      wv(boundary[i]); wv(boundary[(i + 1) % boundary.length]);
+    }
+    this._sweepLines.geometry.attributes.position.needsUpdate = true;
   }
 
   animate() {
