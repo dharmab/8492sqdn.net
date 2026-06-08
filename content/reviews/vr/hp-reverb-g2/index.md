@@ -7,8 +7,6 @@ tags:
 weight: 4
 ---
 
-TL;DR: We do not recommend the HP Reverb G2.
-
 ![](images/headset.webp)
 
 **We purchased this headset with our own money for this review.**
