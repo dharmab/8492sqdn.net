@@ -9,6 +9,7 @@ import {
   cycleSaScale,
   toggleSaCenter,
   pruneLS,
+  pruneGlowTimes,
   tickSweep,
   exitSTT,
   BARS_OPTIONS,
@@ -90,6 +91,7 @@ function render() {
 function change(mutate) {
   mutate();
   pruneLS(state);
+  pruneGlowTimes(state);
   render();
 }
 
@@ -111,8 +113,8 @@ state.assists.show3dVolume = document.getElementById("assist-3d").checked;
 state.assists.showSaCone   = document.getElementById("assist-sa-cone").checked;
 state.assists.ltws         = document.getElementById("assist-ltws").checked;
 
-setupHotas(state, () => { pruneLS(state); render(); });
-setupScs(state, () => { pruneLS(state); render(); });
+setupHotas(state, () => { pruneLS(state); pruneGlowTimes(state); render(); });
+setupScs(state, () => { pruneLS(state); pruneGlowTimes(state); render(); });
 render(); // initial paint
 
 // Continuous animation loop: advance sweep and re-render every frame.

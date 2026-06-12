@@ -388,6 +388,16 @@ export function hasBeenSwept(state, contact) {
   return state.contactGlowTimes[contact.id] != null;
 }
 
+// Drop sweep memory for contacts no longer in the scan volume.
+// Must be called synchronously after any state mutation that changes the scan volume,
+// not just from tickSweep, so render() never sees stale glow times.
+export function pruneGlowTimes(state) {
+  if (state.radar.mode === 'STT') return;
+  for (const c of state.contacts) {
+    if (!isDetected(state, c)) delete state.contactGlowTimes[c.id];
+  }
+}
+
 // Advance the sweep beam by dtSec seconds.
 // Updates state.sweep and records illumination times in state.contactGlowTimes.
 //
@@ -458,6 +468,8 @@ export function tickSweep(state, dtSec) {
       state.contactGlowTimes[c.id] = now;
     }
   }
+
+  pruneGlowTimes(state);
 }
 
 // Glow factor (0..1) for a contact: 1.0 just after sweep, fading to 0 over GLOW_DURATION_MS.
