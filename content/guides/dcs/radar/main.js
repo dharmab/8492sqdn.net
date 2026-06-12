@@ -10,6 +10,7 @@ import {
   toggleSaCenter,
   pruneLS,
   tickSweep,
+  exitSTT,
   BARS_OPTIONS,
 } from "./model.js";
 import { MFD, drawAtkRdr, drawAzEl, drawSa } from "./mfd.js";
@@ -58,7 +59,9 @@ const atk = new MFD(document.getElementById("mfd-atk"), {
   osbs: (s) => [
     { osb: 1,  label: "INTL",           disabled: true },
     { osb: 2,  label: "RDR PRI",        disabled: true, vertical: true },
-    { osb: 5,  label: "RWS",            disabled: true },
+    s.radar.mode === 'STT'
+      ? { osb: 5, label: "RTS\nRWS", action: () => change(() => exitSTT(s)) }
+      : { osb: 5, label: "RWS", disabled: true },
     { osb: 6,  label: `${bars(s)}B`,    action: () => change(() => cycleBars(s)) },
     { osb: 7,  label: "SIL",            disabled: true },
     { osb: 8,  label: "ERASE",          disabled: true },

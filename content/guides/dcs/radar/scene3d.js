@@ -13,6 +13,7 @@ import {
   isDetected,
   sweepBarCenterEl,
   sweepGlow,
+  hasBeenSwept,
 } from "./model.js";
 
 const GREEN = 0x33ff66;
@@ -191,7 +192,7 @@ export class Scene3D {
     const ls = lsContact(state);
     for (const entry of this._contactPool) {
       const c = state.contacts.find(c => c.id === entry.id);
-      const detected = showVolume && isDetected(state, c);
+      const detected = showVolume && isDetected(state, c) && hasBeenSwept(state, c);
       const glow = sweepGlow(state, c.id);
       if (detected) {
         entry.mat.color.setHex(GREEN);

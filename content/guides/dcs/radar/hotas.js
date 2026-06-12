@@ -1,6 +1,6 @@
 // On-screen HOTAS: TDC slew pad, TDC depress, antenna elevation rocker, undesignate, SCS.
 
-import { slewCursor, slewCursorAzel, slewCursorSa, slewElev, tdcDepress, stepLS, setTdcPriority } from "./model.js";
+import { slewCursor, slewCursorAzel, slewCursorSa, slewElev, tdcDepress, stepLS, setTdcPriority, enterSTT, exitSTT } from "./model.js";
 
 const SLEW_RATE = 1.08; // normalized cursor units per second at full deflection
 const ELEV_RATE = 21;   // antenna elevation degrees per second while held
@@ -85,7 +85,11 @@ export function setupHotas(state, onChange) {
   bindHold("elev-up", () => (elevDir = 1), () => (elevDir = 0));
   bindHold("elev-dn", () => (elevDir = -1), () => (elevDir = 0));
   bindButton("undesig", () => {
-    stepLS(state);
+    if (state.radar.mode === 'STT') {
+      exitSTT(state);
+    } else {
+      stepLS(state);
+    }
     onChange();
   });
 }
@@ -99,8 +103,12 @@ export function setupScs(state, onChange) {
   const SCS_MAP = { 'scs-left': 'azel', 'scs-down': 'sa', 'scs-right': 'atk' };
   for (const [id, target] of Object.entries(SCS_MAP)) {
     bindButton(id, () => {
-      if (setTdcPriority(state, target)) onChange();
-      // If already priority: context-sensitive action — deferred to future session.
+      if (setTdcPriority(state, target)) {
+        onChange();
+      } else if (id === 'scs-right' && state.tdcPriority === 'atk' && state.lsId !== null && state.radar.mode === 'RWS') {
+        enterSTT(state);
+        onChange();
+      }
     });
   }
   // scs-up: no-op placeholder for future context-sensitive action.

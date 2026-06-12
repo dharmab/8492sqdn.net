@@ -16,6 +16,7 @@ import {
   lsContact,
   contactUnderCursor,
   sweepGlow,
+  hasBeenSwept,
 } from "./model.js";
 
 export const GREEN = "#33ff66";
@@ -117,6 +118,19 @@ export class MFD {
         });
         rect = { x: an.x - totalW / 2 - 2, y: an.y - totalH / 2, w: totalW + 4, h: totalH, action: o.action, disabled: o.disabled };
         ctx.font = "13px monospace";
+      } else if (o.label.includes("\n")) {
+        const lines = o.label.split("\n");
+        const lineH = 14;
+        const totalH = lines.length * lineH;
+        ctx.textAlign = an.align;
+        const maxW = Math.max(...lines.map(l => ctx.measureText(l).width));
+        lines.forEach((line, i) => {
+          ctx.fillText(line, an.x, an.y - totalH / 2 + i * lineH + lineH / 2);
+        });
+        let rx = an.x;
+        if (an.align === "center") rx = an.x - maxW / 2;
+        if (an.align === "right") rx = an.x - maxW;
+        rect = { x: rx - 4, y: an.y - totalH / 2, w: maxW + 8, h: totalH, action: o.action, disabled: o.disabled };
       } else {
         ctx.textAlign = an.align;
         ctx.fillText(o.label, an.x, an.y);
@@ -365,7 +379,7 @@ export function drawAtkRdr(ctx, a, state) {
   const ls = lsContact(state);
   const tuc = contactUnderCursor(state);
   for (const c of state.contacts) {
-    if (!isDetected(state, c) || c.rangeNmi > range) continue;
+    if (!isDetected(state, c) || c.rangeNmi > range || !hasBeenSwept(state, c)) continue;
     const x = azToX(a, c.azDeg);
     const y = a.y + a.h - (c.rangeNmi / range) * a.h;
     const isLs = ls && c.id === ls.id;
@@ -480,7 +494,7 @@ export function drawAzEl(ctx, a, state) {
   // Contacts in the scan volume.
   const ls = lsContact(state);
   for (const c of state.contacts) {
-    if (!isDetected(state, c)) continue;
+    if (!isDetected(state, c) || !hasBeenSwept(state, c)) continue;
     const x = azToX(a, c.azDeg);
     const y = elToY(contactElevation(state, c));
     brick(ctx, x, y, ls && c.id === ls.id, sweepGlow(state, c.id));
@@ -543,7 +557,7 @@ export function drawSa(ctx, a, state) {
   // Contacts the radar currently detects (in the scan volume, within range).
   const ls = lsContact(state);
   for (const c of state.contacts) {
-    if (!isDetected(state, c) || c.rangeNmi > range) continue;
+    if (!isDetected(state, c) || c.rangeNmi > range || !hasBeenSwept(state, c)) continue;
     const ang = ((c.azDeg - 90) * Math.PI) / 180;
     const d = (c.rangeNmi / range) * R;
     const x = cx + Math.cos(ang) * d;

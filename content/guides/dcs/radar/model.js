@@ -64,6 +64,7 @@ export function createState() {
       barsIndex: BARS_OPTIONS.indexOf(4),
       rangeIndex: RANGE_OPTIONS.indexOf(40),
       declutter: false,
+      mode: 'RWS', // 'RWS' | 'STT'
     },
     saRangeIndex: saIdx,
     saCentered: true,
@@ -162,7 +163,11 @@ export function inScanVolume(state, contact) {
 }
 
 // A contact paints when it's in the scan volume and within radar detection range.
+// In STT, only the locked contact (lsId) paints.
 export function isDetected(state, contact) {
+  if (state.radar.mode === 'STT') {
+    return contact.id === state.lsId && contact.rangeNmi <= MAX_DETECT_NMI;
+  }
   return inScanVolume(state, contact) && contact.rangeNmi <= MAX_DETECT_NMI;
 }
 
@@ -288,11 +293,16 @@ export function setTdcPriority(state, target) {
 }
 
 // TDC depress on ATK RDR: over a contact, designate it as the Launch & Steer target.
+// If the contact under the cursor is already the L&S, enter STT.
 // Over empty space, slew the cone center to the cursor azimuth.
 export function tdcDepress(state) {
   const target = contactUnderCursor(state);
   if (target) {
-    state.lsId = target.id;
+    if (target.id === state.lsId) {
+      enterSTT(state);
+    } else {
+      state.lsId = target.id;
+    }
     return;
   }
   const w = azWidth(state);
@@ -352,6 +362,32 @@ export function sweepBarCenterEl(state, barIdx) {
   return state.radar.elevDeg - s / 2 + (barIdx + 0.5) * BAR_DEG;
 }
 
+// Enter STT: lock onto the current L&S contact, park the sweep beam over it.
+export function enterSTT(state) {
+  if (state.lsId === null) return;
+  const ls = lsContact(state);
+  if (!ls) return;
+  state.radar.mode = 'STT';
+  state.sweep.azDeg = ls.azDeg;
+  const nBars = BARS_OPTIONS[state.radar.barsIndex];
+  const { lo } = elBounds(state);
+  const el = contactElevation(state, ls);
+  const barIdx = Math.max(0, Math.min(nBars - 1, Math.floor((el - lo) / BAR_DEG)));
+  state.sweep.barIdx = barIdx;
+}
+
+// Exit STT: return to RWS. L&S designation is preserved.
+// Clear sweep memory so contacts must be re-acquired by the resumed raster.
+export function exitSTT(state) {
+  state.radar.mode = 'RWS';
+  state.contactGlowTimes = {};
+}
+
+// True once a contact has been illuminated by the sweep at least once since the last reset.
+export function hasBeenSwept(state, contact) {
+  return state.contactGlowTimes[contact.id] != null;
+}
+
 // Advance the sweep beam by dtSec seconds.
 // Updates state.sweep and records illumination times in state.contactGlowTimes.
 //
@@ -360,6 +396,15 @@ export function sweepBarCenterEl(state, barIdx) {
 //   2B: L→R bar0, up to bar1, R→L bar1, reset to bar0
 //   4B: L→R bar0, up, R→L bar1, up, L→R bar2, up, R→L bar3, reset to bar0
 export function tickSweep(state, dtSec) {
+  if (state.radar.mode === 'STT') {
+    const ls = lsContact(state);
+    if (ls) {
+      state.sweep.azDeg = ls.azDeg;
+      state.contactGlowTimes[ls.id] = performance.now();
+    }
+    return;
+  }
+
   const nBars = BARS_OPTIONS[state.radar.barsIndex];
   const { lo, hi } = azBounds(state);
 
@@ -425,6 +470,7 @@ export function sweepGlow(state, contactId) {
 
 export function pruneLS(state) {
   if (state.lsId === null) return;
+  if (state.radar.mode === 'STT') return; // STT holds the lock regardless of cone position
   const ls = lsContact(state);
   if (!ls || !inScanVolume(state, ls)) state.lsId = null;
 }
