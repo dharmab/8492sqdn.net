@@ -47,7 +47,7 @@ function osbAnchor(osb) {
 export class MFD {
   constructor(canvas, config) {
     this.canvas = canvas;
-    this.config = config; // { title, osbs(state)->[], drawDisplay(ctx, area, state) }
+    this.config = config; // { title, priorityKey, osbs(state)->[], drawDisplay(ctx, area, state) }
     this.osbRects = [];
     canvas.addEventListener("click", (e) => this.onClick(e));
   }
@@ -141,6 +141,26 @@ export class MFD {
       ctx.textAlign = "left";
       ctx.textBaseline = "top";
       ctx.fillText(this.config.title, a.x + 4, a.y + 4);
+    }
+
+    // TDC priority indicator: green diamond with center dot in top-right of display area.
+    if (this.config.priorityKey && state.tdcPriority === this.config.priorityKey) {
+      const dx = a.x + a.w - 10;
+      const dy = a.y + 10;
+      const r = 6;
+      ctx.strokeStyle = GREEN;
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(dx, dy - r);
+      ctx.lineTo(dx + r, dy);
+      ctx.lineTo(dx, dy + r);
+      ctx.lineTo(dx - r, dy);
+      ctx.closePath();
+      ctx.stroke();
+      ctx.fillStyle = GREEN;
+      ctx.beginPath();
+      ctx.arc(dx, dy, 1.5, 0, Math.PI * 2);
+      ctx.fill();
     }
 
     // Page content, clipped to display area.
@@ -331,7 +351,7 @@ export function drawAtkRdr(ctx, a, state) {
     ctx.font = "12px monospace";
     ctx.textAlign = "right";
     ctx.textBaseline = "top";
-    ctx.fillText(range + "", a.x + a.w - 4, a.y + 4);
+    ctx.fillText(range + "", a.x + a.w - 4, a.y + 18);
 
     // Elevation readout: cone top/bottom altitude at cursor range.
     const { topFt, bottomFt } = coneAltitudesAt(state, cursorRange(state));
@@ -366,14 +386,16 @@ export function drawAtkRdr(ctx, a, state) {
     }
   }
 
-  // Radar cursor.
-  const cx = a.x + state.cursor.x * a.w;
-  const cy = a.y + a.h - state.cursor.y * a.h;
-  const { topFt, bottomFt } = coneAltitudesAt(state, cursorRange(state));
-  drawCursor(ctx, cx, cy, topFt, bottomFt);
+  // Radar cursor — only visible when ATK has TDC priority.
+  if (state.tdcPriority === 'atk') {
+    const cx = a.x + state.cursorAtk.x * a.w;
+    const cy = a.y + a.h - state.cursorAtk.y * a.h;
+    const { topFt, bottomFt } = coneAltitudesAt(state, cursorRange(state));
+    drawCursor(ctx, cx, cy, topFt, bottomFt);
+  }
 }
 
-function drawCursor(ctx, cx, cy, topFt, bottomFt) {
+function drawSimpleCursor(ctx, cx, cy) {
   ctx.strokeStyle = GREEN;
   ctx.lineWidth = 1.5;
   const vg = 5;
@@ -384,7 +406,12 @@ function drawCursor(ctx, cx, cy, topFt, bottomFt) {
   ctx.moveTo(cx + vg, cy - vs);
   ctx.lineTo(cx + vg, cy + vs);
   ctx.stroke();
+}
 
+function drawCursor(ctx, cx, cy, topFt, bottomFt) {
+  drawSimpleCursor(ctx, cx, cy);
+  const vg = 5;
+  const vs = 8;
   const clamp = ft => Math.max(0, Math.min(99, Math.round(ft / 1000)));
   const fmt = n => String(n).padStart(2, '0');
   ctx.fillStyle = GREEN;
@@ -458,6 +485,12 @@ export function drawAzEl(ctx, a, state) {
     const y = elToY(contactElevation(state, c));
     brick(ctx, x, y, ls && c.id === ls.id, sweepGlow(state, c.id));
   }
+
+  if (state.tdcPriority === 'azel') {
+    const cx = a.x + state.cursorAzel.x * a.w;
+    const cy = a.y + state.cursorAzel.y * a.h;
+    drawSimpleCursor(ctx, cx, cy);
+  }
 }
 
 // --- SA (top-down) ---
@@ -516,5 +549,11 @@ export function drawSa(ctx, a, state) {
     const x = cx + Math.cos(ang) * d;
     const y = oy + Math.sin(ang) * d;
     hafu(ctx, x, y, 'square', 'diamond', false, YELLOW);
+  }
+
+  if (state.tdcPriority === 'sa') {
+    const scx = a.x + state.cursorSa.x * a.w;
+    const scy = a.y + state.cursorSa.y * a.h;
+    drawSimpleCursor(ctx, scx, scy);
   }
 }

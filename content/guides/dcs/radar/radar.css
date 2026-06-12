@@ -144,6 +144,31 @@
     padding: 5px 8px;
 }
 
+.scs-pad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3px;
+    width: 90px;
+}
+
+.scs-pad #scs-up    { grid-column: 2; grid-row: 1; }
+.scs-pad #scs-left  { grid-column: 1; grid-row: 2; }
+.scs-pad .scs-center { grid-column: 2; grid-row: 2; }
+.scs-pad #scs-right { grid-column: 3; grid-row: 2; }
+.scs-pad #scs-down  { grid-column: 2; grid-row: 3; }
+
+.scs-btn {
+    min-width: unset;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .rocker-mid {
     font-size: 11px;
     color: #7a8a7f;

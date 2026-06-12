@@ -14,7 +14,7 @@ import {
 } from "./model.js";
 import { MFD, drawAtkRdr, drawAzEl, drawSa } from "./mfd.js";
 import { Scene3D } from "./scene3d.js";
-import { setupHotas } from "./hotas.js";
+import { setupHotas, setupScs } from "./hotas.js";
 
 const state = createState();
 
@@ -24,11 +24,13 @@ function bars(state) {
 
 const azel = new MFD(document.getElementById("mfd-azel"), {
   title: "AZ/EL",
+  priorityKey: 'azel',
   drawDisplay: drawAzEl,
 });
 
 const sa = new MFD(document.getElementById("mfd-sa"), {
   title: "SA",
+  priorityKey: 'sa',
   osbs: (s) => [
     { osb: 2,  label: "PLID",              disabled: true, vertical: true },
     { osb: 5,  label: "SENSOR",            disabled: true, vertical: true },
@@ -52,6 +54,7 @@ const sa = new MFD(document.getElementById("mfd-sa"), {
 
 const atk = new MFD(document.getElementById("mfd-atk"), {
   title: "ATK RDR",
+  priorityKey: 'atk',
   osbs: (s) => [
     { osb: 1,  label: "INTL",           disabled: true },
     { osb: 2,  label: "RDR PRI",        disabled: true, vertical: true },
@@ -106,6 +109,7 @@ state.assists.showSaCone   = document.getElementById("assist-sa-cone").checked;
 state.assists.ltws         = document.getElementById("assist-ltws").checked;
 
 setupHotas(state, () => { pruneLS(state); render(); });
+setupScs(state, () => { pruneLS(state); render(); });
 render(); // initial paint
 
 // Continuous animation loop: advance sweep and re-render every frame.

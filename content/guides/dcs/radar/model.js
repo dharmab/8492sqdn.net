@@ -13,7 +13,7 @@ export const ELEV_LIMIT_DEG = 30; // max antenna tilt up/down
 export const SCOPE_AZ_DEG = 70; // B-scope shows +/- this azimuth (fits the 140° max option)
 export const MAX_DETECT_NMI = 80; // Hornet radar detection ceiling; contacts beyond this never paint
 
-export const SWEEP_DEG_PER_SEC = 120; // angular rate of the sweep beam; 1B at 140° ≈ 2.3 s cycle
+export const SWEEP_DEG_PER_SEC = 90; // angular rate of the sweep beam; 1B at 140° ≈ 3.1 s cycle
 export const SWEEP_BEAM_AZ_DEG = 6;   // total azimuth width of sweep sub-beam (visual + detection)
 export const GLOW_DURATION_MS = 3000; // ms over which a contact's sweep glow fades to baseline
 
@@ -72,8 +72,12 @@ export function createState() {
       showSaCone: true,
       ltws: false,
     },
-    // Cursor in normalized ATK RDR display coords: x 0..1 (left..right), y 0..1 (near..far)
-    cursor: { x: 0.5, y: 0.5 },
+    tdcPriority: 'atk', // 'azel' | 'sa' | 'atk'
+    // Per-page TDC cursors in normalized display coords (x 0..1 left..right, y 0..1 top..bottom).
+    // cursorAtk uses y 0..1 = near..far (inverted from screen) to match B-scope convention.
+    cursorAtk: { x: 0.5, y: 0.5 },
+    cursorAzel: { x: 0.5, y: 0.5 },
+    cursorSa: { x: 0.5, y: 0.5 },
     azBump: { edge: null, time: 0 }, // azimuth bump gesture state
     rangeBump: { edge: null, time: 0 }, // range bump gesture state
     tdcDepressed: false,
@@ -126,12 +130,12 @@ export function elBounds(state) {
 
 // Cursor mapped to azimuth degrees across the fixed scope width.
 export function cursorAz(state) {
-  return -SCOPE_AZ_DEG + state.cursor.x * 2 * SCOPE_AZ_DEG;
+  return -SCOPE_AZ_DEG + state.cursorAtk.x * 2 * SCOPE_AZ_DEG;
 }
 
 // Cursor mapped to range in nmi.
 export function cursorRange(state) {
-  return state.cursor.y * displayRange(state);
+  return state.cursorAtk.y * displayRange(state);
 }
 
 // Elevation angle (deg) of a contact relative to ownship horizontal.
@@ -218,14 +222,14 @@ export function toggleDeclutter(state) {
   state.radar.declutter = !state.radar.declutter;
 }
 
-// Move the cursor by a normalized delta.
+// Move the ATK cursor by a normalized delta.
 // Azimuth bumping: push TDC into a horizontal edge, then reverse within 1s to
 // step the azimuth scan width down (left edge) or up (right edge).
 // Range bumping: push TDC into a vertical edge, then reverse within 1s to
 // step the display range up (top edge) or down (bottom edge).
 export function slewCursor(state, dx, dy) {
-  const prevX = state.cursor.x;
-  const prevY = state.cursor.y;
+  const prevX = state.cursorAtk.x;
+  const prevY = state.cursorAtk.y;
 
   if (prevX > 0 && prevX + dx <= 0) {
     state.azBump = { edge: 'left', time: Date.now() };
@@ -239,7 +243,7 @@ export function slewCursor(state, dx, dy) {
     state.rangeBump = { edge: 'bottom', time: Date.now() };
   }
 
-  state.cursor.x = Math.max(0, Math.min(1, prevX + dx));
+  state.cursorAtk.x = Math.max(0, Math.min(1, prevX + dx));
 
   const azElapsed = Date.now() - state.azBump.time;
   if (azElapsed > 1000) {
@@ -263,10 +267,27 @@ export function slewCursor(state, dx, dy) {
     state.rangeBump = { edge: null, time: 0 };
   }
 
-  state.cursor.y = Math.max(0, Math.min(1, prevY + dy));
+  state.cursorAtk.y = Math.max(0, Math.min(1, prevY + dy));
 }
 
-// TDC depress: over a contact, designate it as the Launch & Steer target.
+export function slewCursorAzel(state, dx, dy) {
+  state.cursorAzel.x = Math.max(0, Math.min(1, state.cursorAzel.x + dx));
+  state.cursorAzel.y = Math.max(0, Math.min(1, state.cursorAzel.y + dy));
+}
+
+export function slewCursorSa(state, dx, dy) {
+  state.cursorSa.x = Math.max(0, Math.min(1, state.cursorSa.x + dx));
+  state.cursorSa.y = Math.max(0, Math.min(1, state.cursorSa.y + dy));
+}
+
+// Set TDC priority to target. Returns true if priority changed, false if already set.
+export function setTdcPriority(state, target) {
+  if (state.tdcPriority === target) return false;
+  state.tdcPriority = target;
+  return true;
+}
+
+// TDC depress on ATK RDR: over a contact, designate it as the Launch & Steer target.
 // Over empty space, slew the cone center to the cursor azimuth.
 export function tdcDepress(state) {
   const target = contactUnderCursor(state);
@@ -302,7 +323,7 @@ export function stepLS(state) {
   }
 }
 
-// Find the detected contact nearest the cursor, within a small pick radius.
+// Find the detected contact nearest the ATK cursor, within a small pick radius.
 export function contactUnderCursor(state) {
   const range = displayRange(state);
   let best = null;
@@ -311,7 +332,7 @@ export function contactUnderCursor(state) {
     if (!isDetected(state, c) || c.rangeNmi > range) continue;
     const cx = (c.azDeg + SCOPE_AZ_DEG) / (2 * SCOPE_AZ_DEG);
     const cy = c.rangeNmi / range;
-    const d = Math.hypot(cx - state.cursor.x, cy - state.cursor.y);
+    const d = Math.hypot(cx - state.cursorAtk.x, cy - state.cursorAtk.y);
     if (d < bestD) {
       bestD = d;
       best = c;

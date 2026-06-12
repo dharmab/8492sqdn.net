@@ -1,6 +1,6 @@
-// On-screen HOTAS: TDC slew pad, TDC depress, antenna elevation rocker, undesignate.
+// On-screen HOTAS: TDC slew pad, TDC depress, antenna elevation rocker, undesignate, SCS.
 
-import { slewCursor, slewElev, tdcDepress, stepLS } from "./model.js";
+import { slewCursor, slewCursorAzel, slewCursorSa, slewElev, tdcDepress, stepLS, setTdcPriority } from "./model.js";
 
 const SLEW_RATE = 1.08; // normalized cursor units per second at full deflection
 const ELEV_RATE = 21;   // antenna elevation degrees per second while held
@@ -53,8 +53,16 @@ export function setupHotas(state, onChange) {
     lastTime = now;
     let changed = false;
     if (active && (offX !== 0 || offY !== 0)) {
-      // Pad up (negative screen Y) moves the cursor toward greater range (up).
-      slewCursor(state, offX * SLEW_RATE * dt, -offY * SLEW_RATE * dt);
+      const dx = offX * SLEW_RATE * dt;
+      const dy = offY * SLEW_RATE * dt;
+      if (state.tdcPriority === 'azel') {
+        slewCursorAzel(state, dx, dy);
+      } else if (state.tdcPriority === 'sa') {
+        slewCursorSa(state, dx, dy);
+      } else {
+        // Pad up (negative screen Y) moves the ATK cursor toward greater range (up).
+        slewCursor(state, dx, -dy);
+      }
       changed = true;
     }
     if (elevDir !== 0) {
@@ -67,7 +75,11 @@ export function setupHotas(state, onChange) {
   requestAnimationFrame(tick);
 
   bindHold("tdc-depress",
-    () => { state.tdcDepressed = true; tdcDepress(state); onChange(); },
+    () => {
+      state.tdcDepressed = true;
+      if (state.tdcPriority === 'atk') tdcDepress(state);
+      onChange();
+    },
     () => { state.tdcDepressed = false; onChange(); }
   );
   bindHold("elev-up", () => (elevDir = 1), () => (elevDir = 0));
@@ -81,6 +93,17 @@ export function setupHotas(state, onChange) {
 function bindButton(id, fn) {
   const el = document.getElementById(id);
   if (el) el.addEventListener("click", fn);
+}
+
+export function setupScs(state, onChange) {
+  const SCS_MAP = { 'scs-left': 'azel', 'scs-down': 'sa', 'scs-right': 'atk' };
+  for (const [id, target] of Object.entries(SCS_MAP)) {
+    bindButton(id, () => {
+      if (setTdcPriority(state, target)) onChange();
+      // If already priority: context-sensitive action — deferred to future session.
+    });
+  }
+  // scs-up: no-op placeholder for future context-sensitive action.
 }
 
 // Press-and-hold: onDown while pressed, onUp when released/cancelled or pointer leaves.
