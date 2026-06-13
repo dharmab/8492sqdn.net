@@ -99,10 +99,6 @@ document.getElementById("assist-3d").addEventListener("change", (e) => {
   state.assists.show3dVolume = e.target.checked;
   render();
 });
-document.getElementById("assist-sa-cone").addEventListener("change", (e) => {
-  state.assists.showSaCone = e.target.checked;
-  render();
-});
 document.getElementById("assist-ltws").addEventListener("change", (e) => {
   state.assists.ltws = e.target.checked;
   render();
@@ -110,7 +106,6 @@ document.getElementById("assist-ltws").addEventListener("change", (e) => {
 
 // Sync model with browser-restored checkbox state before first render.
 state.assists.show3dVolume = document.getElementById("assist-3d").checked;
-state.assists.showSaCone   = document.getElementById("assist-sa-cone").checked;
 state.assists.ltws         = document.getElementById("assist-ltws").checked;
 
 setupHotas(state, () => { pruneLS(state); pruneGlowTimes(state); render(); });

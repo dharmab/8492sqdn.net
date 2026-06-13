@@ -70,7 +70,6 @@ export function createState() {
     saCentered: true,
     assists: {
       show3dVolume: true,
-      showSaCone: true,
       ltws: false,
     },
     tdcPriority: 'atk', // 'azel' | 'sa' | 'atk'

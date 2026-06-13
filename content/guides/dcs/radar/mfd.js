@@ -509,6 +509,35 @@ export function drawAzEl(ctx, a, state) {
 
 // --- SA (top-down) ---
 
+const COMPASS_LABELS = {
+  0: 'N', 30: '3', 60: '6', 90: 'E', 120: '12',
+  150: '15', 180: 'S', 210: '21', 240: '24', 270: 'W', 300: '30', 330: '33',
+};
+
+function drawCompass(ctx, a) {
+  const cx = a.x + a.w / 2;
+  const cy = a.y + a.h / 2;
+  const R = Math.min(a.w, a.h) / 2 - 32;
+  ctx.fillStyle = GREEN;
+  ctx.shadowColor = GREEN;
+  ctx.shadowBlur = 6;
+  ctx.font = '9px monospace';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  for (let deg = 0; deg < 360; deg += 10) {
+    const ang = (deg - 90) * Math.PI / 180;
+    const label = COMPASS_LABELS[deg];
+    if (label) {
+      ctx.fillText(label, cx + Math.cos(ang) * R, cy + Math.sin(ang) * R);
+    } else {
+      ctx.beginPath();
+      ctx.arc(cx + Math.cos(ang) * R, cy + Math.sin(ang) * R, 1.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+  ctx.shadowBlur = 0;
+}
+
 export function drawSa(ctx, a, state) {
   const cx = a.x + a.w / 2;
   const centered = state.saCentered !== false;
@@ -516,33 +545,38 @@ export function drawSa(ctx, a, state) {
   const R = centered ? Math.min(a.w, a.h) / 2 - 6 : a.h - 14;
   const range = saRange(state);
 
-  if (state.assists.showSaCone) {
-    // Radar cone wedge (azimuth sector, always 80 nmi deep).
-    const { lo, hi } = azBounds(state);
-    const coneR = (80 / range) * R;
-    const a0 = ((lo - 90) * Math.PI) / 180; // up = nose; screen angle offset
-    const a1 = ((hi - 90) * Math.PI) / 180;
-    ctx.fillStyle = FAINT;
-    ctx.beginPath();
-    ctx.moveTo(cx, oy);
-    ctx.arc(cx, oy, coneR, a0, a1);
-    ctx.closePath();
-    ctx.fill();
-  }
+  drawCompass(ctx, a);
 
-  if (state.assists.showSaCone) {
-    // Sweep radial line from ownship at the current sweep azimuth.
-    const sweepAng = ((state.sweep.azDeg - 90) * Math.PI) / 180;
-    const coneR = (80 / range) * R;
-    ctx.strokeStyle = GREEN;
-    ctx.lineWidth = 1;
-    ctx.globalAlpha = 0.6;
+  const compassR = Math.min(a.w, a.h) / 2 - 32;
+
+  // Azimuth scan arc on the compass ring.
+  const { lo, hi } = azBounds(state);
+  ctx.strokeStyle = GREEN;
+  ctx.shadowColor = GREEN;
+  ctx.shadowBlur = 6;
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.arc(cx, oy, compassR + 5, (lo - 90) * Math.PI / 180, (hi - 90) * Math.PI / 180);
+  ctx.stroke();
+
+  // ±70° radial indicator lines from just outside the compass to the display edge.
+  ctx.lineWidth = 1;
+  for (const azDeg of [-70, 70]) {
+    const ang = (azDeg - 90) * Math.PI / 180;
+    const cos = Math.cos(ang);
+    const sin = Math.sin(ang);
+    const ts = [];
+    if (Math.abs(cos) > 1e-9) ts.push(cos > 0 ? (a.x + a.w - cx) / cos : (a.x - cx) / cos);
+    if (Math.abs(sin) > 1e-9) ts.push(sin > 0 ? (a.y + a.h - oy) / sin : (a.y - oy) / sin);
+    const edgeR = Math.min(...ts.filter(t => t > 0));
     ctx.beginPath();
-    ctx.moveTo(cx, oy);
-    ctx.lineTo(cx + Math.cos(sweepAng) * coneR, oy + Math.sin(sweepAng) * coneR);
+    const startR = compassR + 5;
+    const endR = startR + (edgeR - startR) * 0.9;
+    ctx.moveTo(cx + cos * startR, oy + sin * startR);
+    ctx.lineTo(cx + cos * endR, oy + sin * endR);
     ctx.stroke();
-    ctx.globalAlpha = 1;
   }
+  ctx.shadowBlur = 0;
 
   // Ownship chevron (nose up).
   ctx.strokeStyle = GREEN;
