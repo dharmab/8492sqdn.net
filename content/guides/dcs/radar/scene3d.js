@@ -42,6 +42,23 @@ function dir(azDeg, elDeg) {
   );
 }
 
+// Point on the scan-volume cylinder (vertical axis, radius FAR) tilted around the
+// X axis by tiltDeg (the antenna elevation setting).  az is world-space azimuth;
+// elRel is elevation relative to the tilt center, mapping to height via FAR·tan(elRel).
+function cylPt(azDeg, elRelDeg, tiltDeg) {
+  const az  = azDeg    * Math.PI / 180;
+  const el  = elRelDeg * Math.PI / 180;
+  const til = tiltDeg  * Math.PI / 180;
+  const cx =  FAR * Math.sin(az);
+  const cy =  FAR * Math.tan(el);
+  const cz = -FAR * Math.cos(az);
+  return new THREE.Vector3(
+    cx,
+    cy * Math.cos(til) - cz * Math.sin(til),
+    cy * Math.sin(til) + cz * Math.cos(til),
+  );
+}
+
 export class Scene3D {
   constructor(canvas) {
     this.canvas = canvas;
@@ -222,49 +239,38 @@ export class Scene3D {
     const elC = state.radar.elevDeg;
     const azH = azWidth(state) / 2;
     const elH = barSpan(state) / 2;
+    const pt = (az, elRel) => cylPt(az, elRel, elC);
 
-    const boresight = dir(azC, elC);
-    const q = new THREE.Quaternion().setFromUnitVectors(
-      new THREE.Vector3(0, 0, -1),
-      boresight,
-    );
-    const far = (a, e) => dir(a, e).applyQuaternion(q).multiplyScalar(FAR);
-
-    // Write wireframe positions directly into the pre-allocated buffer.
     const wireArr = this._coneLines.geometry.attributes.position.array;
     let wi = 0;
     const wv = v => { wireArr[wi++] = v.x; wireArr[wi++] = v.y; wireArr[wi++] = v.z; };
     const O = new THREE.Vector3(0, 0, 0);
-    for (const [a, e] of [[-azH, -elH], [azH, -elH], [azH, elH], [-azH, elH]]) {
-      wv(O); wv(far(a, e));
+    for (const [a, e] of [[azC-azH,-elH],[azC+azH,-elH],[azC+azH,elH],[azC-azH,elH]]) {
+      wv(O); wv(pt(a, e));
     }
     const boundary = [];
-    const sweep = (a0, e0, a1, e1) => {
+    const arc = (az0, el0, az1, el1) => {
       for (let i = 0; i < ARC; i++) {
         const t = i / ARC;
-        boundary.push(far(a0 + (a1 - a0) * t, e0 + (e1 - e0) * t));
+        boundary.push(pt(az0 + (az1 - az0) * t, el0 + (el1 - el0) * t));
       }
     };
-    sweep(-azH, -elH, azH, -elH);
-    sweep(azH, -elH, azH, elH);
-    sweep(azH, elH, -azH, elH);
-    sweep(-azH, elH, -azH, -elH);
+    arc(azC-azH, -elH, azC+azH, -elH);
+    arc(azC+azH, -elH, azC+azH,  elH);
+    arc(azC+azH,  elH, azC-azH,  elH);
+    arc(azC-azH,  elH, azC-azH, -elH);
     for (let i = 0; i < boundary.length; i++) {
       wv(boundary[i]); wv(boundary[(i + 1) % boundary.length]);
     }
     this._coneLines.geometry.attributes.position.needsUpdate = true;
 
-    // Write cap triangle positions into the pre-allocated buffer.
     const capArr = this._coneCap.geometry.attributes.position.array;
     let ci = 0;
     const cv = v => { capArr[ci++] = v.x; capArr[ci++] = v.y; capArr[ci++] = v.z; };
-    const at = (ai, ei) => far(-azH + (2 * azH * ai) / NA, -elH + (2 * elH * ei) / NE);
+    const at = (ai, ei) => pt(azC - azH + (2 * azH * ai) / NA, -elH + (2 * elH * ei) / NE);
     for (let ai = 0; ai < NA; ai++) {
       for (let ei = 0; ei < NE; ei++) {
-        const a = at(ai, ei);
-        const b = at(ai + 1, ei);
-        const c = at(ai + 1, ei + 1);
-        const d = at(ai, ei + 1);
+        const a = at(ai, ei), b = at(ai + 1, ei), c = at(ai + 1, ei + 1), d = at(ai, ei + 1);
         cv(a); cv(b); cv(c);
         cv(a); cv(c); cv(d);
       }
@@ -272,54 +278,42 @@ export class Scene3D {
     this._coneCap.geometry.attributes.position.needsUpdate = true;
   }
 
-  // Write sweep sub-cone wireframe positions into the pre-allocated buffer.
-  // The sub-cone spans one bar in elevation and SWEEP_BEAM_AZ_DEG in azimuth,
-  // centered on the current sweep beam position.
   buildSweepCone(state) {
-    // Clamp beam azimuth edges to the full scan cone so the sub-cone never protrudes.
     const fullAzLo = scanCenter(state) - azWidth(state) / 2;
     const fullAzHi = scanCenter(state) + azWidth(state) / 2;
     const beamAzLo = Math.max(fullAzLo, state.sweep.azDeg - SWEEP_BEAM_AZ_DEG / 2);
     const beamAzHi = Math.min(fullAzHi, state.sweep.azDeg + SWEEP_BEAM_AZ_DEG / 2);
 
-    // Clamp beam elevation edges to the full elevation band.
-    const fullElLo = state.radar.elevDeg - barSpan(state) / 2;
-    const fullElHi = state.radar.elevDeg + barSpan(state) / 2;
-    const elC = sweepBarCenterEl(state, state.sweep.barIdx);
-    const beamElLo = Math.max(fullElLo, elC - BAR_DEG / 2);
-    const beamElHi = Math.min(fullElHi, elC + BAR_DEG / 2);
+    const elC = state.radar.elevDeg;
+    const fullElLo = elC - barSpan(state) / 2;
+    const fullElHi = elC + barSpan(state) / 2;
+    const elCbar = sweepBarCenterEl(state, state.sweep.barIdx);
+    const beamElLo = Math.max(fullElLo, elCbar - BAR_DEG / 2);
+    const beamElHi = Math.min(fullElHi, elCbar + BAR_DEG / 2);
+    // Convert absolute elevations to relative (cylinder is centered on elC).
+    const elLoRel = beamElLo - elC;
+    const elHiRel = beamElHi - elC;
 
-    // Derive center + half-widths from the clamped edges.
-    const azC = (beamAzLo + beamAzHi) / 2;
-    const azH = (beamAzHi - beamAzLo) / 2;
-    const elCc = (beamElLo + beamElHi) / 2;
-    const elH = (beamElHi - beamElLo) / 2;
-
-    const boresight = dir(azC, elCc);
-    const q = new THREE.Quaternion().setFromUnitVectors(
-      new THREE.Vector3(0, 0, -1),
-      boresight,
-    );
-    const far = (a, e) => dir(a, e).applyQuaternion(q).multiplyScalar(FAR);
+    const pt = (az, elRel) => cylPt(az, elRel, elC);
 
     const wireArr = this._sweepLines.geometry.attributes.position.array;
     let wi = 0;
     const wv = v => { wireArr[wi++] = v.x; wireArr[wi++] = v.y; wireArr[wi++] = v.z; };
     const O = new THREE.Vector3(0, 0, 0);
-    for (const [a, e] of [[-azH, -elH], [azH, -elH], [azH, elH], [-azH, elH]]) {
-      wv(O); wv(far(a, e));
+    for (const [a, e] of [[beamAzLo,elLoRel],[beamAzHi,elLoRel],[beamAzHi,elHiRel],[beamAzLo,elHiRel]]) {
+      wv(O); wv(pt(a, e));
     }
     const boundary = [];
-    const sweep = (a0, e0, a1, e1) => {
+    const arc = (az0, el0, az1, el1) => {
       for (let i = 0; i < ARC; i++) {
         const t = i / ARC;
-        boundary.push(far(a0 + (a1 - a0) * t, e0 + (e1 - e0) * t));
+        boundary.push(pt(az0 + (az1 - az0) * t, el0 + (el1 - el0) * t));
       }
     };
-    sweep(-azH, -elH, azH, -elH);
-    sweep(azH, -elH, azH, elH);
-    sweep(azH, elH, -azH, elH);
-    sweep(-azH, elH, -azH, -elH);
+    arc(beamAzLo, elLoRel, beamAzHi, elLoRel);
+    arc(beamAzHi, elLoRel, beamAzHi, elHiRel);
+    arc(beamAzHi, elHiRel, beamAzLo, elHiRel);
+    arc(beamAzLo, elHiRel, beamAzLo, elLoRel);
     for (let i = 0; i < boundary.length; i++) {
       wv(boundary[i]); wv(boundary[(i + 1) % boundary.length]);
     }

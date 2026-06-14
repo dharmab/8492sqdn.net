@@ -3,6 +3,8 @@
 import {
   SCOPE_AZ_DEG,
   ELEV_LIMIT_DEG,
+  BAR_DEG,
+  BARS_OPTIONS,
   azBounds,
   elBounds,
   scanCenter,
@@ -346,9 +348,11 @@ export function drawAtkRdr(ctx, a, state) {
   }
   ctx.stroke();
 
-  // Elevation caret (<) on the left inner edge.
-  // Neutral (0°) → midpoint; fully raised → 3/4 tick; fully lowered → 1/4 tick.
-  const elevFrac = 0.5 - 0.25 * (state.radar.elevDeg / ELEV_LIMIT_DEG);
+  // Elevation caret (<): starts at antenna tilt, steps down one BAR_DEG per bar scanned.
+  const nBars = BARS_OPTIONS[state.radar.barsIndex];
+  const barsScanned = (nBars - 1) - state.sweep.barIdx;
+  const pipperElev = state.radar.elevDeg - barsScanned * BAR_DEG;
+  const elevFrac = 0.5 - 0.5 * (pipperElev / ELEV_LIMIT_DEG);
   const caretY = a.y + elevFrac * a.h;
   const cs = 7; // caret arm half-size
   ctx.strokeStyle = GREEN;
@@ -441,7 +445,7 @@ function drawCursor(ctx, cx, cy, topFt, bottomFt) {
 
 // Fixed vertical scale for the AZ/EL view: display spans +/- this elevation, so
 // the scanned band visibly grows/shrinks with bars and slides with antenna tilt.
-const VIEW_EL_DEG = 45;
+const VIEW_EL_DEG = 80;
 
 export function drawAzEl(ctx, a, state) {
   const { lo: azLo, hi: azHi } = azBounds(state);

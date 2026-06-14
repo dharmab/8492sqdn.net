@@ -11,11 +11,11 @@ export const RANGE_OPTIONS = [5, 10, 20, 40, 80, 160]; // nmi
 export const SA_RANGE_OPTIONS = [5, 10, 20, 40, 80, 160, 320]; // nmi; SA has wider coverage option
 export const SA_RANGE_OPTIONS_DCNTR = [7.5, 15, 30, 60, 120, 240, 480]; // nmi; 1.5x centered (ownship 3/4 from top)
 export const BAR_DEG = 3.75; // elevation degrees covered per bar (4B = 15° total, ±7.5°)
-export const ELEV_LIMIT_DEG = 30; // max antenna tilt up/down
+export const ELEV_LIMIT_DEG = 70; // max antenna tilt up/down
 export const SCOPE_AZ_DEG = 70; // B-scope shows +/- this azimuth (fits the 140° max option)
 export const MAX_DETECT_NMI = 80; // Hornet radar detection ceiling; contacts beyond this never paint
 
-export const SWEEP_DEG_PER_SEC = 90; // angular rate of the sweep beam; 1B at 140° ≈ 3.1 s cycle
+export const SWEEP_DEG_PER_SEC = 70; // angular rate of the sweep beam
 export const SWEEP_BEAM_AZ_DEG = 6;   // total azimuth width of sweep sub-beam (visual + detection)
 export const GLOW_DURATION_MS = 3000; // ms over which a contact's sweep glow fades to baseline
 
@@ -88,7 +88,7 @@ export function createState() {
     sweep: {
       azDeg: -70, // starts at left edge of the default 140° cone
       dir: 1,     // +1 = left-to-right, -1 = right-to-left
-      barIdx: 0,  // current bar being swept (0 = bottom)
+      barIdx: 5,  // clamps to nBars-1 (top bar) on first tick
     },
     contactGlowTimes: {}, // contact id → performance.now() at last sweep illumination
   };
@@ -217,8 +217,9 @@ export function toggleSaCenter(state) {
 
 // Slew antenna elevation by a (possibly fractional) delta, clamped to the gimbal.
 export function slewElev(state, deltaDeg) {
+  const nBars = BARS_OPTIONS[state.radar.barsIndex];
   state.radar.elevDeg = Math.max(
-    -ELEV_LIMIT_DEG,
+    -ELEV_LIMIT_DEG + (nBars - 1) * BAR_DEG,
     Math.min(ELEV_LIMIT_DEG, state.radar.elevDeg + deltaDeg),
   );
 }
@@ -401,10 +402,10 @@ export function pruneGlowTimes(state) {
 // Advance the sweep beam by dtSec seconds.
 // Updates state.sweep and records illumination times in state.contactGlowTimes.
 //
-// Sweep patterns:
+// Sweep patterns (top-to-bottom):
 //   1B: L→R then R→L, bouncing in bar 0
-//   2B: L→R bar0, up to bar1, R→L bar1, reset to bar0
-//   4B: L→R bar0, up, R→L bar1, up, L→R bar2, up, R→L bar3, reset to bar0
+//   2B: L→R bar1, R→L bar0, reset to bar1
+//   4B: L→R bar3, R→L bar2, L→R bar1, R→L bar0, reset to bar3
 export function tickSweep(state, dtSec) {
   if (state.radar.mode === 'STT') {
     const ls = lsContact(state);
@@ -430,19 +431,19 @@ export function tickSweep(state, dtSec) {
     if (nBars === 1) {
       dir = -1;
     } else {
-      barIdx = Math.min(barIdx + 1, nBars - 1);
+      barIdx = Math.max(barIdx - 1, 0);
       dir = -1;
     }
   } else if (dir < 0 && azDeg <= lo) {
     azDeg = lo;
     if (nBars === 1) {
       dir = 1;
-    } else if (barIdx === nBars - 1) {
-      // Top bar finished — reset to bottom.
-      barIdx = 0;
+    } else if (barIdx === 0) {
+      // Bottom bar finished — reset to top.
+      barIdx = nBars - 1;
       dir = 1;
     } else {
-      barIdx++;
+      barIdx--;
       dir = 1;
     }
   }
