@@ -8,6 +8,7 @@ export const FT_PER_NMI = 6076.12;
 export const AZ_OPTIONS = [20, 40, 60, 80, 140]; // total cone width, degrees
 export const BARS_OPTIONS = [1, 2, 4, 6];
 export const RANGE_OPTIONS = [5, 10, 20, 40, 80, 160]; // nmi
+export const SA_RANGE_OPTIONS = [5, 10, 20, 40, 80, 160, 320]; // nmi; SA has wider coverage option
 export const BAR_DEG = 3.75; // elevation degrees covered per bar (4B = 15° total, ±7.5°)
 export const ELEV_LIMIT_DEG = 30; // max antenna tilt up/down
 export const SCOPE_AZ_DEG = 70; // B-scope shows +/- this azimuth (fits the 140° max option)
@@ -47,8 +48,8 @@ export function createState() {
   // Default the SA scale to the smallest step that contains every contact, so
   // the SA page always shows the full picture as an overview/reference.
   const maxRange = Math.max(...contacts.map((c) => c.rangeNmi));
-  let saIdx = RANGE_OPTIONS.findIndex((r) => r >= maxRange);
-  if (saIdx === -1) saIdx = RANGE_OPTIONS.length - 1;
+  let saIdx = SA_RANGE_OPTIONS.findIndex((r) => r >= maxRange);
+  if (saIdx === -1) saIdx = SA_RANGE_OPTIONS.length - 1;
 
   return {
     ownship: {
@@ -106,7 +107,7 @@ export function displayRange(state) {
 }
 
 export function saRange(state) {
-  return RANGE_OPTIONS[state.saRangeIndex];
+  return SA_RANGE_OPTIONS[state.saRangeIndex];
 }
 
 // Explicit cone center, clamped so the cone stays within the gimbal.
@@ -191,23 +192,15 @@ export function cycleBars(state) {
 }
 
 export function rangeUp(state) {
-  if (state.radar.rangeIndex < RANGE_OPTIONS.length - 1) state.radar.rangeIndex++;
+  state.radar.rangeIndex = (state.radar.rangeIndex + 1) % RANGE_OPTIONS.length;
 }
 
 export function rangeDown(state) {
-  if (state.radar.rangeIndex > 0) state.radar.rangeIndex--;
-}
-
-export function saRangeUp(state) {
-  if (state.saRangeIndex < RANGE_OPTIONS.length - 1) state.saRangeIndex++;
-}
-
-export function saRangeDown(state) {
-  if (state.saRangeIndex > 0) state.saRangeIndex--;
+  state.radar.rangeIndex = (state.radar.rangeIndex - 1 + RANGE_OPTIONS.length) % RANGE_OPTIONS.length;
 }
 
 export function cycleSaScale(state) {
-  state.saRangeIndex = (state.saRangeIndex + 1) % RANGE_OPTIONS.length;
+  state.saRangeIndex = (state.saRangeIndex - 1 + SA_RANGE_OPTIONS.length) % SA_RANGE_OPTIONS.length;
 }
 
 export function toggleSaCenter(state) {
