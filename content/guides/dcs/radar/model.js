@@ -9,6 +9,7 @@ export const AZ_OPTIONS = [20, 40, 60, 80, 140]; // total cone width, degrees
 export const BARS_OPTIONS = [1, 2, 4, 6];
 export const RANGE_OPTIONS = [5, 10, 20, 40, 80, 160]; // nmi
 export const SA_RANGE_OPTIONS = [5, 10, 20, 40, 80, 160, 320]; // nmi; SA has wider coverage option
+export const SA_RANGE_OPTIONS_DCNTR = [7.5, 15, 30, 60, 120, 240, 480]; // nmi; 1.5x centered (ownship 3/4 from top)
 export const BAR_DEG = 3.75; // elevation degrees covered per bar (4B = 15° total, ±7.5°)
 export const ELEV_LIMIT_DEG = 30; // max antenna tilt up/down
 export const SCOPE_AZ_DEG = 70; // B-scope shows +/- this azimuth (fits the 140° max option)
@@ -68,6 +69,7 @@ export function createState() {
       mode: 'RWS', // 'RWS' | 'STT'
     },
     saRangeIndex: saIdx,
+    saRangeIndexDcntr: SA_RANGE_OPTIONS_DCNTR.indexOf(60),
     saCentered: true,
     assists: {
       show3dVolume: true,
@@ -107,7 +109,9 @@ export function displayRange(state) {
 }
 
 export function saRange(state) {
-  return SA_RANGE_OPTIONS[state.saRangeIndex];
+  return state.saCentered !== false
+    ? SA_RANGE_OPTIONS[state.saRangeIndex]
+    : SA_RANGE_OPTIONS_DCNTR[state.saRangeIndexDcntr];
 }
 
 // Explicit cone center, clamped so the cone stays within the gimbal.
@@ -200,7 +204,11 @@ export function rangeDown(state) {
 }
 
 export function cycleSaScale(state) {
-  state.saRangeIndex = (state.saRangeIndex - 1 + SA_RANGE_OPTIONS.length) % SA_RANGE_OPTIONS.length;
+  if (state.saCentered !== false) {
+    state.saRangeIndex = (state.saRangeIndex - 1 + SA_RANGE_OPTIONS.length) % SA_RANGE_OPTIONS.length;
+  } else {
+    state.saRangeIndexDcntr = (state.saRangeIndexDcntr - 1 + SA_RANGE_OPTIONS_DCNTR.length) % SA_RANGE_OPTIONS_DCNTR.length;
+  }
 }
 
 export function toggleSaCenter(state) {

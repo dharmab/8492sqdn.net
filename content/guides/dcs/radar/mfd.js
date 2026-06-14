@@ -538,45 +538,85 @@ function drawCompass(ctx, a) {
   ctx.shadowBlur = 0;
 }
 
+function drawCompassArc(ctx, cx, oy, compassR) {
+  ctx.fillStyle = GREEN;
+  ctx.shadowColor = GREEN;
+  ctx.shadowBlur = 6;
+  ctx.font = '9px monospace';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  for (let deg = 0; deg < 360; deg += 10) {
+    const relativeDeg = deg <= 180 ? deg : deg - 360;
+    if (Math.abs(relativeDeg) > 45) continue;
+    const ang = (deg - 90) * Math.PI / 180;
+    const label = COMPASS_LABELS[deg];
+    if (label) {
+      ctx.fillText(label, cx + Math.cos(ang) * compassR, oy + Math.sin(ang) * compassR);
+    } else {
+      ctx.beginPath();
+      ctx.arc(cx + Math.cos(ang) * compassR, oy + Math.sin(ang) * compassR, 1.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+  ctx.shadowBlur = 0;
+}
+
 export function drawSa(ctx, a, state) {
   const cx = a.x + a.w / 2;
   const centered = state.saCentered !== false;
-  const oy = centered ? a.y + a.h / 2 : a.y + a.h - 12;
-  const R = centered ? Math.min(a.w, a.h) / 2 - 6 : a.h - 14;
+  const oy = centered ? a.y + a.h / 2 : a.y + a.h * 3 / 4;
+  const R = centered ? Math.min(a.w, a.h) / 2 - 6 : a.h * 3 / 4;
   const range = saRange(state);
 
-  drawCompass(ctx, a);
+  const compassR = centered ? Math.min(a.w, a.h) / 2 - 32 : a.h * 3 / 4 - 16;
 
-  const compassR = Math.min(a.w, a.h) / 2 - 32;
+  if (centered) {
+    drawCompass(ctx, a);
 
-  // Azimuth scan arc on the compass ring.
-  const { lo, hi } = azBounds(state);
-  ctx.strokeStyle = GREEN;
-  ctx.shadowColor = GREEN;
-  ctx.shadowBlur = 6;
-  ctx.lineWidth = 2;
-  ctx.beginPath();
-  ctx.arc(cx, oy, compassR + 5, (lo - 90) * Math.PI / 180, (hi - 90) * Math.PI / 180);
-  ctx.stroke();
-
-  // ±70° radial indicator lines from just outside the compass to the display edge.
-  ctx.lineWidth = 1;
-  for (const azDeg of [-70, 70]) {
-    const ang = (azDeg - 90) * Math.PI / 180;
-    const cos = Math.cos(ang);
-    const sin = Math.sin(ang);
-    const ts = [];
-    if (Math.abs(cos) > 1e-9) ts.push(cos > 0 ? (a.x + a.w - cx) / cos : (a.x - cx) / cos);
-    if (Math.abs(sin) > 1e-9) ts.push(sin > 0 ? (a.y + a.h - oy) / sin : (a.y - oy) / sin);
-    const edgeR = Math.min(...ts.filter(t => t > 0));
+    // Azimuth scan arc on the compass ring.
+    const { lo, hi } = azBounds(state);
+    ctx.strokeStyle = GREEN;
+    ctx.shadowColor = GREEN;
+    ctx.shadowBlur = 6;
+    ctx.lineWidth = 2;
     ctx.beginPath();
-    const startR = compassR + 5;
-    const endR = startR + (edgeR - startR) * 0.9;
-    ctx.moveTo(cx + cos * startR, oy + sin * startR);
-    ctx.lineTo(cx + cos * endR, oy + sin * endR);
+    ctx.arc(cx, oy, compassR + 5, (lo - 90) * Math.PI / 180, (hi - 90) * Math.PI / 180);
     ctx.stroke();
+
+    // ±70° radial indicator lines from just outside the compass to the display edge.
+    ctx.lineWidth = 1;
+    for (const azDeg of [-70, 70]) {
+      const ang = (azDeg - 90) * Math.PI / 180;
+      const cos = Math.cos(ang);
+      const sin = Math.sin(ang);
+      const ts = [];
+      if (Math.abs(cos) > 1e-9) ts.push(cos > 0 ? (a.x + a.w - cx) / cos : (a.x - cx) / cos);
+      if (Math.abs(sin) > 1e-9) ts.push(sin > 0 ? (a.y + a.h - oy) / sin : (a.y - oy) / sin);
+      const edgeR = Math.min(...ts.filter(t => t > 0));
+      ctx.beginPath();
+      const startR = compassR + 5;
+      const endR = startR + (edgeR - startR) * 0.9;
+      ctx.moveTo(cx + cos * startR, oy + sin * startR);
+      ctx.lineTo(cx + cos * endR, oy + sin * endR);
+      ctx.stroke();
+    }
+    ctx.shadowBlur = 0;
+  } else {
+    drawCompassArc(ctx, cx, oy, compassR);
+
+    // Two range rings: first touches the display midpoint, second touches the 3/4-up point.
+    ctx.strokeStyle = GREEN;
+    ctx.shadowColor = GREEN;
+    ctx.shadowBlur = 4;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.arc(cx, oy, a.h / 4, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(cx, oy, a.h / 2, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.shadowBlur = 0;
   }
-  ctx.shadowBlur = 0;
 
   // Ownship chevron (nose up).
   ctx.strokeStyle = GREEN;
