@@ -523,8 +523,6 @@ function drawCompass(ctx, a) {
   const cy = a.y + a.h / 2;
   const R = Math.min(a.w, a.h) / 2 - 32;
   ctx.fillStyle = GREEN;
-  ctx.shadowColor = GREEN;
-  ctx.shadowBlur = 6;
   ctx.font = '9px monospace';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
@@ -539,13 +537,10 @@ function drawCompass(ctx, a) {
       ctx.fill();
     }
   }
-  ctx.shadowBlur = 0;
 }
 
 function drawCompassArc(ctx, cx, oy, compassR) {
   ctx.fillStyle = GREEN;
-  ctx.shadowColor = GREEN;
-  ctx.shadowBlur = 6;
   ctx.font = '9px monospace';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
@@ -562,7 +557,6 @@ function drawCompassArc(ctx, cx, oy, compassR) {
       ctx.fill();
     }
   }
-  ctx.shadowBlur = 0;
 }
 
 export function drawSa(ctx, a, state) {
@@ -580,8 +574,6 @@ export function drawSa(ctx, a, state) {
     // Azimuth scan arc on the compass ring.
     const { lo, hi } = azBounds(state);
     ctx.strokeStyle = GREEN;
-    ctx.shadowColor = GREEN;
-    ctx.shadowBlur = 6;
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.arc(cx, oy, compassR + 5, (lo - 90) * Math.PI / 180, (hi - 90) * Math.PI / 180);
@@ -604,14 +596,11 @@ export function drawSa(ctx, a, state) {
       ctx.lineTo(cx + cos * endR, oy + sin * endR);
       ctx.stroke();
     }
-    ctx.shadowBlur = 0;
   } else {
     drawCompassArc(ctx, cx, oy, compassR);
 
     // Two range rings: first touches the display midpoint, second touches the 3/4-up point.
     ctx.strokeStyle = GREEN;
-    ctx.shadowColor = GREEN;
-    ctx.shadowBlur = 4;
     ctx.lineWidth = 1;
     ctx.beginPath();
     ctx.arc(cx, oy, a.h / 4, 0, Math.PI * 2);
@@ -619,7 +608,6 @@ export function drawSa(ctx, a, state) {
     ctx.beginPath();
     ctx.arc(cx, oy, a.h / 2, 0, Math.PI * 2);
     ctx.stroke();
-    ctx.shadowBlur = 0;
   }
 
   // Ownship icon: top-down aircraft silhouette. Wings cross at oy; nose up.
