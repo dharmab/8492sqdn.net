@@ -618,14 +618,19 @@ export function drawSa(ctx, a, state) {
     ctx.shadowBlur = 0;
   }
 
-  // Ownship chevron (nose up).
+  // Ownship icon: top-down aircraft silhouette. Wings cross at oy; nose up.
   ctx.strokeStyle = GREEN;
   ctx.lineWidth = 2;
   ctx.beginPath();
-  ctx.moveTo(cx, oy - 9);
-  ctx.lineTo(cx - 7, oy + 7);
-  ctx.moveTo(cx, oy - 9);
-  ctx.lineTo(cx + 7, oy + 7);
+  // Fuselage: short nose above wings, longer body below
+  ctx.moveTo(cx, oy - 5);
+  ctx.lineTo(cx, oy + 17);
+  // Wings: equal left and right
+  ctx.moveTo(cx - 10, oy);
+  ctx.lineTo(cx + 10, oy);
+  // Tail: stubby horizontal bar near bottom of fuselage
+  ctx.moveTo(cx - 4, oy + 12);
+  ctx.lineTo(cx + 4, oy + 12);
   ctx.stroke();
 
   // Contacts the radar currently detects (in the scan volume, within range).
