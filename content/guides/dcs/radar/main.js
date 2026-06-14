@@ -40,7 +40,7 @@ const sa = new MFD(document.getElementById("mfd-sa"), {
     { osb: 7,  label: "DCLTR",             disabled: true },
     { osb: 8,  label: `SCL/${saRange(s)}`, action: () => change(() => cycleSaScale(s)) },
     { osb: 9,  label: "MK1",               disabled: true },
-    { osb: 10, label: "DCNTR",             action: () => change(() => toggleSaCenter(s)) },
+    { osb: 10, label: "DCNTR",             action: () => change(() => toggleSaCenter(s)), active: s.saCentered === false },
     { osb: 11, label: "WYPT",              disabled: true, vertical: true },
     { osb: 12, label: "↑",                 disabled: true },
     { osb: 13, label: "↓",                 disabled: true },
