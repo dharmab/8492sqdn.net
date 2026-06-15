@@ -1,7 +1,7 @@
 ---
 title: DCS Terrain Tier List
 summary: Recommended DCS World terrains for Singleplayer and Multiplayer
-date: 2025-07-25
+date: 2026-06-15
 weight: 7
 ---
 
@@ -21,9 +21,9 @@ Tier|Terrains
 -|-
 S|Syria, Normandy (WW2)
 A|Persian Gulf, Nevada, Germany
-B|Kola, Channel (WW2)
-C|Afghanistan, Iraq, Sinai, South Atlantic
-F|
+B|Channel (WW2)
+C|Afghanistan, Iraq, Sinai
+F|Kola, South Atlantic
 
 Syria has excellent content for practically every post-WW2 module.
 
@@ -37,6 +37,8 @@ Nevada has excellent content for the A-10C, F-4E, and F-14 - arguably, three of 
 
 Kola and Channel have some good campaigns, if you've already played the ones on the other maps.
 
+However, both Kola and South Atlantic have not had updates in many months and appear to be abandoned by their developers.
+
 # Multiplayer Tier List
 
 Tier|Terrains
@@ -44,8 +46,8 @@ Tier|Terrains
 S|Syria, Germany, Normandy (WW2)
 A|Persian Gulf
 B|
-C|Afghanistan, Iraq, Kola, Nevada, Sinai
-F|South Atlantic, Channel (WW2)
+C|Afghanistan, Iraq, Nevada, Sinai
+F|Kola, South Atlantic, Channel (WW2)
 
 Syria is the de facto standard multiplayer map.
 
@@ -57,6 +59,6 @@ Persian Gulf has some interesting servers.
 
 Afghanistan, Iraq, Sinai, Nevada and Kola are not common on public servers and are mostly used by private squadrons. Only buy the ones you need, if any.
 
-South Atlantic is virtually unused in multiplayer.
+Both Kola and South Atlantic have not had updates in many months and appear to be abandoned by their developers. South Atlantic is virtually unused in multiplayer.
 
 The Channel is no longer used in multiplayer because Normandy contains the entire area of The Channel.
