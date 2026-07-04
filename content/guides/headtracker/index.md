@@ -32,6 +32,9 @@ I have heard mixed experiences about:
 
 - Tobii Eye Tracker 5. Initially I heard from users complaining coarse and oversmoothed tracking. A real-life friend who tried to use one for flight simulation described it as feeling drunk. More recently, I have heard this improved with software updates, but I haven't been able to verify this personally.
 
+I have heard about, but not personally tested:
+
+- [Sony Head Tracker](https://github.com/NicholasSlattery/sony-head-tracker): Software for using the head trackers built into higher-end Sony headphones with OpenTrack.
 
 # FAQ:
 
@@ -41,6 +44,7 @@ There are various advantages and tradeoffs for each product, so try a few and se
 
 1. Do you own an iPhone with Face ID? Try Smoothtrack. Refund it if it doesn't work well for you.
 1. Do you own a webcam? Try OpenTrack NeuralNet.
+1. Do you own a pair of Sony headphones compatible with Sony Head Tracker? Try it.
 1. Do you own an Android Phone? Try the Android apps. Refund them if they don't work well for you.
 1. Take a look at Delanclip, Grassmonkey, TrackHat or a used iPhone X or newer (if you didn't already try Smoothtrack). Try whichever has the best price with shipping.
 
