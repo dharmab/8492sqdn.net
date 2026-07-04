@@ -7,7 +7,7 @@ summary: "Our previous top pick."
 weight: 1
 ---
 
-TL;DR We used to recommend the Pimax Crystal Light (and [Crystal](../pimax-crystal)) as one of our top picks for a high-end VR headset. However, we now recommend waiting for reviews for the [Pimax Crystal Super](../pimax-crystal-super) and [Bigscreen Beyond 2](../bigscreen-beyond-2).
+TL;DR We used to recommend the Pimax Crystal Light (and [Crystal](../pimax-crystal)) as one of our top picks for a high-end VR headset. However, we now recommend the  [Bigscreen Beyond 2](../bigscreen-beyond-2) instead.
 
 ![](images/headset.webp)
 
