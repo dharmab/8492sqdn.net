@@ -1,7 +1,7 @@
 ---
 title: Head Trackers
 summary: "Introduction to Head Tracking for Simulation Games"
-date: 2024-10-14
+date: 2026-08-05
 weight: 2
 ---
 Head tracking is a technology that allow you to control the camera view in your simulator by rotating and moving your head.
