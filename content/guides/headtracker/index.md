@@ -14,8 +14,10 @@ Head tracking can also enrich other types of simulation games such as civil flig
 
 Originally, head tracking for simulators was pioneered by NaturalPoint with their TrackIR product. For this reason, you'll sometimes hear people say "TrackIR" to refer to any head tracking system. However, NaturalPoint TrackIR has long been surpassed in both functionality and value by the competition, so I no longer recommend purchasing new TrackIR units. Instead, check out the following:
 
-- [SmoothTrack](https://smoothtrack.app/), : Smartphone app. Very affordable if you already have a phone with face unlock. These apps are particularly good on iPhone, since iPhones have infrared laser head tracking sensors built in, and can also use AirPods for tracking. You can also buy a used iPhone X or newer to use as a dedicated head tracking device with this app. The price of the phone and app together is comparable to a dedicated device, but then you also have a full-featured phone to use for other things.
-- [JBC Head Tracker](https://jbcconsulting448679429.wordpress.com/): Older smartphone app. It's about $8 cheaper than Smoothtrack, but Smoothtrack works much better on newer iPhones than JBC Head Tracker.
+
+- Smartphone apps. These apps are particularly good on iPhone, since iPhones have infrared laser head tracking sensors built in, and can also use AirPods for tracking. You can also buy a used iPhone X or newer to use as a dedicated head tracking device with this app. The price of the phone and app together is comparable to a dedicated device, but then you also have a full-featured phone to use for other things.
+  - [Headcam](https://headcam.app/): Free smartphone app.
+  - [SmoothTrack](https://smoothtrack.app/): Paid smartphone app.
 
 > 💡 Tip: Use an inexpensive Magsafe charging stand to power your iPhone while running Smoothtrack!
 
@@ -42,10 +44,10 @@ I have heard about, but not personally tested:
 
 There are various advantages and tradeoffs for each product, so try a few and see what works for you:
 
-1. Do you own an iPhone with Face ID? Try Smoothtrack. Refund it if it doesn't work well for you.
+1. Do you own an iPhone with Face ID? Try Headcam and/or Smoothtrack. Refund it if it doesn't work well for you.
 1. Do you own a webcam? Try OpenTrack NeuralNet.
 1. Do you own a pair of Sony headphones compatible with Sony Head Tracker? Try it.
-1. Do you own an Android Phone? Try the Android apps. Refund them if they don't work well for you.
+1. Do you own an Android Phone? Try Headcam. Refund if it doesn't work well for you.
 1. Take a look at Delanclip, Grassmonkey, TrackHat or a used iPhone X or newer (if you didn't already try Smoothtrack). Try whichever has the best price with shipping.
 
 ## How do you look to the side/behind you?
