@@ -15,6 +15,8 @@ Meta's Airlink streaming application is suboptimal; Since Meta makes money from 
 
 [Virtual Desktop](https://www.vrdesktop.net/) is a paid third-party streaming application. Although its primary use case is for displaying 2D content in VR, it also provides advanced options for improved stream quality for VR content. In my testing with Meta Quest devices, I was able to see a higher level of clarity using Virtual Desktop over wifi compared to Meta Quest Link over either USB or wifi. It also recovers from errors better than Quest Link; with Virtual Desktop I can reliably take my headset off, get a drink from the fridge, put my headset back on and resume flight. With Quest Link, I usually had to restart DCS in that situation!
 
+See [this excellent guide to setting up Virtual Desktop](https://xrguidebook.com/guides/virtual-desktop/).
+
 [Steam Link](https://www.meta.com/experiences/steam-link/5841245619310585/) is a free third-party streaming application that works with Meta Quest devices, although it isn't quite as simple to set up as Virtual Desktop.
 
 Your experience may vary depending on your hardware, especially your network bandwidth and wireless access points.
