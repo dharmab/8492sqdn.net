@@ -400,6 +400,7 @@ function renderChoices() {
       choice.steamURL ||
       choice.eShopURL ||
       choice.heatblurURL ||
+      choice.grinnelliURL ||
       choice.downloadURL;
 
     const linksContainer = document.createElement("div");
@@ -434,6 +435,16 @@ function renderChoices() {
         heatblurLink.className = "store-link heatblur-link";
         heatblurLink.textContent = "Heatblur Store";
         linksContainer.appendChild(heatblurLink);
+      }
+
+      if (choice.grinnelliURL) {
+        const grinnelliLink = document.createElement("a");
+        grinnelliLink.href = choice.grinnelliURL;
+        grinnelliLink.target = "_blank";
+        grinnelliLink.rel = "noopener noreferrer";
+        grinnelliLink.className = "store-link grinnelli-link";
+        grinnelliLink.textContent = "Grinnelli Store";
+        linksContainer.appendChild(grinnelliLink);
       }
 
       if (choice.downloadURL) {
