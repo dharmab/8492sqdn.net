@@ -1,21 +1,11 @@
 ---
 title: HOTAS Buyer's Guide for Combat Flight Simulation
 summary: Flight sticks, throttles and pedals organized into recommended, recommended with reservations, and not recommended.
-date: 2025-12-27
+date: 2026-10-18
 weight: 2
 ---
 
 <img src="images/orion-2-hotas-max-f-15ex.webp" width="1600" height="1600" loading="lazy" alt="">
-
-# Note On Current Events
-
-The US is currently experiencing highly chaotic and extreme changes in
-tariff policy. The cost of tariffs is passed onto the customer (i.e. you),
-either in the form of increased prices on goods, or directly as fees collected
-by customs authorities on packages.
-
-You should expect significantly increased prices on most HOTAS equipment,
-since all consumer HOTAS devices are manufactured outside of the United States.
 
 # Note on Winwing/WINCTRL
 
@@ -51,7 +41,7 @@ A budget clone of the VKB Gladiator with more buttons and a vibration motor. Mad
 
 ### VKB Gladiator NXT EVO Space Combat Edition Premium
 
-Best value!
+Made from a nicer feeling plastic compared to the WINCTRL Ursa Minor, and has a longer throw.
 
 <img src="images/gladiator-nxt-evo-sce-premium.webp" width="1100" height="1100" loading="lazy" alt="">
 
@@ -155,17 +145,17 @@ The MCE Ultimate fixed a number of criticisms over the MCE Pro and is worth the 
 
 We have heard reports that Moza's force feedback software interferes with other DCS tools including SimpleRadio-Standalone.
 
-[Additionally, we have heard reports thnat Moza's customers have found fradulent charges on their payment cards after buying from Moza.](https://www.reddit.com/r/moza/comments/1houmep/dont_buy_from_the_moza_website/) Therefore, we do not recommend purchasing from Moza for your financial security.
-
 We recommend VPForce as an alternative, because of the excellent software.
 
 # Throttles
 
 ## Recommended
 
-### VKB STECS
+### WINCTRL Ursa Minor Throttle
 
-Customizable, best value!
+<img src="images/ursa-minor-throttle.webp" width="1600" height="1600" loading="lazy" alt="WINCTRL Ursa Minor Throttle">
+
+### VKB STECS
 
 > 💡 The Mini version is intended for use with a separate mount; The Mini Plus/Standard/Max versions can be used as desktop devices out of the box. You can make a desktop plate for the Mini from some scrap wood.
 
@@ -246,13 +236,13 @@ If you mostly fly WWII aircraft, early to mid cold war aircraft, and/or *DCS MiG
 
 ![](images/gnx-ww2-throttle.webp)
 
-## Not Recommended
-
 ### Moza MTP Throttle.
 
-There aren't any major faults with the hardware itself. The controls on the base are oriented towards startup functions rather than commonly used functions, so it's best paired with a separate panel for commonly used flight controls. The price is a high compared to the competition.
+The controls on the base are oriented towards startup functions rather than commonly used functions, so it's best paired with a separate panel for commonly used flight controls.
 
-However, [we have heard reports thnat Moza's customers have found fradulent charges on their payment cards after buying from Moza.](https://www.reddit.com/r/moza/comments/1houmep/dont_buy_from_the_moza_website/) Therefore, we do not recommend purchasing from Moza for your financial security.
+<img src="images/moza-mtp-throttle.webp" width="1600" height="1600" loading="lazy" alt="Moza MTP Throttle">
+
+## Not Recommended
 
 ### CH Products Pro Throttle
 
@@ -261,6 +251,12 @@ Worse than a modded Thrustmaster TWCS.
 # HOTAS (Stick & Throttle Bundles)
 
 ## Recommended
+
+### WINCTRL Ursa Minor Combat HOTAS
+
+Bundle of the WINCTRL Ursa Minor Fighter Joystick and Ursa Minor Throttle.
+
+<img src="images/ursa-minor-combat-hotas.webp" width="1600" height="1600" loading="lazy" alt="WINCTRL Ursa Minor Combat HOTAS stick and throttle bundle">
 
 ### Winwing (WINCTRL) Orion 2 HOTAS MAX
 
