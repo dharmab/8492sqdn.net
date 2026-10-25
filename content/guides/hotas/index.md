@@ -63,11 +63,6 @@ Made from a nicer feeling plastic compared to the WINCTRL Ursa Minor, and has a 
 
 ## Recommended with Reservations
 
-### Logitech Extreme 3D Pro
-
-This used to be recommended as a first joystick to try flight simulators before buying an expensive HOTAS. However, the price of this joystick has increased while the price of a general-purpose gamepad has decreased, so it's not longer the best option in the price range.
-
-<img src="images/extreme-3d-pro.webp" width="1920" height="1920" loading="lazy" alt="">
 
 ### Thrustmaster T16000M FCS
 
@@ -116,6 +111,12 @@ For serious DIYers with extraordinary budgets and patience. Grip not included, r
 {{< youtube QDU5VHS-YzQ >}}
 
 ## Not Recommended
+
+### Logitech Extreme 3D Pro
+
+Discontinued by Logitech. Severely outdated.
+
+<img src="images/extreme-3d-pro.webp" width="1920" height="1920" loading="lazy" alt="">
 
 ### CH Products Fighterstick
 
