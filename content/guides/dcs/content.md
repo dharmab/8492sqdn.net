@@ -51,9 +51,11 @@ Use a tutorial or training campaign to learn more about the aircraft.
 ### A-10C
 [Iron Flag Part I](https://www.digitalcombatsimulator.com/en/shop/campaigns/a-10c_ii_iron_flag_part_i_campaign/) 💵 - story-based training campaign about an airline pilot and Air National Guard reservist training on the A-10C upgrade. Fully voice acted including instructor pilots, custom ATC and range controllers. **The missing A-10C tutorial.**
 
-[Zero to Hero](https://www.youtube.com/watch?v=a2mtbTYjClA&list=PLYA7v8u34qu89mbs4TGGEIhkwJ8kgFRWr) video series - comprehensive video guide to functional proficiency in the A-10C.
+[Zero to Hero](https://www.youtube.com/watch?v=a2mtbTYjClA&list=PLYA7v8u34qu89mbs4TGGEIhkwJ8kgFRWr) and [Deephack's A-10C II Tutorials](https://www.youtube.com/playlist?list=PLLY_KGBSBGjWyo6K1V8bpGizSYwU_e_Xz) - comprehensive video guides to functional proficiency in the A-10C.
 
 {{< youtube-playlist PLYA7v8u34qu89mbs4TGGEIhkwJ8kgFRWr >}}
+
+{{< youtube-playlist PLLY_KGBSBGjWyo6K1V8bpGizSYwU_e_Xz >}}
 
 [Chuck’s Guide](https://chucksguides.com/aircraft/dcs/a-10c/)
 
