@@ -275,12 +275,17 @@ function filterChoices() {
       let matchesMultipleOr = true;
       let matchesMultipleAny = true;
 
-      // Check single (radio) questions - choice must match ANY of the selected tags (OR logic)
-      if (singleQuestionTags.size > 0) {
-        matchesSingle = Array.from(singleQuestionTags).some((tag) =>
-          choiceTags.includes(tag),
-        );
-      }
+      // Check single (radio) questions - for each question, choice must match
+      // at least ONE tag from the selected answer
+      matchesSingle = Object.values(selectedAnswersByQuestion).every(
+        (selection) => {
+          const questionHasNoFilter = selection.tags.length === 0;
+          const choiceMatchesSelection = selection.tags.some((tag) =>
+            choiceTags.includes(tag),
+          );
+          return questionHasNoFilter || choiceMatchesSelection;
+        },
+      );
 
       // Check multiple (checkbox) questions with AND logic - choice must match ALL selected tags
       if (multipleQuestionTagsAnd.size > 0) {
