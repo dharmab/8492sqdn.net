@@ -172,6 +172,25 @@
       "sortKey": "mig15"
     },
     {
+      "title": "F-100D Super Sabre",
+      "coverImage": "f100d.webp",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "era-early-cold-war",
+        "era-mid-cold-war",
+        "role-fighter",
+        "role-strike",
+        "role-sead",
+        "origin-us"
+      ],
+      "steamURL": "https://store.steampowered.com/app/4767260/DCS_F100D_Super_Sabre_by_Grinnelli_Designs/",
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/f-100d/",
+      "grinnelliURL": "https://grinnellidesigns.com/f-100d/",
+      "rating": 3,
+      "sortKey": "f100"
+    },
+    {
       "title": "F-4E Phantom",
       "coverImage": "f4e.webp",
       "description": "",
@@ -251,7 +270,7 @@
     },
     {
       "title": "F-14A/B Tomcat",
-      "coverImage": "F14.webp",
+      "coverImage": "f14ab.webp",
       "description": "",
       "tags": [
         "fixed-wing",
@@ -267,6 +286,25 @@
       "heatblurURL": "https://store.heatblur.com/products/dcs-f-14-tomcat",
       "rating": 3,
       "sortKey": "f14"
+    },
+    {
+      "title": "F-14B(U) Tomcat",
+      "coverImage": "f14bu.webp",
+      "description": "",
+      "tags": [
+        "fixed-wing",
+        "era-post-cold-war",
+        "era-gwot",
+        "role-fighter",
+        "role-strike",
+        "origin-us",
+        "naval"
+      ],
+      "steamURL": "https://store.steampowered.com/app/4907940/DCS_F14BU_by_Heatblur_Simulations/",
+      "eShopURL": "https://www.digitalcombatsimulator.com/en/shop/modules/f-14bu/",
+      "heatblurURL": "https://store.heatblur.com/products/dcs-f-14b-upgrade",
+      "rating": 3,
+      "sortKey": "f14bu"
     },
     {
       "title": "MiG-29A Fulcrum",

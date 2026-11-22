@@ -107,11 +107,11 @@ There are no perfect VR headsets, but there are a few worth consideration for fl
 
 _These recommendations are for flight simulation use. Some headsets are good for other applications, but not good for flight sim, and thus won't appear in our recommendations_
 
-If you can wait, we currently recommend waiting for the [Steam Frame](https://store.steampowered.com/sale/steamframe) to launch in 2026.
+We reluctantly recommend the [Meta Quest 3](../../reviews/vr/meta-quest-3). Despite its software issues with PCVR, it is the most accessible VR headset which has a good enough display for reading DCS cockpits, and it has parts and warranty available for the foreseeable future.
 
-If you need a VR headset now and cannot wait, we reluctantly recommend the [Meta Quest 3](../../reviews/vr/meta-quest-3).
+Based on our indepdendent purchases and testing, we like the [Bigscreen Beyond 2](../../reviews/vr/bigscreen-beyond-2). However, it requires Valve/HTC Vive/Index Base Stations ("lighthouses") to function. Lighthouses are a legacy product which will fail over time and no guarantee that replacement units will be available long term. We don't recommend buying a Bigscreen Beyond 2 unless you would be fine losing all the money you paid for it if your lighthouses broke and you couldn't buy replacements.
 
-Based on our indepdendent purchases and testing, we like the [Bigscreen Beyond 2](../../reviews/vr/bigscreen-beyond-2). However, it requires Valve/HTC Vive/Index Base Stations ("lighthouses") to function. :ighthouses are a legacy product which will fail over time and no guarantee that replacement units will be available long term. We don't recommend buying a Bigscreen Beyond 2 until a long-term source of replacement lighthouses is available.
+As an alternative choice to the Quest 3, the HP Reverb G2 can be found used for a good price on classifieds and can work with DCS using [Oasis VR](https://store.steampowered.com/app/3824490/Oasis_Driver_for_Windows_Mixed_Reality/). It has a good screen and does not require lighthouses. However, the cable has a 100% failure rate given enough use, and repairs/replacements are no longer available.
 
 Based on our indepdendent purchases and testing, we are no longer recommending Pimax headsets due to the software issues we experienced using them, especially in comparison to the software from Valve and Bigscreen. 
 

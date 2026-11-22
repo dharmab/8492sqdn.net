@@ -4,11 +4,16 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import {
   FT_PER_NMI,
+  BAR_DEG,
+  SWEEP_BEAM_AZ_DEG,
   scanCenter,
   azWidth,
   barSpan,
   lsContact,
   isDetected,
+  sweepBarCenterEl,
+  sweepGlow,
+  hasBeenSwept,
 } from "./model.js";
 
 const GREEN = 0x33ff66;
@@ -34,6 +39,23 @@ function dir(azDeg, elDeg) {
     Math.sin(az) * Math.cos(el),
     Math.sin(el),
     -Math.cos(az) * Math.cos(el),
+  );
+}
+
+// Point on the scan-volume cylinder (vertical axis, radius FAR) tilted around the
+// X axis by tiltDeg (the antenna elevation setting).  az is world-space azimuth;
+// elRel is elevation relative to the tilt center, mapping to height via FAR·tan(elRel).
+function cylPt(azDeg, elRelDeg, tiltDeg) {
+  const az  = azDeg    * Math.PI / 180;
+  const el  = elRelDeg * Math.PI / 180;
+  const til = tiltDeg  * Math.PI / 180;
+  const cx =  FAR * Math.sin(az);
+  const cy =  FAR * Math.tan(el);
+  const cz = -FAR * Math.cos(az);
+  return new THREE.Vector3(
+    cx,
+    cy * Math.cos(til) - cz * Math.sin(til),
+    cy * Math.sin(til) + cz * Math.cos(til),
   );
 }
 
@@ -73,7 +95,7 @@ export class Scene3D {
 
     this.coneGroup = new THREE.Group();
     this.scene.add(this.coneGroup);
-    this._initCone();
+    this._initCone(); // main cone + sweep sub-cone
 
     this.animate = this.animate.bind(this);
     requestAnimationFrame(this.animate);
@@ -113,27 +135,37 @@ export class Scene3D {
         transparent: true,
         opacity: 0.06,
         side: THREE.DoubleSide,
+        depthWrite: false, // don't occlude geometry behind a semi-transparent face
       }),
     );
     this.coneGroup.add(this._coneCap);
+
+    // Sweep sub-cone: narrower wireframe that moves through the full cone volume.
+    const sweepGeo = new THREE.BufferGeometry();
+    sweepGeo.setAttribute(
+      "position",
+      new THREE.BufferAttribute(new Float32Array(WIRE_PTS * 3), 3),
+    );
+    this._sweepLines = new THREE.LineSegments(
+      sweepGeo,
+      new THREE.LineBasicMaterial({ color: GREEN, transparent: true, opacity: 1.0 }),
+    );
+    this.coneGroup.add(this._sweepLines);
   }
 
   // Create one mesh per contact (contacts never move) and one shared L&S cross.
-  // Called once on the first update(); subsequent calls only swap materials.
+  // Called once on the first update(); each contact gets its own material so
+  // emissive intensity can be varied independently for sweep glow.
   _initContactPool(state) {
     const geo = new THREE.ConeGeometry(1.5, 5, 3);
     geo.rotateX(-Math.PI / 2); // tip points along -Z (forward)
 
-    this._detectedMat = new THREE.MeshStandardMaterial({
-      color: GREEN, emissive: GREEN, emissiveIntensity: 0.4, flatShading: true,
-    });
-    this._undetectedMat = new THREE.MeshStandardMaterial({
-      color: CONTACT, emissive: 0x000000, emissiveIntensity: 0, flatShading: true,
-    });
-
     this._contactPool = state.contacts.map(c => {
       const az = (c.azDeg * Math.PI) / 180;
-      const mesh = new THREE.Mesh(geo, this._undetectedMat);
+      const mat = new THREE.MeshStandardMaterial({
+        color: CONTACT, emissive: 0x000000, emissiveIntensity: 0, flatShading: true,
+      });
+      const mesh = new THREE.Mesh(geo, mat);
       mesh.position.set(
         Math.sin(az) * c.rangeNmi,
         (c.altFt - state.ownship.altFt) / FT_PER_NMI,
@@ -141,7 +173,7 @@ export class Scene3D {
       );
       mesh.rotation.y = ((c.headingDeg - state.ownship.headingDeg) * Math.PI) / 180;
       this.contactGroup.add(mesh);
-      return { id: c.id, mesh };
+      return { id: c.id, mesh, mat };
     });
 
     const r = 4;
@@ -172,12 +204,22 @@ export class Scene3D {
     const showVolume = state.assists.show3dVolume;
     this.coneGroup.visible = showVolume;
 
-    // Contacts don't move; swap materials as detection state changes.
-    // When the volume assist is off, show all contacts as undetected.
+    // Contacts don't move; update each contact's individual material so glow
+    // intensity can vary per-contact as the sweep beam passes over them.
     const ls = lsContact(state);
     for (const entry of this._contactPool) {
       const c = state.contacts.find(c => c.id === entry.id);
-      entry.mesh.material = (showVolume && isDetected(state, c)) ? this._detectedMat : this._undetectedMat;
+      const detected = showVolume && isDetected(state, c) && hasBeenSwept(state, c);
+      const glow = sweepGlow(state, c.id);
+      if (detected) {
+        entry.mat.color.setHex(GREEN);
+        entry.mat.emissive.setHex(GREEN);
+        entry.mat.emissiveIntensity = 0.4 + glow * 1.6; // 0.4 baseline → 2.0 peak
+      } else {
+        entry.mat.color.setHex(CONTACT);
+        entry.mat.emissive.setHex(0x000000);
+        entry.mat.emissiveIntensity = 0;
+      }
     }
 
     if (ls) {
@@ -189,6 +231,7 @@ export class Scene3D {
     }
 
     this.buildCone(state);
+    this.buildSweepCone(state);
   }
 
   buildCone(state) {
@@ -196,54 +239,85 @@ export class Scene3D {
     const elC = state.radar.elevDeg;
     const azH = azWidth(state) / 2;
     const elH = barSpan(state) / 2;
+    const pt = (az, elRel) => cylPt(az, elRel, elC);
 
-    const boresight = dir(azC, elC);
-    const q = new THREE.Quaternion().setFromUnitVectors(
-      new THREE.Vector3(0, 0, -1),
-      boresight,
-    );
-    const far = (a, e) => dir(a, e).applyQuaternion(q).multiplyScalar(FAR);
-
-    // Write wireframe positions directly into the pre-allocated buffer.
     const wireArr = this._coneLines.geometry.attributes.position.array;
     let wi = 0;
     const wv = v => { wireArr[wi++] = v.x; wireArr[wi++] = v.y; wireArr[wi++] = v.z; };
     const O = new THREE.Vector3(0, 0, 0);
-    for (const [a, e] of [[-azH, -elH], [azH, -elH], [azH, elH], [-azH, elH]]) {
-      wv(O); wv(far(a, e));
+    for (const [a, e] of [[azC-azH,-elH],[azC+azH,-elH],[azC+azH,elH],[azC-azH,elH]]) {
+      wv(O); wv(pt(a, e));
     }
     const boundary = [];
-    const sweep = (a0, e0, a1, e1) => {
+    const arc = (az0, el0, az1, el1) => {
       for (let i = 0; i < ARC; i++) {
         const t = i / ARC;
-        boundary.push(far(a0 + (a1 - a0) * t, e0 + (e1 - e0) * t));
+        boundary.push(pt(az0 + (az1 - az0) * t, el0 + (el1 - el0) * t));
       }
     };
-    sweep(-azH, -elH, azH, -elH);
-    sweep(azH, -elH, azH, elH);
-    sweep(azH, elH, -azH, elH);
-    sweep(-azH, elH, -azH, -elH);
+    arc(azC-azH, -elH, azC+azH, -elH);
+    arc(azC+azH, -elH, azC+azH,  elH);
+    arc(azC+azH,  elH, azC-azH,  elH);
+    arc(azC-azH,  elH, azC-azH, -elH);
     for (let i = 0; i < boundary.length; i++) {
       wv(boundary[i]); wv(boundary[(i + 1) % boundary.length]);
     }
     this._coneLines.geometry.attributes.position.needsUpdate = true;
 
-    // Write cap triangle positions into the pre-allocated buffer.
     const capArr = this._coneCap.geometry.attributes.position.array;
     let ci = 0;
     const cv = v => { capArr[ci++] = v.x; capArr[ci++] = v.y; capArr[ci++] = v.z; };
-    const at = (ai, ei) => far(-azH + (2 * azH * ai) / NA, -elH + (2 * elH * ei) / NE);
+    const at = (ai, ei) => pt(azC - azH + (2 * azH * ai) / NA, -elH + (2 * elH * ei) / NE);
     for (let ai = 0; ai < NA; ai++) {
       for (let ei = 0; ei < NE; ei++) {
-        const a = at(ai, ei);
-        const b = at(ai + 1, ei);
-        const c = at(ai + 1, ei + 1);
-        const d = at(ai, ei + 1);
+        const a = at(ai, ei), b = at(ai + 1, ei), c = at(ai + 1, ei + 1), d = at(ai, ei + 1);
         cv(a); cv(b); cv(c);
         cv(a); cv(c); cv(d);
       }
     }
     this._coneCap.geometry.attributes.position.needsUpdate = true;
+  }
+
+  buildSweepCone(state) {
+    const fullAzLo = scanCenter(state) - azWidth(state) / 2;
+    const fullAzHi = scanCenter(state) + azWidth(state) / 2;
+    const beamAzLo = Math.max(fullAzLo, state.sweep.azDeg - SWEEP_BEAM_AZ_DEG / 2);
+    const beamAzHi = Math.min(fullAzHi, state.sweep.azDeg + SWEEP_BEAM_AZ_DEG / 2);
+
+    const elC = state.radar.elevDeg;
+    const fullElLo = elC - barSpan(state) / 2;
+    const fullElHi = elC + barSpan(state) / 2;
+    const elCbar = sweepBarCenterEl(state, state.sweep.barIdx);
+    const beamElLo = Math.max(fullElLo, elCbar - BAR_DEG / 2);
+    const beamElHi = Math.min(fullElHi, elCbar + BAR_DEG / 2);
+    // Convert absolute elevations to relative (cylinder is centered on elC).
+    const elLoRel = beamElLo - elC;
+    const elHiRel = beamElHi - elC;
+
+    const pt = (az, elRel) => cylPt(az, elRel, elC);
+
+    const wireArr = this._sweepLines.geometry.attributes.position.array;
+    let wi = 0;
+    const wv = v => { wireArr[wi++] = v.x; wireArr[wi++] = v.y; wireArr[wi++] = v.z; };
+    const O = new THREE.Vector3(0, 0, 0);
+    for (const [a, e] of [[beamAzLo,elLoRel],[beamAzHi,elLoRel],[beamAzHi,elHiRel],[beamAzLo,elHiRel]]) {
+      wv(O); wv(pt(a, e));
+    }
+    const boundary = [];
+    const arc = (az0, el0, az1, el1) => {
+      for (let i = 0; i < ARC; i++) {
+        const t = i / ARC;
+        boundary.push(pt(az0 + (az1 - az0) * t, el0 + (el1 - el0) * t));
+      }
+    };
+    arc(beamAzLo, elLoRel, beamAzHi, elLoRel);
+    arc(beamAzHi, elLoRel, beamAzHi, elHiRel);
+    arc(beamAzHi, elHiRel, beamAzLo, elHiRel);
+    arc(beamAzLo, elHiRel, beamAzLo, elLoRel);
+    for (let i = 0; i < boundary.length; i++) {
+      wv(boundary[i]); wv(boundary[(i + 1) % boundary.length]);
+    }
+    this._sweepLines.geometry.attributes.position.needsUpdate = true;
   }
 
   animate() {

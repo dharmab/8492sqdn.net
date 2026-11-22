@@ -3,6 +3,8 @@
 import {
   SCOPE_AZ_DEG,
   ELEV_LIMIT_DEG,
+  BAR_DEG,
+  BARS_OPTIONS,
   azBounds,
   elBounds,
   scanCenter,
@@ -15,6 +17,8 @@ import {
   cursorRange,
   lsContact,
   contactUnderCursor,
+  sweepGlow,
+  hasBeenSwept,
 } from "./model.js";
 
 export const GREEN = "#33ff66";
@@ -46,7 +50,7 @@ function osbAnchor(osb) {
 export class MFD {
   constructor(canvas, config) {
     this.canvas = canvas;
-    this.config = config; // { title, osbs(state)->[], drawDisplay(ctx, area, state) }
+    this.config = config; // { title, priorityKey, osbs(state)->[], drawDisplay(ctx, area, state) }
     this.osbRects = [];
     canvas.addEventListener("click", (e) => this.onClick(e));
   }
@@ -116,6 +120,19 @@ export class MFD {
         });
         rect = { x: an.x - totalW / 2 - 2, y: an.y - totalH / 2, w: totalW + 4, h: totalH, action: o.action, disabled: o.disabled };
         ctx.font = "13px monospace";
+      } else if (o.label.includes("\n")) {
+        const lines = o.label.split("\n");
+        const lineH = 14;
+        const totalH = lines.length * lineH;
+        ctx.textAlign = an.align;
+        const maxW = Math.max(...lines.map(l => ctx.measureText(l).width));
+        lines.forEach((line, i) => {
+          ctx.fillText(line, an.x, an.y - totalH / 2 + i * lineH + lineH / 2);
+        });
+        let rx = an.x;
+        if (an.align === "center") rx = an.x - maxW / 2;
+        if (an.align === "right") rx = an.x - maxW;
+        rect = { x: rx - 4, y: an.y - totalH / 2, w: maxW + 8, h: totalH, action: o.action, disabled: o.disabled };
       } else {
         ctx.textAlign = an.align;
         ctx.fillText(o.label, an.x, an.y);
@@ -140,6 +157,26 @@ export class MFD {
       ctx.textAlign = "left";
       ctx.textBaseline = "top";
       ctx.fillText(this.config.title, a.x + 4, a.y + 4);
+    }
+
+    // TDC priority indicator: green diamond with center dot in top-right of display area.
+    if (this.config.priorityKey && state.tdcPriority === this.config.priorityKey) {
+      const dx = a.x + a.w - 10;
+      const dy = a.y + 10;
+      const r = 6;
+      ctx.strokeStyle = GREEN;
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(dx, dy - r);
+      ctx.lineTo(dx + r, dy);
+      ctx.lineTo(dx, dy + r);
+      ctx.lineTo(dx - r, dy);
+      ctx.closePath();
+      ctx.stroke();
+      ctx.fillStyle = GREEN;
+      ctx.beginPath();
+      ctx.arc(dx, dy, 1.5, 0, Math.PI * 2);
+      ctx.fill();
     }
 
     // Page content, clipped to display area.
@@ -169,9 +206,17 @@ function drawStar(ctx, x, y, r, color) {
   ctx.fill();
 }
 
-function brick(ctx, x, y, isLS) {
-  ctx.fillStyle = GREEN;
+function brick(ctx, x, y, isLS, glow = 0) {
+  ctx.shadowColor = '#33ff66';
+  ctx.shadowBlur = 22 * glow;
+  // Brighten the brick toward white-green at peak, and draw twice to
+  // accumulate shadow intensity (canvas shadow composites additively).
+  const r = Math.round(51  + 200 * glow);
+  const b = Math.round(102 + 150 * glow);
+  ctx.fillStyle = glow > 0 ? `rgb(${r},255,${b})` : GREEN;
   ctx.fillRect(x - 5, y - 3, 10, 6);
+  if (glow > 0) ctx.fillRect(x - 5, y - 3, 10, 6); // second pass doubles glow spread
+  ctx.shadowBlur = 0;
   if (isLS) drawStar(ctx, x, y - 11, 5, GREEN);
 }
 
@@ -270,6 +315,17 @@ export function drawAtkRdr(ctx, a, state) {
   ctx.stroke();
   ctx.setLineDash([]);
 
+  // Sweep azimuth line — solid vertical line tracking the current beam position.
+  const sweepX = azToX(a, state.sweep.azDeg);
+  ctx.strokeStyle = GREEN;
+  ctx.lineWidth = 1;
+  ctx.globalAlpha = 0.6;
+  ctx.beginPath();
+  ctx.moveTo(sweepX, a.y);
+  ctx.lineTo(sweepX, a.y + a.h);
+  ctx.stroke();
+  ctx.globalAlpha = 1;
+
   // Azimuth tick marks at 0°, ±30°, ±60° along top and bottom inner edges.
   ctx.strokeStyle = DIM;
   ctx.lineWidth = 1;
@@ -292,9 +348,11 @@ export function drawAtkRdr(ctx, a, state) {
   }
   ctx.stroke();
 
-  // Elevation caret (<) on the left inner edge.
-  // Neutral (0°) → midpoint; fully raised → 3/4 tick; fully lowered → 1/4 tick.
-  const elevFrac = 0.5 - 0.25 * (state.radar.elevDeg / ELEV_LIMIT_DEG);
+  // Elevation caret (<): starts at antenna tilt, steps down one BAR_DEG per bar scanned.
+  const nBars = BARS_OPTIONS[state.radar.barsIndex];
+  const barsScanned = (nBars - 1) - state.sweep.barIdx;
+  const pipperElev = state.radar.elevDeg - barsScanned * BAR_DEG;
+  const elevFrac = 0.5 - 0.5 * (pipperElev / ELEV_LIMIT_DEG);
   const caretY = a.y + elevFrac * a.h;
   const cs = 7; // caret arm half-size
   ctx.strokeStyle = GREEN;
@@ -311,7 +369,7 @@ export function drawAtkRdr(ctx, a, state) {
     ctx.font = "12px monospace";
     ctx.textAlign = "right";
     ctx.textBaseline = "top";
-    ctx.fillText(range + "", a.x + a.w - 4, a.y + 4);
+    ctx.fillText(range + "", a.x + a.w - 4, a.y + 18);
 
     // Elevation readout: cone top/bottom altitude at cursor range.
     const { topFt, bottomFt } = coneAltitudesAt(state, cursorRange(state));
@@ -325,7 +383,7 @@ export function drawAtkRdr(ctx, a, state) {
   const ls = lsContact(state);
   const tuc = contactUnderCursor(state);
   for (const c of state.contacts) {
-    if (!isDetected(state, c) || c.rangeNmi > range) continue;
+    if (!isDetected(state, c) || c.rangeNmi > range || !hasBeenSwept(state, c)) continue;
     const x = azToX(a, c.azDeg);
     const y = a.y + a.h - (c.rangeNmi / range) * a.h;
     const isLs = ls && c.id === ls.id;
@@ -342,18 +400,20 @@ export function drawAtkRdr(ctx, a, state) {
       ctx.textAlign = 'left';
       ctx.fillText(angelsStr, x + HAFU_S + 4, y);
     } else {
-      brick(ctx, x, y, isLs);
+      brick(ctx, x, y, isLs, sweepGlow(state, c.id));
     }
   }
 
-  // Radar cursor.
-  const cx = a.x + state.cursor.x * a.w;
-  const cy = a.y + a.h - state.cursor.y * a.h;
-  const { topFt, bottomFt } = coneAltitudesAt(state, cursorRange(state));
-  drawCursor(ctx, cx, cy, topFt, bottomFt);
+  // Radar cursor — only visible when ATK has TDC priority.
+  if (state.tdcPriority === 'atk') {
+    const cx = a.x + state.cursorAtk.x * a.w;
+    const cy = a.y + a.h - state.cursorAtk.y * a.h;
+    const { topFt, bottomFt } = coneAltitudesAt(state, cursorRange(state));
+    drawCursor(ctx, cx, cy, topFt, bottomFt);
+  }
 }
 
-function drawCursor(ctx, cx, cy, topFt, bottomFt) {
+function drawSimpleCursor(ctx, cx, cy) {
   ctx.strokeStyle = GREEN;
   ctx.lineWidth = 1.5;
   const vg = 5;
@@ -364,7 +424,12 @@ function drawCursor(ctx, cx, cy, topFt, bottomFt) {
   ctx.moveTo(cx + vg, cy - vs);
   ctx.lineTo(cx + vg, cy + vs);
   ctx.stroke();
+}
 
+function drawCursor(ctx, cx, cy, topFt, bottomFt) {
+  drawSimpleCursor(ctx, cx, cy);
+  const vg = 5;
+  const vs = 8;
   const clamp = ft => Math.max(0, Math.min(99, Math.round(ft / 1000)));
   const fmt = n => String(n).padStart(2, '0');
   ctx.fillStyle = GREEN;
@@ -380,7 +445,7 @@ function drawCursor(ctx, cx, cy, topFt, bottomFt) {
 
 // Fixed vertical scale for the AZ/EL view: display spans +/- this elevation, so
 // the scanned band visibly grows/shrinks with bars and slides with antenna tilt.
-const VIEW_EL_DEG = 45;
+const VIEW_EL_DEG = 80;
 
 export function drawAzEl(ctx, a, state) {
   const { lo: azLo, hi: azHi } = azBounds(state);
@@ -419,57 +484,161 @@ export function drawAzEl(ctx, a, state) {
   ctx.lineTo(xc, a.y + a.h);
   ctx.stroke();
 
+  // Sweep azimuth line.
+  const sweepX = azToX(a, state.sweep.azDeg);
+  ctx.strokeStyle = GREEN;
+  ctx.lineWidth = 1;
+  ctx.globalAlpha = 0.6;
+  ctx.beginPath();
+  ctx.moveTo(sweepX, a.y);
+  ctx.lineTo(sweepX, a.y + a.h);
+  ctx.stroke();
+  ctx.globalAlpha = 1;
+
   // Contacts in the scan volume.
   const ls = lsContact(state);
   for (const c of state.contacts) {
-    if (!isDetected(state, c)) continue;
+    if (!isDetected(state, c) || !hasBeenSwept(state, c)) continue;
     const x = azToX(a, c.azDeg);
     const y = elToY(contactElevation(state, c));
-    brick(ctx, x, y, ls && c.id === ls.id);
+    brick(ctx, x, y, ls && c.id === ls.id, sweepGlow(state, c.id));
+  }
+
+  if (state.tdcPriority === 'azel') {
+    const cx = a.x + state.cursorAzel.x * a.w;
+    const cy = a.y + state.cursorAzel.y * a.h;
+    drawSimpleCursor(ctx, cx, cy);
   }
 }
 
 // --- SA (top-down) ---
 
+const COMPASS_LABELS = {
+  0: 'N', 30: '3', 60: '6', 90: 'E', 120: '12',
+  150: '15', 180: 'S', 210: '21', 240: '24', 270: 'W', 300: '30', 330: '33',
+};
+
+function drawCompass(ctx, a) {
+  const cx = a.x + a.w / 2;
+  const cy = a.y + a.h / 2;
+  const R = Math.min(a.w, a.h) / 2 - 32;
+  ctx.fillStyle = GREEN;
+  ctx.font = '9px monospace';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  for (let deg = 0; deg < 360; deg += 10) {
+    const ang = (deg - 90) * Math.PI / 180;
+    const label = COMPASS_LABELS[deg];
+    if (label) {
+      ctx.fillText(label, cx + Math.cos(ang) * R, cy + Math.sin(ang) * R);
+    } else {
+      ctx.beginPath();
+      ctx.arc(cx + Math.cos(ang) * R, cy + Math.sin(ang) * R, 1.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+}
+
+function drawCompassArc(ctx, cx, oy, compassR) {
+  ctx.fillStyle = GREEN;
+  ctx.font = '9px monospace';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  for (let deg = 0; deg < 360; deg += 10) {
+    const relativeDeg = deg <= 180 ? deg : deg - 360;
+    if (Math.abs(relativeDeg) > 45) continue;
+    const ang = (deg - 90) * Math.PI / 180;
+    const label = COMPASS_LABELS[deg];
+    if (label) {
+      ctx.fillText(label, cx + Math.cos(ang) * compassR, oy + Math.sin(ang) * compassR);
+    } else {
+      ctx.beginPath();
+      ctx.arc(cx + Math.cos(ang) * compassR, oy + Math.sin(ang) * compassR, 1.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+}
+
 export function drawSa(ctx, a, state) {
   const cx = a.x + a.w / 2;
   const centered = state.saCentered !== false;
-  const oy = centered ? a.y + a.h / 2 : a.y + a.h - 12;
-  const R = centered ? Math.min(a.w, a.h) / 2 - 6 : a.h - 14;
+  const oy = centered ? a.y + a.h / 2 : a.y + a.h * 3 / 4;
+  const R = centered ? Math.min(a.w, a.h) / 2 - 6 : a.h * 3 / 4;
   const range = saRange(state);
 
-  if (state.assists.showSaCone) {
-    // Radar cone wedge (azimuth sector, always 80 nmi deep).
+  const compassR = centered ? Math.min(a.w, a.h) / 2 - 32 : a.h * 3 / 4 - 16;
+
+  if (centered) {
+    drawCompass(ctx, a);
+
+    // Azimuth scan arc on the compass ring.
     const { lo, hi } = azBounds(state);
-    const coneR = (80 / range) * R;
-    const a0 = ((lo - 90) * Math.PI) / 180; // up = nose; screen angle offset
-    const a1 = ((hi - 90) * Math.PI) / 180;
-    ctx.fillStyle = FAINT;
+    ctx.strokeStyle = GREEN;
+    ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.moveTo(cx, oy);
-    ctx.arc(cx, oy, coneR, a0, a1);
-    ctx.closePath();
-    ctx.fill();
+    ctx.arc(cx, oy, compassR + 5, (lo - 90) * Math.PI / 180, (hi - 90) * Math.PI / 180);
+    ctx.stroke();
+
+    // ±70° radial indicator lines from just outside the compass to the display edge.
+    ctx.lineWidth = 1;
+    for (const azDeg of [-70, 70]) {
+      const ang = (azDeg - 90) * Math.PI / 180;
+      const cos = Math.cos(ang);
+      const sin = Math.sin(ang);
+      const ts = [];
+      if (Math.abs(cos) > 1e-9) ts.push(cos > 0 ? (a.x + a.w - cx) / cos : (a.x - cx) / cos);
+      if (Math.abs(sin) > 1e-9) ts.push(sin > 0 ? (a.y + a.h - oy) / sin : (a.y - oy) / sin);
+      const edgeR = Math.min(...ts.filter(t => t > 0));
+      ctx.beginPath();
+      const startR = compassR + 5;
+      const endR = startR + (edgeR - startR) * 0.9;
+      ctx.moveTo(cx + cos * startR, oy + sin * startR);
+      ctx.lineTo(cx + cos * endR, oy + sin * endR);
+      ctx.stroke();
+    }
+  } else {
+    drawCompassArc(ctx, cx, oy, compassR);
+
+    // Two range rings: first touches the display midpoint, second touches the 3/4-up point.
+    ctx.strokeStyle = GREEN;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.arc(cx, oy, a.h / 4, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(cx, oy, a.h / 2, 0, Math.PI * 2);
+    ctx.stroke();
   }
 
-  // Ownship chevron (nose up).
+  // Ownship icon: top-down aircraft silhouette. Wings cross at oy; nose up.
   ctx.strokeStyle = GREEN;
   ctx.lineWidth = 2;
   ctx.beginPath();
-  ctx.moveTo(cx, oy - 9);
-  ctx.lineTo(cx - 7, oy + 7);
-  ctx.moveTo(cx, oy - 9);
-  ctx.lineTo(cx + 7, oy + 7);
+  // Fuselage: short nose above wings, longer body below
+  ctx.moveTo(cx, oy - 5);
+  ctx.lineTo(cx, oy + 17);
+  // Wings: equal left and right
+  ctx.moveTo(cx - 10, oy);
+  ctx.lineTo(cx + 10, oy);
+  // Tail: stubby horizontal bar near bottom of fuselage
+  ctx.moveTo(cx - 4, oy + 12);
+  ctx.lineTo(cx + 4, oy + 12);
   ctx.stroke();
 
   // Contacts the radar currently detects (in the scan volume, within range).
   const ls = lsContact(state);
   for (const c of state.contacts) {
-    if (!isDetected(state, c) || c.rangeNmi > range) continue;
+    if (!isDetected(state, c) || c.rangeNmi > range || !hasBeenSwept(state, c)) continue;
     const ang = ((c.azDeg - 90) * Math.PI) / 180;
     const d = (c.rangeNmi / range) * R;
     const x = cx + Math.cos(ang) * d;
     const y = oy + Math.sin(ang) * d;
     hafu(ctx, x, y, 'square', 'diamond', false, YELLOW);
+  }
+
+  if (state.tdcPriority === 'sa') {
+    const scx = a.x + state.cursorSa.x * a.w;
+    const scy = a.y + state.cursorSa.y * a.h;
+    drawSimpleCursor(ctx, scx, scy);
   }
 }
