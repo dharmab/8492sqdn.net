@@ -37,7 +37,7 @@ Nevada has excellent content for the A-10C, F-4E, and F-14 - arguably, three of 
 
 Kola and Channel have some good campaigns, if you've already played the ones on the other maps.
 
-However, both Kola and South Atlantic have not had updates in many months and appear to be abandoned by their developers.
+South Atlantic has not had updates in many months and appears to be abandoned by its developer.
 
 # Multiplayer Tier List
 
@@ -59,6 +59,6 @@ Persian Gulf has some interesting servers.
 
 Afghanistan, Iraq, Sinai, Nevada and Kola are not common on public servers and are mostly used by private squadrons. Only buy the ones you need, if any.
 
-Both Kola and South Atlantic have not had updates in many months and appear to be abandoned by their developers. South Atlantic is virtually unused in multiplayer.
+South Atlantic has not had updates in many months and appears to be abandoned by its developer. It is virtually unused in multiplayer.
 
 The Channel is no longer used in multiplayer because Normandy contains the entire area of The Channel.
